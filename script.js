@@ -76,6 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => revealObserver.observe(el));
 
+    // Forzar activación de elementos visibles al cargar
+    setTimeout(() => {
+        revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                el.classList.add('active');
+            }
+        });
+    }, 100);
+
     /* ========================================
        5. ACORDEÓN (FAQ)
        ======================================== */
@@ -132,5 +142,52 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    /* ========================================
+       7. HERO SLIDER LOGIC
+       ======================================== */
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 segundos
+
+    if (slides.length > 0) {
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, slideInterval);
+    }
+
+    /* ========================================
+       8. FORMULARIO A WHATSAPP
+       ======================================== */
+    const whatsappForm = document.getElementById('whatsappForm');
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Obtener valores
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const project = document.getElementById('project').value;
+            const message = document.getElementById('message').value;
+            
+            // Número de WhatsApp (sin el +)
+            const tel = "525537270177";
+            
+            // Construir mensaje
+            const text = `Hola DG Audiosound! 👋\n\nQuiero cotizar un proyecto:\n\n*Nombre:* ${name}\n*Email:* ${email}\n*Teléfono:* ${phone}\n*Proyecto:* ${project}\n*Mensaje:* ${message}`;
+            
+            // Codificar para URL
+            const encodedText = encodeURIComponent(text);
+            
+            // URL final
+            const whatsappUrl = `https://wa.me/${tel}?text=${encodedText}`;
+            
+            // Abrir en nueva pestaña
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 
 });
