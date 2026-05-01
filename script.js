@@ -191,3 +191,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+/* ========================================
+   SUBPAGE CINE EN CASA - VIDEO PREVIEW
+   ======================================== */
+   document.addEventListener('DOMContentLoaded', () => {
+    const cineVideoBtn = document.querySelector('.cine-video-preview button');
+
+    if (cineVideoBtn) {
+        cineVideoBtn.addEventListener('click', () => {
+            const whatsappUrl = 'https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20ver%20ejemplos%20o%20cotizar%20un%20cine%20en%20casa';
+            window.open(whatsappUrl, '_blank');
+        });
+    }
+});
