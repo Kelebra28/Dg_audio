@@ -161,23 +161,29 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ========================================
        8. FORMULARIO A WHATSAPP
        ======================================== */
-    const whatsappForm = document.getElementById('whatsappForm');
-    if (whatsappForm) {
-        whatsappForm.addEventListener('submit', (e) => {
+    /* ========================================
+       8. FORMULARIO A WHATSAPP (PREMIUM)
+       ======================================== */
+    const premiumForm = document.getElementById('premiumWhatsappForm');
+    if (premiumForm) {
+        premiumForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             // Obtener valores
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const project = document.getElementById('project').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('p-name').value;
+            const company = document.getElementById('p-company').value || "No especificada";
+            const email = document.getElementById('p-email').value;
+            const phone = document.getElementById('p-phone').value;
+            const city = document.getElementById('p-city').value;
+            const project = document.getElementById('p-project').value;
+            const budget = document.getElementById('p-budget').value || "No especificado";
+            const message = document.getElementById('p-message').value;
             
             // Número de WhatsApp (sin el +)
             const tel = "525537270177";
             
             // Construir mensaje
-            const text = `Hola DG Audiosound! 👋\n\nQuiero cotizar un proyecto:\n\n*Nombre:* ${name}\n*Email:* ${email}\n*Teléfono:* ${phone}\n*Proyecto:* ${project}\n*Mensaje:* ${message}`;
+            const text = `Hola DG Audiosound! 👋\n\nHe completado el formulario de asesoría:\n\n*Nombre:* ${name}\n*Empresa:* ${company}\n*Email:* ${email}\n*Teléfono:* ${phone}\n*Ciudad:* ${city}\n*Tipo de Proyecto:* ${project}\n*Presupuesto:* ${budget}\n\n*Detalles del proyecto:*\n${message}`;
             
             // Codificar para URL
             const encodedText = encodeURIComponent(text);
@@ -202,6 +208,70 @@ document.addEventListener('DOMContentLoaded', () => {
         cineVideoBtn.addEventListener('click', () => {
             const whatsappUrl = 'https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20ver%20ejemplos%20o%20cotizar%20un%20cine%20en%20casa';
             window.open(whatsappUrl, '_blank');
+        });
+    }
+
+    // ========================================
+    // INTERACTIVE MOCKUP: VOLUME SLIDERS
+    // ========================================
+    const sliders = document.querySelectorAll('.volume-slider');
+    
+    sliders.forEach(slider => {
+        slider.addEventListener('click', (e) => {
+            const rect = slider.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const width = rect.width;
+            let percent = Math.round((x / width) * 100);
+            
+            // Constrain
+            percent = Math.max(0, Math.min(100, percent));
+            
+            // Update visual
+            const progress = slider.querySelector('.volume-progress');
+            const label = slider.parentElement.querySelector('.volume-header span:last-child');
+            
+            if (progress) progress.style.width = percent + '%';
+            if (label) label.textContent = percent + '%';
+        });
+    });
+
+    // ========================================
+    // CUSTOM PREMIUM SELECT LOGIC
+    // ========================================
+    const customSelect = document.getElementById('customSelectWrapper');
+    if (customSelect) {
+        const trigger = customSelect.querySelector('.premium-select-custom');
+        const options = customSelect.querySelectorAll('.premium-option-item');
+        const hiddenSelect = document.getElementById('p-project');
+        const label = document.getElementById('p-project-label');
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            customSelect.classList.toggle('active');
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const val = option.getAttribute('data-value');
+                const text = option.textContent;
+                
+                // Update label and hidden select
+                label.textContent = text;
+                hiddenSelect.value = val;
+                
+                // Mark as selected
+                options.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                
+                // Close
+                customSelect.classList.remove('active');
+            });
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', () => {
+            customSelect.classList.remove('active');
         });
     }
 });
