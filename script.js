@@ -1,10 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ========================================
-       1. NAVBAR STICKY & SCROLL EFECTO
+       1. NAVBAR — ALWAYS FLOATING + ADAPTIVE COLOR
        ======================================== */
     const navbar = document.getElementById('navbar');
-    
+
+    // Sections with LIGHT backgrounds → navbar should go dark
+    const lightSections = document.querySelectorAll(
+        '.section-light, .section-light-alt, .section-premium-white, .trust-bar-wrapper, .brands, .solutions, .how-we-work, .contact-bubbles-section'
+    );
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navbar.classList.add('nav-light');
+            }
+        });
+    }, { rootMargin: '-70px 0px 0px 0px', threshold: 0.01 });
+
+    // Sections with DARK backgrounds → navbar goes back to dark glass
+    const darkSections = document.querySelectorAll(
+        '.hero, .section-dark, .section-black, .section-dark-premium, .applications, .faq, .why-us'
+    );
+
+    const darkNavObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navbar.classList.remove('nav-light');
+            }
+        });
+    }, { rootMargin: '-70px 0px 0px 0px', threshold: 0.01 });
+
+    lightSections.forEach(s => navObserver.observe(s));
+    darkSections.forEach(s => darkNavObserver.observe(s));
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -196,6 +225,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ========================================
+       9. NUEVO FORMULARIO BURBUJA (CONTACTO)
+       ======================================== */
+    const bubblesForm = document.getElementById('bubblesWhatsappForm');
+    if (bubblesForm) {
+        bubblesForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name    = document.getElementById('cb-name').value;
+            const company = document.getElementById('cb-company').value || 'No especificada';
+            const phone   = document.getElementById('cb-phone').value;
+            const city    = document.getElementById('cb-city').value;
+            const project = document.getElementById('cb-project').value;
+            const message = document.getElementById('cb-message').value;
+            const tel     = '525537270177';
+            const text = `Hola DG Audiosound! 👋\n\nSolicito asesoría:\n\n*Nombre:* ${name}\n*Empresa:* ${company}\n*Teléfono:* ${phone}\n*Ciudad:* ${city}\n*Tipo de Proyecto:* ${project}\n\n*Detalles:*\n${message}`;
+            window.open(`https://wa.me/${tel}?text=${encodeURIComponent(text)}`, '_blank');
+        });
+    }
+
 });
 
 /* ========================================
@@ -273,5 +321,85 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', () => {
             customSelect.classList.remove('active');
         });
+    }
+
+    // ========================================
+    // COOKIE CONSENT BANNER
+    // ========================================
+    const cookieBanner = document.getElementById('cookieConsentBanner');
+    const acceptCookiesButton = document.getElementById('acceptCookies');
+    const rejectCookiesButton = document.getElementById('rejectCookies');
+    const openCookiePreferences = document.getElementById('openCookiePreferences');
+
+    function getStoredCookieConsent() {
+      try {
+        return window.localStorage.getItem('dg_cookie_consent');
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function setStoredCookieConsent(value) {
+      try {
+        window.localStorage.setItem('dg_cookie_consent', value);
+      } catch (error) {
+        // Si localStorage no está disponible
+      }
+    }
+
+    function updateDGConsent(consentValue, source) {
+      const accepted = consentValue === 'accepted';
+      if (typeof window.dgConsentCommand === 'function' && typeof window.dgBuildConsentState === 'function') {
+        window.dgConsentCommand(
+          'consent',
+          'update',
+          window.dgBuildConsentState(accepted ? 'granted' : 'denied')
+        );
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: accepted ? 'cookie_consent_accepted' : 'cookie_consent_rejected',
+        consent_status: consentValue,
+        consent_source: source || 'cookie_banner'
+      });
+    }
+
+    function showCookieBanner() {
+      if (!cookieBanner) return;
+      cookieBanner.hidden = false;
+      cookieBanner.classList.add('is-visible');
+    }
+
+    function hideCookieBanner() {
+      if (!cookieBanner) return;
+      cookieBanner.classList.remove('is-visible');
+      cookieBanner.hidden = true;
+    }
+
+    function handleCookieChoice(choice) {
+      setStoredCookieConsent(choice);
+      updateDGConsent(choice, 'cookie_banner');
+      hideCookieBanner();
+    }
+
+    const storedCookieConsent = getStoredCookieConsent();
+    if (!storedCookieConsent) {
+      showCookieBanner();
+    }
+
+    if (acceptCookiesButton) {
+      acceptCookiesButton.addEventListener('click', () => handleCookieChoice('accepted'));
+    }
+
+    if (rejectCookiesButton) {
+      rejectCookiesButton.addEventListener('click', () => handleCookieChoice('rejected'));
+    }
+
+    if (openCookiePreferences) {
+      openCookiePreferences.addEventListener('click', () => {
+        showCookieBanner();
+        if (acceptCookiesButton) acceptCookiesButton.focus();
+      });
     }
 });

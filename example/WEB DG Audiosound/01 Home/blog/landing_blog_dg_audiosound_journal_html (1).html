@@ -1,0 +1,1467 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0d">
+
+  <title>Blog de audio y video profesional | DG Audiosound México</title>
+  <meta name="description" content="Guías, ideas y consejos sobre audio, video, pantallas, proyectores, sonido profesional e integración audiovisual para hogares, negocios, oficinas y eventos en México.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://dgaudiosound.com/blog/">
+  <link rel="alternate" hreflang="es-MX" href="https://dgaudiosound.com/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://dgaudiosound.com/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="DG Audiosound">
+  <meta property="og:title" content="DG Audiosound Journal | Guías de audio y video profesional">
+  <meta property="og:description" content="Explora ideas, guías y soluciones para elegir mejor sistemas de audio, video, pantallas, proyectores e integración audiovisual para hogares, negocios, empresas y eventos.">
+  <meta property="og:url" content="https://dgaudiosound.com/blog/">
+  <meta property="og:image" content="https://dgaudiosound.com/assets/img/blog-audio-video-dg-audiosound-og.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DG Audiosound Journal con guías de audio y video profesional para proyectos en México">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DG Audiosound Journal | Guías de audio y video profesional">
+  <meta name="twitter:description" content="Guías, ideas y soluciones para elegir mejor audio, video e integración audiovisual para hogares, negocios, empresas y eventos.">
+  <meta name="twitter:image" content="https://dgaudiosound.com/assets/img/blog-audio-video-dg-audiosound-og.webp">
+
+  <!-- Performance hints -->
+  <link rel="preload" as="image" href="/assets/img/blog-audio-video-dg-audiosound-hero.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- TODO ANTES DE PRODUCCIÓN:
+    1. Reemplazar todos los enlaces wa.me con el número real de WhatsApp de DG Audiosound.
+    2. Confirmar que contacto@dgaudiosound.com sea el correo definitivo.
+    3. Confirmar URLs reales de artículos y landings internas para evitar enlaces rotos.
+    4. Subir todas las imágenes .webp referenciadas en /assets/img/ y comprimirlas para Core Web Vitals.
+    5. Agregar Facebook oficial en Schema y footer si se confirma la URL.
+    6. Validar en GTM que GA4 y Meta Pixel respeten Consent Mode antes de disparar etiquetas.
+  -->
+
+  <!-- Consent Mode default: denied -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N65F3T7P');
+  </script>
+
+  <style>
+    :root {
+      --bg: #08080a;
+      --bg-2: #0d0d11;
+      --panel: rgba(22, 22, 27, .78);
+      --panel-solid: #15151a;
+      --panel-soft: rgba(255, 255, 255, .055);
+      --text: #f6efe2;
+      --muted: #bdb2a1;
+      --muted-2: #8e8375;
+      --gold: #d8b56d;
+      --gold-2: #9d7a3e;
+      --blue: #4da3ff;
+      --line: rgba(216, 181, 109, .22);
+      --white-line: rgba(255,255,255,.12);
+      --shadow: 0 24px 80px rgba(0,0,0,.46);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --container: min(1180px, calc(100% - 40px));
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(216, 181, 109, .16), transparent 28%),
+        radial-gradient(circle at 85% 5%, rgba(77, 163, 255, .13), transparent 32%),
+        linear-gradient(180deg, #08080a 0%, #101014 46%, #08080a 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body.no-scroll { overflow: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+    section { position: relative; padding: 92px 0; }
+    .container { width: var(--container); margin: 0 auto; }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      z-index: 10000;
+      background: var(--gold);
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 16px; }
+
+    :focus-visible {
+      outline: 3px solid rgba(77, 163, 255, .85);
+      outline-offset: 4px;
+      border-radius: 10px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    h1, h2, h3 { line-height: 1.08; margin: 0; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.65rem, 6vw, 5.8rem); max-width: 980px; }
+    h2 { font-size: clamp(2rem, 4vw, 3.8rem); max-width: 880px; }
+    h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+    p { margin: 0; color: var(--muted); }
+    .lead { font-size: clamp(1.05rem, 1.8vw, 1.28rem); max-width: 780px; color: #d8cfbf; }
+    .section-head { display: grid; gap: 18px; margin-bottom: 38px; }
+    .section-head.center { text-align: center; justify-items: center; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: #111;
+      background: linear-gradient(135deg, #f4dd9c, #d8b56d 44%, #aa7f35);
+      box-shadow: 0 14px 30px rgba(216,181,109,.22);
+    }
+    .btn-secondary {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(12px);
+    }
+    .btn-secondary:hover { border-color: rgba(216,181,109,.48); }
+    .btn-ghost { color: var(--gold); padding: 0; min-height: auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(8,8,10,.74);
+      backdrop-filter: blur(18px);
+    }
+    .nav-wrap {
+      width: var(--container);
+      margin: 0 auto;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      font-weight: 950;
+      letter-spacing: -.04em;
+      font-size: 1.18rem;
+    }
+    .brand span { color: var(--gold); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; }
+    .nav-links { display: flex; align-items: center; gap: 18px; color: #ded4c4; font-size: .94rem; }
+    .nav-links a { opacity: .9; }
+    .nav-links a[aria-current="page"], .nav-links a:hover { color: var(--gold); opacity: 1; }
+    .menu-toggle { display: none; background: transparent; color: var(--text); border: 1px solid var(--white-line); border-radius: 999px; padding: 10px 13px; }
+
+    .breadcrumb {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 26px 0 0;
+      color: var(--muted-2);
+      font-size: .9rem;
+    }
+    .breadcrumb a { color: #d0c3b1; }
+    .breadcrumb span { color: var(--gold); }
+
+    .hero { padding-top: 36px; min-height: 760px; display: grid; align-items: center; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.03fr .97fr; gap: 52px; align-items: center; }
+    .hero-copy { position: relative; z-index: 3; display: grid; gap: 24px; }
+    .hero-actions, .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .topic-cloud { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 980px; margin: 0 auto; }
+    .topic-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #e8ddc9;
+      border: 1px solid rgba(216,181,109,.2);
+      background: linear-gradient(135deg, rgba(216,181,109,.09), rgba(255,255,255,.04));
+      font-size: .92rem;
+      transition: transform .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .topic-chip:hover { transform: translateY(-2px); border-color: rgba(216,181,109,.46); color: var(--gold); }
+    .badge {
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.055);
+      color: #d9cfbf;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: .83rem;
+    }
+    .hero-media {
+      position: relative;
+      min-height: 600px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(216,181,109,.18);
+      box-shadow: var(--shadow);
+      background: #111;
+    }
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8,8,10,.88), rgba(8,8,10,.18) 44%, rgba(8,8,10,.08)), radial-gradient(circle at 80% 18%, rgba(77,163,255,.18), transparent 28%);
+    }
+    .hero-media img { width: 100%; height: 100%; min-height: 600px; object-fit: cover; }
+    .floating-card {
+      position: absolute;
+      z-index: 2;
+      right: 24px;
+      bottom: 24px;
+      width: min(360px, calc(100% - 48px));
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 24px;
+      background: rgba(12,12,15,.74);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 50px rgba(0,0,0,.34);
+    }
+    .floating-card strong { display: block; color: var(--text); font-size: 1.08rem; margin-bottom: 8px; }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 0;
+      min-height: 430px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(216,181,109,.2);
+      background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      box-shadow: var(--shadow);
+    }
+    .featured-card img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-content { padding: clamp(28px, 5vw, 56px); display: grid; align-content: center; gap: 18px; }
+    .meta { color: var(--gold); font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
+
+    .grid-4, .grid-3, .grid-2 { display: grid; gap: 20px; }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .category-card, .article-card, .space-card, .solution-link, .stat-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 18px 58px rgba(0,0,0,.24);
+    }
+    .category-card { min-height: 420px; display: flex; align-items: flex-end; }
+    .category-card img, .space-card img, .article-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .category-card:hover img, .space-card:hover img, .article-card:hover img { transform: scale(1.04); }
+    .category-card::after, .space-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 12%, rgba(5,5,7,.84) 74%, rgba(5,5,7,.96));
+    }
+    .category-content, .space-content { position: absolute; z-index: 2; inset: auto 0 0; padding: 24px; display: grid; gap: 10px; }
+    .category-content p, .space-content p { font-size: .95rem; }
+
+    .filter-panel {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 12px;
+      padding: 18px;
+      border: 1px solid rgba(216,181,109,.18);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.055);
+      backdrop-filter: blur(16px);
+    }
+    .filter-panel input, .filter-panel select {
+      width: 100%;
+      color: var(--text);
+      background: rgba(8,8,10,.72);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 14px 14px;
+      min-height: 50px;
+    }
+    .filter-panel option { color: #111; }
+
+    .article-card { display: grid; background: rgba(255,255,255,.055); }
+    .article-card .thumb { height: 210px; overflow: hidden; }
+    .article-body { padding: 22px; display: grid; gap: 12px; }
+    .article-body p { font-size: .95rem; }
+
+    .space-card { min-height: 360px; }
+    .space-card.wide { grid-column: span 2; }
+
+    .ranking {
+      display: grid;
+      gap: 14px;
+    }
+    .rank-item {
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+    }
+    .rank-number { color: var(--gold); font-size: 2rem; font-weight: 950; letter-spacing: -.06em; }
+
+    .editorial-band {
+      border: 1px solid rgba(216,181,109,.2);
+      border-radius: var(--radius-xl);
+      padding: clamp(32px, 6vw, 74px);
+      background:
+        linear-gradient(135deg, rgba(216,181,109,.14), transparent 36%),
+        radial-gradient(circle at 85% 20%, rgba(77,163,255,.15), transparent 30%),
+        rgba(255,255,255,.045);
+      box-shadow: var(--shadow);
+    }
+    .editorial-band .content { display: grid; grid-template-columns: 1fr .8fr; gap: 34px; align-items: center; }
+    .check-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; color: #d9cfbf; }
+    .check-list li { display: flex; gap: 10px; align-items: flex-start; }
+    .check-list li::before { content: "✓"; color: var(--gold); font-weight: 950; }
+
+    .solutions-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+    .solution-link { padding: 14px 16px; border-radius: 999px; color: #e7dcc9; }
+    .solution-link:hover { border-color: rgba(216,181,109,.42); color: var(--gold); }
+
+    .faq-list { display: grid; gap: 14px; }
+    .faq-item {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 22px;
+      background: rgba(255,255,255,.045);
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      color: var(--text);
+      background: transparent;
+      border: 0;
+      padding: 22px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      font-weight: 850;
+      font-size: 1.05rem;
+    }
+    .faq-question span:last-child { color: var(--gold); }
+    .faq-answer { display: none; padding: 0 22px 22px; }
+    .faq-item.active .faq-answer { display: block; }
+
+    .final-cta {
+      padding-bottom: 120px;
+    }
+    .cta-card {
+      display: grid;
+      grid-template-columns: 1fr .82fr;
+      gap: 0;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(216,181,109,.22);
+      background: #111116;
+      box-shadow: var(--shadow);
+    }
+    .cta-copy { padding: clamp(34px, 6vw, 70px); display: grid; gap: 20px; align-content: center; }
+    .cta-card img { width: 100%; height: 100%; object-fit: cover; min-height: 440px; }
+
+    .site-footer {
+      border-top: 1px solid rgba(255,255,255,.1);
+      background: #070708;
+      padding: 54px 0 28px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(3, .75fr); gap: 28px; }
+    .footer-col { display: grid; gap: 10px; align-content: start; }
+    .footer-col h3 { font-size: 1rem; color: var(--gold); letter-spacing: 0; }
+    .footer-col a, .footer-col p { color: var(--muted); font-size: .94rem; }
+    .footer-bottom { margin-top: 34px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.08); color: var(--muted-2); font-size: .9rem; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+
+    .cookie-banner {
+      position: fixed;
+      z-index: 1200;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      width: min(980px, calc(100% - 28px));
+      display: none;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+      border: 1px solid rgba(216,181,109,.28);
+      border-radius: 24px;
+      background: rgba(10,10,13,.92);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+    .cookie-banner.active { display: flex; }
+    .cookie-banner p { font-size: .92rem; }
+    .cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    @media (max-width: 1040px) {
+      .nav-links, .nav-wrap > .btn { display: none; }
+      .menu-toggle { display: inline-flex; }
+      .nav-links.mobile-open {
+        display: grid;
+        position: fixed;
+        inset: 76px 14px auto 14px;
+        padding: 22px;
+        border: 1px solid rgba(216,181,109,.18);
+        border-radius: 24px;
+        background: rgba(10,10,13,.96);
+        box-shadow: var(--shadow);
+      }
+      .hero-grid, .featured-card, .editorial-band .content, .cta-card { grid-template-columns: 1fr; }
+      .hero-media, .hero-media img { min-height: 480px; }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .filter-panel { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      :root { --container: min(100% - 28px, 1180px); }
+      section { padding: 70px 0; }
+      .hero { min-height: auto; }
+      .hero-media, .hero-media img { min-height: 390px; }
+      .hero-actions, .cta-row, .cookie-actions { width: 100%; }
+      .btn { width: 100%; }
+      .grid-4, .grid-3, .grid-2, .filter-panel, .footer-grid { grid-template-columns: 1fr; }
+      .space-card.wide { grid-column: span 1; }
+      .rank-item { grid-template-columns: 1fr; }
+      .cookie-banner { align-items: stretch; flex-direction: column; }
+      .footer-bottom { display: grid; }
+      .floating-card { left: 18px; right: 18px; bottom: 18px; width: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+  /* Limpieza final producción: versión editorial luminosa inspirada en una portada institucional tipo journal */
+  :root {
+    --bg: #f3ecdf;
+    --bg-2: #e9ddcb;
+    --panel: rgba(255, 250, 240, .86);
+    --panel-solid: #fffaf0;
+    --panel-soft: rgba(23, 19, 16, .055);
+    --text: #171310;
+    --muted: #5f5548;
+    --muted-2: #817363;
+    --gold: #9d6f32;
+    --gold-2: #6f4a20;
+    --blue: #1f5f8f;
+    --line: rgba(157, 111, 50, .24);
+    --white-line: rgba(23,19,16,.12);
+    --shadow: 0 24px 70px rgba(42,31,18,.18);
+  }
+  body {
+    background:
+      radial-gradient(circle at 12% 0%, rgba(157,111,50,.16), transparent 30%),
+      radial-gradient(circle at 88% 4%, rgba(31,95,143,.10), transparent 34%),
+      linear-gradient(180deg, #f7f1e7 0%, #eee3d1 45%, #f7f1e7 100%);
+  }
+  .site-header { background: rgba(247,241,231,.88); border-bottom-color: rgba(23,19,16,.1); }
+  .nav-links { color: #43382d; }
+  .breadcrumb a { color: #4d4033; }
+  .btn-secondary { background: rgba(255,250,240,.72); color: var(--text); border-color: var(--line); }
+  .badge, .solution-link { background: rgba(255,250,240,.72); color: #3a2f25; }
+  .editorial-nav {
+    padding: 24px 0 16px;
+    border-bottom: 1px solid rgba(23,19,16,.1);
+    background: rgba(255,250,240,.56);
+  }
+  .journal-sections,
+  .featured-topics {
+    width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .journal-sections { margin-bottom: 14px; }
+  .journal-sections a {
+    font-size: .95rem;
+    font-weight: 850;
+    padding: 9px 12px;
+    border-radius: 999px;
+    color: #30271f;
+  }
+  .journal-sections a:hover { background: rgba(157,111,50,.1); color: var(--gold-2); }
+  .featured-topics { color: var(--muted); font-size: .9rem; }
+  .featured-topics strong { color: var(--text); }
+  .featured-topics a { color: var(--gold-2); font-weight: 780; }
+  .journal-mark {
+    display: grid;
+    gap: 8px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(23,19,16,.12);
+  }
+  .journal-mark strong {
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
+    line-height: .86;
+    letter-spacing: -.065em;
+    font-weight: 950;
+    color: var(--text);
+  }
+  .journal-mark span { color: var(--muted); font-weight: 720; letter-spacing: .02em; }
+  .hero-media { background: #f7f1e7; border-color: rgba(157,111,50,.2); }
+  .hero-media::after { background: linear-gradient(90deg, rgba(247,241,231,.72), rgba(247,241,231,.16) 46%, rgba(8,8,10,.05)), radial-gradient(circle at 80% 18%, rgba(31,95,143,.14), transparent 28%); }
+  .floating-card { background: rgba(255,250,240,.88); color: var(--text); }
+  .featured-card, .article-card, .faq-item, .rank-item, .filter-panel, .editorial-band, .cta-card { background: linear-gradient(135deg, rgba(255,255,255,.82), rgba(255,250,240,.68)); border-color: rgba(157,111,50,.18); }
+  .filter-panel input, .filter-panel select { background: rgba(255,250,240,.88); color: var(--text); }
+  .site-footer { background: #171310; }
+  .article-status {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(157,111,50,.22);
+    background: rgba(157,111,50,.08);
+    color: var(--gold-2);
+    font-size: .76rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .production-note {
+    margin-top: 18px;
+    padding: 16px 18px;
+    border-radius: 20px;
+    border: 1px dashed rgba(157,111,50,.34);
+    background: rgba(255,250,240,.66);
+    color: var(--muted);
+    font-size: .92rem;
+  }
+  .cookie-banner { background: rgba(255,250,240,.96); color: var(--text); }
+  @media (max-width: 1040px) { .nav-links.mobile-open { background: rgba(255,250,240,.98); } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dgaudiosound.com/#website",
+        "name": "DG Audiosound",
+        "url": "https://dgaudiosound.com/",
+        "inLanguage": "es-MX",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://dgaudiosound.com/blog/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://dgaudiosound.com/#localbusiness",
+        "name": "DG Audiosound",
+        "url": "https://dgaudiosound.com/",
+        "image": "https://dgaudiosound.com/assets/img/blog-audio-video-dg-audiosound-og.webp",
+        "description": "Soluciones de audio y video profesional para hogares, negocios, empresas, instituciones, eventos y producción audiovisual en México.",
+        "areaServed": [
+          { "@type": "Country", "name": "México" },
+          { "@type": "City", "name": "Ciudad de México" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/dgaudiosound/"
+        ],
+        "makesOffer": {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Soluciones de audio y video profesional",
+            "serviceType": "Audio, video, integración audiovisual, instalación y asesoría"
+          }
+        }
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://dgaudiosound.com/blog/#webpage",
+        "url": "https://dgaudiosound.com/blog/",
+        "name": "Blog de audio y video profesional | DG Audiosound México",
+        "description": "Guías, ideas y consejos sobre audio, video, pantallas, proyectores, sonido profesional e integración audiovisual para hogares, negocios, oficinas y eventos en México.",
+        "isPartOf": { "@id": "https://dgaudiosound.com/#website" },
+        "about": { "@id": "https://dgaudiosound.com/#localbusiness" },
+        "inLanguage": "es-MX",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://dgaudiosound.com/assets/img/blog-audio-video-dg-audiosound-og.webp",
+          "width": 1200,
+          "height": 630
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://dgaudiosound.com/blog/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://dgaudiosound.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://dgaudiosound.com/blog/"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://dgaudiosound.com/blog/#itemlist",
+        "name": "Guías destacadas de audio y video profesional de DG Audiosound",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://dgaudiosound.com/blog/audio-profesional-para-restaurantes/",
+            "name": "Audio profesional para restaurantes: guía completa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://dgaudiosound.com/blog/cine-en-casa-premium-que-considerar/",
+            "name": "Cine en casa premium: qué considerar antes de instalar"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://dgaudiosound.com/blog/que-necesita-sala-de-juntas-moderna/",
+            "name": "Qué necesita una sala de juntas moderna"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://dgaudiosound.com/blog/audio-para-gimnasios-potencia-zonas-control/",
+            "name": "Audio para gimnasios: potencia, zonas y control"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://dgaudiosound.com/blog/equipo-basico-para-streamers-profesionales/",
+            "name": "Equipo básico para streamers profesionales"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://dgaudiosound.com/blog/como-elegir-pantallas-profesionales-para-negocios/",
+            "name": "Cómo elegir pantallas profesionales para negocios"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dgaudiosound.com/blog/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Para qué sirve el Blog de DG Audiosound?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sirve para ayudarte a entender, comparar y elegir soluciones de audio y video antes de invertir en un proyecto residencial, comercial, corporativo o profesional."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo solicitar una cotización después de leer una guía?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Cada artículo incluye enlaces y botones para solicitar asesoría por WhatsApp o formulario."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El Blog habla solo de productos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. El enfoque principal son soluciones completas: audio, video, instalación, integración, compatibilidad, experiencia y operación."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo usar estas guías para planear mi negocio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Las guías están pensadas para ayudarte a tomar mejores decisiones antes de comprar equipo o iniciar una instalación."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿DG Audiosound instala los sistemas que recomienda?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. DG Audiosound puede ayudarte con selección, integración, instalación y asesoría para proyectos de audio y video."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N65F3T7P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- PLACEHOLDERS POR CONFIRMAR ANTES DE PRODUCCIÓN: WhatsApp 52XXXXXXXXXX, correo contacto@dgaudiosound.com, URLs finales de artículos, imágenes en /assets/img/ y Facebook oficial. -->
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header" aria-label="Encabezado principal">
+    <div class="nav-wrap">
+      <a class="brand" href="/" aria-label="DG Audiosound inicio">
+        DG Audiosound
+        <span>Audio · Video · Integración</span>
+      </a>
+
+      <nav class="nav-links" id="mainNav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/soluciones/">Soluciones</a>
+        <a href="/soluciones/residencial-premium/">Residencial</a>
+        <a href="/soluciones/negocios/">Negocios</a>
+        <a href="/soluciones/corporativo/">Corporativo</a>
+        <a href="/soluciones/eventos-produccion/">Eventos</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/contacto/">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary" href="https://wa.me/52XXXXXXXXXX?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20proyecto%20de%20audio%20y%20video." data-event="click_whatsapp_blog" data-location="header" aria-label="Cotizar por WhatsApp con DG Audiosound">Cotizar por WhatsApp</a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainNav">Menú</button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a> / <span>Blog</span>
+    </nav>
+
+    <div class="editorial-nav" aria-label="Navegación editorial del Journal">
+      <div class="journal-sections">
+        <a href="/blog/residencial-premium/">Residencial</a>
+        <a href="/blog/negocios-experiencias-comerciales/">Negocios</a>
+        <a href="/blog/corporativo-institucional/">Corporativo</a>
+        <a href="/blog/eventos-creadores-produccion/">Eventos y producción</a>
+        <a href="/blog/guias-de-compra/">Guías de compra</a>
+        <a href="/blog/comparativas/">Comparativas</a>
+        <a href="/blog/archivo/">Archivo</a>
+      </div>
+      <div class="featured-topics">
+        <strong>Temas destacados:</strong>
+        <a href="/blog/audio-profesional/">Audio profesional</a>
+        <a href="/blog/pantallas-profesionales/">Pantallas</a>
+        <a href="/blog/proyectores/">Proyectores</a>
+        <a href="/blog/salas-de-juntas/">Salas de juntas</a>
+        <a href="/blog/restaurantes/">Restaurantes</a>
+      </div>
+    </div>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="journal-mark" aria-label="DG Audiosound Journal">
+            <strong>Journal</strong>
+            <span>DG Audiosound · Guías, ideas y tendencias para crear mejores experiencias de audio y video.</span>
+          </div>
+          <span class="eyebrow">Centro editorial audiovisual</span>
+          <h1 id="hero-title">Ideas, guías y soluciones de audio y video profesional para transformar espacios en México</h1>
+          <p class="lead">Una portada editorial para explorar soluciones, resolver dudas reales y tomar mejores decisiones antes de invertir en audio, video, pantallas, proyectores, sonido profesional e integración audiovisual para hogares, negocios, empresas y eventos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#ultimos-articulos" data-event="click_blog_cta" data-location="hero_explorar">Explorar artículos</a>
+            <a class="btn btn-secondary" href="https://wa.me/52XXXXXXXXXX?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20proyecto%20de%20audio%20y%20video." data-event="click_whatsapp_blog" data-location="hero">Cotizar por WhatsApp</a>
+          </div>
+          <div class="hero-badges" aria-label="Temas del blog">
+            <span class="badge">Cine en casa</span>
+            <span class="badge">Audio para negocios</span>
+            <span class="badge">Salas de juntas</span>
+            <span class="badge">Eventos y producción</span>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <img src="/assets/img/blog-audio-video-dg-audiosound-hero.webp" width="1920" height="1080" alt="Centro editorial premium de audio y video profesional para guías de DG Audiosound" fetchpriority="high" decoding="async">
+          <figcaption class="floating-card">
+            <strong>Featured series · Soluciones que se entienden</strong>
+            <p>Una serie editorial para convertir dudas frecuentes en decisiones claras: qué necesitas, qué evitar y cuándo conviene pedir asesoría profesional.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Guía destacada para empezar</span>
+          <h2 id="featured-title">Antes de comprar equipos, entiende la solución que realmente necesitas</h2>
+        </div>
+
+        <article class="featured-card">
+          <img src="/assets/img/blog-articulo-destacado-audio-video.webp" width="980" height="620" alt="Guía destacada de audio y video profesional para elegir una solución integral" loading="lazy" decoding="async">
+          <div class="featured-content">
+            <span class="meta">Guía principal · 8 min de lectura</span>
+            <h3>Cómo elegir una solución de audio y video profesional para tu proyecto</h3>
+            <p>Antes de comprar equipos, conviene entender el espacio, el uso, la cobertura, la conectividad, la instalación, la compatibilidad y la experiencia que quieres lograr. Esta guía te ayuda a tomar una mejor decisión desde el inicio.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="/blog/como-elegir-solucion-audio-video-profesional/" data-event="click_featured_article" data-location="featured">Leer guía completa</a>
+              <a class="btn btn-secondary" href="/soluciones/" data-event="click_related_solution" data-location="featured">Ver soluciones</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Contenido por tipo de proyecto</span>
+          <h2 id="categories-title">Explora el Journal desde el espacio que quieres transformar</h2>
+          <p class="lead">Cada categoría está conectada con las líneas comerciales de DG Audiosound para que el contenido lleve naturalmente de la inspiración a la cotización.</p>
+        </div>
+
+        <div class="grid-4">
+          <a class="category-card" href="/blog/residencial-premium/" data-event="click_blog_category" data-category="residencial_premium">
+            <img src="/assets/img/blog-residencial-premium-dg-audiosound.webp" width="700" height="420" alt="Blog de audio y video residencial premium para cine en casa y family room" loading="lazy" decoding="async">
+            <div class="category-content">
+              <span class="meta">Residencial Premium</span>
+              <h3>Ideas para vivir mejor el entretenimiento en casa</h3>
+              <p>Cine en casa, audio distribuido, family room, terrazas, jardín, audio Hi-Fi y home office premium.</p>
+              <span class="btn btn-ghost">Ver artículos residenciales →</span>
+            </div>
+          </a>
+
+          <a class="category-card" href="/blog/negocios-experiencias-comerciales/" data-event="click_blog_category" data-category="negocios">
+            <img src="/assets/img/blog-negocios-audio-video-dg-audiosound.webp" width="700" height="420" alt="Blog de audio y video para restaurantes bares gimnasios hoteles y retail" loading="lazy" decoding="async">
+            <div class="category-content">
+              <span class="meta">Negocios</span>
+              <h3>Guías para crear mejores experiencias comerciales</h3>
+              <p>Restaurantes, bares, cafeterías, gimnasios, hoteles, retail, barberías y espacios comerciales.</p>
+              <span class="btn btn-ghost">Ver artículos para negocios →</span>
+            </div>
+          </a>
+
+          <a class="category-card" href="/blog/corporativo-institucional/" data-event="click_blog_category" data-category="corporativo">
+            <img src="/assets/img/blog-corporativo-audio-video-dg-audiosound.webp" width="700" height="420" alt="Blog de audio y video corporativo para salas de juntas auditorios y educación" loading="lazy" decoding="async">
+            <div class="category-content">
+              <span class="meta">Corporativo</span>
+              <h3>Contenido para comunicar, presentar y decidir mejor</h3>
+              <p>Salas de juntas, auditorios, oficinas, educación, gobierno, capacitación y centros de culto.</p>
+              <span class="btn btn-ghost">Ver artículos corporativos →</span>
+            </div>
+          </a>
+
+          <a class="category-card" href="/blog/eventos-creadores-produccion/" data-event="click_blog_category" data-category="eventos_produccion">
+            <img src="/assets/img/blog-eventos-produccion-dg-audiosound.webp" width="700" height="420" alt="Blog de audio profesional para streamers DJ músicos vocalistas eventos y producción" loading="lazy" decoding="async">
+            <div class="category-content">
+              <span class="meta">Eventos y producción</span>
+              <h3>Recomendaciones para sonar, grabar y transmitir mejor</h3>
+              <p>Streamers, DJ, músicos, vocalistas, eventos, producción audiovisual y sonido profesional.</p>
+              <span class="btn btn-ghost">Ver artículos profesionales →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="search-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Centro de búsqueda</span>
+          <h2 id="search-title">Encuentra la guía ideal para tu proyecto</h2>
+          <p class="lead">La página queda preparada para filtros editoriales que ayudan al usuario a encontrar contenido por espacio, intención y nivel de conocimiento.</p>
+        </div>
+
+        <form class="filter-panel" role="search" aria-label="Buscar artículos del Blog DG Audiosound" action="/blog/" method="get">
+          <input type="search" name="s" placeholder="Buscar: restaurantes, cine en casa, salas de juntas..." aria-label="Buscar artículos" data-event="click_search_blog">
+          <select name="tipo" aria-label="Filtrar por tipo de proyecto" data-event="click_filter_blog">
+            <option value="">Tipo de proyecto</option>
+            <option value="residencial">Residencial</option>
+            <option value="negocios">Negocios</option>
+            <option value="corporativo">Corporativo</option>
+            <option value="eventos">Eventos y producción</option>
+          </select>
+          <select name="intencion" aria-label="Filtrar por intención" data-event="click_filter_blog">
+            <option value="">Intención</option>
+            <option value="inspiracion">Inspiración</option>
+            <option value="guia-compra">Guía de compra</option>
+            <option value="comparativa">Comparativa</option>
+            <option value="instalacion">Instalación</option>
+            <option value="mantenimiento">Mantenimiento</option>
+            <option value="problemas">Solución de problemas</option>
+          </select>
+          <select name="nivel" aria-label="Filtrar por nivel" data-event="click_filter_blog">
+            <option value="">Nivel</option>
+            <option value="basico">Básico</option>
+            <option value="intermedio">Intermedio</option>
+            <option value="avanzado">Avanzado</option>
+          </select>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="topics-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Temas estratégicos SEO</span>
+          <h2 id="topics-title">Temas que cubrimos en el Journal</h2>
+          <p class="lead">Esta nube temática refuerza la autoridad de DG Audiosound en búsquedas orgánicas de audio, video, integración, instalación y soluciones por tipo de espacio.</p>
+        </div>
+        <div class="topic-cloud" aria-label="Temas principales del Blog DG Audiosound">
+          <a class="topic-chip" href="/blog/audio-profesional/" data-event="click_blog_category" data-category="audio_profesional">Audio profesional</a>
+          <a class="topic-chip" href="/blog/video-profesional/" data-event="click_blog_category" data-category="video_profesional">Video profesional</a>
+          <a class="topic-chip" href="/blog/pantallas-profesionales/" data-event="click_blog_category" data-category="pantallas_profesionales">Pantallas profesionales</a>
+          <a class="topic-chip" href="/blog/proyectores/" data-event="click_blog_category" data-category="proyectores">Proyectores</a>
+          <a class="topic-chip" href="/blog/cine-en-casa/" data-event="click_blog_category" data-category="cine_en_casa">Cine en casa</a>
+          <a class="topic-chip" href="/blog/audio-distribuido/" data-event="click_blog_category" data-category="audio_distribuido">Audio distribuido</a>
+          <a class="topic-chip" href="/blog/salas-de-juntas/" data-event="click_blog_category" data-category="salas_de_juntas">Salas de juntas</a>
+          <a class="topic-chip" href="/blog/restaurantes/" data-event="click_blog_category" data-category="restaurantes">Restaurantes</a>
+          <a class="topic-chip" href="/blog/gimnasios/" data-event="click_blog_category" data-category="gimnasios">Gimnasios</a>
+          <a class="topic-chip" href="/blog/streamers/" data-event="click_blog_category" data-category="streamers">Streamers</a>
+          <a class="topic-chip" href="/blog/dj-y-eventos/" data-event="click_blog_category" data-category="dj_eventos">DJ y eventos</a>
+          <a class="topic-chip" href="/blog/instalacion-audiovisual/" data-event="click_blog_category" data-category="instalacion_audiovisual">Instalación audiovisual</a>
+          <a class="topic-chip" href="/blog/videowall/" data-event="click_blog_category" data-category="videowall">Videowall</a>
+          <a class="topic-chip" href="/blog/senalizacion-digital/" data-event="click_blog_category" data-category="senalizacion_digital">Señalización digital</a>
+          <a class="topic-chip" href="/blog/proyeccion-profesional/" data-event="click_blog_category" data-category="proyeccion_profesional">Proyección profesional</a>
+          <a class="topic-chip" href="/blog/hoteles/" data-event="click_blog_category" data-category="hoteles">Hoteles</a>
+          <a class="topic-chip" href="/blog/educacion/" data-event="click_blog_category" data-category="educacion">Educación</a>
+          <a class="topic-chip" href="/blog/auditorios/" data-event="click_blog_category" data-category="auditorios">Auditorios</a>
+          <a class="topic-chip" href="/blog/iglesias-centros-de-culto/" data-event="click_blog_category" data-category="iglesias_centros_culto">Iglesias y centros de culto</a>
+          <a class="topic-chip" href="/blog/gobierno-instituciones/" data-event="click_blog_category" data-category="gobierno_instituciones">Gobierno e instituciones</a>
+          <a class="topic-chip" href="/blog/home-office/" data-event="click_blog_category" data-category="home_office">Home office</a>
+          <a class="topic-chip" href="/blog/podcast-creadores/" data-event="click_blog_category" data-category="podcast_creadores">Podcast y creadores</a>
+        </div>
+        <p class="production-note"><strong>Nota de producción:</strong> antes de publicar, crea o redirecciona las URLs de estos temas para evitar enlaces rotos. Si algún cluster aún no existe, puede enlazarse temporalmente a <code>/blog/</code> o dejarse como categoría futura en WordPress.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="guides-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Guías útiles antes de invertir</span>
+          <h2 id="guides-title">Contenido pensado para evitar compras incorrectas</h2>
+          <p class="lead">Estas guías responden dudas reales de búsqueda y conectan con soluciones comerciales de DG Audiosound.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-guia-bocinas-negocio.webp" width="700" height="420" alt="Guía para elegir bocinas para un negocio con audio profesional" loading="lazy" decoding="async"></div>
+            <div class="article-body">
+              <span class="article-status">Próximamente</span>
+              <span class="meta">Negocios · 6 min</span>
+              <h3>Cómo elegir bocinas para un negocio</h3>
+              <p>Aprende qué revisar antes de comprar bocinas para restaurantes, tiendas, cafeterías, bares o gimnasios.</p>
+              <a class="btn btn-ghost" href="/blog/como-elegir-bocinas-para-negocio/" data-event="click_article_card" data-article="bocinas_negocio">Leer artículo →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-guia-comprar-proyector.webp" width="700" height="420" alt="Guía para comprar proyector profesional para negocio o cine en casa" loading="lazy" decoding="async"></div>
+            <div class="article-body">
+              <span class="article-status">Próximamente</span>
+              <span class="meta">Video · 7 min</span>
+              <h3>Qué revisar antes de comprar un proyector</h3>
+              <p>Brillo, distancia, tamaño de pantalla, instalación, conectividad y uso real del espacio.</p>
+              <a class="btn btn-ghost" href="/blog/que-revisar-antes-de-comprar-proyector/" data-event="click_article_card" data-article="comprar_proyector">Leer artículo →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-pantalla-profesional-vs-television.webp" width="700" height="420" alt="Comparativa de pantalla profesional contra televisión para negocios y empresas" loading="lazy" decoding="async"></div>
+            <div class="article-body">
+              <span class="article-status">Próximamente</span>
+              <span class="meta">Comparativa · 5 min</span>
+              <h3>Pantalla profesional vs televisión: cuál conviene</h3>
+              <p>Conoce cuándo una pantalla profesional puede ser mejor opción para operación comercial o corporativa.</p>
+              <a class="btn btn-ghost" href="/blog/pantalla-profesional-vs-television/" data-event="click_article_card" data-article="pantalla_vs_tv">Leer artículo →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-audio-ambiental-vs-profesional.webp" width="700" height="420" alt="Diferencia entre audio ambiental y audio profesional para espacios comerciales" loading="lazy" decoding="async"></div>
+            <div class="article-body">
+              <span class="article-status">Próximamente</span>
+              <span class="meta">Audio · 6 min</span>
+              <h3>Audio ambiental vs audio profesional</h3>
+              <p>La diferencia entre poner música y diseñar una experiencia sonora clara, cómoda y controlada.</p>
+              <a class="btn btn-ghost" href="/blog/audio-ambiental-vs-audio-profesional/" data-event="click_article_card" data-article="audio_ambiental_profesional">Leer artículo →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-cuantas-bocinas-necesita-un-espacio.webp" width="700" height="420" alt="Cómo saber cuántas bocinas necesita un espacio comercial o residencial" loading="lazy" decoding="async"></div>
+            <div class="article-body">
+              <span class="article-status">Próximamente</span>
+              <span class="meta">Instalación · 8 min</span>
+              <h3>Cómo saber cuántas bocinas necesita un espacio</h3>
+              <p>Una guía práctica para entender cobertura, zonas, volumen, distribución y experiencia del usuario.</p>
+              <a class="btn btn-ghost" href="/blog/cuantas-bocinas-necesita-un-espacio/" data-event="click_article_card" data-article="cantidad_bocinas">Leer artículo →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-errores-instalacion-audio-video.webp" width="700" height="420" alt="Errores comunes al instalar audio y video en hogares negocios y empresas" loading="lazy" decoding="async"></div>
+            <div class="article-body">
+              <span class="article-status">Próximamente</span>
+              <span class="meta">Planeación · 7 min</span>
+              <h3>Errores comunes al instalar audio y video</h3>
+              <p>Evita problemas de cableado, compatibilidad, potencia, mala cobertura y equipos mal elegidos.</p>
+              <a class="btn btn-ghost" href="/blog/errores-comunes-instalacion-audio-video/" data-event="click_article_card" data-article="errores_instalacion">Leer artículo →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="spaces-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Inspiración por espacio</span>
+          <h2 id="spaces-title">Elige el ambiente que quieres mejorar</h2>
+        </div>
+
+        <div class="grid-3">
+          <a class="space-card wide" href="/blog/hogares-premium/" data-event="click_blog_category" data-category="hogares_premium">
+            <img src="/assets/img/blog-inspiracion-hogares-premium.webp" width="980" height="620" alt="Inspiración de audio y video para hogares premium" loading="lazy" decoding="async">
+            <div class="space-content">
+              <span class="meta">Hogares premium</span>
+              <h3>Cine en casa, family room, terrazas y audio distribuido</h3>
+              <p>Ideas para elevar la experiencia de entretenimiento, convivencia y confort.</p>
+            </div>
+          </a>
+          <a class="space-card" href="/blog/restaurantes-bares/" data-event="click_blog_category" data-category="restaurantes_bares">
+            <img src="/assets/img/blog-inspiracion-restaurantes-bares.webp" width="700" height="420" alt="Inspiración de audio y video para restaurantes y bares" loading="lazy" decoding="async">
+            <div class="space-content">
+              <span class="meta">Restaurantes y bares</span>
+              <h3>Ambientes que se escuchan y se ven mejor</h3>
+            </div>
+          </a>
+          <a class="space-card" href="/blog/oficinas-salas-juntas/" data-event="click_blog_category" data-category="oficinas_salas_juntas">
+            <img src="/assets/img/blog-inspiracion-oficinas-salas-juntas.webp" width="700" height="420" alt="Inspiración de audio y video para oficinas y salas de juntas" loading="lazy" decoding="async">
+            <div class="space-content">
+              <span class="meta">Oficinas y salas de juntas</span>
+              <h3>Comunicación clara para decisiones importantes</h3>
+            </div>
+          </a>
+          <a class="space-card" href="/blog/gimnasios-retail/" data-event="click_blog_category" data-category="gimnasios_retail">
+            <img src="/assets/img/blog-inspiracion-gimnasios-retail.webp" width="700" height="420" alt="Inspiración de audio y video para gimnasios y retail" loading="lazy" decoding="async">
+            <div class="space-content">
+              <span class="meta">Gimnasios y retail</span>
+              <h3>Audio, pantallas y comunicación para operación diaria</h3>
+            </div>
+          </a>
+          <a class="space-card wide" href="/blog/eventos-streamers-produccion/" data-event="click_blog_category" data-category="eventos_streamers_produccion">
+            <img src="/assets/img/blog-inspiracion-eventos-streamers-produccion.webp" width="980" height="620" alt="Inspiración de audio profesional para eventos streamers y producción" loading="lazy" decoding="async">
+            <div class="space-content">
+              <span class="meta">Eventos, streamers y producción</span>
+              <h3>Sistemas listos para sonar, grabar y transmitir con más calidad</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Lo más consultado</span>
+          <h2 id="popular-title">Las dudas que más se convierten en proyectos</h2>
+        </div>
+
+        <div class="ranking">
+          <a class="rank-item" href="/blog/audio-profesional-para-restaurantes/" data-event="click_article_card" data-article="audio_restaurantes">
+            <span class="rank-number">01</span>
+            <div><h3>Cómo elegir audio profesional para restaurantes</h3><p>Ambiente, cobertura, zonas, control y experiencia del cliente.</p></div>
+            <span class="btn btn-ghost">Leer guía →</span>
+          </a>
+          <a class="rank-item" href="/blog/que-necesita-sala-de-juntas-moderna/" data-event="click_article_card" data-article="sala_juntas_moderna">
+            <span class="rank-number">02</span>
+            <div><h3>Qué necesita una sala de juntas moderna</h3><p>Audio claro, cámara, pantalla, conectividad y videoconferencia confiable.</p></div>
+            <span class="btn btn-ghost">Leer guía →</span>
+          </a>
+          <a class="rank-item" href="/blog/como-mejorar-sonido-gimnasio/" data-event="click_article_card" data-article="sonido_gimnasio">
+            <span class="rank-number">03</span>
+            <div><h3>Cómo mejorar el sonido de un gimnasio</h3><p>Potencia, resistencia, zonas, música, clases y operación diaria.</p></div>
+            <span class="btn btn-ghost">Leer guía →</span>
+          </a>
+          <a class="rank-item" href="/blog/cine-en-casa-premium-que-considerar/" data-event="click_article_card" data-article="cine_casa_premium">
+            <span class="rank-number">04</span>
+            <div><h3>Qué considerar para un cine en casa premium</h3><p>Pantalla, sonido envolvente, acústica, control, instalación y experiencia.</p></div>
+            <span class="btn btn-ghost">Leer guía →</span>
+          </a>
+          <a class="rank-item" href="/blog/elegir-sistema-sonido-eventos/" data-event="click_article_card" data-article="sonido_eventos">
+            <span class="rank-number">05</span>
+            <div><h3>Cómo elegir un sistema de sonido para eventos</h3><p>Bocinas, subwoofers, consola, microfonía, monitoreo y escalabilidad.</p></div>
+            <span class="btn btn-ghost">Leer guía →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="seo-title">
+      <div class="container">
+        <div class="editorial-band">
+          <div class="content">
+            <div class="section-head" style="margin-bottom:0;">
+              <span class="eyebrow">Aprende antes de comprar</span>
+              <h2 id="seo-title">Un buen proyecto no empieza comprando equipos</h2>
+              <p class="lead">Antes de invertir en audio y video, conviene entender el espacio, el objetivo, la cobertura, la acústica, la conectividad, la instalación y la experiencia que quieres lograr. En DG Audiosound creamos contenido para ayudarte a tomar mejores decisiones y evitar compras incorrectas.</p>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/52XXXXXXXXXX?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20proyecto%20de%20audio%20y%20video." data-event="click_whatsapp_blog" data-location="seo_block">Solicitar asesoría profesional</a>
+                <a class="btn btn-secondary" href="/soluciones/" data-event="click_related_solution" data-location="seo_block">Ver soluciones</a>
+              </div>
+            </div>
+            <ul class="check-list" aria-label="Beneficios del Journal para el usuario">
+              <li>Guías optimizadas para búsquedas reales en Google.</li>
+              <li>Contenido conectado con soluciones y aplicaciones de DG Audiosound.</li>
+              <li>Respuestas claras para tomar mejores decisiones antes de invertir.</li>
+              <li>CTAs directos a WhatsApp, formularios y páginas de solución.</li>
+              <li>Base útil para redes sociales, CRM, chatbot y ventas orgánicas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ultimos-articulos" aria-labelledby="latest-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Últimos artículos del Journal</span>
+          <h2 id="latest-title">Nuevas ideas para planear mejor tu proyecto</h2>
+        </div>
+
+        <div class="grid-3">
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-audio-profesional-para-restaurantes.webp" width="700" height="420" alt="Audio profesional para restaurantes con sonido ambiental y bocinas integradas" loading="lazy" decoding="async"></div>
+            <div class="article-body"><span class="article-status">Próximamente</span><span class="meta">Negocios · 10 May 2026 · 8 min</span><h3>Audio profesional para restaurantes: guía completa</h3><p>Cómo diseñar una experiencia sonora cómoda, clara y alineada al ambiente del restaurante.</p><a class="btn btn-ghost" href="/blog/audio-profesional-para-restaurantes/" data-event="click_article_card">Leer artículo →</a></div>
+          </article>
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-cine-en-casa-premium.webp" width="700" height="420" alt="Cine en casa premium con pantalla grande y audio envolvente" loading="lazy" decoding="async"></div>
+            <div class="article-body"><span class="article-status">Próximamente</span><span class="meta">Residencial · 10 May 2026 · 7 min</span><h3>Cine en casa premium: qué considerar antes de instalar</h3><p>Pantalla, proyector, bocinas, acústica, control y detalles que elevan la experiencia.</p><a class="btn btn-ghost" href="/blog/cine-en-casa-premium-que-considerar/" data-event="click_article_card">Leer artículo →</a></div>
+          </article>
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-sala-juntas-moderna.webp" width="700" height="420" alt="Sala de juntas moderna con pantalla audio profesional y videoconferencia" loading="lazy" decoding="async"></div>
+            <div class="article-body"><span class="article-status">Próximamente</span><span class="meta">Corporativo · 10 May 2026 · 6 min</span><h3>Qué necesita una sala de juntas moderna</h3><p>La tecnología correcta evita fallas, mejora la comunicación y facilita decisiones importantes.</p><a class="btn btn-ghost" href="/blog/que-necesita-sala-de-juntas-moderna/" data-event="click_article_card">Leer artículo →</a></div>
+          </article>
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-audio-para-gimnasios.webp" width="700" height="420" alt="Sistema de audio profesional para gimnasio con zonas y control" loading="lazy" decoding="async"></div>
+            <div class="article-body"><span class="article-status">Próximamente</span><span class="meta">Negocios · 10 May 2026 · 7 min</span><h3>Audio para gimnasios: potencia, zonas y control</h3><p>Qué considerar para música, clases, recepción, resistencia, volumen y operación diaria.</p><a class="btn btn-ghost" href="/blog/audio-para-gimnasios-potencia-zonas-control/" data-event="click_article_card">Leer artículo →</a></div>
+          </article>
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-equipo-streamers-profesionales.webp" width="700" height="420" alt="Setup profesional para streamers con micrófono cámara e iluminación" loading="lazy" decoding="async"></div>
+            <div class="article-body"><span class="article-status">Próximamente</span><span class="meta">Creadores · 10 May 2026 · 6 min</span><h3>Equipo básico para streamers profesionales</h3><p>Micrófono, cámara, iluminación, monitoreo, conectividad y experiencia de transmisión.</p><a class="btn btn-ghost" href="/blog/equipo-basico-para-streamers-profesionales/" data-event="click_article_card">Leer artículo →</a></div>
+          </article>
+          <article class="article-card">
+            <div class="thumb"><img src="/assets/img/blog-pantallas-profesionales-negocios.webp" width="700" height="420" alt="Pantallas profesionales para negocios retail restaurantes y empresas" loading="lazy" decoding="async"></div>
+            <div class="article-body"><span class="article-status">Próximamente</span><span class="meta">Video · 10 May 2026 · 5 min</span><h3>Cómo elegir pantallas profesionales para negocios</h3><p>Uso comercial, brillo, operación, ubicación, contenido, conectividad y vida útil.</p><a class="btn btn-ghost" href="/blog/como-elegir-pantallas-profesionales-para-negocios/" data-event="click_article_card">Leer artículo →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Del contenido a la solución</span>
+          <h2 id="solutions-title">Convierte la idea en un proyecto real</h2>
+          <p class="lead">Después de conocer las opciones, el siguiente paso es explorar la aplicación correcta y solicitar asesoría para tu espacio.</p>
+        </div>
+        <div class="production-note"><strong>Validación previa:</strong> confirma que estas landings existan con sus URLs finales. Si alguna todavía no está publicada, deja el enlace temporalmente a la categoría principal para no generar errores 404.</div>
+        <div class="solutions-grid" aria-label="Soluciones relacionadas de DG Audiosound">
+          <a class="solution-link" href="/soluciones/residencial-premium/" data-event="click_related_solution">Audio y video residencial</a>
+          <a class="solution-link" href="/soluciones/negocios/" data-event="click_related_solution">Soluciones para negocios</a>
+          <a class="solution-link" href="/soluciones/corporativo/" data-event="click_related_solution">Corporativo e institucional</a>
+          <a class="solution-link" href="/soluciones/eventos-produccion/" data-event="click_related_solution">Eventos y producción</a>
+          <a class="solution-link" href="/audio-video-para-restaurantes/" data-event="click_related_solution">Audio y video para restaurantes</a>
+          <a class="solution-link" href="/cine-en-casa-premium/" data-event="click_related_solution">Cine en casa premium</a>
+          <a class="solution-link" href="/audio-video-para-salas-de-juntas/" data-event="click_related_solution">Salas de juntas</a>
+          <a class="solution-link" href="/audio-para-gimnasios/" data-event="click_related_solution">Audio para gimnasios</a>
+          <a class="solution-link" href="/audio-video-para-streamers/" data-event="click_related_solution">Streamers</a>
+          <a class="solution-link" href="/sonido-para-dj-eventos/" data-event="click_related_solution">Sonido para DJ y eventos</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 id="faq-title">Dudas sobre el DG Audiosound Journal</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Para qué sirve el Blog de DG Audiosound?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>Para ayudarte a entender, comparar y elegir soluciones de audio y video antes de invertir en un proyecto residencial, comercial, corporativo o profesional.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Puedo solicitar una cotización después de leer una guía?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>Sí. Cada artículo incluye enlaces y botones para solicitar asesoría por WhatsApp o formulario.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿El Blog habla solo de productos?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>No. El enfoque principal son soluciones completas: audio, video, instalación, integración, compatibilidad, experiencia y operación.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Puedo usar estas guías para planear mi negocio?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>Sí. Las guías están pensadas para ayudarte a tomar mejores decisiones antes de comprar equipo o iniciar una instalación.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿DG Audiosound instala los sistemas que recomienda?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer"><p>Sí. DG Audiosound puede ayudarte con selección, integración, instalación y asesoría para proyectos de audio y video.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-copy">
+            <span class="eyebrow">Asesoría profesional</span>
+            <h2 id="cta-title">¿Ya tienes una idea para tu proyecto?</h2>
+            <p class="lead">Cuéntanos qué espacio quieres mejorar y te ayudamos a convertirlo en una solución real de audio, video e integración profesional.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://wa.me/52XXXXXXXXXX?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20proyecto%20de%20audio%20y%20video." data-event="click_whatsapp_blog" data-location="final_cta">Cotizar por WhatsApp</a>
+              <a class="btn btn-secondary" href="/soluciones/" data-event="click_related_solution" data-location="final_cta">Ver soluciones DG Audiosound</a>
+            </div>
+            <p style="font-size:.9rem;">Al contactarnos aceptas que usemos tus datos únicamente para responder tu solicitud. Consulta nuestro <a href="/aviso-de-privacidad/" style="color:var(--gold);">aviso de privacidad</a>.</p>
+          </div>
+          <img src="/assets/img/blog-cta-proyecto-audio-video-dg-audiosound.webp" width="900" height="720" alt="Proyecto audiovisual profesional terminado con audio video e integración DG Audiosound" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="/">DG Audiosound<span>Soluciones de audio y video para el éxito de tu proyecto</span></a>
+          <p>Diseño, selección, integración e instalación de soluciones audiovisuales para hogares, negocios, empresas, instituciones, eventos y producción.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Soluciones</h3>
+          <a href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a href="/soluciones/negocios/">Negocios</a>
+          <a href="/soluciones/corporativo/">Corporativo</a>
+          <a href="/soluciones/eventos-produccion/">Eventos y producción</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contenido</h3>
+          <a href="/blog/">Blog</a>
+          <a href="/blog/audio-profesional-para-restaurantes/">Audio para restaurantes</a>
+          <a href="/blog/cine-en-casa-premium-que-considerar/">Cine en casa</a>
+          <a href="/blog/que-necesita-sala-de-juntas-moderna/">Salas de juntas</a>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <a href="https://wa.me/52XXXXXXXXXX?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20proyecto%20de%20audio%20y%20video." data-event="click_whatsapp_blog" data-location="footer">WhatsApp</a>
+          <a href="mailto:contacto@dgaudiosound.com" data-event="click_email" data-location="footer">contacto@dgaudiosound.com</a>
+          <a href="https://www.instagram.com/dgaudiosound/" rel="noopener" data-event="click_social" data-social="instagram">Instagram</a>
+          <a href="/aviso-de-privacidad/">Aviso de privacidad</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> DG Audiosound. Todos los derechos reservados.</span>
+        <span>Audio · Video · Integración audiovisual profesional</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consentimiento de cookies">
+    <p>Usamos cookies para medir visitas, mejorar la experiencia y entender qué contenidos ayudan más a nuestros clientes. Puedes aceptar o rechazar el uso de medición. Consulta el <a href="/aviso-de-privacidad/" style="color:var(--gold);">aviso de privacidad</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary" type="button" id="rejectCookies">Rechazar</button>
+      <button class="btn btn-primary" type="button" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const WHATSAPP_PLACEHOLDER = '52XXXXXXXXXX';
+      const eventId = () => 'dg_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 10);
+      const pushEvent = (eventName, data = {}) => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: eventName, event_id: eventId(), page_type: 'blog_journal', ...data });
+      };
+
+      pushEvent('view_blog', { location: 'page_load' });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const menuButton = document.querySelector('.menu-toggle');
+      const nav = document.getElementById('mainNav');
+      if (menuButton && nav) {
+        menuButton.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('mobile-open');
+          menuButton.setAttribute('aria-expanded', String(isOpen));
+          menuButton.textContent = isOpen ? 'Cerrar' : 'Menú';
+        });
+        const closeMobileMenu = () => {
+          nav.classList.remove('mobile-open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.textContent = 'Menú';
+        };
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && nav.classList.contains('mobile-open')) {
+            closeMobileMenu();
+            menuButton.focus();
+          }
+        });
+        window.addEventListener('scroll', () => {
+          if (nav.classList.contains('mobile-open')) closeMobileMenu();
+        }, { passive: true });
+      }
+
+      document.querySelectorAll('[data-event]').forEach(el => {
+        const handler = () => {
+          const eventName = el.getAttribute('data-event');
+          pushEvent(eventName, {
+            location: el.getAttribute('data-location') || undefined,
+            category: el.getAttribute('data-category') || undefined,
+            article: el.getAttribute('data-article') || undefined,
+            social: el.getAttribute('data-social') || undefined,
+            link_url: el.href || undefined,
+            control_name: el.name || undefined,
+            control_value: el.value || undefined
+          });
+        };
+        el.addEventListener(el.matches('select,input') ? 'change' : 'click', handler);
+      });
+
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.closest('.faq-item');
+          const open = item.classList.toggle('active');
+          button.setAttribute('aria-expanded', String(open));
+          const icon = button.querySelector('span:last-child');
+          if (icon) icon.textContent = open ? '−' : '+';
+          pushEvent('faq_interaction_blog', { question: button.textContent.trim(), state: open ? 'open' : 'closed' });
+        });
+      });
+
+      const cookieBanner = document.getElementById('cookieBanner');
+      const acceptCookies = document.getElementById('acceptCookies');
+      const rejectCookies = document.getElementById('rejectCookies');
+      const consentStatus = localStorage.getItem('dg_cookie_consent');
+
+      const applyConsent = (status) => {
+        const granted = status === 'accepted';
+        gtag('consent', 'update', {
+          ad_storage: granted ? 'granted' : 'denied',
+          analytics_storage: granted ? 'granted' : 'denied',
+          ad_user_data: granted ? 'granted' : 'denied',
+          ad_personalization: granted ? 'granted' : 'denied'
+        });
+      };
+
+      const saveConsent = (status) => {
+        localStorage.setItem('dg_cookie_consent', status);
+        applyConsent(status);
+        if (cookieBanner) cookieBanner.classList.remove('active');
+        pushEvent(status === 'accepted' ? 'cookie_consent_accepted' : 'cookie_consent_rejected', { location: 'cookie_banner' });
+      };
+
+      if (!consentStatus && cookieBanner) {
+        window.setTimeout(() => cookieBanner.classList.add('active'), 900);
+      } else if (consentStatus) {
+        applyConsent(consentStatus);
+      }
+
+      if (acceptCookies) acceptCookies.addEventListener('click', () => saveConsent('accepted'));
+      if (rejectCookies) rejectCookies.addEventListener('click', () => saveConsent('rejected'));
+
+      const productionPlaceholders = [
+        { token: WHATSAPP_PLACEHOLDER, message: 'Reemplaza el placeholder de WhatsApp 52XXXXXXXXXX antes de producción.' },
+        { token: 'contacto@dgaudiosound.com', message: 'Confirma que contacto@dgaudiosound.com sea el correo definitivo.' },
+        { token: '/blog/audio-profesional/', message: 'Confirma o crea las URLs de categorías y artículos del Blog antes de indexar.' }
+      ];
+      productionPlaceholders.forEach(item => {
+        if (document.body.innerHTML.includes(item.token)) {
+          console.warn('DG Audiosound:', item.message);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

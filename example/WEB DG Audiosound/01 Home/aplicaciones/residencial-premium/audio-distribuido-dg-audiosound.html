@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GOOGLE TAG MANAGER + CONTEXTO DE MEDICIÓN -->
+  
+  <!-- CONSENT MODE / GTM: consentimiento denegado por defecto -->
+  <script>
+    window.DG_TRACKING_CONFIG = window.DG_TRACKING_CONFIG || {
+      googleTagManagerId: 'GTM-N65F3T7P',
+      ga4MeasurementId: 'G-H29S551ZJK',
+      useDirectGA4: false,
+      metaPixelId: '1977566363148263' // Usar únicamente desde GTM
+    };
+
+    window.dataLayer = window.dataLayer || [];
+
+    // Consent Mode: analítica y publicidad denegadas por defecto.
+    // GTM debe activar GA4 y Meta Pixel solo si el usuario acepta desde el banner.
+    window.dgConsentCommand = function() {
+      window.dataLayer.push(arguments);
+    };
+
+    window.dgBuildConsentState = function(status) {
+      var granted = status === 'granted';
+      return {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        personalization_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      };
+    };
+
+    var dgStoredConsent = null;
+    try {
+      dgStoredConsent = window.localStorage.getItem('dg_cookie_consent');
+    } catch (error) {
+      dgStoredConsent = null;
+    }
+
+    window.dgConsentCommand(
+      'consent',
+      'default',
+      Object.assign(
+        {},
+        window.dgBuildConsentState(dgStoredConsent === 'accepted' ? 'granted' : 'denied'),
+        { wait_for_update: 500 }
+      )
+    );
+  </script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'page_context',
+      page_type: 'landing_application',
+      brand: 'DG Audiosound',
+      parent_solution: 'residencial_premium',
+      solution_slug: 'audio_distribuido',
+      application_slug: 'audio_distribuido',
+      lead_source: 'landing_audio_distribuido'
+    });
+  </script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N65F3T7P');
+  </script>
+
+
+  <!-- =========================================================
+    LANDING SEO PARA APLICACIÓN: AUDIO DISTRIBUIDO | DG AUDIOSOUND
+    Dominio oficial: https://dgaudiosound.com
+    Basada en plantilla SEO de aplicaciones DG Audiosound.
+  ========================================================== -->
+
+  <!-- SEO BÁSICO -->
+  <title>Audio Distribuido en México | Sonido Multiroom para Casas y Negocios | DG Audiosound</title>
+  <meta name="description" content="Diseño e instalación de audio distribuido en México para casas, restaurantes, oficinas, hoteles, gimnasios y negocios. Sonido multiroom, bocinas, amplificadores, control por zonas y asesoría profesional. Cotiza por WhatsApp." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="DG Audiosound" />
+  <meta name="theme-color" content="#151515" />
+  <link rel="canonical" href="https://dgaudiosound.com/aplicaciones/audio-distribuido/" />
+  <link rel="alternate" hreflang="es-MX" href="https://dgaudiosound.com/aplicaciones/audio-distribuido/" />
+  <link rel="alternate" hreflang="x-default" href="https://dgaudiosound.com/aplicaciones/audio-distribuido/" />
+
+  <!-- OPEN GRAPH / COMPARTIR EN WHATSAPP, FACEBOOK, LINKEDIN -->
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DG Audiosound" />
+  <meta property="og:title" content="Audio Distribuido en México | DG Audiosound" />
+  <meta property="og:description" content="Integra música ambiental, sonido por zonas y control multiroom para casas, restaurantes, oficinas, hoteles y negocios." />
+  <meta property="og:url" content="https://dgaudiosound.com/aplicaciones/audio-distribuido/" />
+  <meta property="og:image" content="https://dgaudiosound.com/assets/img/audio-distribuido-dg-audiosound-og.webp" />
+  <meta property="og:image:alt" content="Sistema de audio distribuido con bocinas de plafón, control por zonas y música ambiental DG Audiosound" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- TWITTER / X CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Audio Distribuido en México | DG Audiosound" />
+  <meta name="twitter:description" content="Sistemas de sonido multiroom, música ambiental y audio por zonas para hogares y negocios." />
+  <meta name="twitter:image" content="https://dgaudiosound.com/assets/img/audio-distribuido-dg-audiosound-og.webp" />
+  <meta name="twitter:image:alt" content="Audio distribuido para casas y negocios con control por zonas DG Audiosound" />
+
+  <!-- PERFORMANCE -->
+  <link rel="preload" as="image" href="/assets/img/audio-distribuido-dg-audiosound-hero.webp" type="image/webp" fetchpriority="high" decoding="async" />
+
+  <!-- DATOS ESTRUCTURADOS JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://dgaudiosound.com/#localbusiness",
+      "name": "DG Audiosound",
+      "url": "https://dgaudiosound.com/",
+      "telephone": "+525537270177",
+      "email": "contacto@dgaudiosound.com",
+      "description": "DG Audiosound ofrece soluciones profesionales de audio y video para hogares, negocios, empresas, eventos y espacios comerciales.",
+      "slogan": "Soluciones de audio y video para el éxito de tu proyecto.",
+      "image": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "logo": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Place",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/dgaudiosound/",
+        "https://www.facebook.com/61572482057227/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+525537270177",
+        "contactType": "sales",
+        "areaServed": "MX",
+        "availableLanguage": [
+          "es-MX",
+          "es"
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-distribuido/#service",
+      "name": "Diseño e instalación de audio distribuido",
+      "serviceType": "Sistemas de sonido multiroom, música ambiental y audio por zonas",
+      "provider": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      },
+      "areaServed": [
+        "Ciudad de México",
+        "Estado de México",
+        "México"
+      ],
+      "description": "Diseño, selección, integración e instalación de sistemas de audio distribuido para hogares, restaurantes, oficinas, hoteles, gimnasios y negocios, incluyendo bocinas de plafón, bocinas de muro, amplificadores, matrices, streamers, control por zonas, cableado, configuración y asesoría profesional.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Clientes residenciales, restaurantes, hoteles, oficinas, gimnasios, retail, cafeterías, bares, spas y negocios que buscan música ambiental o sonido por zonas"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "MXN"
+        },
+        "url": "https://dgaudiosound.com/aplicaciones/audio-distribuido/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-distribuido/#webpage",
+      "url": "https://dgaudiosound.com/aplicaciones/audio-distribuido/",
+      "name": "Audio Distribuido en México | Sonido Multiroom para Casas y Negocios | DG Audiosound",
+      "description": "Diseño e instalación de audio distribuido en México para casas, restaurantes, oficinas, hoteles, gimnasios y negocios. Sonido multiroom, bocinas, amplificadores, control por zonas y asesoría profesional. Cotiza por WhatsApp.",
+      "isPartOf": {
+        "@id": "https://dgaudiosound.com/#website"
+      },
+      "about": {
+        "@id": "https://dgaudiosound.com/aplicaciones/audio-distribuido/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://dgaudiosound.com/assets/img/audio-distribuido-dg-audiosound-hero.webp"
+      },
+      "breadcrumb": {
+        "@id": "https://dgaudiosound.com/aplicaciones/audio-distribuido/#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dgaudiosound.com/#website",
+      "url": "https://dgaudiosound.com/",
+      "name": "DG Audiosound",
+      "publisher": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-distribuido/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dgaudiosound.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aplicaciones",
+          "item": "https://dgaudiosound.com/aplicaciones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Audio Distribuido",
+          "item": "https://dgaudiosound.com/aplicaciones/audio-distribuido/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-distribuido/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es un sistema de audio distribuido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una solución de sonido que permite reproducir música o audio en diferentes áreas de una casa o negocio, ya sea en una sola zona o en varias zonas independientes, con bocinas, amplificadores y controles adecuados para cada espacio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde se puede instalar audio distribuido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede instalarse en casas, departamentos, restaurantes, cafeterías, bares, hoteles, oficinas, gimnasios, spas, tiendas, salas de espera y espacios comerciales que requieren música ambiental o sonido por zonas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El audio distribuido puede controlarse por zonas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Dependiendo del sistema, se puede controlar el volumen y la fuente de audio por áreas, por ejemplo sala, terraza, cocina, restaurante, recepción, baños, gimnasio o zona VIP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué equipos se necesitan para audio distribuido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normalmente se requieren bocinas de plafón, muro o exteriores, amplificadores, procesadores, matrices o streamers, cableado, controles, soportes y configuración. La selección depende del número de zonas, tamaño del lugar y nivel de calidad deseado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede instalar audio distribuido sin afectar la estética del lugar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Existen bocinas empotrables, de plafón, de muro y soluciones discretas que permiten integrar el sonido cuidando la decoración y apariencia del espacio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo cotizar un sistema de audio distribuido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes contactar a DG Audiosound por WhatsApp y compartir fotos, medidas, número de áreas, tipo de uso, presupuesto aproximado y si buscas música ambiental, sonido más potente o control por zonas."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    :root {
+      --dg-red: #b51f24;
+      --dg-red-dark: #8f171b;
+      --dg-gold: #c8a24a;
+      --dg-gold-dark: #a77f28;
+      --dg-black: #151515;
+      --dg-gray: #6f6f6f;
+      --dg-soft-gray: #f1eee8;
+      --dg-cream: #f8f6f2;
+      --dg-white: #ffffff;
+      --dg-border: #e6e0d6;
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --shadow-strong: 0 18px 45px rgba(0, 0, 0, 0.18);
+      --radius: 18px;
+      --radius-small: 12px;
+      --max-width: 1180px;
+      --mobile-cta-height: 64px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: var(--dg-cream); color: var(--dg-black); line-height: 1.55; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    input, select, textarea, button { font: inherit; }
+    .container { width: min(100% - 40px, var(--max-width)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .section-sm { padding: 48px 0; }
+    .eyebrow { color: var(--dg-gold-dark); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 800; margin-bottom: 12px; }
+    h1, h2, h3 { line-height: 1.1; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.25rem, 5vw, 4.7rem); max-width: 900px; margin-bottom: 22px; }
+    h2 { font-size: clamp(1.75rem, 3vw, 3rem); margin-bottom: 18px; }
+    h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    p { color: #333; font-size: 1rem; }
+    .lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 840px; color: #2f2f2f; }
+
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -120px;
+      z-index: 2000;
+      background: var(--dg-black);
+      color: var(--dg-white);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: var(--shadow-strong);
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 16px; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--dg-gold);
+      outline-offset: 3px;
+    }
+    .privacy-link { color: var(--dg-gold); font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
+    .related-box {
+      margin-top: 42px;
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--dg-soft-gray);
+      border: 1px solid var(--dg-border);
+    }
+    .related-box h3 { margin-bottom: 8px; }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .related-link {
+      display: flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 12px;
+      border-radius: 999px;
+      background: var(--dg-white);
+      border: 1px solid var(--dg-border);
+      font-weight: 900;
+      color: #2d2d2d;
+      transition: 0.2s ease;
+    }
+    .related-link:hover { transform: translateY(-1px); color: var(--dg-red); box-shadow: var(--shadow-soft); }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 22px; border-radius: 999px; font-weight: 800; transition: 0.2s ease; border: 1px solid transparent; cursor: pointer; font-size: 0.95rem; }
+    .btn-primary { background: var(--dg-gold); color: var(--dg-white); box-shadow: 0 12px 24px rgba(200, 162, 74, 0.32); }
+    .btn-primary:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--dg-white); border-color: rgba(255,255,255,0.6); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    .site-header { position: sticky; top: 0; z-index: 999; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--dg-border); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; position: relative; }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 900; letter-spacing: -0.04em; color: var(--dg-black); }
+    .logo-mark { font-size: 2rem; color: var(--dg-red); line-height: 1; }
+    .logo-text { font-size: 0.95rem; letter-spacing: -0.02em; }
+    .menu { display: flex; gap: 24px; align-items: center; font-size: 0.92rem; font-weight: 700; color: #2c2c2c; }
+    .menu a:hover { color: var(--dg-red); }
+    .header-cta { padding: 10px 18px; min-height: 40px; font-size: 0.86rem; }
+    .mobile-toggle { display: none; border: 0; background: transparent; font-size: 2rem; cursor: pointer; }
+
+    .breadcrumb-wrap { background: #fff; border-bottom: 1px solid var(--dg-border); }
+    .breadcrumb { display: flex; gap: 8px; align-items: center; min-height: 42px; font-size: 0.84rem; color: var(--dg-gray); overflow-x: auto; white-space: nowrap; }
+    .breadcrumb a { color: #4b4b4b; font-weight: 700; }
+    .breadcrumb a:hover { color: var(--dg-red); }
+
+    .hero { min-height: 690px; display: grid; align-items: center; color: var(--dg-white); position: relative; overflow: hidden; background: #0d0d0d; }
+    .hero-media { position: absolute; inset: 0; z-index: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.66) 44%, rgba(0,0,0,0.20) 100%), radial-gradient(circle at 82% 18%, rgba(200,162,74,0.22), transparent 30%); }
+    .hero .container { position: relative; z-index: 2; }
+    .hero p { color: rgba(255,255,255,0.88); }
+    .hero .microcopy { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; color: rgba(255,255,255,0.85); font-size: 0.94rem; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); padding: 9px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .image-card { min-height: 380px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); position: relative; }
+    .image-card img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.45)); pointer-events: none; }
+    .highlight-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-soft); }
+    .warning-card { border-left: 5px solid var(--dg-red); }
+
+    .icon-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 34px; }
+    .mini-card { padding: 22px; background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius-small); text-align: center; }
+    .icon { width: 46px; height: 46px; display: inline-grid; place-items: center; border-radius: 50%; background: rgba(200,162,74,0.12); color: var(--dg-gold-dark); font-size: 1.35rem; margin-bottom: 14px; }
+    .mini-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .mini-card p { font-size: 0.92rem; color: var(--dg-gray); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px; }
+    .solution-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); transition: 0.2s ease; }
+    .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .card-img { height: 180px; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 24px; }
+    .card-body p { color: #4b4b4b; font-size: 0.95rem; }
+    .centered { text-align: center; max-width: 840px; margin: 0 auto; }
+    .bg-white { background: var(--dg-white); }
+    .bg-soft { background: var(--dg-soft-gray); }
+    .bg-dark { background: var(--dg-black); color: var(--dg-white); }
+    .bg-dark p, .bg-dark li { color: rgba(255,255,255,0.78); }
+    .bg-dark .mini-card { background: rgba(255,255,255,0.055); border-color: rgba(255,255,255,0.12); }
+    .bg-dark .eyebrow { color: var(--dg-gold); }
+
+    .area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+    .area-card { min-height: 170px; border-radius: var(--radius-small); overflow: hidden; position: relative; color: var(--dg-white); font-weight: 900; }
+    .area-card img { width: 100%; height: 100%; min-height: 170px; object-fit: cover; }
+    .area-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.74)); z-index: 1; }
+    .area-card span { position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 2; }
+
+    .event-banner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(200,162,74,0.35); box-shadow: var(--shadow-soft); background: var(--dg-white); }
+    .event-img img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+    .event-content { padding: 44px; display: flex; flex-direction: column; justify-content: center; }
+
+    .process { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 38px; }
+    .process-step { background: var(--dg-white); border: 1px solid var(--dg-border); padding: 24px 18px; border-radius: var(--radius-small); text-align: center; }
+    .step-number { width: 34px; height: 34px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; background: var(--dg-gold); color: var(--dg-white); font-weight: 900; }
+    .process-step h3 { font-size: 0.98rem; }
+    .process-step p { font-size: 0.86rem; color: var(--dg-gray); }
+
+    .split-dark { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+    .dark-panel { background: var(--dg-black); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .gold-panel { background: linear-gradient(135deg, var(--dg-gold), #af7c26); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .dark-panel p, .gold-panel p { color: rgba(255,255,255,0.86); }
+    .dark-panel .eyebrow, .gold-panel .eyebrow { color: #fff; }
+    .check-list { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+    .check-list li::before { content: "✓"; color: var(--dg-gold); margin-right: 9px; font-weight: 900; }
+    .gold-panel .check-list li::before { color: var(--dg-white); }
+
+    .brands-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 32px; }
+    .brand-box { min-height: 78px; border-radius: var(--radius-small); border: 1px solid var(--dg-border); background: var(--dg-white); display: grid; place-items: center; font-weight: 900; color: #2d2d2d; letter-spacing: -0.03em; text-align: center; padding: 12px; }
+
+    .faq-list { max-width: 980px; margin: 34px auto 0; display: grid; gap: 12px; }
+    .faq-item { border: 1px solid var(--dg-border); border-radius: var(--radius-small); background: var(--dg-white); overflow: hidden; }
+    .faq-question { width: 100%; border: 0; background: transparent; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 20px 22px; font-size: 1rem; font-weight: 900; cursor: pointer; color: var(--dg-black); }
+    .faq-question span:last-child { font-size: 1.3rem; color: var(--dg-gold-dark); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+    .faq-answer p { padding: 0 22px 20px; color: var(--dg-gray); }
+    .faq-item.active .faq-answer { max-height: 320px; }
+
+    .cta-final { background: var(--dg-black); color: var(--dg-white); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-columns: 1.15fr 0.85fr; box-shadow: var(--shadow-strong); }
+    .cta-content { padding: 52px; display: flex; flex-direction: column; justify-content: center; }
+    .cta-content p { color: rgba(255,255,255,0.84); }
+    .cta-media { min-height: 360px; position: relative; }
+    .cta-media img { width: 100%; height: 100%; object-fit: cover; }
+    .cta-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,21,21,0.35), rgba(21,21,21,0)); }
+    .phone { font-size: 1.6rem; font-weight: 900; color: var(--dg-gold); margin-top: 12px; }
+
+
+
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: max(14px, env(safe-area-inset-bottom));
+      z-index: 1200;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--dg-gold);
+      color: var(--dg-white);
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+      border: 1px solid rgba(255,255,255,0.22);
+      letter-spacing: -0.01em;
+    }
+
+    .contact-section { background: var(--dg-white); }
+    .contact-wrap { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 32px; align-items: stretch; }
+    .contact-info { background: linear-gradient(135deg, #171717, #262626); color: var(--dg-white); border-radius: var(--radius); padding: 44px; box-shadow: var(--shadow-strong); position: relative; overflow: hidden; }
+    .contact-info::before { content: ""; position: absolute; width: 230px; height: 230px; right: -90px; top: -90px; border-radius: 50%; background: rgba(200,162,74,0.22); }
+    .contact-info > * { position: relative; z-index: 1; }
+    .contact-info p { color: rgba(255,255,255,0.82); }
+    .contact-details { display: grid; gap: 16px; margin-top: 28px; }
+    .contact-detail { padding: 16px; border-radius: var(--radius-small); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
+    .contact-detail strong { display: block; color: var(--dg-gold); margin-bottom: 4px; font-size: 0.92rem; }
+    .contact-detail a, .contact-detail span { color: rgba(255,255,255,0.90); font-weight: 700; }
+
+    .contact-form-card { background: #111; color: var(--dg-white); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-strong); border: 1px solid rgba(200,162,74,0.25); }
+    .contact-form-card h3 { font-size: clamp(1.45rem, 2vw, 2rem); margin-bottom: 10px; }
+    .contact-form-card p { color: rgba(255,255,255,0.72); margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: grid; gap: 8px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: rgba(255,255,255,0.86); font-size: 0.9rem; font-weight: 800; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid rgba(255,255,255,0.16); background: #f8f6f2; color: #151515; border-radius: 12px; padding: 13px 14px; outline: none; transition: 0.2s ease; }
+    .form-field textarea { min-height: 132px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--dg-gold); box-shadow: 0 0 0 3px rgba(200,162,74,0.18); }
+    .form-note { font-size: 0.82rem; color: rgba(255,255,255,0.58); margin-top: 14px; }
+    .form-submit { width: 100%; margin-top: 18px; border: 0; min-height: 52px; border-radius: 999px; background: var(--dg-gold); color: #fff; font-weight: 900; cursor: pointer; transition: 0.2s ease; box-shadow: 0 14px 28px rgba(200,162,74,0.24); }
+    .form-submit:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+
+    .text-gold { color: var(--dg-gold); }
+    .bg-white .text-gold, .bg-soft .text-gold { color: var(--dg-gold-dark); }
+
+    .footer { background: #111; color: var(--dg-white); padding: 48px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); gap: 28px; }
+    .footer p, .footer a { color: rgba(255,255,255,0.74); font-size: 0.94rem; }
+    .footer h3 { color: var(--dg-white); font-size: 1rem; margin-bottom: 14px; }
+    .footer-links { display: grid; gap: 8px; }
+    .footer-links a:hover { color: var(--dg-gold); }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 36px; padding-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.86rem; text-align: center; }
+
+    @media (max-width: 980px) {
+      .menu, .header-cta { display: none; }
+      .mobile-toggle { display: block; }
+      .menu.is-open { display: grid; position: absolute; left: 20px; right: 20px; top: 78px; padding: 24px; border-radius: var(--radius); background: var(--dg-white); box-shadow: var(--shadow-strong); }
+      .hero { min-height: 640px; }
+      .two-col, .event-banner, .split-dark, .cta-final, .contact-wrap { grid-template-columns: 1fr; }
+      .icon-row, .cards-grid, .area-grid, .brands-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+
+
+    @media (max-width: 768px) {
+      body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+      .mobile-sticky-cta { display: flex; }
+      .footer { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, var(--max-width)); }
+      .section { padding: 52px 0; }
+      .hero { min-height: 720px; }
+      .btn-group { flex-direction: column; }
+      .btn { width: 100%; }
+      .icon-row, .cards-grid, .area-grid, .brands-grid, .related-grid, .process, .footer-grid { grid-template-columns: 1fr; }
+      .cta-content, .dark-panel, .gold-panel, .highlight-card, .event-content, .contact-info, .contact-form-card { padding: 28px; }
+      .nav { min-height: 68px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+  
+
+    .cookie-consent {
+      position: fixed;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1400;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      width: min(100% - 36px, 1080px);
+      margin: 0 auto;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(17, 17, 17, 0.96);
+      color: var(--dg-white);
+      border: 1px solid rgba(200, 162, 74, 0.32);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(12px);
+    }
+
+    .cookie-consent[hidden] { display: none; }
+    .cookie-consent p { color: rgba(255, 255, 255, 0.78); font-size: 0.88rem; margin: 0; }
+    .cookie-consent strong { color: var(--dg-white); }
+    .cookie-consent a { color: var(--dg-gold); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+    .cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+
+    .cookie-button, .footer-cookie-button {
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      background: transparent;
+      color: var(--dg-white);
+      transition: 0.2s ease;
+    }
+
+    .cookie-button:hover, .footer-cookie-button:hover { background: rgba(255,255,255,0.10); }
+    .cookie-button.accept { background: var(--dg-gold); border-color: var(--dg-gold); color: var(--dg-white); }
+    .cookie-button.accept:hover { background: var(--dg-gold-dark); border-color: var(--dg-gold-dark); }
+    .footer-cookie-preferences { text-align: center; margin-top: 14px; }
+    .footer-cookie-button { color: rgba(255,255,255,0.78); font-size: 0.86rem; padding: 8px 14px; }
+
+    @media (max-width: 760px) {
+      .cookie-consent {
+        grid-template-columns: 1fr;
+        bottom: calc(78px + env(safe-area-inset-bottom));
+        padding: 16px;
+      }
+      .cookie-actions { justify-content: stretch; }
+      .cookie-button { flex: 1; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N65F3T7P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="cookie-consent" id="cookieConsentBanner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+    <div>
+      <p><strong>Privacidad y medición.</strong> Usamos cookies y tecnologías de medición para mejorar el sitio, analizar visitas y optimizar campañas. Puedes aceptar o rechazar el uso de analítica y publicidad. Consulta nuestro <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>.</p>
+    </div>
+    <div class="cookie-actions" aria-label="Acciones de consentimiento">
+      <button class="cookie-button reject" type="button" id="rejectCookies">Rechazar</button>
+      <button class="cookie-button accept" type="button" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="DG Audiosound inicio">
+        <span class="logo-mark">DG</span>
+        <span class="logo-text">AUDIOSOUND</span>
+      </a>
+
+      <nav class="menu" id="mainMenu" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/soluciones/">Soluciones</a>
+        <a href="/aplicaciones/">Aplicaciones</a>
+        <a href="/blog/">Blog</a>
+        <a href="/marcas/">Marcas</a>
+        <a href="/tienda/">Tienda</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20audio%20distribuido.%20Puedo%20enviar%20fotos%2C%20medidas%20y%20n%C3%BAmero%20de%20zonas%20del%20proyecto." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenu">☰</button>
+    </div>
+  </header>
+
+  <div class="breadcrumb-wrap" aria-label="Ruta de navegación">
+    <div class="container breadcrumb">
+      <a href="/">Inicio</a>
+      <span>›</span>
+      <a href="/aplicaciones/">Aplicaciones</a>
+      <span>›</span>
+      <span>Audio Distribuido</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <!-- 1. HERO ESPECÍFICO -->
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <img src="/assets/img/audio-distribuido-dg-audiosound-hero.webp" alt="" width="1920" height="1080" fetchpriority="high" />
+      </div>
+      <div class="container">
+        <div class="eyebrow">Aplicaciones: Audio Distribuido</div>
+        <h1><span class="text-gold">Audio distribuido</span> para llevar música, ambiente y control a cada zona de tu casa o negocio.</h1>
+        <p class="lead">Diseñamos e instalamos sistemas de sonido multiroom y audio por zonas para hogares, restaurantes, oficinas, hoteles, gimnasios, cafeterías, bares y espacios comerciales.</p>
+        <p class="lead" style="margin-top:16px;">En DG Audiosound integramos bocinas, amplificadores, streamers, matrices, cableado y control por zonas para que cada área tenga el sonido correcto, con una operación sencilla y una instalación estética.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20distribuido.%20Tengo%20varias%20zonas%20y%20puedo%20enviar%20fotos%20y%20medidas." target="_blank" rel="noopener">Cotizar audio distribuido</a>
+          <a class="btn btn-secondary" href="#soluciones">Ver soluciones</a>
+        </div>
+        <div class="microcopy">
+          <span class="pill">✦ Música ambiental</span>
+          <span class="pill">✦ Control por zonas</span>
+          <span class="pill">✦ Bocinas de plafón</span>
+          <span class="pill">✦ Sonido multiroom</span>
+          <span class="pill">✦ Instalación profesional</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. APERTURA EMOCIONAL / CONTEXTO -->
+    <section class="section bg-white">
+      <div class="container two-col">
+        <div>
+          <div class="eyebrow">Sonido que acompaña la experiencia</div>
+          <h2>El audio distribuido crea <span class="text-gold">ambiente</span>, comodidad y presencia sin saturar el espacio.</h2>
+          <p>Un sistema de audio distribuido permite que la música llegue de forma uniforme a diferentes áreas, sin depender de una sola bocina fuerte, cables improvisados o equipos aislados. El objetivo es que el sonido se sienta natural, agradable y bien integrado al lugar.</p>
+          <p style="margin-top:16px;">En una casa puede conectar sala, cocina, terraza y recámaras. En un negocio puede crear ambiente en comedor, recepción, pasillos, baños, terraza, zona VIP o áreas de atención. Cada zona puede tener el volumen y la función adecuada.</p>
+        </div>
+        <figure class="image-card">
+          <img src="/assets/img/sistema-audio-distribuido-casa-negocio-dg-audiosound.webp" alt="Sistema de audio distribuido para casa y negocio con bocinas discretas y control por zonas DG Audiosound" width="900" height="620" loading="lazy" decoding="async" fetchpriority="low" />
+        </figure>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">★</div><h3>Ambiente premium</h3><p>Música uniforme y agradable para mejorar la experiencia del lugar.</p></div>
+        <div class="mini-card"><div class="icon">⏱</div><h3>Uso práctico</h3><p>Control sencillo para reproducir música o ajustar volumen por zona.</p></div>
+        <div class="mini-card"><div class="icon">↗</div><h3>Escalable</h3><p>Puede iniciar con pocas zonas y crecer conforme evolucione el proyecto.</p></div>
+        <div class="mini-card"><div class="icon">⚙</div><h3>Integración estética</h3><p>Bocinas discretas, cableado planeado y equipos organizados.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. PROBLEMA PUNTUAL DEL SECTOR -->
+    <section class="section bg-soft">
+      <div class="container two-col">
+        <div class="highlight-card warning-card">
+          <div class="eyebrow">El problema</div>
+          <h2>Cuando el sonido no está distribuido, el ambiente se vuelve irregular y poco profesional.</h2>
+          <p>En muchos espacios se intenta cubrir todo con una bocina demasiado fuerte en una sola zona. Esto provoca áreas con volumen excesivo, otras sin claridad, música molesta para conversar, cables visibles o equipos difíciles de operar.</p>
+          <p style="margin-top:16px;">El audio distribuido resuelve esto al repartir el sonido de forma inteligente. Con la selección correcta de bocinas, amplificación y control, cada área recibe el nivel de audio adecuado para su función.</p>
+        </div>
+        <div class="icon-row" style="grid-template-columns: repeat(2, 1fr); margin-top:0;">
+          <div class="mini-card"><div class="icon">🔊</div><h3>Volumen disparejo</h3><p>Algunas zonas suenan demasiado fuerte y otras casi no se escuchan.</p></div>
+          <div class="mini-card"><div class="icon">📺</div><h3>Equipos aislados</h3><p>Bocinas sueltas o sistemas improvisados dificultan la operación diaria.</p></div>
+          <div class="mini-card"><div class="icon">💡</div><h3>Mala experiencia</h3><p>El sonido puede cansar, distraer o afectar la conversación del cliente o la familia.</p></div>
+          <div class="mini-card"><div class="icon">🧩</div><h3>Sin control por zonas</h3><p>No todas las áreas necesitan la misma música, volumen o fuente de audio.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. QUÉ HACEMOS -->
+    <section class="section bg-white">
+      <div class="container centered">
+        <div class="eyebrow">Qué hacemos</div>
+        <h2>Diseñamos audio distribuido profesional para que cada zona suene como debe.</h2>
+        <p class="lead">Analizamos el espacio, el tipo de uso y el nivel de experiencia que buscas para definir zonas, bocinas, amplificación, fuentes de audio, cableado, controles y configuración.</p>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">🎚</div><h3>Control por zonas</h3><p>Volumen y reproducción adaptados por área según el sistema elegido.</p></div>
+        <div class="mini-card"><div class="icon">🖥</div><h3>Fuentes de audio</h3><p>Streaming, reproductores, TV, sistemas comerciales o fuentes específicas del cliente.</p></div>
+        <div class="mini-card"><div class="icon">💡</div><h3>Diseño discreto</h3><p>Bocinas de plafón, muro, exteriores o soluciones visibles según el estilo del lugar.</p></div>
+        <div class="mini-card"><div class="icon">📍</div><h3>Mapa de cobertura</h3><p>Planeamos cuántas bocinas requiere cada zona y dónde conviene ubicarlas.</p></div>
+      </div>
+    </section>
+
+    <!-- 4B. QUÉ INCLUYE LA SOLUCIÓN -->
+    <section class="section bg-soft" id="incluye">
+      <div class="container centered">
+        <div class="eyebrow">Qué incluye la solución</div>
+        <h2>Una solución completa de audio distribuido, no solo bocinas sueltas.</h2>
+        <p class="lead">Te ayudamos a definir el alcance correcto para que el sistema suene bien, sea fácil de operar y quede integrado de forma limpia en tu casa, negocio o espacio comercial.</p>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">📐</div><h3>Diseño de zonas</h3><p>Definimos áreas, cobertura, niveles de volumen y necesidades reales de cada espacio.</p></div>
+        <div class="mini-card"><div class="icon">🔈</div><h3>Selección de bocinas</h3><p>Recomendamos plafón, muro, exteriores o soluciones visibles según estética y desempeño.</p></div>
+        <div class="mini-card"><div class="icon">🎛</div><h3>Amplificación y control</h3><p>Integramos amplificadores, streamers, matrices o procesadores según el número de zonas.</p></div>
+        <div class="mini-card"><div class="icon">🔌</div><h3>Cableado e instalación</h3><p>Planeamos rutas, conexiones y montaje cuidando orden, seguridad y apariencia del lugar.</p></div>
+        <div class="mini-card"><div class="icon">✅</div><h3>Configuración y pruebas</h3><p>Ajustamos fuentes, volumen, operación y funcionamiento antes de entregar el sistema.</p></div>
+        <div class="mini-card"><div class="icon">🤝</div><h3>Capacitación y soporte</h3><p>Te explicamos el uso básico y dejamos una operación clara para el día a día.</p></div>
+      </div>
+    </section>
+
+    <!-- 5. SOLUCIONES ESPECÍFICAS -->
+    <section class="section bg-white" id="soluciones">
+      <div class="container centered">
+        <div class="eyebrow">Qué soluciones vendemos</div>
+        <h2>Audio distribuido para diferentes espacios y necesidades.</h2>
+        <p class="lead">La solución puede ser residencial, comercial o corporativa. Lo importante es lograr cobertura, calidad, control y facilidad de uso.</p>
+      </div>
+      <div class="container cards-grid">
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/audio-multiroom-residencial-dg-audiosound.webp" alt="Audio multiroom residencial para sala cocina terraza y recámaras DG Audiosound" width="700" height="420" loading="lazy" decoding="async" fetchpriority="low" /></div><div class="card-body"><h3>Audio multiroom residencial</h3><p>Música en sala, cocina, terraza, recámaras, jardín o área social con control cómodo y sonido elegante.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/musica-ambiental-restaurantes-dg-audiosound.webp" alt="Música ambiental para restaurantes con audio distribuido DG Audiosound" width="700" height="420" loading="lazy" decoding="async" fetchpriority="low" /></div><div class="card-body"><h3>Música ambiental para negocios</h3><p>Audio agradable para restaurantes, cafeterías, tiendas, hoteles, spas y salas de espera sin saturar el ambiente.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/bocinas-plafon-audio-distribuido-dg-audiosound.webp" alt="Bocinas de plafón para sistema de audio distribuido DG Audiosound" width="700" height="420" loading="lazy" decoding="async" fetchpriority="low" /></div><div class="card-body"><h3>Bocinas de plafón y muro</h3><p>Soluciones discretas para integrar sonido sin afectar la decoración ni invadir visualmente el espacio.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/audio-zonas-terraza-jardin-dg-audiosound.webp" alt="Audio por zonas para terraza jardín y exteriores DG Audiosound" width="700" height="420" loading="lazy" decoding="async" fetchpriority="low" /></div><div class="card-body"><h3>Audio para terrazas y exteriores</h3><p>Sistemas para áreas abiertas, terrazas techadas, jardines o zonas sociales con bocinas adecuadas al entorno.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/amplificadores-matrices-audio-distribuido-dg-audiosound.webp" alt="Amplificadores matrices y streamers para audio distribuido DG Audiosound" width="700" height="420" loading="lazy" decoding="async" fetchpriority="low" /></div><div class="card-body"><h3>Amplificación y matrices</h3><p>Equipos centrales para alimentar múltiples zonas, organizar fuentes y mantener operación estable.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/control-audio-por-zonas-dg-audiosound.webp" alt="Control de audio por zonas para casa y negocio DG Audiosound" width="700" height="420" loading="lazy" decoding="async" fetchpriority="low" /></div><div class="card-body"><h3>Control y operación</h3><p>Configuración para que el sistema sea fácil de usar, con volumen por zona y fuentes de audio según el alcance.</p></div></article>
+      </div>
+    </section>
+
+    <!-- 6. BENEFICIOS COMERCIALES -->
+    <section class="section bg-dark">
+      <div class="container centered">
+        <div class="eyebrow">Beneficios</div>
+        <h2>Audio que mejora la experiencia del cliente, la comodidad del hogar y la operación del espacio.</h2>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">★</div><h3>Mejor ambiente</h3><p>La música correcta hace que el espacio se sienta más cómodo, elegante y profesional.</p></div>
+        <div class="mini-card"><div class="icon">⏳</div><h3>Menos complicaciones</h3><p>Un sistema bien diseñado evita equipos improvisados, fallas y operación confusa.</p></div>
+        <div class="mini-card"><div class="icon">🎭</div><h3>Experiencia consistente</h3><p>Cada zona recibe sonido adecuado sin depender de una sola bocina a volumen alto.</p></div>
+        <div class="mini-card"><div class="icon">⚙</div><h3>Control eficiente</h3><p>Permite gestionar volumen, áreas y fuentes de audio con una lógica práctica.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. ÁREAS DONDE SE APLICA -->
+    <section class="section bg-white" id="aplicaciones">
+      <div class="container centered">
+        <div class="eyebrow">Áreas de aplicación</div>
+        <h2>Espacios ideales para audio distribuido.</h2>
+        <p class="lead">Una solución de sonido por zonas puede adaptarse a proyectos residenciales, comerciales y corporativos con diferentes niveles de cobertura y control.</p>
+      </div>
+      <div class="container area-grid">
+        <div class="area-card"><img src="/assets/img/audio-distribuido-casas-residencial-dg-audiosound.webp" alt="Audio distribuido en casas y residencias premium DG Audiosound" width="620" height="380" loading="lazy" decoding="async" fetchpriority="low" /><span>Casas y residencias</span></div>
+        <div class="area-card"><img src="/assets/img/audio-distribuido-restaurantes-cafeterias-dg-audiosound.webp" alt="Audio distribuido para restaurantes y cafeterías DG Audiosound" width="620" height="380" loading="lazy" decoding="async" fetchpriority="low" /><span>Restaurantes y cafeterías</span></div>
+        <div class="area-card"><img src="/assets/img/audio-distribuido-hoteles-dg-audiosound.webp" alt="Audio distribuido para hoteles y áreas comunes DG Audiosound" width="620" height="380" loading="lazy" decoding="async" fetchpriority="low" /><span>Hoteles</span></div>
+        <div class="area-card"><img src="/assets/img/audio-distribuido-oficinas-dg-audiosound.webp" alt="Audio distribuido para oficinas y corporativos DG Audiosound" width="620" height="380" loading="lazy" decoding="async" fetchpriority="low" /><span>Oficinas</span></div>
+        <div class="area-card"><img src="/assets/img/audio-distribuido-gimnasios-dg-audiosound.webp" alt="Audio distribuido para gimnasios y estudios fitness DG Audiosound" width="620" height="380" loading="lazy" decoding="async" fetchpriority="low" /><span>Gimnasios</span></div>
+        <div class="area-card"><img src="/assets/img/audio-distribuido-retail-tiendas-dg-audiosound.webp" alt="Audio distribuido para retail tiendas y espacios comerciales DG Audiosound" width="620" height="380" loading="lazy" decoding="async" fetchpriority="low" /><span>Retail y tiendas</span></div>
+      </div>
+      <div class="container related-box" aria-label="Aplicaciones y soluciones relacionadas">
+        <h3>Aplicaciones relacionadas y soluciones pilar</h3>
+        <p>El audio distribuido puede formar parte de un proyecto residencial, comercial o corporativo más amplio. También puedes revisar estas soluciones relacionadas.</p>
+        <div class="related-grid">
+          <a class="related-link" href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a class="related-link" href="/soluciones/negocios-y-experiencias-comerciales/">Negocios Comerciales</a>
+          <a class="related-link" href="/aplicaciones/terrazas-y-jardin/">Terrazas y Jardín</a>
+          <a class="related-link" href="/aplicaciones/audio-y-video-para-restaurantes/">Restaurantes</a>
+          <a class="related-link" href="/aplicaciones/audio-y-video-para-hoteles/">Hoteles</a>
+          <a class="related-link" href="/aplicaciones/audio-y-video-para-retail/">Retail</a>
+          <a class="related-link" href="/aplicaciones/cine-en-casa/">Cine en Casa</a>
+          <a class="related-link" href="/aplicaciones/audio-hi-fi/">Audio Hi-Fi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECCIÓN ESPECIAL DEL SECTOR -->
+    <section class="section-sm bg-soft">
+      <div class="container event-banner">
+        <div class="event-img"><img src="/assets/img/audio-distribuido-control-por-zonas-dg-audiosound.webp" alt="Control por zonas para sistema de audio distribuido en casa o negocio DG Audiosound" width="980" height="620" loading="lazy" decoding="async" fetchpriority="low" /></div>
+        <div class="event-content">
+          <div class="eyebrow">Control por zonas</div>
+          <h2>Cada área puede tener una función sonora diferente.</h2>
+          <p>No siempre se necesita el mismo volumen en todo el lugar. Una terraza, comedor, recepción, pasillo, sala, cocina o zona VIP pueden requerir niveles distintos. Con audio distribuido, el sistema se planea para que cada espacio tenga el sonido adecuado.</p>
+          <div class="btn-group"><a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20un%20sistema%20de%20audio%20por%20zonas.%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa." target="_blank" rel="noopener">Diseñar mis zonas de audio</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. PROCESO -->
+    <section class="section bg-white" id="proceso">
+      <div class="container centered"><div class="eyebrow">Proceso</div><h2>Un proceso claro para una solución profesional</h2></div>
+      <div class="container process">
+        <div class="process-step"><div class="step-number">1</div><h3>Nos contactas</h3><p>Nos escribes por WhatsApp y nos compartes qué áreas quieres sonorizar.</p></div>
+        <div class="process-step"><div class="step-number">2</div><h3>Revisamos el espacio</h3><p>Analizamos medidas, fotos, techos, muros, mobiliario y tipo de uso.</p></div>
+        <div class="process-step"><div class="step-number">3</div><h3>Definimos zonas</h3><p>Separamos áreas, volumen, fuentes y necesidades de cobertura sonora.</p></div>
+        <div class="process-step"><div class="step-number">4</div><h3>Propuesta clara</h3><p>Te entregamos alcance, equipos, tiempos e inversión.</p></div>
+        <div class="process-step"><div class="step-number">5</div><h3>Instalamos</h3><p>Montaje, conexión, pruebas, ajustes y puesta en marcha.</p></div>
+        <div class="process-step"><div class="step-number">6</div><h3>Te capacitamos</h3><p>Explicamos el uso básico para una operación sencilla.</p></div>
+      </div>
+    </section>
+
+    <!-- 10. DIFERENCIADOR Y CONFIANZA -->
+    <section class="section bg-soft">
+      <div class="container split-dark">
+        <div class="dark-panel">
+          <div class="eyebrow">Diferenciador</div>
+          <h2>No instalamos bocinas al azar: diseñamos cobertura sonora.</h2>
+          <p>La calidad del audio distribuido depende de la planeación. No basta con colocar muchas bocinas; hay que elegir el tipo correcto, definir la potencia necesaria, ubicar cada punto estratégicamente y organizar la operación del sistema.</p>
+          <p style="margin-top:16px;">En DG Audiosound buscamos que el sonido se integre al espacio de forma estética, funcional y confiable, ya sea para una casa, un restaurante, una oficina o un negocio con varias áreas.</p>
+        </div>
+        <div class="gold-panel">
+          <div class="eyebrow" style="color:#fff;">Confianza</div>
+          <h2>Una decisión profesional para tu espacio</h2>
+          <ul class="check-list">
+            <li>Asesoría personalizada</li>
+            <li>Propuesta formal</li>
+            <li>Equipos originales</li>
+            <li>Instalación profesional</li>
+            <li>Integración estética</li>
+            <li>Capacitación básica de uso</li>
+            <li>Acompañamiento técnico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. MARCAS -->
+    <section class="section bg-white">
+      <div class="container centered">
+        <div class="eyebrow">Marcas y tecnología</div>
+        <h2>Integramos tecnología de audio para soluciones confiables y escalables.</h2>
+        <p class="lead">Según el proyecto, podemos recomendar bocinas, amplificadores, streamers, matrices, procesadores y sistemas de control adecuados para el número de zonas y nivel de experiencia buscado.</p>
+      </div>
+      <div class="container brands-grid" aria-label="Marcas y categorías recomendadas para audio distribuido">
+        <div class="brand-box">Sonos</div><div class="brand-box">KEF</div><div class="brand-box">NAD</div><div class="brand-box">Biamp</div><div class="brand-box">QSC</div>
+        <div class="brand-box">Kramer</div><div class="brand-box">Bocinas de plafón</div><div class="brand-box">Amplificadores</div><div class="brand-box">Streamers</div><div class="brand-box">Control por zonas</div>
+      </div>
+    </section>
+
+    <!-- 12. FAQ -->
+    <section class="section bg-soft" id="faq">
+      <div class="container centered"><div class="eyebrow">FAQ</div><h2>Preguntas frecuentes sobre audio distribuido</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué es un sistema de audio distribuido?</span><span>+</span></button><div class="faq-answer"><p>Es una solución de sonido que permite reproducir música o audio en diferentes áreas de una casa o negocio, ya sea en una sola zona o en varias zonas independientes, con bocinas, amplificadores y controles adecuados para cada espacio.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Dónde se puede instalar audio distribuido?</span><span>+</span></button><div class="faq-answer"><p>Puede instalarse en casas, departamentos, restaurantes, cafeterías, bares, hoteles, oficinas, gimnasios, spas, tiendas, salas de espera y espacios comerciales que requieren música ambiental o sonido por zonas.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿El audio distribuido puede controlarse por zonas?</span><span>+</span></button><div class="faq-answer"><p>Sí. Dependiendo del sistema, se puede controlar el volumen y la fuente de audio por áreas, por ejemplo sala, terraza, cocina, restaurante, recepción, baños, gimnasio o zona VIP.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué equipos se necesitan para audio distribuido?</span><span>+</span></button><div class="faq-answer"><p>Normalmente se requieren bocinas de plafón, muro o exteriores, amplificadores, procesadores, matrices o streamers, cableado, controles, soportes y configuración. La selección depende del número de zonas, tamaño del lugar y nivel de calidad deseado.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Se puede instalar audio distribuido sin afectar la estética del lugar?</span><span>+</span></button><div class="faq-answer"><p>Sí. Existen bocinas empotrables, de plafón, de muro y soluciones discretas que permiten integrar el sonido cuidando la decoración y apariencia del espacio.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Cómo puedo cotizar un sistema de audio distribuido?</span><span>+</span></button><div class="faq-answer"><p>Puedes contactar a DG Audiosound por WhatsApp y compartir fotos, medidas, número de áreas, tipo de uso, presupuesto aproximado y si buscas música ambiental, sonido más potente o control por zonas.</p></div></div>
+      </div>
+    </section>
+
+    <!-- 13. CTA FINAL -->
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-wrap">
+        <div class="contact-info">
+          <div class="eyebrow">Cotiza tu proyecto</div>
+          <h2>Diseñemos un sistema de <span class="text-gold">audio distribuido</span> para tu casa o negocio</h2>
+          <p>Comparte fotos, medidas, número de áreas, tipo de uso y nivel de sonido esperado. Con esa información podremos orientarte mejor por WhatsApp.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail"><strong>Teléfono / WhatsApp</strong><a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20sistema%20de%20audio%20distribuido." target="_blank" rel="noopener">55 3727 0177</a></div>
+            <div class="contact-detail"><strong>Correo</strong><a href="mailto:contacto@dgaudiosound.com">contacto@dgaudiosound.com</a></div>
+            <div class="contact-detail"><strong>Ubicación / cobertura</strong><span>Ciudad de México, Estado de México y proyectos especiales en México</span></div>
+          </div>
+
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20audio%20distribuido.%20Puedo%20enviar%20fotos%2C%20medidas%20y%20n%C3%BAmero%20de%20zonas%20del%20proyecto." target="_blank" rel="noopener">Enviar WhatsApp ahora</a>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>Solicita una cotización</h3>
+          <p>Cuéntanos cuántas zonas necesitas, qué tipo de espacio tienes y si buscas música ambiental, audio multiroom o control por áreas.</p>
+
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="form-field"><label for="name">Nombre / Empresa *</label><input type="text" id="name" name="name" placeholder="Ej. Nombre, empresa o proyecto" autocomplete="name" required /></div>
+              <div class="form-field"><label for="email">Correo Electrónico *</label><input type="email" id="email" name="email" placeholder="correo@empresa.com" autocomplete="email" required /></div>
+              <div class="form-field"><label for="phone">Teléfono / WhatsApp</label><input type="tel" id="phone" name="phone" placeholder="55 0000 0000" autocomplete="tel" /></div>
+              <div class="form-field">
+                <label for="projectType">Tipo de Proyecto</label>
+                <select id="projectType" name="projectType" autocomplete="off">
+                  <option value="Audio distribuido residencial">Audio distribuido residencial</option>
+                  <option value="Música ambiental para negocio">Música ambiental para negocio</option>
+                  <option value="Restaurante / cafetería">Restaurante / cafetería</option>
+                  <option value="Oficinas / corporativo">Oficinas / corporativo</option>
+                  <option value="Hotel / amenidades">Hotel / amenidades</option>
+                  <option value="Gimnasio / retail">Gimnasio / retail</option>
+                  <option value="Terraza / jardín">Terraza / jardín</option>
+                  <option value="Control por zonas">Control por zonas</option>
+                  <option value="Mejora de sistema existente">Mejora de sistema existente</option>
+                  <option value="Otro proyecto">Otro proyecto</option>
+                </select>
+              </div>
+              <div class="form-field full"><label for="details">Detalles del proyecto</label><textarea id="details" name="details" autocomplete="off" placeholder="Cuéntanos número de zonas, tamaño del lugar, si es casa o negocio, si requieres bocinas de plafón/muro/exterior, control por zonas, presupuesto aproximado y fotos o medidas disponibles."></textarea></div>
+            </div>
+
+            <button class="form-submit" type="submit">Solicitar Cotización</button>
+            <div class="form-note">Al enviar, se abrirá WhatsApp con tu información para que un asesor de DG Audiosound pueda atenderte. Consulta nuestro <a class="privacy-link" href="/aviso-de-privacidad/">aviso de privacidad</a>. No compartimos tus datos personales con plataformas de medición.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="/" class="logo" style="color:#fff; margin-bottom:14px; display:inline-flex;"><span class="logo-mark">DG</span><span class="logo-text">AUDIOSOUND</span></a>
+        <p>Soluciones de audio y video para el éxito de tu proyecto.</p>
+      </div>
+      <div>
+        <h3>Soluciones</h3>
+        <div class="footer-links">
+          <a href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a href="/soluciones/negocios-y-experiencias-comerciales/">Negocios y experiencias comerciales</a>
+          <a href="/soluciones/corporativo-e-institucional/">Corporativo e institucional</a>
+          <a href="/soluciones/eventos-creadores-y-produccion/">Eventos, creadores y producción</a>
+        </div>
+      </div>
+      <div>
+        <h3>Aplicaciones relacionadas</h3>
+        <div class="footer-links">
+          <a href="/aplicaciones/cine-en-casa/">Cine en Casa</a>
+          <a href="/aplicaciones/audio-hi-fi/">Audio Hi‑Fi</a>
+          <a href="/aplicaciones/family-room/">Family Room</a>
+          <a href="/aplicaciones/home-office/">Home Office</a>
+          <a href="/aplicaciones/terrazas-y-jardin/">Terrazas y Jardín</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <div class="footer-links">
+          <a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20un%20sistema%20de%20audio%20distribuido." target="_blank" rel="noopener">WhatsApp: 55 3727 0177</a>
+          <a href="mailto:contacto@dgaudiosound.com">contacto@dgaudiosound.com</a>
+          <a href="https://www.instagram.com/dgaudiosound/" target="_blank" rel="noopener">Instagram: @dgaudiosound</a>
+          <a href="https://www.facebook.com/61572482057227/" target="_blank" rel="noopener">Facebook: DG Audiosound</a>
+          <a href="/aviso-de-privacidad/">Aviso de privacidad</a>
+          <a href="/terminos-y-condiciones/">Términos y condiciones</a>
+          <a href="/garantias-y-devoluciones/">Garantías y devoluciones</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright">© 2026 DG Audiosound. Todos los derechos reservados.</div>
+
+    <div class="container footer-cookie-preferences">
+      <button class="footer-cookie-button" type="button" id="openCookiePreferences">Preferencias de cookies</button>
+    </div>
+
+  </footer>
+
+  <a class="mobile-sticky-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20audio%20distribuido.%20Puedo%20enviar%20fotos%2C%20medidas%20y%20n%C3%BAmero%20de%20zonas%20del%20proyecto." target="_blank" rel="noopener" aria-label="Cotizar Audio Distribuido por WhatsApp con DG Audiosound">
+    Cotizar por WhatsApp
+  </a>
+
+  <script>
+    (function () {
+      const PAGE_CONTEXT = {
+        page_type: 'landing_application',
+        brand: 'DG Audiosound',
+        parent_solution: 'residencial_premium',
+        solution_slug: 'audio_distribuido',
+        application_slug: 'audio_distribuido',
+        lead_source: 'landing_audio_distribuido'
+      };
+
+      window.dataLayer = window.dataLayer || [];
+
+      function normalizeValue(value) {
+        return String(value || '')
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '')
+          .slice(0, 80);
+      }
+
+      function createEventId(eventName) {
+        const randomPart = Math.random().toString(36).slice(2, 10);
+        return ['dg', normalizeValue(eventName), Date.now(), randomPart].join('_');
+      }
+
+      function getPageSection(element) {
+        const section = element.closest('section, header, footer');
+        if (!section) return 'page';
+        if (section.id) return normalizeValue(section.id);
+        if (section.classList.contains('site-header')) return 'header';
+        if (section.classList.contains('footer')) return 'footer';
+        if (section.classList.contains('hero')) return 'hero';
+        return normalizeValue(section.className || 'section');
+      }
+
+      function getLinkText(element) {
+        return String(element.textContent || element.getAttribute('aria-label') || 'link')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, 90);
+      }
+
+      function pushDGEvent(eventName, params) {
+        window.dataLayer.push(Object.assign({}, PAGE_CONTEXT, params || {}, {
+          event: eventName,
+          event_id: createEventId(eventName)
+        }));
+      }
+
+      window.dgTrack = pushDGEvent;
+
+      const mobileToggle = document.getElementById('mobileToggle');
+      const mainMenu = document.getElementById('mainMenu');
+
+      if (mobileToggle && mainMenu) {
+        mobileToggle.addEventListener('click', function () {
+          const isOpen = mainMenu.classList.toggle('is-open');
+          mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          mobileToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && mainMenu.classList.contains('is-open')) {
+            mainMenu.classList.remove('is-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', 'Abrir menú');
+            mobileToggle.focus();
+          }
+        });
+
+        mainMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (mainMenu.classList.contains('is-open')) {
+              mainMenu.classList.remove('is-open');
+              mobileToggle.setAttribute('aria-expanded', 'false');
+              mobileToggle.setAttribute('aria-label', 'Abrir menú');
+            }
+          });
+        });
+      }
+
+      document.querySelectorAll('.faq-item').forEach(function (item, index) {
+        const button = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        if (!button || !answer) return;
+
+        const answerId = 'faq-audio-distribuido-' + (index + 1);
+        answer.id = answerId;
+        answer.setAttribute('role', 'region');
+        answer.setAttribute('aria-labelledby', 'faq-question-audio-distribuido-' + (index + 1));
+        button.id = 'faq-question-audio-distribuido-' + (index + 1);
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-controls', answerId);
+
+        button.addEventListener('click', function () {
+          const expanded = item.classList.toggle('active');
+          button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+          const symbol = button.querySelector('span:last-child');
+          if (symbol) {
+            symbol.textContent = expanded ? '−' : '+';
+          }
+
+          if (expanded) {
+            pushDGEvent('open_faq', {
+              page_section: 'faq',
+              link_text: getLinkText(button),
+              cta_intent: 'resolver_duda',
+              destination_type: 'faq'
+            });
+          }
+        });
+      });
+
+      document.querySelectorAll('a[href]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const href = link.getAttribute('href') || '';
+          const absoluteHref = link.href || href;
+          const pageSection = getPageSection(link);
+          const linkText = getLinkText(link);
+          const commonParams = {
+            page_section: pageSection,
+            link_text: linkText
+          };
+
+          if (absoluteHref.includes('wa.me/525537270177')) {
+            const whatsappParams = Object.assign({}, commonParams, {
+              destination_type: 'whatsapp',
+              contact_method: 'whatsapp',
+              conversion_type: 'contact',
+              cta_intent: 'cotizar_audio_distribuido'
+            });
+
+            pushDGEvent('click_whatsapp', whatsappParams);
+
+            if (link.classList.contains('btn') || link.classList.contains('mobile-sticky-cta')) {
+              pushDGEvent('click_quote_cta', Object.assign({}, whatsappParams, {
+                conversion_type: 'quote_request'
+              }));
+            }
+
+            if (pageSection === 'contacto') {
+              pushDGEvent('click_final_cta', Object.assign({}, whatsappParams, {
+                conversion_type: 'final_contact'
+              }));
+            }
+            return;
+          }
+
+          if (href.startsWith('mailto:')) {
+            pushDGEvent('click_email', Object.assign({}, commonParams, {
+              destination_type: 'email',
+              contact_method: 'email',
+              conversion_type: 'contact'
+            }));
+            return;
+          }
+
+          if (href.startsWith('tel:')) {
+            pushDGEvent('click_phone', Object.assign({}, commonParams, {
+              destination_type: 'phone',
+              contact_method: 'phone',
+              conversion_type: 'contact'
+            }));
+            return;
+          }
+
+          if (absoluteHref.includes('instagram.com') || absoluteHref.includes('facebook.com')) {
+            pushDGEvent('click_social', Object.assign({}, commonParams, {
+              destination_type: 'social',
+              social_network: absoluteHref.includes('instagram.com') ? 'instagram' : 'facebook'
+            }));
+            return;
+          }
+
+          if (href.includes('/tienda/')) {
+            pushDGEvent('click_store', Object.assign({}, commonParams, {
+              destination_type: 'store',
+              cta_intent: 'visitar_tienda'
+            }));
+            return;
+          }
+
+          if (href.includes('/soluciones/')) {
+            pushDGEvent('click_parent_solution', Object.assign({}, commonParams, {
+              destination_type: 'internal_link',
+              cta_intent: 'ver_solucion_pilar',
+              parent_solution: normalizeValue(linkText)
+            }));
+            return;
+          }
+
+          if (href.includes('/aplicaciones/') && !href.includes('/audio-distribuido/')) {
+            pushDGEvent('click_related_application', Object.assign({}, commonParams, {
+              destination_type: 'internal_link',
+              cta_intent: 'ver_aplicacion_relacionada',
+              related_application: normalizeValue(linkText)
+            }));
+            return;
+          }
+
+          if (href === '#soluciones' || href === '#incluye') {
+            pushDGEvent('select_solution', Object.assign({}, commonParams, {
+              destination_type: 'section_anchor',
+              cta_intent: 'explorar_solucion'
+            }));
+          }
+        });
+      });
+
+      document.querySelectorAll('.solution-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          const title = card.querySelector('h3');
+          pushDGEvent('select_solution', {
+            page_section: 'soluciones',
+            link_text: title ? getLinkText(title) : 'solucion_audio_distribuido',
+            destination_type: 'content_card',
+            cta_intent: 'explorar_tipo_de_solucion'
+          });
+        });
+      });
+
+      document.querySelectorAll('.area-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          const title = card.querySelector('span');
+          pushDGEvent('select_application', {
+            page_section: 'aplicaciones',
+            link_text: title ? getLinkText(title) : 'area_audio_distribuido',
+            destination_type: 'content_card',
+            cta_intent: 'explorar_area_de_aplicacion'
+          });
+        });
+      });
+
+      const quoteForm = document.getElementById('quoteForm');
+
+      if (quoteForm) {
+        let formStarted = false;
+
+        quoteForm.querySelectorAll('input, select, textarea').forEach(function (field) {
+          field.addEventListener('input', function () {
+            if (formStarted) return;
+            formStarted = true;
+            pushDGEvent('form_start', {
+              page_section: 'contacto',
+              destination_type: 'form',
+              cta_intent: 'solicitar_cotizacion',
+              conversion_type: 'lead'
+            });
+          }, { once: true });
+        });
+
+        quoteForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const projectType = document.getElementById('projectType').value;
+          const details = document.getElementById('details').value.trim();
+
+          if (!quoteForm.checkValidity()) {
+            quoteForm.reportValidity();
+            return;
+          }
+
+          pushDGEvent('generate_lead', {
+            page_section: 'contacto',
+            destination_type: 'whatsapp',
+            contact_method: 'whatsapp',
+            conversion_type: 'lead',
+            cta_intent: 'solicitar_cotizacion_audio_distribuido',
+            project_type: normalizeValue(projectType)
+          });
+
+          const message =
+            'Hola DG Audiosound, quiero solicitar una cotización para sistema de audio distribuido.%0A%0A' +
+            'Nombre / Empresa: ' + encodeURIComponent(name) + '%0A' +
+            'Correo: ' + encodeURIComponent(email) + '%0A' +
+            'Teléfono / WhatsApp: ' + encodeURIComponent(phone || 'No especificado') + '%0A' +
+            'Tipo de proyecto: ' + encodeURIComponent(projectType) + '%0A' +
+            'Detalles: ' + encodeURIComponent(details || 'No especificado');
+
+          window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
+        });
+      }
+    })();
+  </script>
+
+
+  <script>
+    (function() {
+      const cookieBanner = document.getElementById('cookieConsentBanner');
+      const acceptCookies = document.getElementById('acceptCookies');
+      const rejectCookies = document.getElementById('rejectCookies');
+      const openCookiePreferences = document.getElementById('openCookiePreferences');
+
+      function getStoredConsent() {
+        try {
+          return window.localStorage.getItem('dg_cookie_consent');
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function saveStoredConsent(value) {
+        try {
+          window.localStorage.setItem('dg_cookie_consent', value);
+        } catch (error) {
+          // Si localStorage no está disponible, solo actualizamos el consentimiento en la sesión actual.
+        }
+      }
+
+      function updateDGConsent(consentValue, source) {
+        const accepted = consentValue === 'accepted';
+        if (typeof window.dgConsentCommand === 'function' && typeof window.dgBuildConsentState === 'function') {
+          window.dgConsentCommand(
+            'consent',
+            'update',
+            window.dgBuildConsentState(accepted ? 'granted' : 'denied')
+          );
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: accepted ? 'cookie_consent_accepted' : 'cookie_consent_rejected',
+          consent_status: consentValue,
+          consent_source: source || 'cookie_banner'
+        });
+      }
+
+      function showCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.hidden = false;
+        cookieBanner.classList.add('is-visible');
+      }
+
+      function hideCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.remove('is-visible');
+        cookieBanner.hidden = true;
+      }
+
+      function setConsent(choice, source) {
+        saveStoredConsent(choice);
+        updateDGConsent(choice, source);
+        hideCookieBanner();
+      }
+
+      if (acceptCookies) {
+        acceptCookies.addEventListener('click', function() {
+          setConsent('accepted', 'cookie_banner');
+        });
+      }
+
+      if (rejectCookies) {
+        rejectCookies.addEventListener('click', function() {
+          setConsent('rejected', 'cookie_banner');
+        });
+      }
+
+      if (openCookiePreferences) {
+        openCookiePreferences.addEventListener('click', function() {
+          showCookieBanner();
+        });
+      }
+
+      const storedConsent = getStoredConsent();
+      if (storedConsent !== 'accepted' && storedConsent !== 'rejected') {
+        showCookieBanner();
+      }
+    })();
+  </script>
+
+</body>
+</html>

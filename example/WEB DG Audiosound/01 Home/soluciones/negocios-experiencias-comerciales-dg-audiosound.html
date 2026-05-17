@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <!-- CONSENT MODE: denegado por defecto para analítica y publicidad -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    window.dgConsentCommand = function() {
+      window.dataLayer.push(arguments);
+    };
+
+    window.dgBuildConsentState = function(status) {
+      var granted = status === 'granted';
+      return {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        personalization_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      };
+    };
+
+    var dgStoredConsent = null;
+    try {
+      dgStoredConsent = window.localStorage.getItem('dg_cookie_consent');
+    } catch (error) {
+      dgStoredConsent = null;
+    }
+
+    window.dgConsentCommand(
+      'consent',
+      'default',
+      Object.assign(
+        {},
+        window.dgBuildConsentState(dgStoredConsent === 'accepted' ? 'granted' : 'denied'),
+        { wait_for_update: 500 }
+      )
+    );
+  </script>
+
+  <!-- GOOGLE TAG MANAGER
+    GA4 (G-H29S551ZJK) y Meta Pixel (1977566363148263) deben configurarse desde GTM
+    para evitar duplicar mediciones en el HTML.
+  -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "page_context",
+      page_type: "solution_landing",
+      page_category: "negocios_y_experiencias_comerciales",
+      solution_slug: "negocios-y-experiencias-comerciales",
+      lead_source: "landing_negocios_experiencias_comerciales",
+      business_name: "DG Audiosound",
+      content_language: "es-MX"
+    });
+  </script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N65F3T7P');
+  </script>
+
+  <!-- =========================================================
+    LANDING PILAR DE SOLUCIÓN: NEGOCIOS Y EXPERIENCIAS COMERCIALES | DG AUDIOSOUND
+    Dominio oficial: https://dgaudiosound.com
+    URL canónica: https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/
+
+    Objetivo de esta página:
+    Responder qué soluciones vendemos para negocios, comercios y espacios de experiencia,
+    y enlazar hacia landings específicas de aplicación cuando aplique.
+  ========================================================== -->
+
+  <!-- SEO BÁSICO -->
+  <title>Audio y Video para Negocios | DG Audiosound</title>
+  <meta name="description" content="Audio y video profesional para negocios en México. Música ambiental, pantallas, audio distribuido, restaurantes, bares, gimnasios, retail, barberías y..." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="DG Audiosound" />
+  <meta name="theme-color" content="#151515" />
+  <link rel="canonical" href="https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/" />
+  <link rel="alternate" hreflang="es-MX" href="https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/" />
+  <link rel="alternate" hreflang="x-default" href="https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/" />
+
+  <!-- OPEN GRAPH / COMPARTIR EN WHATSAPP, FACEBOOK, LINKEDIN -->
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DG Audiosound" />
+  <meta property="og:title" content="Audio y Video para Negocios | Experiencias Comerciales | DG Audiosound" />
+  <meta property="og:description" content="Diseñamos soluciones de audio y video para negocios: música ambiental, pantallas, audio distribuido, restaurantes, bares y antros, gimnasios, retail, barberías y cafeterías." />
+  <meta property="og:url" content="https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/" />
+  <meta property="og:image" content="https://dgaudiosound.com/assets/img/negocios-experiencias-comerciales-dg-audiosound-og.webp" />
+  <meta property="og:image:alt" content="Soluciones de audio y video para negocios, restaurantes, bares, antros, gimnasios, retail, barberías y cafeterías DG Audiosound" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- TWITTER / X CARD -->
+  <meta name="twitter:site" content="@dgaudiosound" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Audio y Video para Negocios | DG Audiosound" />
+  <meta name="twitter:description" content="Soluciones de música ambiental, audio distribuido, pantallas, proyección y experiencias comerciales para restaurantes, bares, gimnasios, retail, barberías y cafeterías." />
+  <meta name="twitter:image" content="https://dgaudiosound.com/assets/img/negocios-experiencias-comerciales-dg-audiosound-og.webp" />
+  <meta name="twitter:image:alt" content="Audio y video profesional para negocios y experiencias comerciales DG Audiosound" />
+
+  <!-- PERFORMANCE -->
+  <link rel="preload" as="image" href="/assets/img/negocios-experiencias-comerciales-dg-audiosound-hero.webp" type="image/webp" />
+
+  <!-- DATOS ESTRUCTURADOS JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://dgaudiosound.com/#localbusiness",
+      "name": "DG Audiosound",
+      "url": "https://dgaudiosound.com/",
+      "telephone": "+525537270177",
+      "description": "DG Audiosound ofrece soluciones profesionales de audio y video para hogares, negocios, empresas, eventos y espacios comerciales.",
+      "slogan": "Soluciones de audio y video para el éxito de tu proyecto.",
+      "image": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "logo": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Place",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/dgaudiosound/",
+        "https://www.facebook.com/61572482057227/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+525537270177",
+        "contactType": "sales",
+        "areaServed": "MX",
+        "availableLanguage": [
+          "es-MX",
+          "es"
+        ]
+      },
+      "email": "contacto@dgaudiosound.com"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/#service",
+      "name": "Soluciones de audio y video para negocios y experiencias comerciales",
+      "serviceType": "Audio ambiental, audio distribuido, video, pantallas, proyección, señalización digital, sistemas para restaurantes, bares y antros, gimnasios, retail, barberías y cafeterías",
+      "provider": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      },
+      "areaServed": [
+        "Ciudad de México",
+        "Estado de México",
+        "México"
+      ],
+      "description": "Diseño, selección, integración e instalación de soluciones de audio y video para negocios y experiencias comerciales, incluyendo música ambiental, audio distribuido, bocinas, amplificadores, pantallas, proyectores, videowalls, señalización digital, sistemas para restaurantes, bares y antros, gimnasios, retail, barberías, cafeterías, terrazas comerciales y espacios de atención al cliente.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Restaurantes, bares y antros, gimnasios, retail, barberías, cafeterías, terrazas comerciales, negocios locales y empresas que desean mejorar la experiencia del cliente con audio y video"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Soluciones para negocios y experiencias comerciales DG Audiosound",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para restaurantes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio, video e iluminación para bares y antros"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio para gimnasios"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para retail y tiendas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para barberías"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para cafeterías"
+            }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "MXN"
+        },
+        "url": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/#webpage",
+      "url": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/",
+      "name": "Audio y Video para Negocios en México | Experiencias Comerciales | DG Audiosound",
+      "description": "Audio y video profesional para negocios en México. Música ambiental, pantallas, audio distribuido, restaurantes, bares, gimnasios, retail, barberías y cafeterías con instalación DG Audiosound.",
+      "isPartOf": {
+        "@id": "https://dgaudiosound.com/#website"
+      },
+      "about": {
+        "@id": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://dgaudiosound.com/assets/img/negocios-experiencias-comerciales-dg-audiosound-hero.webp"
+      },
+      "breadcrumb": {
+        "@id": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dgaudiosound.com/#website",
+      "url": "https://dgaudiosound.com/",
+      "name": "DG Audiosound",
+      "publisher": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dgaudiosound.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Soluciones",
+          "item": "https://dgaudiosound.com/soluciones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Negocios y Experiencias Comerciales",
+          "item": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dgaudiosound.com/soluciones/negocios-y-experiencias-comerciales/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué soluciones de audio y video ofrece DG Audiosound para negocios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DG Audiosound ofrece música ambiental, audio distribuido, bocinas, amplificadores, pantallas, proyectores, videowalls, señalización digital, sistemas para restaurantes, bares, gimnasios, hoteles, retail, oficinas, terrazas comerciales, salas de espera y espacios de atención al cliente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué un negocio necesita una solución profesional de audio y video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque el audio y video influyen en la experiencia del cliente, el ambiente, la permanencia, la comunicación, la percepción de marca y la operación diaria. Una solución improvisada puede generar sonido molesto, mala cobertura, pantallas mal ubicadas o equipos difíciles de operar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden instalar música ambiental por zonas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Se pueden diseñar sistemas de audio distribuido con control por zonas para comedor, terraza, recepción, baños, gimnasio, tienda, sala de espera, áreas VIP u oficinas, según el tipo de negocio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿También instalan pantallas o proyectores para negocios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. DG Audiosound puede integrar pantallas, proyectores, videowalls o soluciones de visualización para menús digitales, eventos deportivos, publicidad, salas de juntas, capacitaciones o entretenimiento de clientes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué datos necesitan para cotizar una solución para mi negocio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ayudan las medidas del lugar, fotos, tipo de negocio, número de zonas, uso principal, presupuesto aproximado, si se requiere audio, video o ambos, horarios de operación, nivel de volumen esperado y si ya existen equipos instalados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La instalación puede hacerse cuidando la estética del negocio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El objetivo es integrar audio y video de forma limpia, segura y estética, cuidando ubicación de bocinas, cableado, soportes, racks, pantallas, visibilidad y facilidad de operación."
+          }
+        }
+      ]
+    }
+  ],
+  "dateModified": "2026-05-10",
+  "datePublished": "2025-01-01",
+  "author": {
+    "@type": "Organization",
+    "name": "DG Audiosound",
+    "url": "https://dgaudiosound.com/"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.4326",
+    "longitude": "-99.1332"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "15:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+  </script>
+
+  <style>
+    :root {
+      --dg-red: #b51f24;
+      --dg-red-dark: #8f171b;
+      --dg-gold: #c8a24a;
+      --dg-gold-dark: #a77f28;
+      --dg-black: #151515;
+      --dg-gray: #6f6f6f;
+      --dg-soft-gray: #f1eee8;
+      --dg-cream: #f8f6f2;
+      --dg-white: #ffffff;
+      --dg-border: #e6e0d6;
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --shadow-strong: 0 18px 45px rgba(0, 0, 0, 0.18);
+      --radius: 18px;
+      --radius-small: 12px;
+      --max-width: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: var(--dg-cream); color: var(--dg-black); line-height: 1.55; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .skip-link { position: absolute; left: 16px; top: -80px; z-index: 2000; background: var(--dg-black); color: var(--dg-white); padding: 10px 14px; border-radius: 10px; font-weight: 800; transition: top 0.2s ease; }
+    .skip-link:focus { top: 16px; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(200,162,74,0.85); outline-offset: 3px; }
+    .container { width: min(100% - 40px, var(--max-width)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .section-sm { padding: 48px 0; }
+    .eyebrow { color: var(--dg-gold-dark); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 800; margin-bottom: 12px; }
+    h1, h2, h3 { line-height: 1.1; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.25rem, 5vw, 4.7rem); max-width: 980px; margin-bottom: 22px; }
+    h2 { font-size: clamp(1.75rem, 3vw, 3rem); margin-bottom: 18px; }
+    h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    p { color: #333; font-size: 1rem; }
+    .lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 880px; color: #2f2f2f; }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 22px; border-radius: 999px; font-weight: 800; transition: 0.2s ease; border: 1px solid transparent; cursor: pointer; font-size: 0.95rem; }
+    .btn-primary { background: var(--dg-gold); color: var(--dg-white); box-shadow: 0 12px 24px rgba(200, 162, 74, 0.32); }
+    .btn-primary:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--dg-white); border-color: rgba(255,255,255,0.6); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    .site-header { position: sticky; top: 0; z-index: 999; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--dg-border); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; position: relative; }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 900; letter-spacing: -0.04em; color: var(--dg-black); }
+    .logo-mark { font-size: 2rem; color: var(--dg-red); line-height: 1; }
+    .logo-text { font-size: 0.95rem; letter-spacing: -0.02em; }
+    .menu { display: flex; gap: 24px; align-items: center; font-size: 0.92rem; font-weight: 700; color: #2c2c2c; }
+    .menu a:hover { color: var(--dg-red); }
+    .header-cta { padding: 10px 18px; min-height: 40px; font-size: 0.86rem; }
+    .mobile-toggle { display: none; border: 0; background: transparent; font-size: 2rem; cursor: pointer; }
+
+    .breadcrumb-wrap { background: #fff; border-bottom: 1px solid var(--dg-border); }
+    .breadcrumb { display: flex; gap: 8px; align-items: center; min-height: 42px; font-size: 0.84rem; color: var(--dg-gray); overflow-x: auto; white-space: nowrap; }
+    .breadcrumb a { color: #4b4b4b; font-weight: 700; }
+    .breadcrumb a:hover { color: var(--dg-red); }
+
+    .hero { min-height: 720px; display: grid; align-items: center; color: var(--dg-white); position: relative; overflow: hidden; background: #0d0d0d; }
+    .hero-media { position: absolute; inset: 0; z-index: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.70) 48%, rgba(0,0,0,0.22) 100%), radial-gradient(circle at 82% 18%, rgba(200,162,74,0.24), transparent 30%); }
+    .hero .container { position: relative; z-index: 2; }
+    .hero p { color: rgba(255,255,255,0.88); }
+    .hero .microcopy { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; color: rgba(255,255,255,0.85); font-size: 0.94rem; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); padding: 9px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .image-card { min-height: 380px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); position: relative; }
+    .image-card img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.45)); pointer-events: none; }
+    .highlight-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-soft); }
+    .warning-card { border-left: 5px solid var(--dg-red); }
+
+    .icon-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 34px; }
+    .mini-card { padding: 22px; background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius-small); text-align: center; }
+    .icon { width: 46px; height: 46px; display: inline-grid; place-items: center; border-radius: 50%; background: rgba(200,162,74,0.12); color: var(--dg-gold-dark); font-size: 1.35rem; margin-bottom: 14px; }
+    .mini-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .mini-card p { font-size: 0.92rem; color: var(--dg-gray); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px; }
+    .solution-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); transition: 0.2s ease; }
+    .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .card-img { height: 190px; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 24px; }
+    .card-body p { color: #4b4b4b; font-size: 0.95rem; }
+    .card-link { display: inline-flex; margin-top: 16px; font-weight: 900; color: var(--dg-red); font-size: 0.94rem; }
+
+    .centered { text-align: center; max-width: 880px; margin: 0 auto; }
+    .bg-white { background: var(--dg-white); }
+    .bg-soft { background: var(--dg-soft-gray); }
+    .bg-dark { background: var(--dg-black); color: var(--dg-white); }
+    .bg-dark p, .bg-dark li { color: rgba(255,255,255,0.78); }
+    .bg-dark .mini-card { background: rgba(255,255,255,0.055); border-color: rgba(255,255,255,0.12); }
+    .bg-dark .eyebrow { color: var(--dg-gold); }
+
+    .systems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+    .system-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-soft); }
+    .system-card h3 { color: var(--dg-black); }
+    .system-card ul { margin-top: 14px; padding-left: 18px; color: var(--dg-gray); display: grid; gap: 7px; }
+    .system-card li { color: var(--dg-gray); font-size: 0.95rem; }
+
+    .process { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 38px; }
+    .process-step { background: var(--dg-white); border: 1px solid var(--dg-border); padding: 24px 18px; border-radius: var(--radius-small); text-align: center; }
+    .step-number { width: 34px; height: 34px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; background: var(--dg-gold); color: var(--dg-white); font-weight: 900; }
+    .process-step h3 { font-size: 0.98rem; }
+    .process-step p { font-size: 0.86rem; color: var(--dg-gray); }
+
+    .split-dark { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+    .dark-panel { background: var(--dg-black); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .gold-panel { background: linear-gradient(135deg, var(--dg-gold), #af7c26); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .dark-panel p, .gold-panel p { color: rgba(255,255,255,0.86); }
+    .dark-panel .eyebrow, .gold-panel .eyebrow { color: #fff; }
+    .check-list { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+    .check-list li::before { content: "✓"; color: var(--dg-gold); margin-right: 9px; font-weight: 900; }
+    .gold-panel .check-list li::before { color: var(--dg-white); }
+
+    .brands-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 32px; }
+    .brand-box { min-height: 78px; border-radius: var(--radius-small); border: 1px solid var(--dg-border); background: var(--dg-white); display: grid; place-items: center; font-weight: 900; color: #2d2d2d; letter-spacing: -0.03em; text-align: center; padding: 12px; }
+
+    .faq-list { max-width: 980px; margin: 34px auto 0; display: grid; gap: 12px; }
+    .faq-item { border: 1px solid var(--dg-border); border-radius: var(--radius-small); background: var(--dg-white); overflow: hidden; }
+    .faq-question { width: 100%; border: 0; background: transparent; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 20px 22px; font-size: 1rem; font-weight: 900; cursor: pointer; color: var(--dg-black); }
+    .faq-question span:last-child { font-size: 1.3rem; color: var(--dg-gold-dark); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+    .faq-answer p { padding: 0 22px 20px; color: var(--dg-gray); }
+    .faq-item.active .faq-answer { max-height: 340px; }
+
+    .cta-final { background: var(--dg-black); color: var(--dg-white); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-columns: 1.15fr 0.85fr; box-shadow: var(--shadow-strong); }
+    .cta-content { padding: 52px; display: flex; flex-direction: column; justify-content: center; }
+    .cta-content p { color: rgba(255,255,255,0.84); }
+    .cta-media { min-height: 360px; position: relative; }
+    .cta-media img { width: 100%; height: 100%; object-fit: cover; }
+    .cta-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,21,21,0.35), rgba(21,21,21,0)); }
+    .phone { font-size: 1.6rem; font-weight: 900; color: var(--dg-gold); margin-top: 12px; }
+
+    .footer { background: #111; color: var(--dg-white); padding: 48px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.15fr repeat(4, 1fr); gap: 28px; }
+    .footer p, .footer a { color: rgba(255,255,255,0.74); font-size: 0.94rem; }
+    .footer h3 { color: var(--dg-white); font-size: 1rem; margin-bottom: 14px; }
+    .footer-links { display: grid; gap: 8px; }
+    .footer a:hover { color: var(--dg-gold); }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 36px; padding-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.86rem; text-align: center; }
+
+    @media (max-width: 980px) {
+      .menu, .header-cta { display: none; }
+      .mobile-toggle { display: block; }
+      .menu.is-open { display: grid; position: absolute; left: 20px; right: 20px; top: 78px; padding: 24px; border-radius: var(--radius); background: var(--dg-white); box-shadow: var(--shadow-strong); }
+      .hero { min-height: 660px; }
+      .two-col, .split-dark, .cta-final { grid-template-columns: 1fr; }
+      .icon-row, .cards-grid, .systems-grid, .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, var(--max-width)); }
+      .section { padding: 52px 0; }
+      .hero { min-height: 800px; }
+      .btn-group { flex-direction: column; }
+      .btn { width: 100%; }
+      .icon-row, .cards-grid, .systems-grid, .brands-grid, .process, .footer-grid { grid-template-columns: 1fr; }
+      .cta-content, .dark-panel, .gold-panel, .highlight-card, .system-card { padding: 28px; }
+      .nav { min-height: 68px; }
+    }
+  
+    input, select, textarea, button { font: inherit; }
+
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: max(14px, env(safe-area-inset-bottom));
+      z-index: 1200;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--dg-gold);
+      color: var(--dg-white);
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+      border: 1px solid rgba(255,255,255,0.22);
+      letter-spacing: -0.01em;
+    }
+    .mobile-sticky-cta:hover { background: var(--dg-gold-dark); }
+
+    .contact-section { background: var(--dg-white); }
+    .contact-wrap { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 32px; align-items: stretch; }
+    .contact-info { background: linear-gradient(135deg, #171717, #262626); color: var(--dg-white); border-radius: var(--radius); padding: 44px; box-shadow: var(--shadow-strong); position: relative; overflow: hidden; }
+    .contact-info::before { content: ""; position: absolute; width: 230px; height: 230px; right: -90px; top: -90px; border-radius: 50%; background: rgba(200,162,74,0.22); }
+    .contact-info > * { position: relative; z-index: 1; }
+    .contact-info p { color: rgba(255,255,255,0.82); }
+    .contact-details { display: grid; gap: 16px; margin-top: 28px; }
+    .contact-detail { padding: 16px; border-radius: var(--radius-small); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
+    .contact-detail strong { display: block; color: var(--dg-gold); margin-bottom: 4px; font-size: 0.92rem; }
+    .contact-detail a, .contact-detail span { color: rgba(255,255,255,0.90); font-weight: 700; }
+
+    .contact-form-card { background: #111; color: var(--dg-white); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-strong); border: 1px solid rgba(200,162,74,0.25); }
+    .contact-form-card h3 { font-size: clamp(1.45rem, 2vw, 2rem); margin-bottom: 10px; }
+    .contact-form-card p { color: rgba(255,255,255,0.72); margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: grid; gap: 8px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: rgba(255,255,255,0.86); font-size: 0.9rem; font-weight: 800; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid rgba(255,255,255,0.16); background: #f8f6f2; color: #151515; border-radius: 12px; padding: 13px 14px; outline: none; transition: 0.2s ease; }
+    .form-field textarea { min-height: 132px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--dg-gold); box-shadow: 0 0 0 3px rgba(200,162,74,0.18); }
+    .form-note { font-size: 0.82rem; color: rgba(255,255,255,0.58); margin-top: 14px; }
+    .form-submit { width: 100%; margin-top: 18px; border: 0; min-height: 52px; border-radius: 999px; background: var(--dg-gold); color: #fff; font-weight: 900; cursor: pointer; transition: 0.2s ease; box-shadow: 0 14px 28px rgba(200,162,74,0.24); }
+    .form-submit:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+
+    .text-gold { color: var(--dg-gold); }
+    .bg-white .text-gold, .bg-soft .text-gold { color: var(--dg-gold-dark); }
+
+
+    @media (max-width: 768px) {
+      body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+      .mobile-sticky-cta { display: flex; }
+      .hero { min-height: 620px; }
+      .hero-media::after { background: linear-gradient(180deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.68) 56%, rgba(0,0,0,0.34) 100%); }
+      .hero .microcopy { gap: 10px; margin-top: 22px; }
+      .pill { padding: 8px 12px; font-size: 0.86rem; }
+      .lead { font-size: 1rem; }
+      .footer { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+      .btn:hover, .solution-card:hover { transform: none; }
+    }
+
+  
+  /* GPU layer hints para elementos animados */
+  .card, .solution-card, .app-card, .brand-card, .step-card, .faq-item,
+  .btn, .btn-primary, .btn-secondary, .btn-wa, .cta-btn, .service-card,
+  .feature-card, .audience-card, .offer-card { will-change: transform; }
+
+
+    .cookie-consent {
+      position: fixed;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      color: var(--dg-white);
+      background: rgba(11, 11, 13, 0.96);
+      border: 1px solid rgba(200, 162, 74, 0.35);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(14px);
+    }
+
+    .cookie-consent.is-visible { display: flex; }
+
+    .cookie-consent p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .cookie-consent strong {
+      display: block;
+      color: var(--dg-white);
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .cookie-consent a {
+      color: var(--dg-gold);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .cookie-button {
+      min-height: 40px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--dg-white);
+      cursor: pointer;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .cookie-button:hover {
+      transform: translateY(-1px);
+      border-color: var(--dg-gold);
+    }
+
+    .cookie-button.accept {
+      background: var(--dg-gold);
+      border-color: var(--dg-gold);
+      color: var(--dg-black);
+    }
+
+    .cookie-button.accept:hover {
+      background: var(--dg-gold-dark);
+      border-color: var(--dg-gold-dark);
+      color: var(--dg-white);
+    }
+
+    .footer-cookie-button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: rgba(255,255,255,0.74);
+      font: inherit;
+      font-size: 0.94rem;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .footer-cookie-button:hover { color: var(--dg-gold); }
+
+    @media (max-width: 760px) {
+      .cookie-consent {
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cookie-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+  </style>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N65F3T7P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="cookie-consent" id="cookieConsentBanner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+    <div>
+      <strong>Privacidad y medición</strong>
+      <p>Usamos cookies y tecnologías de medición para mejorar el sitio, analizar visitas y optimizar campañas. Puedes aceptar o rechazar el uso de analítica y publicidad. Consulta nuestro <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>.</p>
+    </div>
+    <div class="cookie-actions" aria-label="Acciones de consentimiento">
+      <button class="cookie-button reject" type="button" id="rejectCookies">Rechazar</button>
+      <button class="cookie-button accept" type="button" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="DG Audiosound inicio">
+        <span class="logo-mark">DG</span>
+        <span class="logo-text">AUDIOSOUND</span>
+      </a>
+
+      <nav class="menu" id="mainMenu" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/soluciones/negocios-y-experiencias-comerciales/">Solución</a>
+        <a href="/aplicaciones/">Aplicaciones</a>
+        <a href="/blog/">Blog</a>
+        <a href="/marcas/">Marcas</a>
+        <a href="/tienda/" data-destination-type="store">Tienda</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20audio%20y%20video%20para%20mi%20negocio." target="_blank" rel="noopener" data-page-section="header" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="negocios_y_experiencias_comerciales" data-quote-cta="true">Cotizar por WhatsApp</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-controls="mainMenu" aria-expanded="false" type="button">☰</button>
+    </div>
+  </header>
+
+  <div class="breadcrumb-wrap" aria-label="Ruta de navegación">
+    <div class="container breadcrumb">
+      <a href="/">Inicio</a>
+      <span>›</span>
+      <a href="/soluciones/">Soluciones</a>
+      <span>›</span>
+      <span>Negocios y Experiencias Comerciales</span>
+    </div>
+  </div>
+
+  <main id="contenido-principal">
+    <!-- 1. HERO PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <img loading="lazy" src="/assets/img/negocios-experiencias-comerciales-dg-audiosound-hero.webp" alt="Negocios Experiencias Comerciales Dg Audiosound Hero | DG Audiosound" width="1920" height="1080" fetchpriority="high" decoding="async" />
+      </div>
+      <div class="container">
+        <div class="eyebrow">Soluciones: Negocios y Experiencias Comerciales</div>
+        <h1>Soluciones de audio y video para negocios que quieren crear <span class="text-gold">mejores experiencias</span> para sus clientes.</h1>
+        <p class="lead">Diseñamos e integramos sistemas profesionales para restaurantes, bares y antros, gimnasios, retail, barberías, cafeterías, terrazas comerciales, salas de espera y espacios de atención al cliente.</p>
+        <p class="lead" style="margin-top:16px;">En DG Audiosound convertimos el audio y video en parte de la experiencia comercial: música ambiental, pantallas, audio distribuido, proyección, señalización digital, videoconferencia y sistemas fáciles de operar para negocios en CDMX, Estado de México y proyectos comerciales en México.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20audio%20y%20video%20para%20mi%20negocio.%20Puedo%20enviar%20fotos%20y%20medidas%20del%20espacio." target="_blank" rel="noopener" data-page-section="hero" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="negocios_y_experiencias_comerciales" data-quote-cta="true">Cotizar solución para mi negocio</a>
+          <a class="btn btn-secondary" href="#sistemas">Ver qué soluciones vendemos</a>
+        </div>
+        <div class="microcopy">
+          <span class="pill">✦ Música ambiental</span>
+          <span class="pill">✦ Audio distribuido</span>
+          <span class="pill">✦ Pantallas y proyección</span>
+          <span class="pill">✦ Restaurantes y cafeterías</span>
+          <span class="pill">✦ Bares, gimnasios y retail</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROBLEMA QUE RESUELVE -->
+    <section class="section bg-white" id="problema">
+      <div class="container two-col">
+        <div class="highlight-card warning-card">
+          <div class="eyebrow">El problema que resolvemos</div>
+          <h2>Un negocio con mal audio o mala imagen puede perder <span class="text-gold">ambiente, claridad y percepción de marca</span>.</h2>
+          <p>Muchos comercios intentan resolver el audio y video con bocinas improvisadas, pantallas mal ubicadas, cables visibles, volumen excesivo, equipos domésticos o sistemas difíciles de operar. Esto puede provocar mala cobertura, ruido molesto, baja inteligibilidad, pantallas poco visibles y una experiencia irregular para el cliente, ya sea en un restaurante, bar, gimnasio, barbería, cafetería o tienda.</p>
+          <p style="margin-top:16px;">Una solución comercial debe considerar el tipo de negocio, número de zonas, flujo de personas, nivel de ruido, estética, horarios, personal que opera el sistema y objetivos de experiencia: ambientar, informar, entretener, vender o comunicar mejor.</p>
+        </div>
+        <figure class="image-card">
+          <img src="/assets/img/problema-audio-video-negocios-dg-audiosound.webp" alt="Problemas de audio y video en negocios con bocinas improvisadas pantallas mal ubicadas y cables visibles DG Audiosound" width="900" height="620" loading="lazy" fetchpriority="low" decoding="async" />
+        </figure>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">🔊</div><h3>Sonido disparejo</h3><p>Algunas zonas suenan demasiado fuerte y otras no tienen cobertura suficiente.</p></div>
+        <div class="mini-card"><div class="icon">📺</div><h3>Video poco visible</h3><p>Pantallas mal ubicadas o insuficientes reducen impacto, comunicación y experiencia.</p></div>
+        <div class="mini-card"><div class="icon">🧩</div><h3>Operación complicada</h3><p>Si el personal no puede usar el sistema fácilmente, la solución pierde valor.</p></div>
+        <div class="mini-card"><div class="icon">⚙</div><h3>Imagen improvisada</h3><p>Cables, soportes y equipos mal integrados afectan la percepción profesional del negocio.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. TIPOS DE SISTEMAS QUE INCLUYE -->
+    <section class="section bg-soft" id="sistemas">
+      <div class="container centered">
+        <div class="eyebrow">Qué soluciones vendemos</div>
+        <h2>Tipos de sistemas comerciales que podemos <span class="text-gold">diseñar e integrar</span>.</h2>
+        <p class="lead">Esta página pilar resume las soluciones principales para negocios. Las aplicaciones específicas pueden desarrollarse en landings dedicadas para cada industria.</p>
+      </div>
+
+      <div class="container systems-grid">
+        <article class="system-card">
+          <h3>Música ambiental</h3>
+          <p>Sonido agradable y uniforme para crear atmósfera, mejorar permanencia y reforzar la identidad del negocio.</p>
+          <ul>
+            <li>Bocinas de plafón, muro o exteriores</li>
+            <li>Volumen adecuado por área</li>
+            <li>Streaming o fuentes comerciales</li>
+          </ul>
+        </article>
+
+        <article class="system-card">
+          <h3>Audio distribuido por zonas</h3>
+          <p>Control independiente para distintas áreas del negocio: comedor, terraza, recepción, baños, zona VIP o pasillos.</p>
+          <ul>
+            <li>Amplificadores y matrices</li>
+            <li>Control por zonas</li>
+            <li>Cobertura sonora equilibrada</li>
+          </ul>
+        </article>
+
+        <article class="system-card">
+          <h3>Pantallas, proyectores y video</h3>
+          <p>Soluciones visuales para deportes, menús digitales, publicidad, contenido de marca, entretenimiento y comunicación.</p>
+          <ul>
+            <li>Pantallas comerciales</li>
+            <li>Proyectores y videowalls</li>
+            <li>Señalización digital</li>
+          </ul>
+        </article>
+
+        <article class="system-card">
+          <h3>Audio para alto impacto</h3>
+          <p>Sistemas para negocios que requieren más energía sonora, como bares, gimnasios, antros o espacios con música protagonista.</p>
+          <ul>
+            <li>Bocinas profesionales</li>
+            <li>Subwoofers</li>
+            <li>Procesamiento y amplificación</li>
+          </ul>
+        </article>
+
+        <article class="system-card">
+          <h3>Salas comerciales y videoconferencia</h3>
+          <p>Soluciones para oficinas, salas de juntas, capacitaciones y reuniones con clientes o equipos internos.</p>
+          <ul>
+            <li>Cámaras y micrófonos</li>
+            <li>Pantallas y conectividad</li>
+            <li>Audio claro para reuniones</li>
+          </ul>
+        </article>
+
+        <article class="system-card">
+          <h3>Experiencias de marca</h3>
+          <p>Audio y video integrados para que el espacio se sienta más profesional, memorable y alineado a la identidad del negocio.</p>
+          <ul>
+            <li>Ambiente comercial premium</li>
+            <li>Contenido visual</li>
+            <li>Diseño funcional y estético</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- 4. QUÉ INCLUYE LA SOLUCIÓN -->
+    <section class="section bg-white" id="incluye">
+      <div class="container centered">
+        <div class="eyebrow">Qué incluye una solución</div>
+        <h2>De la idea al sistema funcionando: una solución comercial debe considerar <span class="text-gold">audio, video, operación y estética</span>.</h2>
+        <p class="lead">Cada negocio necesita una combinación distinta. Por eso revisamos el espacio, el uso real y la experiencia que quieres crear antes de recomendar equipos.</p>
+      </div>
+      <div class="container systems-grid">
+        <article class="system-card">
+          <h3>Diagnóstico del espacio</h3>
+          <p>Revisión de giro, áreas, medidas, fotos, ruido, flujo de clientes, horarios, uso esperado y operación diaria.</p>
+        </article>
+        <article class="system-card">
+          <h3>Diseño de audio y video</h3>
+          <p>Definición de bocinas, amplificación, pantallas, proyección, zonas, fuentes, conectividad y control según el negocio.</p>
+        </article>
+        <article class="system-card">
+          <h3>Selección de equipos</h3>
+          <p>Recomendación de productos originales y compatibles para evitar compras aisladas, insuficientes o difíciles de operar.</p>
+        </article>
+        <article class="system-card">
+          <h3>Instalación e integración</h3>
+          <p>Montaje, cableado, conexión, configuración, pruebas y puesta en marcha cuidando estética, seguridad y funcionalidad.</p>
+        </article>
+        <article class="system-card">
+          <h3>Capacitación básica</h3>
+          <p>Explicación del uso del sistema para que el personal pueda controlar volumen, fuentes, pantallas o zonas con mayor confianza.</p>
+        </article>
+        <article class="system-card">
+          <h3>Acompañamiento comercial</h3>
+          <p>Asesoría para priorizar inversión, planear crecimiento y construir una experiencia más profesional para tus clientes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. BENEFICIOS -->
+    <section class="section bg-dark" id="beneficios">
+      <div class="container centered">
+        <div class="eyebrow">Beneficios</div>
+        <h2>Una buena solución de audio y video mejora la experiencia del cliente y la operación del negocio.</h2>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">★</div><h3>Mejor ambiente</h3><p>La música y el contenido visual ayudan a que el espacio se sienta más atractivo.</p></div>
+        <div class="mini-card"><div class="icon">⏳</div><h3>Mayor permanencia</h3><p>Una experiencia cómoda puede invitar al cliente a quedarse más tiempo.</p></div>
+        <div class="mini-card"><div class="icon">🎭</div><h3>Imagen profesional</h3><p>Equipos bien integrados elevan la percepción de calidad del negocio.</p></div>
+        <div class="mini-card"><div class="icon">⚙</div><h3>Operación sencilla</h3><p>El sistema se diseña para que el personal pueda usarlo sin complicaciones.</p></div>
+      </div>
+    </section>
+
+    <!-- 6. MARCAS RECOMENDADAS -->
+    <section class="section bg-white" id="marcas">
+      <div class="container centered">
+        <div class="eyebrow">Marcas y tecnología</div>
+        <h2>Integramos marcas y categorías de audio y video para proyectos comerciales.</h2>
+        <p class="lead">Según el tipo de negocio, podemos recomendar soluciones profesionales de audio, video, control, conectividad, microfonía, proyección, pantallas, procesamiento y amplificación.</p>
+      </div>
+      <div class="container brands-grid" aria-label="Marcas y categorías recomendadas para negocios y experiencias comerciales">
+        <div class="brand-box">QSC</div><div class="brand-box">Shure</div><div class="brand-box">Biamp</div><div class="brand-box">Kramer</div><div class="brand-box">Nexo</div>
+        <div class="brand-box">Allen & Heath</div><div class="brand-box">dB Technologies</div><div class="brand-box">Optoma</div><div class="brand-box">Sharp / NEC</div><div class="brand-box">Barco</div>
+        <div class="brand-box">Sonos</div><div class="brand-box">KEF</div><div class="brand-box">Pantallas</div><div class="brand-box">Subwoofers</div><div class="brand-box">Audio distribuido</div>
+      </div>
+    </section>
+
+    <!-- 7. PROCESO DE TRABAJO -->
+    <section class="section bg-soft" id="proceso">
+      <div class="container centered">
+        <div class="eyebrow">Proceso de trabajo</div>
+        <h2>Un proceso claro para diseñar, cotizar e instalar tu solución comercial.</h2>
+        <p class="lead">Buscamos entender la operación real del negocio para recomendar una solución que funcione en el día a día, no solo una lista de equipos.</p>
+      </div>
+      <div class="container process">
+        <div class="process-step"><div class="step-number">1</div><h3>Contacto inicial</h3><p>Nos escribes por WhatsApp y nos cuentas qué tipo de negocio tienes.</p></div>
+        <div class="process-step"><div class="step-number">2</div><h3>Diagnóstico</h3><p>Revisamos fotos, medidas, zonas, ruido, uso, presupuesto y equipos actuales.</p></div>
+        <div class="process-step"><div class="step-number">3</div><h3>Diseño de solución</h3><p>Definimos audio, video, zonas, cableado, pantallas, control y operación.</p></div>
+        <div class="process-step"><div class="step-number">4</div><h3>Propuesta formal</h3><p>Te entregamos alcance, equipos, tiempos, inversión y consideraciones técnicas.</p></div>
+        <div class="process-step"><div class="step-number">5</div><h3>Instalación</h3><p>Montaje, conexión, pruebas, configuración y puesta en marcha.</p></div>
+        <div class="process-step"><div class="step-number">6</div><h3>Capacitación</h3><p>Explicamos el uso básico para que tu equipo pueda operar el sistema.</p></div>
+      </div>
+    </section>
+
+    <!-- 8. APLICACIONES RELACIONADAS -->
+    <section class="section bg-white" id="aplicaciones">
+      <div class="container centered">
+        <div class="eyebrow">Aplicaciones comerciales relacionadas</div>
+        <h2>Explora cómo se aplican nuestras soluciones en los negocios que hemos definido.</h2>
+        <p class="lead">Aquí solo resumimos cada aplicación comercial. Cada una puede tener su landing dedicada con alcances, beneficios, ejemplos de uso y preguntas frecuentes.</p>
+      </div>
+
+      <div class="container cards-grid">
+        <article class="solution-card">
+          <div class="card-img"><img src="/assets/img/aplicacion-restaurantes-audio-video-dg-audiosound.webp" alt="Aplicación de audio y video para restaurantes DG Audiosound" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div>
+          <div class="card-body"><h3>Restaurantes</h3><p>Música ambiental, pantallas, terrazas, audio por zonas y experiencia sonora para mejorar el ambiente del cliente.</p><a class="card-link" href="/aplicaciones/audio-y-video-para-restaurantes/" data-solution-slug="audio-y-video-para-restaurantes" data-page-section="aplicaciones" data-cta-intent="select_solution">Ver landing de Restaurantes →</a></div>
+        </article>
+        <article class="solution-card">
+          <div class="card-img"><img src="/assets/img/aplicacion-bares-antros-audio-video-iluminacion-dg-audiosound.webp" alt="Aplicación de audio video e iluminación para bares y antros DG Audiosound" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div>
+          <div class="card-body"><h3>Bares y antros</h3><p>Sistemas de alto impacto para música, DJs, pantallas, subwoofers, iluminación y experiencia nocturna.</p><a class="card-link" href="/aplicaciones/audio-video-e-iluminacion-para-bares-y-antros/" data-solution-slug="audio-video-e-iluminacion-para-bares-y-antros" data-page-section="aplicaciones" data-cta-intent="select_solution">Ver landing de Bares y Antros →</a></div>
+        </article>
+        <article class="solution-card">
+          <div class="card-img"><img src="/assets/img/aplicacion-gimnasios-audio-video-dg-audiosound.webp" alt="Aplicación de audio y video para gimnasios DG Audiosound" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div>
+          <div class="card-body"><h3>Gimnasios y estudios fitness</h3><p>Audio potente, motivador y distribuido para clases, entrenamiento, recepción, pantallas y zonas de actividad.</p><a class="card-link" href="/aplicaciones/audio-y-video-para-gimnasios/" data-solution-slug="audio-y-video-para-gimnasios" data-page-section="aplicaciones" data-cta-intent="select_solution">Ver landing de Gimnasios →</a></div>
+        </article>
+        <article class="solution-card">
+          <div class="card-img"><img src="/assets/img/aplicacion-retail-tiendas-audio-video-dg-audiosound.webp" alt="Aplicación de audio y video para retail y tiendas DG Audiosound" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div>
+          <div class="card-body"><h3>Retail y tiendas</h3><p>Música ambiental, pantallas, señalización digital y sonido para mejorar experiencia, marca y comunicación visual.</p><a class="card-link" href="/aplicaciones/audio-y-video-para-retail/" data-solution-slug="audio-y-video-para-retail" data-page-section="aplicaciones" data-cta-intent="select_solution">Ver landing de Retail →</a></div>
+        </article>
+        <article class="solution-card">
+          <div class="card-img"><img src="/assets/img/aplicacion-barberia-audio-video-dg-audiosound.webp" alt="Aplicación de audio y video para barberías DG Audiosound" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div>
+          <div class="card-body"><h3>Barberías</h3><p>Música ambiental, pantallas, contenido visual y sonido para crear una experiencia moderna, cómoda y con identidad.</p><a class="card-link" href="/aplicaciones/audio-y-video-para-barberias/" data-solution-slug="audio-y-video-para-barberias" data-page-section="aplicaciones" data-cta-intent="select_solution">Ver landing de Barberías →</a></div>
+        </article>
+        <article class="solution-card">
+          <div class="card-img"><img src="/assets/img/aplicacion-cafeterias-audio-video-dg-audiosound.webp" alt="Aplicación de audio y video para cafeterías DG Audiosound" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div>
+          <div class="card-body"><h3>Cafeterías</h3><p>Música ambiental, pantallas, audio por zonas y ambiente sonoro para mejorar permanencia, comodidad y experiencia del cliente.</p><a class="card-link" href="/aplicaciones/audio-y-video-para-cafeterias/" data-solution-slug="audio-y-video-para-cafeterias" data-page-section="aplicaciones" data-cta-intent="select_solution">Ver landing de Cafeterías →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 9. DIFERENCIADOR Y CONFIANZA -->
+    <section class="section bg-soft">
+      <div class="container split-dark">
+        <div class="dark-panel">
+          <div class="eyebrow">Diferenciador DG Audiosound</div>
+          <h2>No solo instalamos equipos: diseñamos experiencias comerciales.</h2>
+          <p>Un sistema para negocio debe funcionar en la operación diaria. Debe sonar bien, verse bien, ser fácil de operar, resistir uso continuo y apoyar la experiencia que el negocio quiere transmitir.</p>
+          <p style="margin-top:16px;">Por eso nuestro enfoque considera el tipo de cliente, flujo del lugar, zonas, ruido, estética, marca, contenido visual, equipo del personal y crecimiento futuro.</p>
+        </div>
+        <div class="gold-panel">
+          <div class="eyebrow" style="color:#fff;">Confianza</div>
+          <h2>Una decisión profesional para tu negocio</h2>
+          <ul class="check-list">
+            <li>Asesoría personalizada</li>
+            <li>Propuesta formal</li>
+            <li>Equipos originales</li>
+            <li>Instalación profesional</li>
+            <li>Integración estética</li>
+            <li>Capacitación básica de uso</li>
+            <li>Acompañamiento técnico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section class="section bg-white" id="faq">
+      <div class="container centered"><div class="eyebrow">FAQ</div><h2>Preguntas frecuentes sobre audio y video para negocios</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué soluciones de audio y video ofrece DG Audiosound para negocios?</span><span>+</span></button><div class="faq-answer"><p>DG Audiosound ofrece música ambiental, audio distribuido, bocinas, amplificadores, pantallas, proyectores, videowalls, señalización digital, sistemas para restaurantes, bares, gimnasios, hoteles, retail, oficinas, terrazas comerciales, salas de espera y espacios de atención al cliente.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Por qué un negocio necesita una solución profesional de audio y video?</span><span>+</span></button><div class="faq-answer"><p>Porque el audio y video influyen en la experiencia del cliente, el ambiente, la permanencia, la comunicación, la percepción de marca y la operación diaria. Una solución improvisada puede generar sonido molesto, mala cobertura, pantallas mal ubicadas o equipos difíciles de operar.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Pueden instalar música ambiental por zonas?</span><span>+</span></button><div class="faq-answer"><p>Sí. Se pueden diseñar sistemas de audio distribuido con control por zonas para comedor, terraza, recepción, baños, gimnasio, tienda, sala de espera, áreas VIP u oficinas, según el tipo de negocio.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿También instalan pantallas o proyectores para negocios?</span><span>+</span></button><div class="faq-answer"><p>Sí. DG Audiosound puede integrar pantallas, proyectores, videowalls o soluciones de visualización para menús digitales, eventos deportivos, publicidad, salas de juntas, capacitaciones o entretenimiento de clientes.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué datos necesitan para cotizar una solución para mi negocio?</span><span>+</span></button><div class="faq-answer"><p>Ayudan las medidas del lugar, fotos, tipo de negocio, número de zonas, uso principal, presupuesto aproximado, si se requiere audio, video o ambos, horarios de operación, nivel de volumen esperado y si ya existen equipos instalados.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿La instalación puede hacerse cuidando la estética del negocio?</span><span>+</span></button><div class="faq-answer"><p>Sí. El objetivo es integrar audio y video de forma limpia, segura y estética, cuidando ubicación de bocinas, cableado, soportes, racks, pantallas, visibilidad y facilidad de operación.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-sm bg-soft" aria-labelledby="cta-final-title">
+      <div class="container cta-final">
+        <div class="cta-content">
+          <div class="eyebrow">Siguiente paso</div>
+          <h2 id="cta-final-title">Haz que tu negocio se escuche, se vea y comunique mejor.</h2>
+          <p>Cuéntanos qué tipo de negocio tienes, qué áreas quieres cubrir y si necesitas audio, video o ambos. Podemos ayudarte a definir una solución clara, estética y preparada para operar en el día a día.</p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20audio%20y%20video%20para%20mi%20negocio.%20Necesito%20asesor%C3%ADa%20para%20definir%20audio%2C%20video%2C%20zonas%2C%20pantallas%20o%20m%C3%BAsica%20ambiental." target="_blank" rel="noopener" data-page-section="cta-final" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="negocios_y_experiencias_comerciales" data-quote-cta="true">Solicitar asesoría por WhatsApp</a>
+            <a class="btn btn-secondary" href="#contacto" data-page-section="cta-final" data-cta-intent="open_contact_form" data-conversion-type="engagement">Completar formulario</a>
+          </div>
+          <p class="phone">55 3727 0177</p>
+        </div>
+        <div class="cta-media" aria-hidden="true">
+          <img src="/assets/img/negocios-experiencias-comerciales-dg-audiosound-hero.webp" alt="Negocios Experiencias Comerciales Dg Audiosound Hero | DG Audiosound" width="900" height="720" loading="lazy" fetchpriority="low" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-wrap">
+        <div class="contact-info">
+          <div class="eyebrow">Contacto</div>
+          <h2>Diseñemos una solución de audio y video para <span class="text-gold">Negocios y Experiencias Comerciales</span></h2>
+          <p>Comparte el giro, áreas, número de zonas, si necesitas audio, video o ambos, y cualquier detalle de operación. Con eso podemos orientarte con una solución comercial realista.</p>
+          <div class="contact-details">
+            <div class="contact-detail"><strong>WhatsApp</strong><a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20audio%20y%20video%20para%20mi%20negocio." target="_blank" rel="noopener" data-page-section="contacto" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="negocios_y_experiencias_comerciales" data-quote-cta="true">55 3727 0177</a></div>
+            <div class="contact-detail"><strong>Correo</strong><a href="mailto:contacto@dgaudiosound.com">contacto@dgaudiosound.com</a></div>
+            <div class="contact-detail"><strong>Atención</strong><span>Ciudad de México, Estado de México y proyectos en México</span></div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>Cuéntanos qué tipo de negocio quieres mejorar</h3>
+          <p>Completa estos datos y se abrirá WhatsApp con tu solicitud lista para enviarse.</p>
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Nombre / Empresa *</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre o empresa" autocomplete="name organization" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Correo *</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="correo@empresa.com" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="phone">Teléfono / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="55 0000 0000" autocomplete="tel" />
+              </div>
+              <div class="form-field">
+                <label for="projectType">Tipo de proyecto</label>
+                <select id="projectType" name="projectType" autocomplete="off">
+                <option value="Restaurantes">Restaurantes</option>
+                <option value="Bares y antros">Bares y antros</option>
+                <option value="Gimnasios">Gimnasios</option>
+                <option value="Retail">Retail</option>
+                <option value="Barberías">Barberías</option>
+                <option value="Cafeterías">Cafeterías</option>
+                <option value="Otro negocio">Otro negocio</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="details">Detalles del proyecto</label>
+                <textarea id="details" name="details" placeholder="Cuéntanos medidas, zonas, uso principal, presupuesto aproximado o cualquier dato importante." autocomplete="off"></textarea>
+              </div>
+            </div>
+            <button class="form-submit" type="submit">Enviar solicitud por WhatsApp</button>
+            <p class="form-note">Tus datos se usarán únicamente para dar seguimiento a tu cotización. Consulta nuestro <a href="/aviso-de-privacidad/" data-page-section="contacto" data-link-text="Aviso de privacidad">aviso de privacidad</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="/" class="logo" style="color:#fff; margin-bottom:14px; display:inline-flex;"><span class="logo-mark">DG</span><span class="logo-text">AUDIOSOUND</span></a>
+        <p>Soluciones de audio y video para el éxito de tu proyecto.</p>
+      </div>
+      <div>
+        <h3>Soluciones</h3>
+        <div class="footer-links">
+          <a href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a href="/soluciones/negocios-y-experiencias-comerciales/">Negocios</a>
+          <a href="/soluciones/corporativo-e-institucional/">Corporativo</a>
+          <a href="/soluciones/eventos-creadores-y-produccion/">Eventos y Creadores</a>
+        </div>
+      </div>
+      <div>
+        <h3>Aplicaciones comerciales</h3>
+        <div class="footer-links">
+          <a href="/aplicaciones/audio-y-video-para-restaurantes/" data-solution-slug="audio-y-video-para-restaurantes" data-page-section="aplicaciones" data-cta-intent="select_solution">Restaurantes</a>
+          <a href="/aplicaciones/audio-video-e-iluminacion-para-bares-y-antros/" data-solution-slug="audio-video-e-iluminacion-para-bares-y-antros" data-page-section="aplicaciones" data-cta-intent="select_solution">Bares y Antros</a>
+          <a href="/aplicaciones/audio-y-video-para-gimnasios/" data-solution-slug="audio-y-video-para-gimnasios" data-page-section="aplicaciones" data-cta-intent="select_solution">Gimnasios</a>
+          <a href="/aplicaciones/audio-y-video-para-retail/" data-solution-slug="audio-y-video-para-retail" data-page-section="aplicaciones" data-cta-intent="select_solution">Retail</a>
+          <a href="/aplicaciones/audio-y-video-para-barberias/" data-solution-slug="audio-y-video-para-barberias" data-page-section="aplicaciones" data-cta-intent="select_solution">Barberías</a>
+          <a href="/aplicaciones/audio-y-video-para-cafeterias/" data-solution-slug="audio-y-video-para-cafeterias" data-page-section="aplicaciones" data-cta-intent="select_solution">Cafeterías</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <div class="footer-links">
+          <a href="https://wa.me/525537270177" target="_blank" rel="noopener" data-page-section="footer" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="negocios_y_experiencias_comerciales" data-quote-cta="true">WhatsApp: 55 3727 0177</a>
+          <a href="mailto:contacto@dgaudiosound.com" data-page-section="footer" data-link-text="Correo">contacto@dgaudiosound.com</a>
+          <a href="https://www.instagram.com/dgaudiosound/" target="_blank" rel="noopener" data-page-section="footer" data-social-network="instagram">Instagram: @dgaudiosound</a>
+          <a href="https://www.facebook.com/61572482057227/" target="_blank" rel="noopener" data-page-section="footer" data-social-network="facebook">Facebook: DG Audiosound</a>
+          <button class="footer-cookie-button" type="button" id="openCookiePreferences">Preferencias de cookies</button>
+        </div>
+      </div>
+      <div>
+        <h3>Información</h3>
+        <div class="footer-links">
+          <a href="/aviso-de-privacidad/" data-page-section="footer" data-link-text="Aviso de privacidad">Aviso de privacidad</a>
+          <a href="/terminos-y-condiciones/" data-page-section="footer" data-link-text="Términos y condiciones">Términos y condiciones</a>
+          <a href="/garantias-y-devoluciones/" data-page-section="footer" data-link-text="Garantías y devoluciones">Garantías y devoluciones</a>
+          <a href="/tienda/" data-page-section="footer" data-link-text="Tienda" data-destination-type="store">Tienda</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 DG Audiosound. Todos los derechos reservados.</div>
+  </footer>
+
+  <a class="mobile-sticky-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20audio%20y%20video%20para%20mi%20negocio." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp con DG Audiosound" data-page-section="mobile-sticky" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="negocios_y_experiencias_comerciales" data-quote-cta="true">
+    Cotizar por WhatsApp
+  </a>
+
+
+  <script>
+    (function () {
+      const cookieBanner = document.getElementById('cookieConsentBanner');
+      const acceptCookiesButton = document.getElementById('acceptCookies');
+      const rejectCookiesButton = document.getElementById('rejectCookies');
+      const openCookiePreferences = document.getElementById('openCookiePreferences');
+
+      function getStoredCookieConsent() {
+        try {
+          return window.localStorage.getItem('dg_cookie_consent');
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function setStoredCookieConsent(value) {
+        try {
+          window.localStorage.setItem('dg_cookie_consent', value);
+        } catch (error) {
+          // Si localStorage no está disponible, solo actualizamos el consentimiento en la sesión actual.
+        }
+      }
+
+      function updateDGConsent(consentValue, source) {
+        const accepted = consentValue === 'accepted';
+        if (typeof window.dgConsentCommand === 'function' && typeof window.dgBuildConsentState === 'function') {
+          window.dgConsentCommand(
+            'consent',
+            'update',
+            window.dgBuildConsentState(accepted ? 'granted' : 'denied')
+          );
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: accepted ? 'cookie_consent_accepted' : 'cookie_consent_rejected',
+          consent_status: consentValue,
+          consent_source: source || 'cookie_banner'
+        });
+      }
+
+      function showCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.hidden = false;
+        cookieBanner.classList.add('is-visible');
+      }
+
+      function hideCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.remove('is-visible');
+        cookieBanner.hidden = true;
+      }
+
+      function handleCookieChoice(choice) {
+        setStoredCookieConsent(choice);
+        updateDGConsent(choice, 'cookie_banner');
+        hideCookieBanner();
+      }
+
+      const storedCookieConsent = getStoredCookieConsent();
+      if (!storedCookieConsent) showCookieBanner();
+
+      if (acceptCookiesButton) {
+        acceptCookiesButton.addEventListener('click', () => handleCookieChoice('accepted'));
+      }
+
+      if (rejectCookiesButton) {
+        rejectCookiesButton.addEventListener('click', () => handleCookieChoice('rejected'));
+      }
+
+      if (openCookiePreferences) {
+        openCookiePreferences.addEventListener('click', () => {
+          showCookieBanner();
+          if (acceptCookiesButton) acceptCookiesButton.focus();
+        });
+      }
+    })();
+  </script>
+
+  <script>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+
+      const PAGE_CONTEXT = {
+        page_type: 'solution_landing',
+        page_category: 'negocios_y_experiencias_comerciales',
+        solution_slug: 'negocios-y-experiencias-comerciales',
+        lead_source: 'landing_negocios_experiencias_comerciales'
+      };
+
+      function cleanText(value) {
+        return (value || '').replace(/\s+/g, ' ').trim().slice(0, 120);
+      }
+
+      function toSlug(value) {
+        return cleanText(value)
+          .toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_|_$/g, '') || 'no_especificado';
+      }
+
+      function createEventId(eventName) {
+        let randomPart = Math.random().toString(36).slice(2, 10);
+        if (window.crypto && window.crypto.getRandomValues) {
+          const array = new Uint32Array(1);
+          window.crypto.getRandomValues(array);
+          randomPart = array[0].toString(36);
+        }
+        return 'dg_neg_' + eventName + '_' + Date.now() + '_' + randomPart;
+      }
+
+      function getPageSection(element) {
+        if (element.dataset.pageSection) return element.dataset.pageSection;
+        const section = element.closest('section[id]');
+        if (section) return section.id;
+        if (element.closest('header')) return 'header';
+        if (element.closest('footer')) return 'footer';
+        return 'unknown';
+      }
+
+      function trackDGEvent(eventName, params) {
+        const eventId = createEventId(eventName);
+        const payload = Object.assign({}, PAGE_CONTEXT, params || {}, {
+          event: eventName,
+          event_id: eventId,
+          page_path: window.location.pathname
+        });
+
+        // Importante: no enviar nombre, correo, teléfono, empresa, ciudad ni mensaje al dataLayer.
+        delete payload.name;
+        delete payload.email;
+        delete payload.phone;
+        delete payload.telefono;
+        delete payload.message;
+        delete payload.details;
+        delete payload.empresa;
+        delete payload.correo;
+        delete payload.city;
+        delete payload.ciudad;
+
+        window.dataLayer.push(payload);
+        return eventId;
+      }
+
+      window.dgTrackEvent = trackDGEvent;
+
+      const mobileToggle = document.getElementById('mobileToggle');
+      const mainMenu = document.getElementById('mainMenu');
+      if (mobileToggle && mainMenu) {
+        mobileToggle.setAttribute('aria-controls', 'mainMenu');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = mainMenu.classList.toggle('is-open');
+          mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          mobileToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        });
+
+        mainMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            mainMenu.classList.remove('is-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', 'Abrir menú');
+          });
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && mainMenu.classList.contains('is-open')) {
+            mainMenu.classList.remove('is-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', 'Abrir menú');
+            mobileToggle.focus();
+          }
+        });
+      }
+
+      document.querySelectorAll('.faq-question').forEach((button, index) => {
+        const item = button.closest('.faq-item');
+        const answer = item ? item.querySelector('.faq-answer') : null;
+        const answerId = 'faq-answer-' + (index + 1);
+
+        button.setAttribute('aria-expanded', 'false');
+        if (answer) {
+          answer.id = answerId;
+          answer.setAttribute('role', 'region');
+          answer.setAttribute('aria-label', cleanText(button.innerText));
+          button.setAttribute('aria-controls', answerId);
+        }
+
+        const icon = button.querySelector('span:last-child');
+        if (icon) icon.setAttribute('aria-hidden', 'true');
+
+        button.addEventListener('click', () => {
+          const expanded = item.classList.toggle('active');
+          button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          if (icon) icon.textContent = expanded ? '−' : '+';
+
+          if (expanded) {
+            trackDGEvent('open_faq', {
+              page_section: 'faq',
+              faq_question: cleanText(button.innerText),
+              conversion_type: 'engagement'
+            });
+          }
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        const element = event.target.closest('a, button');
+        if (!element) return;
+
+        const href = element.getAttribute('href') || '';
+        const pageSection = getPageSection(element);
+        const linkText = cleanText(element.dataset.linkText || element.innerText || element.getAttribute('aria-label'));
+        const isWhatsapp = href.includes('wa.me/525537270177');
+        const ctaIntent = element.dataset.ctaIntent || (isWhatsapp ? 'quote' : 'navigation');
+        const conversionType = element.dataset.conversionType || (isWhatsapp ? 'contact_intent' : 'engagement');
+        const projectType = element.dataset.projectType || 'negocios_y_experiencias_comerciales';
+
+        const baseParams = {
+          page_section: pageSection,
+          link_text: linkText,
+          cta_intent: ctaIntent,
+          conversion_type: conversionType,
+          project_type: projectType
+        };
+
+        if (element.dataset.quoteCta === 'true' || isWhatsapp) {
+          trackDGEvent('click_quote_cta', Object.assign({}, baseParams, {
+            contact_method: element.dataset.contactMethod || 'whatsapp',
+            destination_type: 'quote_cta'
+          }));
+        }
+
+        if (isWhatsapp) {
+          trackDGEvent('click_whatsapp', Object.assign({}, baseParams, {
+            contact_method: 'whatsapp',
+            destination_type: 'whatsapp'
+          }));
+        }
+
+        if (href.startsWith('mailto:')) {
+          trackDGEvent('click_email', Object.assign({}, baseParams, {
+            contact_method: 'email',
+            destination_type: 'email'
+          }));
+        }
+
+        if (href.startsWith('tel:')) {
+          trackDGEvent('click_phone', Object.assign({}, baseParams, {
+            contact_method: 'phone',
+            destination_type: 'phone'
+          }));
+        }
+
+        if (href.includes('instagram.com') || href.includes('facebook.com')) {
+          trackDGEvent('click_social', Object.assign({}, baseParams, {
+            destination_type: 'social',
+            social_network: element.dataset.socialNetwork || (href.includes('instagram.com') ? 'instagram' : 'facebook')
+          }));
+        }
+
+        if (href === '/tienda/' || href.startsWith('/tienda/')) {
+          trackDGEvent('click_store', Object.assign({}, baseParams, {
+            destination_type: 'store'
+          }));
+        }
+
+        if (element.dataset.solutionSlug || href.startsWith('/aplicaciones/')) {
+          trackDGEvent('select_solution', Object.assign({}, baseParams, {
+            solution_slug: element.dataset.solutionSlug || toSlug(linkText),
+            destination_type: 'internal_solution'
+          }));
+        }
+      });
+
+      const quoteForm = document.getElementById('quoteForm');
+      let formStarted = false;
+
+      if (quoteForm) {
+        quoteForm.addEventListener('focusin', () => {
+          if (formStarted) return;
+          formStarted = true;
+          const projectType = document.getElementById('projectType')?.value || 'Negocios y experiencias comerciales';
+          trackDGEvent('form_start', {
+            page_section: 'contacto',
+            form_id: 'quoteForm',
+            conversion_type: 'lead_form',
+            contact_method: 'whatsapp',
+            project_type: toSlug(projectType)
+          });
+        });
+
+        quoteForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const projectType = document.getElementById('projectType').value;
+          const details = document.getElementById('details').value.trim();
+
+          if (!quoteForm.checkValidity()) {
+            quoteForm.reportValidity();
+            return;
+          }
+
+          // Solo se envían parámetros no personales al dataLayer.
+          trackDGEvent('generate_lead', {
+            page_section: 'contacto',
+            form_id: 'quoteForm',
+            conversion_type: 'lead',
+            contact_method: 'whatsapp',
+            project_type: toSlug(projectType),
+            cta_intent: 'submit_quote_form'
+          });
+
+          trackDGEvent('click_whatsapp', {
+            page_section: 'contacto',
+            link_text: 'Enviar solicitud por WhatsApp',
+            cta_intent: 'submit_quote_form',
+            conversion_type: 'lead',
+            contact_method: 'whatsapp',
+            destination_type: 'whatsapp',
+            project_type: toSlug(projectType)
+          });
+
+          const message =
+            'Hola DG Audiosound, quiero solicitar una cotización para una solución de audio y video para mi negocio.%0A%0A' +
+            'Nombre / Empresa: ' + encodeURIComponent(name) + '%0A' +
+            'Correo: ' + encodeURIComponent(email) + '%0A' +
+            'Teléfono / WhatsApp: ' + encodeURIComponent(phone || 'No especificado') + '%0A' +
+            'Tipo de proyecto: ' + encodeURIComponent(projectType) + '%0A' +
+            'Detalles: ' + encodeURIComponent(details || 'No especificado');
+
+          window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

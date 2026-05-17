@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GOOGLE TAG MANAGER + CONTEXTO DE MEDICIÓN -->
+  
+  <!-- CONSENT MODE / GTM: consentimiento denegado por defecto -->
+  <script>
+    window.DG_TRACKING_CONFIG = window.DG_TRACKING_CONFIG || {
+      googleTagManagerId: 'GTM-N65F3T7P',
+      ga4MeasurementId: 'G-H29S551ZJK',
+      useDirectGA4: false,
+      metaPixelId: '1977566363148263' // Usar únicamente desde GTM
+    };
+
+    window.dataLayer = window.dataLayer || [];
+
+    // Consent Mode: analítica y publicidad denegadas por defecto.
+    // GTM debe activar GA4 y Meta Pixel solo si el usuario acepta desde el banner.
+    window.dgConsentCommand = function() {
+      window.dataLayer.push(arguments);
+    };
+
+    window.dgBuildConsentState = function(status) {
+      var granted = status === 'granted';
+      return {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        personalization_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      };
+    };
+
+    var dgStoredConsent = null;
+    try {
+      dgStoredConsent = window.localStorage.getItem('dg_cookie_consent');
+    } catch (error) {
+      dgStoredConsent = null;
+    }
+
+    window.dgConsentCommand(
+      'consent',
+      'default',
+      Object.assign(
+        {},
+        window.dgBuildConsentState(dgStoredConsent === 'accepted' ? 'granted' : 'denied'),
+        { wait_for_update: 500 }
+      )
+    );
+  </script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'page_context',
+      page_type: 'landing_application',
+      brand: 'DG Audiosound',
+      parent_solution: 'residencial_premium',
+      solution_slug: 'audio_hi_fi',
+      application_slug: 'audio_hi_fi',
+      lead_source: 'landing_audio_hi_fi'
+    });
+  </script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N65F3T7P');
+  </script>
+
+  <!-- =========================================================
+    LANDING SEO PARA APLICACIÓN: AUDIO HI-FI | DG AUDIOSOUND
+    Aplicación dentro de Residencial Premium
+    Dominio oficial: https://dgaudiosound.com
+    Basada en plantilla SEO de aplicaciones DG Audiosound.
+  ========================================================== -->
+
+  <!-- SEO BÁSICO -->
+  <title>Audio Hi-Fi en México | Sistemas Estéreo, Tornamesas y Alta Fidelidad | DG Audiosound</title>
+  <meta name="description" content="Diseño e integración de sistemas de Audio Hi-Fi en México. Bocinas estéreo, amplificadores, tornamesas, streamers, DACs, subwoofers, cableado, acústica y asesoría profesional. Cotiza por WhatsApp." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="DG Audiosound" />
+  <meta name="theme-color" content="#151515" />
+  <link rel="canonical" href="https://dgaudiosound.com/aplicaciones/audio-hi-fi/" />
+  <link rel="alternate" hreflang="es-MX" href="https://dgaudiosound.com/aplicaciones/audio-hi-fi/" />
+  <link rel="alternate" hreflang="x-default" href="https://dgaudiosound.com/aplicaciones/audio-hi-fi/" />
+
+  <!-- OPEN GRAPH / COMPARTIR EN WHATSAPP, FACEBOOK, LINKEDIN -->
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DG Audiosound" />
+  <meta property="og:title" content="Audio Hi-Fi en México | Sistemas Estéreo y Tornamesas | DG Audiosound" />
+  <meta property="og:description" content="Soluciones de alta fidelidad para escuchar música en casa con bocinas estéreo, amplificadores, tornamesas, streamers y asesoría profesional." />
+  <meta property="og:url" content="https://dgaudiosound.com/aplicaciones/audio-hi-fi/" />
+  <meta property="og:image" content="https://dgaudiosound.com/assets/img/audio-hi-fi-dg-audiosound-og.webp" />
+  <meta property="og:image:alt" content="Sistema de Audio Hi-Fi premium con bocinas estéreo, amplificador, tornamesa y streamer DG Audiosound" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- TWITTER / X CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Audio Hi-Fi en México | DG Audiosound" />
+  <meta name="twitter:description" content="Sistemas estéreo de alta fidelidad con bocinas, amplificadores, tornamesas, streamers, DACs y asesoría profesional." />
+  <meta name="twitter:image" content="https://dgaudiosound.com/assets/img/audio-hi-fi-dg-audiosound-og.webp" />
+  <meta name="twitter:image:alt" content="Audio Hi-Fi residencial con tornamesa, amplificador y bocinas estéreo DG Audiosound" />
+
+  <!-- PERFORMANCE -->
+  <link rel="preload" as="image" href="/assets/img/audio-hi-fi-dg-audiosound-hero.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- DATOS ESTRUCTURADOS JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://dgaudiosound.com/#localbusiness",
+      "name": "DG Audiosound",
+      "url": "https://dgaudiosound.com/",
+      "telephone": "+525537270177",
+      "email": "contacto@dgaudiosound.com",
+      "description": "DG Audiosound ofrece soluciones profesionales de audio y video para hogares, negocios, empresas, eventos y espacios comerciales.",
+      "slogan": "Soluciones de audio y video para el éxito de tu proyecto.",
+      "image": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "logo": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Place",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/dgaudiosound/",
+        "https://www.facebook.com/61572482057227/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+525537270177",
+        "contactType": "sales",
+        "areaServed": "MX",
+        "availableLanguage": [
+          "es-MX",
+          "es"
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/#service",
+      "name": "Diseño e integración de sistemas de Audio Hi-Fi",
+      "serviceType": "Soluciones residenciales de alta fidelidad, audio estéreo, tornamesas, amplificadores, bocinas y reproducción musical premium",
+      "provider": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      },
+      "areaServed": [
+        "Ciudad de México",
+        "Estado de México",
+        "México"
+      ],
+      "description": "Diseño, selección, integración e instalación de sistemas de Audio Hi-Fi para escucha musical en casa, incluyendo bocinas estéreo, amplificadores integrados, tornamesas, cápsulas, preamplificadores phono, streamers, DACs, subwoofers, cableado, soportes, ubicación de bocinas, acústica básica y asesoría profesional.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Clientes residenciales, amantes de la música, coleccionistas de vinilos, audiófilos, usuarios de streaming Hi-Res, propietarios de salas premium y personas que buscan sonido estéreo de alta fidelidad en casa"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "MXN"
+        },
+        "url": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/#webpage",
+      "url": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/",
+      "name": "Audio Hi-Fi en México | Sistemas Estéreo, Tornamesas y Alta Fidelidad | DG Audiosound",
+      "description": "Diseño e integración de sistemas de Audio Hi-Fi en México. Bocinas estéreo, amplificadores, tornamesas, streamers, DACs, subwoofers, cableado, acústica y asesoría profesional. Cotiza por WhatsApp.",
+      "isPartOf": {
+        "@id": "https://dgaudiosound.com/#website"
+      },
+      "about": {
+        "@id": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://dgaudiosound.com/assets/img/audio-hi-fi-dg-audiosound-hero.webp"
+      },
+      "breadcrumb": {
+        "@id": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dgaudiosound.com/#website",
+      "url": "https://dgaudiosound.com/",
+      "name": "DG Audiosound",
+      "publisher": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dgaudiosound.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aplicaciones",
+          "item": "https://dgaudiosound.com/aplicaciones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Audio Hi-Fi",
+          "item": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dgaudiosound.com/aplicaciones/audio-hi-fi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es un sistema de Audio Hi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un sistema de Audio Hi-Fi es una solución de alta fidelidad diseñada para reproducir música con mayor claridad, detalle, escena estéreo y naturalidad. Puede incluir bocinas, amplificador, tornamesa, streamer, DAC, subwoofer y cableado adecuado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden integrar tornamesas en un sistema Hi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. DG Audiosound puede asesorar e integrar tornamesas, cápsulas, preamplificadores phono, amplificadores y bocinas para disfrutar vinilos con una configuración correcta y balanceada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito para iniciar un sistema estéreo de alta fidelidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normalmente se parte de una fuente de audio, como streamer o tornamesa, un amplificador integrado, un par de bocinas estéreo y cableado adecuado. La recomendación depende del espacio, presupuesto y tipo de música que escuchas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es mejor un sistema Hi-Fi estéreo o un cine en casa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del uso principal. Si la prioridad es música con mayor detalle y escena estéreo, un sistema Hi-Fi puede ser ideal. Si la prioridad son películas y sonido envolvente, conviene un sistema de cine en casa. También se pueden combinar ambos enfoques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La ubicación de las bocinas afecta el sonido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La posición de las bocinas, distancia a muros, altura, orientación, punto de escucha y acústica del cuarto influyen mucho en el resultado. Por eso la instalación y ajuste son parte importante del proyecto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué datos necesitan para cotizar un sistema Audio Hi-Fi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ayudan las medidas del espacio, fotos, presupuesto aproximado, tipo de música, si escuchas vinilos o streaming, equipos actuales, nivel de volumen deseado y si prefieres bocinas de piso, repisa o una solución compacta."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    :root {
+      --dg-red: #b51f24;
+      --dg-red-dark: #8f171b;
+      --dg-gold: #c8a24a;
+      --dg-gold-dark: #a77f28;
+      --dg-black: #151515;
+      --dg-gray: #6f6f6f;
+      --dg-soft-gray: #f1eee8;
+      --dg-cream: #f8f6f2;
+      --dg-white: #ffffff;
+      --dg-border: #e6e0d6;
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --shadow-strong: 0 18px 45px rgba(0, 0, 0, 0.18);
+      --radius: 18px;
+      --radius-small: 12px;
+      --max-width: 1180px;
+      --mobile-cta-height: 64px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: var(--dg-cream); color: var(--dg-black); line-height: 1.55; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    input, select, textarea, button { font: inherit; }
+    .container { width: min(100% - 40px, var(--max-width)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .section-sm { padding: 48px 0; }
+    .eyebrow { color: var(--dg-gold-dark); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 800; margin-bottom: 12px; }
+    h1, h2, h3 { line-height: 1.1; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.25rem, 5vw, 4.7rem); max-width: 920px; margin-bottom: 22px; }
+    h2 { font-size: clamp(1.75rem, 3vw, 3rem); margin-bottom: 18px; }
+    h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    p { color: #333; font-size: 1rem; }
+    .lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 850px; color: #2f2f2f; }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -120px;
+      z-index: 2000;
+      background: var(--dg-black);
+      color: var(--dg-white);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: var(--shadow-strong);
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 16px; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--dg-gold);
+      outline-offset: 3px;
+    }
+    .privacy-link { color: var(--dg-gold); font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
+    .related-box {
+      margin-top: 42px;
+      padding: 28px;
+      border: 1px solid var(--dg-border);
+      border-radius: var(--radius);
+      background: var(--dg-white);
+      box-shadow: var(--shadow-soft);
+    }
+    .related-box p { margin-top: 8px; color: var(--dg-gray); }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .related-link {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 999px;
+      border: 1px solid var(--dg-border);
+      background: var(--dg-cream);
+      color: var(--dg-black);
+      font-weight: 900;
+      padding: 10px 14px;
+      transition: 0.2s ease;
+    }
+    .related-link:hover {
+      transform: translateY(-1px);
+      border-color: var(--dg-gold);
+      color: var(--dg-red);
+    }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 22px; border-radius: 999px; font-weight: 800; transition: 0.2s ease; border: 1px solid transparent; cursor: pointer; font-size: 0.95rem; }
+    .btn-primary { background: var(--dg-gold); color: var(--dg-white); box-shadow: 0 12px 24px rgba(200, 162, 74, 0.32); }
+    .btn-primary:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--dg-white); border-color: rgba(255,255,255,0.6); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    .site-header { position: sticky; top: 0; z-index: 999; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--dg-border); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; position: relative; }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 900; letter-spacing: -0.04em; color: var(--dg-black); }
+    .logo-mark { font-size: 2rem; color: var(--dg-red); line-height: 1; }
+    .logo-text { font-size: 0.95rem; letter-spacing: -0.02em; }
+    .menu { display: flex; gap: 24px; align-items: center; font-size: 0.92rem; font-weight: 700; color: #2c2c2c; }
+    .menu a:hover { color: var(--dg-red); }
+    .header-cta { padding: 10px 18px; min-height: 40px; font-size: 0.86rem; }
+    .mobile-toggle { display: none; border: 0; background: transparent; font-size: 2rem; cursor: pointer; }
+
+    .breadcrumb-wrap { background: #fff; border-bottom: 1px solid var(--dg-border); }
+    .breadcrumb { display: flex; gap: 8px; align-items: center; min-height: 42px; font-size: 0.84rem; color: var(--dg-gray); overflow-x: auto; white-space: nowrap; }
+    .breadcrumb a { color: #4b4b4b; font-weight: 700; }
+    .breadcrumb a:hover { color: var(--dg-red); }
+
+    .hero { min-height: 690px; display: grid; align-items: center; color: var(--dg-white); position: relative; overflow: hidden; background: #0d0d0d; }
+    .hero-media { position: absolute; inset: 0; z-index: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.66) 44%, rgba(0,0,0,0.20) 100%), radial-gradient(circle at 82% 18%, rgba(200,162,74,0.22), transparent 30%); }
+    .hero .container { position: relative; z-index: 2; }
+    .hero p { color: rgba(255,255,255,0.88); }
+    .hero .microcopy { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; color: rgba(255,255,255,0.85); font-size: 0.94rem; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); padding: 9px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .image-card { min-height: 380px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); position: relative; }
+    .image-card img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.45)); pointer-events: none; }
+    .highlight-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-soft); }
+    .warning-card { border-left: 5px solid var(--dg-red); }
+
+    .icon-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 34px; }
+    .mini-card { padding: 22px; background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius-small); text-align: center; }
+    .icon { width: 46px; height: 46px; display: inline-grid; place-items: center; border-radius: 50%; background: rgba(200,162,74,0.12); color: var(--dg-gold-dark); font-size: 1.35rem; margin-bottom: 14px; }
+    .mini-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .mini-card p { font-size: 0.92rem; color: var(--dg-gray); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px; }
+    .solution-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); transition: 0.2s ease; }
+    .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .card-img { height: 180px; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 24px; }
+    .card-body p { color: #4b4b4b; font-size: 0.95rem; }
+    .centered { text-align: center; max-width: 840px; margin: 0 auto; }
+    .bg-white { background: var(--dg-white); }
+    .bg-soft { background: var(--dg-soft-gray); }
+    .bg-dark { background: var(--dg-black); color: var(--dg-white); }
+    .bg-dark p, .bg-dark li { color: rgba(255,255,255,0.78); }
+    .bg-dark .mini-card { background: rgba(255,255,255,0.055); border-color: rgba(255,255,255,0.12); }
+    .bg-dark .eyebrow { color: var(--dg-gold); }
+
+    .area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+    .area-card { min-height: 170px; border-radius: var(--radius-small); overflow: hidden; position: relative; color: var(--dg-white); font-weight: 900; }
+    .area-card img { width: 100%; height: 100%; min-height: 170px; object-fit: cover; }
+    .area-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.74)); z-index: 1; }
+    .area-card span { position: absolute; left: 18px; right: 18px; bottom: 18px; z-index: 2; }
+
+    .event-banner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(200,162,74,0.35); box-shadow: var(--shadow-soft); background: var(--dg-white); }
+    .event-img img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+    .event-content { padding: 44px; display: flex; flex-direction: column; justify-content: center; }
+
+    .process { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 38px; }
+    .process-step { background: var(--dg-white); border: 1px solid var(--dg-border); padding: 24px 18px; border-radius: var(--radius-small); text-align: center; }
+    .step-number { width: 34px; height: 34px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; background: var(--dg-gold); color: var(--dg-white); font-weight: 900; }
+    .process-step h3 { font-size: 0.98rem; }
+    .process-step p { font-size: 0.86rem; color: var(--dg-gray); }
+
+    .split-dark { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+    .dark-panel { background: var(--dg-black); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .gold-panel { background: linear-gradient(135deg, var(--dg-gold), #af7c26); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .dark-panel p, .gold-panel p { color: rgba(255,255,255,0.86); }
+    .dark-panel .eyebrow, .gold-panel .eyebrow { color: #fff; }
+    .check-list { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+    .check-list li::before { content: "✓"; color: var(--dg-gold); margin-right: 9px; font-weight: 900; }
+    .gold-panel .check-list li::before { color: var(--dg-white); }
+
+    .brands-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 32px; }
+    .brand-box { min-height: 78px; border-radius: var(--radius-small); border: 1px solid var(--dg-border); background: var(--dg-white); display: grid; place-items: center; font-weight: 900; color: #2d2d2d; letter-spacing: -0.03em; text-align: center; padding: 12px; }
+
+    .faq-list { max-width: 980px; margin: 34px auto 0; display: grid; gap: 12px; }
+    .faq-item { border: 1px solid var(--dg-border); border-radius: var(--radius-small); background: var(--dg-white); overflow: hidden; }
+    .faq-question { width: 100%; border: 0; background: transparent; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 20px 22px; font-size: 1rem; font-weight: 900; cursor: pointer; color: var(--dg-black); }
+    .faq-question span:last-child { font-size: 1.3rem; color: var(--dg-gold-dark); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+    .faq-answer p { padding: 0 22px 20px; color: var(--dg-gray); }
+    .faq-item.active .faq-answer { max-height: 320px; }
+
+    .cta-final { background: var(--dg-black); color: var(--dg-white); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-columns: 1.15fr 0.85fr; box-shadow: var(--shadow-strong); }
+    .cta-content { padding: 52px; display: flex; flex-direction: column; justify-content: center; }
+    .cta-content p { color: rgba(255,255,255,0.84); }
+    .cta-media { min-height: 360px; position: relative; }
+    .cta-media img { width: 100%; height: 100%; object-fit: cover; }
+    .cta-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,21,21,0.35), rgba(21,21,21,0)); }
+    .phone { font-size: 1.6rem; font-weight: 900; color: var(--dg-gold); margin-top: 12px; }
+
+
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: max(14px, env(safe-area-inset-bottom));
+      z-index: 1200;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--dg-gold);
+      color: var(--dg-white);
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+      border: 1px solid rgba(255,255,255,0.22);
+      letter-spacing: -0.01em;
+    }
+
+    .contact-section { background: var(--dg-white); }
+    .contact-wrap { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 32px; align-items: stretch; }
+    .contact-info { background: linear-gradient(135deg, #171717, #262626); color: var(--dg-white); border-radius: var(--radius); padding: 44px; box-shadow: var(--shadow-strong); position: relative; overflow: hidden; }
+    .contact-info::before { content: ""; position: absolute; width: 230px; height: 230px; right: -90px; top: -90px; border-radius: 50%; background: rgba(200,162,74,0.22); }
+    .contact-info > * { position: relative; z-index: 1; }
+    .contact-info p { color: rgba(255,255,255,0.82); }
+    .contact-details { display: grid; gap: 16px; margin-top: 28px; }
+    .contact-detail { padding: 16px; border-radius: var(--radius-small); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
+    .contact-detail strong { display: block; color: var(--dg-gold); margin-bottom: 4px; font-size: 0.92rem; }
+    .contact-detail a, .contact-detail span { color: rgba(255,255,255,0.90); font-weight: 700; }
+
+    .contact-form-card { background: #111; color: var(--dg-white); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-strong); border: 1px solid rgba(200,162,74,0.25); }
+    .contact-form-card h3 { font-size: clamp(1.45rem, 2vw, 2rem); margin-bottom: 10px; }
+    .contact-form-card p { color: rgba(255,255,255,0.72); margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: grid; gap: 8px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: rgba(255,255,255,0.86); font-size: 0.9rem; font-weight: 800; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid rgba(255,255,255,0.16); background: #f8f6f2; color: #151515; border-radius: 12px; padding: 13px 14px; outline: none; transition: 0.2s ease; }
+    .form-field textarea { min-height: 132px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--dg-gold); box-shadow: 0 0 0 3px rgba(200,162,74,0.18); }
+    .form-note { font-size: 0.82rem; color: rgba(255,255,255,0.58); margin-top: 14px; }
+    .form-submit { width: 100%; margin-top: 18px; border: 0; min-height: 52px; border-radius: 999px; background: var(--dg-gold); color: #fff; font-weight: 900; cursor: pointer; transition: 0.2s ease; box-shadow: 0 14px 28px rgba(200,162,74,0.24); }
+    .form-submit:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+
+    .text-gold { color: var(--dg-gold); }
+    .bg-white .text-gold, .bg-soft .text-gold { color: var(--dg-gold-dark); }
+
+    .footer { background: #111; color: var(--dg-white); padding: 48px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); gap: 28px; }
+    .footer p, .footer a { color: rgba(255,255,255,0.74); font-size: 0.94rem; }
+    .footer h3 { color: var(--dg-white); font-size: 1rem; margin-bottom: 14px; }
+    .footer-links { display: grid; gap: 8px; }
+    .footer-links a:hover { color: var(--dg-gold); }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 36px; padding-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.86rem; text-align: center; }
+
+    @media (max-width: 980px) {
+      .menu, .header-cta { display: none; }
+      .mobile-toggle { display: block; }
+      .menu.is-open { display: grid; position: absolute; left: 20px; right: 20px; top: 78px; padding: 24px; border-radius: var(--radius); background: var(--dg-white); box-shadow: var(--shadow-strong); }
+      .hero { min-height: 640px; }
+      .two-col, .event-banner, .split-dark, .cta-final, .contact-wrap { grid-template-columns: 1fr; }
+      .icon-row, .cards-grid, .area-grid, .brands-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+
+    @media (max-width: 768px) {
+      body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+      .mobile-sticky-cta { display: flex; }
+      .footer { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, var(--max-width)); }
+      .section { padding: 52px 0; }
+      .hero { min-height: 720px; }
+      .btn-group { flex-direction: column; }
+      .btn { width: 100%; }
+      .icon-row, .cards-grid, .area-grid, .brands-grid, .related-grid, .process, .footer-grid { grid-template-columns: 1fr; }
+      .cta-content, .dark-panel, .gold-panel, .highlight-card, .event-content, .contact-info, .contact-form-card { padding: 28px; }
+      .nav { min-height: 68px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+  
+
+    .cookie-consent {
+      position: fixed;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1400;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      width: min(100% - 36px, 1080px);
+      margin: 0 auto;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(17, 17, 17, 0.96);
+      color: var(--dg-white);
+      border: 1px solid rgba(200, 162, 74, 0.32);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(12px);
+    }
+
+    .cookie-consent[hidden] { display: none; }
+    .cookie-consent p { color: rgba(255, 255, 255, 0.78); font-size: 0.88rem; margin: 0; }
+    .cookie-consent strong { color: var(--dg-white); }
+    .cookie-consent a { color: var(--dg-gold); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+    .cookie-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+
+    .cookie-button, .footer-cookie-button {
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      background: transparent;
+      color: var(--dg-white);
+      transition: 0.2s ease;
+    }
+
+    .cookie-button:hover, .footer-cookie-button:hover { background: rgba(255,255,255,0.10); }
+    .cookie-button.accept { background: var(--dg-gold); border-color: var(--dg-gold); color: var(--dg-white); }
+    .cookie-button.accept:hover { background: var(--dg-gold-dark); border-color: var(--dg-gold-dark); }
+    .footer-cookie-preferences { text-align: center; margin-top: 14px; }
+    .footer-cookie-button { color: rgba(255,255,255,0.78); font-size: 0.86rem; padding: 8px 14px; }
+
+    @media (max-width: 760px) {
+      .cookie-consent {
+        grid-template-columns: 1fr;
+        bottom: calc(78px + env(safe-area-inset-bottom));
+        padding: 16px;
+      }
+      .cookie-actions { justify-content: stretch; }
+      .cookie-button { flex: 1; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N65F3T7P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="cookie-consent" id="cookieConsentBanner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+    <div>
+      <p><strong>Privacidad y medición.</strong> Usamos cookies y tecnologías de medición para mejorar el sitio, analizar visitas y optimizar campañas. Puedes aceptar o rechazar el uso de analítica y publicidad. Consulta nuestro <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>.</p>
+    </div>
+    <div class="cookie-actions" aria-label="Acciones de consentimiento">
+      <button class="cookie-button reject" type="button" id="rejectCookies">Rechazar</button>
+      <button class="cookie-button accept" type="button" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="DG Audiosound inicio">
+        <span class="logo-mark">DG</span>
+        <span class="logo-text">AUDIOSOUND</span>
+      </a>
+
+      <nav class="menu" id="mainMenu" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/soluciones/">Soluciones</a>
+        <a href="/aplicaciones/">Aplicaciones</a>
+        <a href="/blog/">Blog</a>
+        <a href="/marcas/">Marcas</a>
+        <a href="/tienda/">Tienda</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20Audio%20Hi-Fi%20para%20mi%20casa.%20Me%20interesan%20bocinas%2C%20amplificador%2C%20streamer%20o%20tornamesa." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-controls="mainMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="breadcrumb-wrap" aria-label="Ruta de navegación">
+    <div class="container breadcrumb">
+      <a href="/">Inicio</a>
+      <span>›</span>
+      <a href="/aplicaciones/">Aplicaciones</a>
+      <span>›</span>
+      <span>Audio Hi-Fi</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <!-- 1. HERO ESPECÍFICO -->
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <img src="/assets/img/audio-hi-fi-dg-audiosound-hero.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
+      </div>
+      <div class="container">
+        <div class="eyebrow">Aplicaciones Residencial Premium: <span class="text-gold">Audio Hi‑Fi</span></div>
+        <h1>Audio Hi‑Fi para escuchar música en casa con <span class="text-gold">detalle</span>, profundidad y emoción.</h1>
+        <p class="lead">Diseñamos e integramos sistemas estéreo de alta fidelidad con bocinas, amplificadores, tornamesas, streamers, DACs, subwoofers, cableado y configuración profesional para que tu música se escuche como debe.</p>
+        <p class="lead" style="margin-top:16px;">En DG Audiosound te ayudamos a crear una experiencia musical premium, ya sea que escuches vinilos, streaming Hi‑Res, playlists, jazz, rock, clásica, electrónica o conciertos en casa.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20Audio%20Hi-Fi.%20Me%20interesan%20bocinas%2C%20amplificador%2C%20streamer%20o%20tornamesa." target="_blank" rel="noopener">Cotizar mi sistema Hi‑Fi</a>
+          <a class="btn btn-secondary" href="#incluye">Ver qué incluye</a>
+        </div>
+        <div class="microcopy">
+          <span class="pill">✦ Bocinas estéreo</span>
+          <span class="pill">✦ Amplificadores</span>
+          <span class="pill">✦ Tornamesas</span>
+          <span class="pill">✦ Streamers y DACs</span>
+          <span class="pill">✦ Asesoría audiófila</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. APERTURA EMOCIONAL / CONTEXTO -->
+    <section class="section bg-white">
+      <div class="container two-col">
+        <div>
+          <div class="eyebrow">Escucha musical premium</div>
+          <h2>Un buen sistema Hi‑Fi no solo suena fuerte: revela lo que hay dentro de la <span class="text-gold">música</span>.</h2>
+          <p>La alta fidelidad busca que cada instrumento, voz, textura y espacio se escuche con mayor naturalidad. Un sistema bien elegido puede hacer que tus discos favoritos, vinilos o playlists se sientan más vivos, más amplios y más cercanos.</p>
+          <p style="margin-top:16px;">La diferencia está en el equilibrio: bocinas adecuadas al espacio, amplificación correcta, fuente de audio de calidad, cableado confiable, ubicación precisa y ajustes que permitan que el sistema trabaje como un conjunto.</p>
+        </div>
+        <figure class="image-card">
+          <img src="/assets/img/sistema-audio-hi-fi-residencial-dg-audiosound.webp" alt="Sistema de Audio Hi-Fi residencial con bocinas estéreo amplificador y tornamesa DG Audiosound" width="900" height="620" loading="lazy"  decoding="async"  fetchpriority="low" />
+        </figure>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">★</div><h3>Mayor detalle</h3><p>Escucha voces, instrumentos y matices con más claridad y separación.</p></div>
+        <div class="mini-card"><div class="icon">⏱</div><h3>Uso cotidiano</h3><p>Disfruta vinilos, streaming, radio por internet o música digital con comodidad.</p></div>
+        <div class="mini-card"><div class="icon">↗</div><h3>Escalable</h3><p>Empieza con un sistema estéreo sólido y crece hacia DAC, subwoofer o tornamesa.</p></div>
+        <div class="mini-card"><div class="icon">⚙</div><h3>Ajuste fino</h3><p>La ubicación, acústica y configuración influyen directamente en el resultado.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. PROBLEMA PUNTUAL DEL SECTOR -->
+    <section class="section bg-soft">
+      <div class="container two-col">
+        <div class="highlight-card warning-card">
+          <div class="eyebrow">El problema</div>
+          <h2>Comprar componentes Hi‑Fi sin compatibilidad puede limitar el sonido desde el inicio.</h2>
+          <p>En audio de alta fidelidad no todo se resuelve comprando el equipo más caro. Una bocina puede no combinar bien con cierto amplificador, una tornamesa puede necesitar preamplificador phono, un cuarto puede provocar exceso de graves y una mala ubicación puede reducir la escena estéreo.</p>
+          <p style="margin-top:16px;">Por eso es importante pensar el sistema completo: fuente, amplificación, bocinas, espacio, punto de escucha, conectividad y crecimiento futuro. Cuando todo está equilibrado, la música se siente mucho más natural.</p>
+        </div>
+        <div class="icon-row" style="grid-template-columns: repeat(2, 1fr); margin-top:0;">
+          <div class="mini-card"><div class="icon">🔊</div><h3>Bocinas mal elegidas</h3><p>El tamaño, sensibilidad y tipo de bocina deben corresponder al espacio y amplificador.</p></div>
+          <div class="mini-card"><div class="icon">📺</div><h3>Fuente limitada</h3><p>Una mala fuente digital o analógica puede reducir detalle, dinámica y claridad.</p></div>
+          <div class="mini-card"><div class="icon">💡</div><h3>Ubicación incorrecta</h3><p>La posición de las bocinas afecta graves, imagen estéreo y profundidad.</p></div>
+          <div class="mini-card"><div class="icon">🧩</div><h3>Componentes incompatibles</h3><p>Amplificador, tornamesa, DAC, pre phono y bocinas deben trabajar en conjunto.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. QUÉ HACEMOS -->
+    <section class="section bg-white">
+      <div class="container centered">
+        <div class="eyebrow">Qué hacemos</div>
+        <h2>Integramos sistemas Hi‑Fi equilibrados para escuchar música con calidad real.</h2>
+        <p class="lead">Analizamos tu espacio, tus hábitos de escucha, tus fuentes musicales y tu presupuesto para recomendar una configuración coherente: bocinas, amplificador, tornamesa, streamer, DAC, subwoofer, cableado y ubicación.</p>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">🎚</div><h3>Amplificación</h3><p>Amplificadores integrados, receptores estéreo, preamplificadores y etapas según el sistema.</p></div>
+        <div class="mini-card"><div class="icon">🖥</div><h3>Fuentes de audio</h3><p>Tornamesas, streamers, DACs, reproductores de CD, TV o fuentes digitales.</p></div>
+        <div class="mini-card"><div class="icon">💡</div><h3>Bocinas Hi‑Fi</h3><p>Bocinas de piso, repisa, compactas, subwoofers y soluciones estéreo premium.</p></div>
+        <div class="mini-card"><div class="icon">📍</div><h3>Instalación y ajuste</h3><p>Ubicación, conexión, calibración básica, cableado y explicación de uso.</p></div>
+      </div>
+    </section>
+
+    <!-- 4B. QUÉ INCLUYE LA SOLUCIÓN -->
+    <section class="section bg-soft" id="incluye">
+      <div class="container centered">
+        <div class="eyebrow">Qué incluye la solución</div>
+        <h2>Una solución Hi‑Fi completa, no solo componentes sueltos.</h2>
+        <p class="lead">Te ayudamos a construir una cadena de audio coherente para que fuente, amplificación, bocinas, cableado, ubicación y operación trabajen como un solo sistema.</p>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">📐</div><h3>Diagnóstico del espacio</h3><p>Revisamos medidas, ubicación de escucha, mobiliario, acústica básica y objetivo musical.</p></div>
+        <div class="mini-card"><div class="icon">🔈</div><h3>Selección de bocinas</h3><p>Recomendamos bocinas de piso, repisa o compactas según sala, potencia y estilo de escucha.</p></div>
+        <div class="mini-card"><div class="icon">🎛</div><h3>Amplificación adecuada</h3><p>Integramos amplificador, preamplificador, etapa o receptor estéreo con compatibilidad real.</p></div>
+        <div class="mini-card"><div class="icon">🎚</div><h3>Fuentes musicales</h3><p>Definimos tornamesa, streamer, DAC, CD, TV o fuentes digitales según tus hábitos.</p></div>
+        <div class="mini-card"><div class="icon">🔌</div><h3>Cableado e instalación</h3><p>Organizamos conexiones, soportes, ubicación y estética para una experiencia limpia.</p></div>
+        <div class="mini-card"><div class="icon">✅</div><h3>Pruebas y capacitación</h3><p>Probamos funcionamiento, explicamos operación y dejamos el sistema listo para disfrutar.</p></div>
+      </div>
+    </section>
+
+    <!-- 5. SOLUCIONES ESPECÍFICAS -->
+    <section class="section bg-white" id="soluciones">
+      <div class="container centered">
+        <div class="eyebrow">Qué soluciones vendemos</div>
+        <h2>Sistemas Audio Hi‑Fi para diferentes formas de escuchar música.</h2>
+        <p class="lead">Cada cliente escucha distinto. Podemos diseñar una solución para vinilos, streaming de alta resolución, música ambiental premium, escucha crítica o una sala estéreo dedicada.</p>
+      </div>
+      <div class="container cards-grid">
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/bocinas-hi-fi-estereo-dg-audiosound.webp" alt="Bocinas Hi-Fi estéreo para sala residencial premium DG Audiosound" width="700" height="420" loading="lazy"  decoding="async"  fetchpriority="low" /></div><div class="card-body"><h3>Bocinas Hi‑Fi estéreo</h3><p>Bocinas de repisa o piso seleccionadas según tamaño de sala, potencia, diseño y nivel de detalle deseado.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/amplificador-integrado-hi-fi-dg-audiosound.webp" alt="Amplificador integrado Hi-Fi para sistema estéreo residencial DG Audiosound" width="700" height="420" loading="lazy"  decoding="async"  fetchpriority="low" /></div><div class="card-body"><h3>Amplificadores integrados</h3><p>El corazón del sistema: potencia, control, conectividad y carácter sonoro para mover correctamente las bocinas.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/tornamesa-hi-fi-vinilos-dg-audiosound.webp" alt="Tornamesa Hi-Fi para vinilos con sistema de alta fidelidad DG Audiosound" width="700" height="420" loading="lazy"  decoding="async"  fetchpriority="low" /></div><div class="card-body"><h3>Tornamesas y vinilos</h3><p>Integración de tornamesas, cápsulas, preamplificadores phono y ajustes básicos para disfrutar tu colección de vinilos.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/streamer-dac-audio-hi-fi-dg-audiosound.webp" alt="Streamer y DAC para audio Hi-Fi de alta resolución DG Audiosound" width="700" height="420" loading="lazy"  decoding="async"  fetchpriority="low" /></div><div class="card-body"><h3>Streamers y DACs</h3><p>Reproducción digital de alta calidad para plataformas de música, archivos, radio por internet o audio Hi‑Res.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/subwoofer-audio-hi-fi-dg-audiosound.webp" alt="Subwoofer para sistema Audio Hi-Fi estéreo residencial DG Audiosound" width="700" height="420" loading="lazy"  decoding="async"  fetchpriority="low" /></div><div class="card-body"><h3>Subwoofers Hi‑Fi</h3><p>Extensión de graves más profunda y controlada para música, sin perder equilibrio ni definición.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/img/cableado-soportes-audio-hi-fi-dg-audiosound.webp" alt="Cableado soportes y rack para sistema Audio Hi-Fi DG Audiosound" width="700" height="420" loading="lazy"  decoding="async"  fetchpriority="low" /></div><div class="card-body"><h3>Cableado, rack y soportes</h3><p>Organización del sistema con cableado adecuado, bases, soportes, racks y estética limpia.</p></div></article>
+      </div>
+    </section>
+
+    <!-- 6. BENEFICIOS COMERCIALES -->
+    <section class="section bg-dark">
+      <div class="container centered">
+        <div class="eyebrow">Beneficios</div>
+        <h2>Redescubre tu música con un sistema diseñado para emocionar, no solo para sonar.</h2>
+      </div>
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">★</div><h3>Más detalle musical</h3><p>Mayor claridad en voces, instrumentos, separación, dinámica y escena estéreo.</p></div>
+        <div class="mini-card"><div class="icon">⏳</div><h3>Mejor inversión</h3><p>La asesoría evita combinaciones incorrectas y compras que no corresponden al espacio.</p></div>
+        <div class="mini-card"><div class="icon">🎭</div><h3>Experiencia emocional</h3><p>Un buen sistema te invita a sentarte, escuchar y disfrutar la música con intención.</p></div>
+        <div class="mini-card"><div class="icon">⚙</div><h3>Sistema escalable</h3><p>Puedes iniciar con estéreo y crecer hacia tornamesa, streamer, DAC o subwoofer.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. ÁREAS DONDE SE APLICA -->
+    <section class="section bg-white" id="aplicaciones">
+      <div class="container centered">
+        <div class="eyebrow">Áreas de aplicación</div>
+        <h2>Espacios residenciales ideales para Audio Hi‑Fi.</h2>
+        <p class="lead">Un sistema de alta fidelidad puede integrarse en una sala principal, estudio, biblioteca, cuarto de música o espacio dedicado para disfrutar vinilos y streaming con mayor calidad.</p>
+      </div>
+      <div class="container area-grid">
+        <div class="area-card"><img src="/assets/img/sala-audio-hi-fi-residencial-dg-audiosound.webp" alt="Sala residencial con sistema Audio Hi-Fi estéreo DG Audiosound" width="620" height="380" loading="lazy"  decoding="async"  fetchpriority="low" /><span>Sala principal</span></div>
+        <div class="area-card"><img src="/assets/img/cuarto-musica-hi-fi-dg-audiosound.webp" alt="Cuarto de música con sistema Hi-Fi y tornamesa DG Audiosound" width="620" height="380" loading="lazy"  decoding="async"  fetchpriority="low" /><span>Cuarto de música</span></div>
+        <div class="area-card"><img src="/assets/img/biblioteca-audio-hi-fi-dg-audiosound.webp" alt="Biblioteca residencial con audio Hi-Fi premium DG Audiosound" width="620" height="380" loading="lazy"  decoding="async"  fetchpriority="low" /><span>Biblioteca</span></div>
+        <div class="area-card"><img src="/assets/img/estudio-audio-hi-fi-dg-audiosound.webp" alt="Estudio residencial con sistema de alta fidelidad DG Audiosound" width="620" height="380" loading="lazy"  decoding="async"  fetchpriority="low" /><span>Estudio</span></div>
+        <div class="area-card"><img src="/assets/img/zona-vinilos-tornamesa-dg-audiosound.webp" alt="Zona de vinilos con tornamesa y sistema Hi-Fi DG Audiosound" width="620" height="380" loading="lazy"  decoding="async"  fetchpriority="low" /><span>Zona de vinilos</span></div>
+        <div class="area-card"><img src="/assets/img/sala-premium-streaming-hi-fi-dg-audiosound.webp" alt="Sala premium con streamer y audio Hi-Fi de alta resolución DG Audiosound" width="620" height="380" loading="lazy"  decoding="async"  fetchpriority="low" /><span>Streaming Hi‑Res</span></div>
+      </div>
+      <div class="container related-box" aria-label="Aplicaciones y soluciones relacionadas">
+        <h3>Aplicaciones relacionadas y soluciones pilar</h3>
+        <p>Audio Hi‑Fi pertenece a Residencial Premium y puede convivir con cine en casa, audio distribuido o una sala familiar mejor integrada.</p>
+        <div class="related-grid">
+          <a class="related-link" href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a class="related-link" href="/aplicaciones/cine-en-casa/">Cine en Casa</a>
+          <a class="related-link" href="/aplicaciones/audio-distribuido/">Audio Distribuido</a>
+          <a class="related-link" href="/aplicaciones/family-room/">Family Room</a>
+          <a class="related-link" href="/aplicaciones/home-office/">Home Office</a>
+          <a class="related-link" href="/aplicaciones/terrazas-y-jardin/">Terrazas y Jardín</a>
+          <a class="related-link" href="/marcas/">Marcas de Audio</a>
+          <a class="related-link" href="/tienda/">Tienda</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECCIÓN ESPECIAL DEL SECTOR -->
+    <section class="section-sm bg-soft">
+      <div class="container event-banner">
+        <div class="event-img"><img src="/assets/img/tornamesas-vinilos-audio-hi-fi-dg-audiosound.webp" alt="Tornamesas y vinilos para sistema Audio Hi-Fi premium DG Audiosound" width="980" height="620" loading="lazy"  decoding="async"  fetchpriority="low" /></div>
+        <div class="event-content">
+          <div class="eyebrow">Especial tornamesas y vinilos</div>
+          <h2>El vinilo necesita más que una tornamesa bonita: necesita una cadena bien integrada.</h2>
+          <p>Para disfrutar tus discos con mayor calidad, la tornamesa debe trabajar correctamente con la cápsula, el preamplificador phono, el amplificador, las bocinas y la ubicación del sistema. Una buena integración puede hacer que tu colección cobre nueva vida.</p>
+          <div class="btn-group"><a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20armar%20o%20mejorar%20un%20sistema%20Hi-Fi%20con%20tornamesa%20y%20vinilos." target="_blank" rel="noopener">Cotizar sistema con tornamesa</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. PROCESO -->
+    <section class="section bg-white" id="proceso">
+      <div class="container centered"><div class="eyebrow">Proceso</div><h2>Un proceso claro para una solución profesional</h2></div>
+      <div class="container process">
+        <div class="process-step"><div class="step-number">1</div><h3>Nos contactas</h3><p>Nos escribes por WhatsApp y nos cuentas cómo escuchas música.</p></div>
+        <div class="process-step"><div class="step-number">2</div><h3>Revisamos tu espacio</h3><p>Analizamos medidas, fotos, muebles, ubicación y equipos actuales.</p></div>
+        <div class="process-step"><div class="step-number">3</div><h3>Definimos sistema</h3><p>Recomendamos bocinas, amplificador, fuente, tornamesa, DAC o subwoofer.</p></div>
+        <div class="process-step"><div class="step-number">4</div><h3>Propuesta clara</h3><p>Te entregamos alcance, equipos, tiempos e inversión.</p></div>
+        <div class="process-step"><div class="step-number">5</div><h3>Instalamos</h3><p>Montaje, conexión, pruebas, ajustes y puesta en marcha.</p></div>
+        <div class="process-step"><div class="step-number">6</div><h3>Te capacitamos</h3><p>Explicamos el uso básico para una operación sencilla.</p></div>
+      </div>
+    </section>
+
+    <!-- 10. DIFERENCIADOR Y CONFIANZA -->
+    <section class="section bg-soft">
+      <div class="container split-dark">
+        <div class="dark-panel">
+          <div class="eyebrow">Diferenciador</div>
+          <h2>No vendemos componentes aislados: construimos una cadena de audio coherente.</h2>
+          <p>En Hi‑Fi, cada eslabón importa. La fuente, el amplificador, las bocinas, el cableado, el mueble, la ubicación y la acústica influyen en el resultado. Por eso no recomendamos piezas sueltas sin considerar el sistema completo.</p>
+          <p style="margin-top:16px;">En DG Audiosound buscamos que tu inversión tenga sentido: que suene bien, se vea bien, se use fácil y pueda crecer de forma inteligente.</p>
+        </div>
+        <div class="gold-panel">
+          <div class="eyebrow" style="color:#fff;">Confianza</div>
+          <h2>Una decisión profesional para tu música</h2>
+          <ul class="check-list">
+            <li>Asesoría personalizada</li>
+            <li>Propuesta formal</li>
+            <li>Equipos originales</li>
+            <li>Integración estética</li>
+            <li>Instalación profesional</li>
+            <li>Ajustes básicos de ubicación</li>
+            <li>Capacitación de uso</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. MARCAS -->
+    <section class="section bg-white">
+      <div class="container centered">
+        <div class="eyebrow">Marcas y tecnología</div>
+        <h2>Integramos marcas y componentes para crear sistemas estéreo de alta fidelidad.</h2>
+        <p class="lead">Según el proyecto, podemos recomendar bocinas, amplificadores, tornamesas, streamers, DACs, preamplificadores phono, subwoofers y accesorios adecuados para tu espacio y forma de escucha.</p>
+      </div>
+      <div class="container brands-grid" aria-label="Marcas y categorías recomendadas para Audio Hi-Fi">
+        <div class="brand-box">KEF</div><div class="brand-box">NAD</div><div class="brand-box">Pro-Ject</div><div class="brand-box">Ruark</div><div class="brand-box">Sonos</div>
+        <div class="brand-box">Tornamesas</div><div class="brand-box">Amplificadores</div><div class="brand-box">Streamers</div><div class="brand-box">DACs</div><div class="brand-box">Bocinas Hi‑Fi</div>
+      </div>
+    </section>
+
+    <!-- 12. FAQ -->
+    <section class="section bg-soft" id="faq">
+      <div class="container centered"><div class="eyebrow">FAQ</div><h2>Preguntas frecuentes sobre Audio Hi‑Fi</h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué es un sistema de Audio Hi‑Fi?</span><span>+</span></button><div class="faq-answer"><p>Un sistema de Audio Hi‑Fi es una solución de alta fidelidad diseñada para reproducir música con mayor claridad, detalle, escena estéreo y naturalidad. Puede incluir bocinas, amplificador, tornamesa, streamer, DAC, subwoofer y cableado adecuado.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Pueden integrar tornamesas en un sistema Hi‑Fi?</span><span>+</span></button><div class="faq-answer"><p>Sí. DG Audiosound puede asesorar e integrar tornamesas, cápsulas, preamplificadores phono, amplificadores y bocinas para disfrutar vinilos con una configuración correcta y balanceada.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué necesito para iniciar un sistema estéreo de alta fidelidad?</span><span>+</span></button><div class="faq-answer"><p>Normalmente se parte de una fuente de audio, como streamer o tornamesa, un amplificador integrado, un par de bocinas estéreo y cableado adecuado. La recomendación depende del espacio, presupuesto y tipo de música que escuchas.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Es mejor un sistema Hi‑Fi estéreo o un cine en casa?</span><span>+</span></button><div class="faq-answer"><p>Depende del uso principal. Si la prioridad es música con mayor detalle y escena estéreo, un sistema Hi‑Fi puede ser ideal. Si la prioridad son películas y sonido envolvente, conviene un sistema de cine en casa. También se pueden combinar ambos enfoques.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿La ubicación de las bocinas afecta el sonido?</span><span>+</span></button><div class="faq-answer"><p>Sí. La posición de las bocinas, distancia a muros, altura, orientación, punto de escucha y acústica del cuarto influyen mucho en el resultado. Por eso la instalación y ajuste son parte importante del proyecto.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué datos necesitan para cotizar un sistema Audio Hi‑Fi?</span><span>+</span></button><div class="faq-answer"><p>Ayudan las medidas del espacio, fotos, presupuesto aproximado, tipo de música, si escuchas vinilos o streaming, equipos actuales, nivel de volumen deseado y si prefieres bocinas de piso, repisa o una solución compacta.</p></div></div>
+      </div>
+    </section>
+
+    <!-- 13. CTA FINAL -->
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-wrap">
+        <div class="contact-info">
+          <div class="eyebrow">Cotiza tu proyecto</div>
+          <h2>Construyamos un sistema <span class="text-gold">Hi‑Fi</span> a la medida de tu música</h2>
+          <p>Comparte fotos del espacio, medidas, gustos musicales, equipos actuales y presupuesto aproximado. Con esa información podemos orientarte hacia una configuración equilibrada, estética y preparada para crecer.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail"><strong>Teléfono / WhatsApp</strong><a href="https://wa.me/525537270177" target="_blank" rel="noopener">55 3727 0177</a></div>
+            <div class="contact-detail"><strong>Correo</strong><a href="mailto:contacto@dgaudiosound.com">contacto@dgaudiosound.com</a></div>
+            <div class="contact-detail"><strong>Ubicación / cobertura</strong><span>Ciudad de México, Estado de México y proyectos especiales en México</span></div>
+          </div>
+
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20Audio%20Hi-Fi%20para%20mi%20casa.%20Me%20interesan%20bocinas%2C%20amplificador%2C%20streamer%20o%20tornamesa." target="_blank" rel="noopener">Enviar WhatsApp ahora</a>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>Solicita una cotización</h3>
+          <p>Cuéntanos qué tipo de música escuchas, el tamaño del espacio, si usas vinilos o streaming y qué nivel de sistema buscas.</p>
+
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="form-field"><label for="name">Nombre / Empresa *</label><input type="text" id="name" name="name" placeholder="Ej. Nombre, empresa o proyecto" autocomplete="name" required /></div>
+              <div class="form-field"><label for="email">Correo Electrónico *</label><input type="email" id="email" name="email" placeholder="correo@empresa.com" autocomplete="email" required /></div>
+              <div class="form-field"><label for="phone">Teléfono / WhatsApp</label><input type="tel" id="phone" name="phone" placeholder="55 0000 0000" autocomplete="tel" /></div>
+              <div class="form-field">
+                <label for="projectType">Tipo de Proyecto</label>
+                <select id="projectType" name="projectType">
+                  <option value="Sistema estéreo Hi‑Fi">Sistema estéreo Hi‑Fi</option>
+                  <option value="Bocinas y amplificador">Bocinas y amplificador</option>
+                  <option value="Tornamesa y vinilos">Tornamesa y vinilos</option>
+                  <option value="Streamer / DAC">Streamer / DAC</option>
+                  <option value="Subwoofer para música">Subwoofer para música</option>
+                  <option value="Mejora de sistema actual">Mejora de sistema actual</option>
+                  <option value="Sala de música">Sala de música</option>
+                  <option value="Sistema compacto premium">Sistema compacto premium</option>
+                  <option value="Asesoría audiófila">Asesoría audiófila</option>
+                  <option value="Otro proyecto">Otro proyecto</option>
+                </select>
+              </div>
+              <div class="form-field full"><label for="details">Detalles del proyecto</label><textarea id="details" name="details" autocomplete="off" placeholder="Cuéntanos medidas del cuarto, tipo de música, si usas vinilos o streaming, equipos actuales, preferencia por bocinas de piso/repisa, presupuesto aproximado y objetivo del sistema."></textarea></div>
+            </div>
+
+            <button class="form-submit" type="submit">Solicitar Cotización</button>
+            <div class="form-note">Al enviar, se abrirá WhatsApp con tu información para que un asesor de DG Audiosound pueda atenderte. Al continuar aceptas nuestro <a class="privacy-link" href="/aviso-de-privacidad/">aviso de privacidad</a>.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="/" class="logo" style="color:#fff; margin-bottom:14px; display:inline-flex;"><span class="logo-mark">DG</span><span class="logo-text">AUDIOSOUND</span></a>
+        <p>Soluciones de audio y video para el éxito de tu proyecto.</p>
+      </div>
+      <div>
+        <h3>Soluciones</h3>
+        <div class="footer-links">
+          <a href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a href="/soluciones/negocios-y-experiencias-comerciales/">Negocios y experiencias comerciales</a>
+          <a href="/soluciones/corporativo-e-institucional/">Corporativo e institucional</a>
+          <a href="/soluciones/eventos-creadores-y-produccion/">Eventos, creadores y producción</a>
+        </div>
+      </div>
+      <div>
+        <h3>Aplicaciones relacionadas</h3>
+        <div class="footer-links">
+          <a href="/aplicaciones/cine-en-casa/">Cine en Casa</a>
+          <a href="/aplicaciones/audio-distribuido/">Audio Distribuido</a>
+          <a href="/aplicaciones/family-room/">Family Room</a>
+          <a href="/aplicaciones/home-office/">Home Office</a>
+          <a href="/aplicaciones/terrazas-y-jardin/">Terrazas y Jardín</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <div class="footer-links">
+          <a href="https://wa.me/525537270177" target="_blank" rel="noopener">WhatsApp: 55 3727 0177</a>
+          <a href="mailto:contacto@dgaudiosound.com">contacto@dgaudiosound.com</a>
+          <a href="https://www.instagram.com/dgaudiosound/" target="_blank" rel="noopener">Instagram: @dgaudiosound</a>
+          <a href="https://www.facebook.com/61572482057227/" target="_blank" rel="noopener">Facebook: DG Audiosound</a>
+          <a href="/tienda/">Tienda</a>
+          <a href="/aviso-de-privacidad/">Aviso de privacidad</a>
+          <a href="/terminos-y-condiciones/">Términos y condiciones</a>
+          <a href="/garantias-y-devoluciones/">Garantías y devoluciones</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright">© 2026 DG Audiosound. Todos los derechos reservados.</div>
+
+    <div class="container footer-cookie-preferences">
+      <button class="footer-cookie-button" type="button" id="openCookiePreferences">Preferencias de cookies</button>
+    </div>
+
+  </footer>
+
+  <a class="mobile-sticky-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20un%20sistema%20de%20Audio%20Hi-Fi%20para%20mi%20casa.%20Me%20interesan%20bocinas%2C%20amplificador%2C%20streamer%20o%20tornamesa." target="_blank" rel="noopener" aria-label="Cotizar Audio Hi‑Fi por WhatsApp con DG Audiosound">
+    Cotizar por WhatsApp
+  </a>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const PAGE_CONTEXT = {
+        page_type: 'landing_application',
+        brand: 'DG Audiosound',
+        parent_solution: 'residencial_premium',
+        solution_slug: 'audio_hi_fi',
+        application_slug: 'audio_hi_fi',
+        lead_source: 'landing_audio_hi_fi'
+      };
+
+      window.dataLayer = window.dataLayer || [];
+
+      function normalizeValue(value) {
+        return String(value || '')
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '')
+          .slice(0, 80);
+      }
+
+      function createEventId(eventName) {
+        const randomPart = Math.random().toString(36).slice(2, 10);
+        return 'dg_audio_hi_fi_' + normalizeValue(eventName) + '_' + Date.now() + '_' + randomPart;
+      }
+
+      function getPageSection(element) {
+        const section = element.closest('section');
+        if (section && section.id) return section.id;
+        if (element.closest('header')) return 'header';
+        if (element.closest('footer')) return 'footer';
+        if (element.classList.contains('mobile-sticky-cta')) return 'sticky_mobile_cta';
+        return 'body';
+      }
+
+      function getLinkText(element) {
+        return String(element.textContent || element.getAttribute('aria-label') || 'link')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, 90);
+      }
+
+      function pushDGEvent(eventName, params) {
+        window.dataLayer.push(Object.assign({}, PAGE_CONTEXT, params || {}, {
+          event: eventName,
+          event_id: createEventId(eventName)
+        }));
+      }
+
+      window.dgTrack = pushDGEvent;
+
+      const mobileToggle = document.getElementById('mobileToggle');
+      const mainMenu = document.getElementById('mainMenu');
+
+      if (mobileToggle && mainMenu) {
+        mobileToggle.addEventListener('click', function () {
+          const isOpen = mainMenu.classList.toggle('is-open');
+          mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          mobileToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && mainMenu.classList.contains('is-open')) {
+            mainMenu.classList.remove('is-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', 'Abrir menú');
+            mobileToggle.focus();
+          }
+        });
+
+        mainMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (mainMenu.classList.contains('is-open')) {
+              mainMenu.classList.remove('is-open');
+              mobileToggle.setAttribute('aria-expanded', 'false');
+              mobileToggle.setAttribute('aria-label', 'Abrir menú');
+            }
+          });
+        });
+      }
+
+      document.querySelectorAll('.faq-item').forEach(function (item, index) {
+        const button = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        if (!button || !answer) return;
+
+        const answerId = 'faq-audio-hi-fi-' + (index + 1);
+        answer.id = answerId;
+        answer.setAttribute('role', 'region');
+        answer.setAttribute('aria-labelledby', 'faq-question-audio-hi-fi-' + (index + 1));
+        button.id = 'faq-question-audio-hi-fi-' + (index + 1);
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-controls', answerId);
+
+        button.addEventListener('click', function () {
+          const expanded = item.classList.toggle('active');
+          button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+          const symbol = button.querySelector('span:last-child');
+          if (symbol) {
+            symbol.textContent = expanded ? '−' : '+';
+          }
+
+          if (expanded) {
+            pushDGEvent('open_faq', {
+              page_section: 'faq',
+              link_text: getLinkText(button),
+              cta_intent: 'resolver_duda',
+              destination_type: 'faq'
+            });
+          }
+        });
+      });
+
+      document.querySelectorAll('a[href]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const href = link.getAttribute('href') || '';
+          const absoluteHref = link.href || href;
+          const pageSection = getPageSection(link);
+          const linkText = getLinkText(link);
+          const commonParams = {
+            page_section: pageSection,
+            link_text: linkText
+          };
+
+          if (absoluteHref.includes('wa.me/525537270177')) {
+            const whatsappParams = Object.assign({}, commonParams, {
+              destination_type: 'whatsapp',
+              contact_method: 'whatsapp',
+              conversion_type: 'contact',
+              cta_intent: 'cotizar_audio_hi_fi'
+            });
+
+            pushDGEvent('click_whatsapp', whatsappParams);
+
+            if (link.classList.contains('btn') || link.classList.contains('mobile-sticky-cta')) {
+              pushDGEvent('click_quote_cta', Object.assign({}, whatsappParams, {
+                conversion_type: 'quote_request'
+              }));
+            }
+
+            if (pageSection === 'contacto') {
+              pushDGEvent('click_final_cta', Object.assign({}, whatsappParams, {
+                conversion_type: 'final_contact'
+              }));
+            }
+            return;
+          }
+
+          if (href.startsWith('mailto:')) {
+            pushDGEvent('click_email', Object.assign({}, commonParams, {
+              destination_type: 'email',
+              contact_method: 'email',
+              conversion_type: 'contact'
+            }));
+            return;
+          }
+
+          if (href.startsWith('tel:')) {
+            pushDGEvent('click_phone', Object.assign({}, commonParams, {
+              destination_type: 'phone',
+              contact_method: 'phone',
+              conversion_type: 'contact'
+            }));
+            return;
+          }
+
+          if (absoluteHref.includes('instagram.com') || absoluteHref.includes('facebook.com')) {
+            pushDGEvent('click_social', Object.assign({}, commonParams, {
+              destination_type: 'social',
+              social_network: absoluteHref.includes('instagram.com') ? 'instagram' : 'facebook'
+            }));
+            return;
+          }
+
+          if (href.includes('/tienda/')) {
+            pushDGEvent('click_store', Object.assign({}, commonParams, {
+              destination_type: 'store',
+              cta_intent: 'visitar_tienda'
+            }));
+            return;
+          }
+
+          if (href.includes('/soluciones/')) {
+            pushDGEvent('click_parent_solution', Object.assign({}, commonParams, {
+              destination_type: 'internal_link',
+              cta_intent: 'ver_solucion_pilar',
+              parent_solution: normalizeValue(linkText)
+            }));
+            return;
+          }
+
+          if (href.includes('/aplicaciones/') && !href.includes('/audio-hi-fi/')) {
+            pushDGEvent('click_related_application', Object.assign({}, commonParams, {
+              destination_type: 'internal_link',
+              cta_intent: 'ver_aplicacion_relacionada',
+              related_application: normalizeValue(linkText)
+            }));
+            return;
+          }
+
+          if (href === '#soluciones' || href === '#incluye') {
+            pushDGEvent('select_solution', Object.assign({}, commonParams, {
+              destination_type: 'section_anchor',
+              cta_intent: 'explorar_solucion_hi_fi'
+            }));
+          }
+        });
+      });
+
+      document.querySelectorAll('.solution-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          const title = card.querySelector('h3');
+          pushDGEvent('select_solution', {
+            page_section: 'soluciones',
+            link_text: title ? getLinkText(title) : 'solucion_audio_hi_fi',
+            destination_type: 'content_card',
+            cta_intent: 'explorar_tipo_de_solucion'
+          });
+        });
+      });
+
+      document.querySelectorAll('.area-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          const title = card.querySelector('span');
+          pushDGEvent('select_application', {
+            page_section: 'aplicaciones',
+            link_text: title ? getLinkText(title) : 'area_audio_hi_fi',
+            destination_type: 'content_card',
+            cta_intent: 'explorar_area_de_aplicacion'
+          });
+        });
+      });
+
+      const quoteForm = document.getElementById('quoteForm');
+
+      if (quoteForm) {
+        let formStarted = false;
+
+        quoteForm.querySelectorAll('input, select, textarea').forEach(function (field) {
+          field.addEventListener('input', function () {
+            if (formStarted) return;
+            formStarted = true;
+            pushDGEvent('form_start', {
+              page_section: 'contacto',
+              destination_type: 'form',
+              cta_intent: 'solicitar_cotizacion',
+              conversion_type: 'lead'
+            });
+          }, { once: true });
+        });
+
+        quoteForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const projectType = document.getElementById('projectType').value;
+          const details = document.getElementById('details').value.trim();
+
+          if (!quoteForm.checkValidity()) {
+            quoteForm.reportValidity();
+            return;
+          }
+
+          pushDGEvent('generate_lead', {
+            page_section: 'contacto',
+            destination_type: 'whatsapp',
+            contact_method: 'whatsapp',
+            conversion_type: 'lead',
+            cta_intent: 'solicitar_cotizacion_audio_hi_fi',
+            project_type: normalizeValue(projectType)
+          });
+
+          const message =
+            'Hola DG Audiosound, quiero solicitar una cotización para sistema de Audio Hi-Fi.%0A%0A' +
+            'Nombre / Empresa: ' + encodeURIComponent(name) + '%0A' +
+            'Correo: ' + encodeURIComponent(email) + '%0A' +
+            'Teléfono / WhatsApp: ' + encodeURIComponent(phone || 'No especificado') + '%0A' +
+            'Tipo de proyecto: ' + encodeURIComponent(projectType) + '%0A' +
+            'Detalles: ' + encodeURIComponent(details || 'No especificado');
+
+          window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
+        });
+      }
+    })();
+  </script>
+
+
+  <script>
+    (function() {
+      const cookieBanner = document.getElementById('cookieConsentBanner');
+      const acceptCookies = document.getElementById('acceptCookies');
+      const rejectCookies = document.getElementById('rejectCookies');
+      const openCookiePreferences = document.getElementById('openCookiePreferences');
+
+      function getStoredConsent() {
+        try {
+          return window.localStorage.getItem('dg_cookie_consent');
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function saveStoredConsent(value) {
+        try {
+          window.localStorage.setItem('dg_cookie_consent', value);
+        } catch (error) {
+          // Si localStorage no está disponible, solo actualizamos el consentimiento en la sesión actual.
+        }
+      }
+
+      function updateDGConsent(consentValue, source) {
+        const accepted = consentValue === 'accepted';
+        if (typeof window.dgConsentCommand === 'function' && typeof window.dgBuildConsentState === 'function') {
+          window.dgConsentCommand(
+            'consent',
+            'update',
+            window.dgBuildConsentState(accepted ? 'granted' : 'denied')
+          );
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: accepted ? 'cookie_consent_accepted' : 'cookie_consent_rejected',
+          consent_status: consentValue,
+          consent_source: source || 'cookie_banner'
+        });
+      }
+
+      function showCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.hidden = false;
+        cookieBanner.classList.add('is-visible');
+      }
+
+      function hideCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.remove('is-visible');
+        cookieBanner.hidden = true;
+      }
+
+      function setConsent(choice, source) {
+        saveStoredConsent(choice);
+        updateDGConsent(choice, source);
+        hideCookieBanner();
+      }
+
+      if (acceptCookies) {
+        acceptCookies.addEventListener('click', function() {
+          setConsent('accepted', 'cookie_banner');
+        });
+      }
+
+      if (rejectCookies) {
+        rejectCookies.addEventListener('click', function() {
+          setConsent('rejected', 'cookie_banner');
+        });
+      }
+
+      if (openCookiePreferences) {
+        openCookiePreferences.addEventListener('click', function() {
+          showCookieBanner();
+        });
+      }
+
+      const storedConsent = getStoredConsent();
+      if (storedConsent !== 'accepted' && storedConsent !== 'rejected') {
+        showCookieBanner();
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  <!-- CONSENT MODE: denegado por defecto para analítica y publicidad -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    window.dgConsentCommand = function() {
+      window.dataLayer.push(arguments);
+    };
+
+    window.dgBuildConsentState = function(status) {
+      var granted = status === 'granted';
+      return {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied',
+        personalization_storage: granted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted'
+      };
+    };
+
+    var dgStoredConsent = null;
+    try {
+      dgStoredConsent = window.localStorage.getItem('dg_cookie_consent');
+    } catch (error) {
+      dgStoredConsent = null;
+    }
+
+    window.dgConsentCommand(
+      'consent',
+      'default',
+      Object.assign(
+        {},
+        window.dgBuildConsentState(dgStoredConsent === 'accepted' ? 'granted' : 'denied'),
+        { wait_for_update: 500 }
+      )
+    );
+  </script>
+
+  <!-- GOOGLE TAG MANAGER
+    GA4 (G-H29S551ZJK) y Meta Pixel (1977566363148263) deben configurarse desde GTM
+    para evitar duplicar mediciones en el HTML.
+  -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "page_context",
+      page_type: "solution_landing",
+      page_category: "eventos_creadores_produccion",
+      solution_slug: "eventos-creadores-y-produccion",
+      lead_source: "landing_eventos_creadores_produccion",
+      business_name: "DG Audiosound",
+      content_language: "es-MX"
+    });
+  </script>
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N65F3T7P');
+  </script>
+
+  <title>Eventos y Producción Audio y Video | DG Audiosound</title>
+  <meta name="description" content="Audio y video profesional para eventos, creadores y producción en México. Podcast, streaming, DJs, centros de culto, músicos y cine independiente con..." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="DG Audiosound" />
+  <meta name="theme-color" content="#151515" />
+  <link rel="canonical" href="https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/" />
+  <link rel="alternate" hreflang="es-MX" href="https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/" />
+  <link rel="alternate" hreflang="x-default" href="https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/" />
+
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DG Audiosound" />
+  <meta property="og:title" content="Eventos, creadores y producción | Audio y video profesional | DG Audiosound" />
+  <meta property="og:description" content="Audio profesional, video, microfonía, consolas, streaming, grabación, monitoreo e integración para eventos, creadores, músicos, DJs y espacios de producción." />
+  <meta property="og:url" content="https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/" />
+  <meta property="og:image" content="https://dgaudiosound.com/assets/soluciones/eventos-creadores-produccion-hero.webp" />
+  <meta property="og:image:alt" content="Soluciones profesionales de audio y video para eventos, creadores y producción" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:site" content="@dgaudiosound" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Eventos, creadores y producción | Audio y video profesional | DG Audiosound" />
+  <meta name="twitter:description" content="Soluciones profesionales de audio, video, microfonía, streaming y producción para proyectos donde la experiencia audiovisual es esencial." />
+  <meta name="twitter:image" content="https://dgaudiosound.com/assets/soluciones/eventos-creadores-produccion-hero.webp" />
+  <meta name="twitter:image:alt" content="Soluciones profesionales de audio y video para eventos, creadores y producción" />
+
+  <link rel="preload" as="image" href="/assets/soluciones/eventos-creadores-produccion-hero.webp" imagesrcset="/assets/soluciones/eventos-creadores-produccion-hero.webp 1920w, /assets/soluciones/eventos-creadores-produccion-hero-tablet.webp 1200w, /assets/soluciones/eventos-creadores-produccion-hero-mobile.webp 768w" imagesizes="100vw" type="image/webp" fetchpriority="high" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://dgaudiosound.com/#localbusiness",
+      "name": "DG Audiosound",
+      "url": "https://dgaudiosound.com/",
+      "telephone": "+525537270177",
+      "email": "contacto@dgaudiosound.com",
+      "description": "DG Audiosound ofrece soluciones profesionales de audio y video para hogares, negocios, empresas, eventos, creadores de contenido y espacios de producción.",
+      "slogan": "Soluciones de audio y video para el éxito de tu proyecto.",
+      "image": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "logo": "https://dgaudiosound.com/assets/dg-audiosound-logo.png",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Place",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/dgaudiosound/",
+        "https://www.facebook.com/61572482057227/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+525537270177",
+        "contactType": "sales",
+        "areaServed": "MX",
+        "availableLanguage": [
+          "es-MX",
+          "es"
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/#service",
+      "name": "Soluciones de audio y video para eventos, creadores y producción",
+      "serviceType": "Audio profesional, video, microfonía, streaming, grabación, mezcla e integración audiovisual",
+      "provider": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      },
+      "areaServed": [
+        "Ciudad de México",
+        "Estado de México",
+        "México"
+      ],
+      "description": "Soluciones profesionales de audio, video, microfonía, consolas, bocinas, subwoofers, monitoreo, proyección, streaming, grabación e iluminación complementaria para eventos, creadores, DJs, centros de culto, cine independiente, músicos y vocalistas.",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Productores, creadores de contenido, streamers, músicos, DJs, centros de culto, cines independientes y proyectos audiovisuales"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Soluciones para eventos, creadores y producción DG Audiosound",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para podcast"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para streamers"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio para sonidos y DJ"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para centros de culto"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio y video para cine independiente"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Audio para músicos y vocalistas"
+            }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "MXN"
+        },
+        "url": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/#webpage",
+      "url": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/",
+      "name": "Eventos, creadores y producción | Audio y video profesional | DG Audiosound",
+      "description": "Audio y video profesional para eventos, creadores y producción en México. Podcast, streaming, DJs, centros de culto, músicos y cine independiente con asesoría e integración.",
+      "isPartOf": {
+        "@id": "https://dgaudiosound.com/#website"
+      },
+      "about": {
+        "@id": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://dgaudiosound.com/assets/soluciones/eventos-creadores-produccion-hero.webp"
+      },
+      "breadcrumb": {
+        "@id": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/#breadcrumb"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dgaudiosound.com/#website",
+      "url": "https://dgaudiosound.com/",
+      "name": "DG Audiosound",
+      "publisher": {
+        "@id": "https://dgaudiosound.com/#localbusiness"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dgaudiosound.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Soluciones",
+          "item": "https://dgaudiosound.com/soluciones/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Eventos, Creadores y Producción",
+          "item": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dgaudiosound.com/soluciones/eventos-creadores-y-produccion/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué tipo de soluciones ofrece DG Audiosound para eventos, creadores y producción?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos soluciones profesionales de audio, video, microfonía, consolas, mezcladoras, bocinas, subwoofers, monitoreo, interfaces, grabación, streaming, proyección, pantallas e iluminación complementaria para proyectos audiovisuales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden ayudarme a elegir el equipo correcto para mi proyecto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Analizamos el tipo de proyecto, espacio, uso, audiencia, operación, presupuesto y objetivos para recomendar una solución adecuada, escalable y fácil de operar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Trabajan con soluciones para podcast y streamers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Podemos integrar micrófonos, interfaces, mezcladoras, monitoreo, cámaras, iluminación básica, captura de video y flujo de audio para podcast, streaming y creación de contenido profesional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿También atienden proyectos para sonidos, DJs y eventos en vivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Desarrollamos soluciones con sistemas PA, subwoofers, consolas, microfonía, monitoreo, cableado y accesorios para sonidos, DJs, presentaciones y eventos donde se requiere potencia, claridad y confiabilidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La solución puede incluir instalación y capacitación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Según el alcance del proyecto, podemos apoyar con instalación, conexión, configuración, pruebas, puesta en marcha y capacitación básica para que el equipo pueda operarse correctamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo solicitar una cotización?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes solicitar una cotización por WhatsApp al 55 3727 0177 o llenar el formulario de contacto de esta página. Te pediremos datos básicos del proyecto para preparar una recomendación adecuada."
+          }
+        }
+      ]
+    }
+  ],
+  "dateModified": "2026-05-10",
+  "datePublished": "2025-01-01",
+  "author": {
+    "@type": "Organization",
+    "name": "DG Audiosound",
+    "url": "https://dgaudiosound.com/"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.4326",
+    "longitude": "-99.1332"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "15:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+  </script>
+
+  <style>
+    :root {
+      --dg-red: #b51f24;
+      --dg-red-dark: #8f171b;
+      --dg-gold: #c8a24a;
+      --dg-gold-dark: #a77f28;
+      --dg-black: #151515;
+      --dg-black-soft: #202020;
+      --dg-gray: #6f6f6f;
+      --dg-soft-gray: #f1eee8;
+      --dg-cream: #f8f6f2;
+      --dg-white: #ffffff;
+      --dg-border: #e6e0d6;
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --shadow-strong: 0 18px 45px rgba(0, 0, 0, 0.18);
+      --radius: 18px;
+      --radius-small: 12px;
+      --max-width: 1180px;
+      --mobile-cta-height: 64px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: var(--dg-cream); color: var(--dg-black); line-height: 1.55; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    input, select, textarea, button { font: inherit; }
+    .skip-link { position: fixed; left: 16px; top: -90px; z-index: 2000; background: var(--dg-black); color: var(--dg-white); padding: 12px 16px; border-radius: 999px; font-weight: 900; box-shadow: var(--shadow-strong); }
+    .skip-link:focus { top: 16px; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(200,162,74,0.78); outline-offset: 3px; }
+    .privacy-link { color: var(--dg-gold); font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
+
+    .container { width: min(100% - 40px, var(--max-width)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .section-sm { padding: 48px 0; }
+    .eyebrow { color: var(--dg-gold-dark); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 800; margin-bottom: 12px; }
+    h1, h2, h3 { line-height: 1.1; letter-spacing: -0.03em; }
+    h1 { font-size: clamp(2.25rem, 5vw, 4.7rem); max-width: 900px; margin-bottom: 22px; }
+    h2 { font-size: clamp(1.75rem, 3vw, 3rem); margin-bottom: 18px; }
+    h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    p { color: #333; font-size: 1rem; }
+    .lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); max-width: 860px; color: #2f2f2f; }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 13px 22px; border-radius: 999px; font-weight: 800; transition: 0.2s ease; border: 1px solid transparent; cursor: pointer; font-size: 0.95rem; }
+    .btn-primary { background: var(--dg-gold); color: var(--dg-white); box-shadow: 0 12px 24px rgba(200, 162, 74, 0.32); }
+    .btn-primary:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--dg-white); border-color: rgba(255,255,255,0.6); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      left: 14px;
+      right: 14px;
+      bottom: max(14px, env(safe-area-inset-bottom));
+      z-index: 1200;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--dg-gold);
+      color: var(--dg-white);
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+      border: 1px solid rgba(255,255,255,0.22);
+      letter-spacing: -0.01em;
+    }
+
+    .site-header { position: sticky; top: 0; z-index: 999; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--dg-border); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; position: relative; }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 900; letter-spacing: -0.04em; color: var(--dg-black); }
+    .logo-mark { font-size: 2rem; color: var(--dg-red); line-height: 1; }
+    .logo-text { font-size: 0.95rem; letter-spacing: -0.02em; }
+    .menu { display: flex; gap: 24px; align-items: center; font-size: 0.92rem; font-weight: 700; color: #2c2c2c; }
+    .menu a:hover { color: var(--dg-red); }
+    .header-cta { padding: 10px 18px; min-height: 40px; font-size: 0.86rem; }
+    .mobile-toggle { display: none; border: 0; background: transparent; font-size: 2rem; cursor: pointer; color: var(--dg-black); }
+
+    .breadcrumb-wrap { background: #fff; border-bottom: 1px solid var(--dg-border); }
+    .breadcrumb { display: flex; gap: 8px; align-items: center; min-height: 42px; font-size: 0.84rem; color: var(--dg-gray); overflow-x: auto; white-space: nowrap; }
+    .breadcrumb a { color: #4b4b4b; font-weight: 700; }
+    .breadcrumb a:hover { color: var(--dg-red); }
+
+    .hero { min-height: 700px; display: grid; align-items: center; color: var(--dg-white); position: relative; overflow: hidden; background: #0d0d0d; }
+    .hero-media { position: absolute; inset: 0; z-index: 0; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.70) 46%, rgba(0,0,0,0.20) 100%), radial-gradient(circle at 82% 18%, rgba(200,162,74,0.25), transparent 30%);
+    }
+    .hero .container { position: relative; z-index: 2; }
+    .hero p { color: rgba(255,255,255,0.88); }
+    .hero .microcopy { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; color: rgba(255,255,255,0.85); font-size: 0.94rem; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.25); padding: 9px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .image-card { min-height: 390px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); position: relative; background: #ddd; }
+    .image-card img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; }
+    .image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.45)); pointer-events: none; }
+
+    .highlight-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-soft); }
+    .warning-card { border-left: 5px solid var(--dg-red); }
+
+    .icon-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 34px; }
+    .mini-card { padding: 22px; background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius-small); text-align: center; box-shadow: 0 8px 18px rgba(0,0,0,0.04); }
+    .icon { width: 46px; height: 46px; display: inline-grid; place-items: center; border-radius: 50%; background: rgba(200,162,74,0.12); color: var(--dg-gold-dark); font-size: 0.95rem; font-weight: 900; margin-bottom: 14px; }
+    .mini-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .mini-card p { font-size: 0.92rem; color: var(--dg-gray); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px; }
+    .solution-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); transition: 0.2s ease; }
+    .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .card-img { height: 185px; overflow: hidden; background: #ddd; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 24px; }
+    .card-body p { color: #4b4b4b; font-size: 0.95rem; }
+
+    .centered { text-align: center; max-width: 860px; margin: 0 auto; }
+    .centered .lead { margin-left: auto; margin-right: auto; }
+    .bg-white { background: var(--dg-white); }
+    .bg-soft { background: var(--dg-soft-gray); }
+    .bg-dark { background: var(--dg-black); color: var(--dg-white); }
+    .bg-dark p, .bg-dark li { color: rgba(255,255,255,0.78); }
+    .bg-dark .mini-card { background: rgba(255,255,255,0.055); border-color: rgba(255,255,255,0.12); box-shadow: none; }
+    .bg-dark .mini-card h3 { color: var(--dg-white); }
+
+    .applications-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 38px; }
+    .application-card { background: #fff; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--dg-border); box-shadow: var(--shadow-soft); display: flex; flex-direction: column; min-height: 100%; transition: 0.2s ease; }
+    .application-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .application-card img { width: 100%; height: 195px; object-fit: cover; background: #ddd; }
+    .application-card-content { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+    .application-card-content p { color: #4b4b4b; font-size: 0.95rem; flex: 1; }
+    .application-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; margin-top: 18px; padding: 10px 16px; border-radius: 999px; background: var(--dg-black); color: var(--dg-white); font-weight: 900; font-size: 0.9rem; transition: 0.2s ease; }
+    .application-cta:hover { background: var(--dg-red); }
+
+    .include-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; }
+    .include-card { background: var(--dg-white); border: 1px solid var(--dg-border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-soft); }
+    .include-card h3 { color: var(--dg-black); }
+    .include-card p { color: var(--dg-gray); font-size: 0.94rem; }
+    .local-note { margin-top: 24px; padding: 18px 22px; border-radius: var(--radius-small); background: rgba(200,162,74,0.10); border: 1px solid rgba(200,162,74,0.24); color: #3a3326; font-weight: 700; }
+
+    .cta-final { background: var(--dg-black); color: var(--dg-white); border-radius: var(--radius); overflow: hidden; display: grid; grid-template-columns: 1.15fr 0.85fr; box-shadow: var(--shadow-strong); }
+    .cta-content { padding: 52px; display: flex; flex-direction: column; justify-content: center; }
+    .cta-content p { color: rgba(255,255,255,0.84); }
+    .cta-media { min-height: 360px; position: relative; }
+    .cta-media img { width: 100%; height: 100%; object-fit: cover; }
+    .cta-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(21,21,21,0.35), rgba(21,21,21,0)); }
+
+    .event-banner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0; overflow: hidden; border-radius: var(--radius); border: 1px solid rgba(200,162,74,0.35); box-shadow: var(--shadow-soft); background: var(--dg-white); }
+    .event-img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+    .event-content { padding: 44px; display: flex; flex-direction: column; justify-content: center; }
+
+    .process { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; margin-top: 38px; }
+    .process-step { background: var(--dg-white); border: 1px solid var(--dg-border); padding: 24px 18px; border-radius: var(--radius-small); text-align: center; box-shadow: 0 8px 18px rgba(0,0,0,0.04); }
+    .step-number { width: 34px; height: 34px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; background: var(--dg-gold); color: var(--dg-white); font-weight: 900; }
+    .process-step h3 { font-size: 0.98rem; }
+    .process-step p { font-size: 0.86rem; color: var(--dg-gray); }
+
+    .split-dark { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+    .dark-panel { background: var(--dg-black); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .gold-panel { background: linear-gradient(135deg, var(--dg-gold), #af7c26); color: var(--dg-white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+    .dark-panel p, .gold-panel p { color: rgba(255,255,255,0.86); }
+    .check-list { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+    .check-list li::before { content: "✓"; color: var(--dg-gold); margin-right: 9px; font-weight: 900; }
+    .gold-panel .check-list li::before { color: var(--dg-white); }
+
+    .brands-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 32px; }
+    .brand-box { min-height: 78px; border-radius: var(--radius-small); border: 1px solid var(--dg-border); background: var(--dg-white); display: grid; place-items: center; font-weight: 900; color: #2d2d2d; letter-spacing: -0.03em; text-align: center; padding: 14px; }
+
+    .faq-list { max-width: 980px; margin: 34px auto 0; display: grid; gap: 12px; }
+    .faq-item { border: 1px solid var(--dg-border); border-radius: var(--radius-small); background: var(--dg-white); overflow: hidden; }
+    .faq-question { width: 100%; border: 0; background: transparent; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 20px 22px; font-size: 1rem; font-weight: 900; cursor: pointer; color: var(--dg-black); }
+    .faq-question span:last-child { font-size: 1.3rem; color: var(--dg-gold-dark); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.28s ease; }
+    .faq-answer p { padding: 0 22px 20px; color: var(--dg-gray); }
+    .faq-item.active .faq-answer { max-height: 280px; }
+
+    .contact-section { background: var(--dg-white); }
+    .contact-wrap { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 32px; align-items: stretch; }
+    .contact-info { background: linear-gradient(135deg, #171717, #262626); color: var(--dg-white); border-radius: var(--radius); padding: 44px; box-shadow: var(--shadow-strong); position: relative; overflow: hidden; }
+    .contact-info::before { content: ""; position: absolute; width: 230px; height: 230px; right: -90px; top: -90px; border-radius: 50%; background: rgba(200,162,74,0.22); }
+    .contact-info > * { position: relative; z-index: 1; }
+    .contact-info p { color: rgba(255,255,255,0.82); }
+    .contact-details { display: grid; gap: 16px; margin-top: 28px; }
+    .contact-detail { padding: 16px; border-radius: var(--radius-small); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); }
+    .contact-detail strong { display: block; color: var(--dg-gold); margin-bottom: 4px; font-size: 0.92rem; }
+    .contact-detail a, .contact-detail span { color: rgba(255,255,255,0.90); font-weight: 700; }
+
+    .contact-form-card { background: #111; color: var(--dg-white); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-strong); border: 1px solid rgba(200,162,74,0.25); }
+    .contact-form-card h3 { font-size: clamp(1.45rem, 2vw, 2rem); margin-bottom: 10px; }
+    .contact-form-card p { color: rgba(255,255,255,0.72); margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: grid; gap: 8px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { color: rgba(255,255,255,0.86); font-size: 0.9rem; font-weight: 800; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid rgba(255,255,255,0.16); background: #f8f6f2; color: #151515; border-radius: 12px; padding: 13px 14px; outline: none; transition: 0.2s ease; }
+    .form-field textarea { min-height: 132px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--dg-gold); box-shadow: 0 0 0 3px rgba(200,162,74,0.18); }
+    .form-note { font-size: 0.82rem; color: rgba(255,255,255,0.58); margin-top: 14px; }
+    .form-submit { width: 100%; margin-top: 18px; border: 0; min-height: 52px; border-radius: 999px; background: var(--dg-gold); color: #fff; font-weight: 900; cursor: pointer; transition: 0.2s ease; box-shadow: 0 14px 28px rgba(200,162,74,0.24); }
+    .form-submit:hover { background: var(--dg-gold-dark); transform: translateY(-1px); }
+
+    .footer { background: #111; color: var(--dg-white); padding: 48px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr repeat(4, 1fr); gap: 28px; }
+    .footer p, .footer a { color: rgba(255,255,255,0.74); font-size: 0.94rem; }
+    .footer h3 { color: var(--dg-white); font-size: 1rem; margin-bottom: 14px; }
+    .footer-links { display: grid; gap: 8px; }
+    .footer a:hover { color: var(--dg-gold); }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 36px; padding-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.86rem; text-align: center; }
+
+    @media (max-width: 980px) {
+      .menu, .header-cta { display: none; }
+      .mobile-toggle { display: block; }
+      .menu.is-open { display: grid; position: absolute; left: 0; right: 0; top: 78px; padding: 24px; border-radius: var(--radius); background: var(--dg-white); box-shadow: var(--shadow-strong); z-index: 1000; }
+      .hero { min-height: 650px; }
+      .two-col, .event-banner, .split-dark, .contact-wrap, .cta-final { grid-template-columns: 1fr; }
+      .icon-row, .cards-grid, .applications-grid, .brands-grid, .include-grid { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      body { padding-bottom: calc(var(--mobile-cta-height) + env(safe-area-inset-bottom)); }
+      .mobile-sticky-cta { display: flex; }
+      .hero { min-height: 620px; }
+      .hero-media::after { background: linear-gradient(180deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.68) 56%, rgba(0,0,0,0.34) 100%); }
+      .hero .microcopy { gap: 10px; margin-top: 22px; }
+      .pill { padding: 8px 12px; font-size: 0.86rem; }
+      .lead { font-size: 1rem; }
+      .footer { padding-bottom: calc(92px + env(safe-area-inset-bottom)); }
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, var(--max-width)); }
+      .section { padding: 52px 0; }
+      .section-sm { padding: 42px 0; }
+      h1 { font-size: clamp(2rem, 10vw, 2.7rem); }
+      h2 { font-size: clamp(1.55rem, 8vw, 2.2rem); }
+      .hero { min-height: 610px; }
+      .btn-group { flex-direction: column; }
+      .btn { width: 100%; }
+      .icon-row, .cards-grid, .applications-grid, .brands-grid, .include-grid, .process, .footer-grid { grid-template-columns: 1fr; }
+      .contact-info, .contact-form-card, .dark-panel, .gold-panel, .highlight-card, .event-content, .include-card, .cta-content { padding: 28px; }
+      .event-img img, .image-card, .image-card img { min-height: 280px; }
+      .card-img, .application-card img { height: 210px; }
+      .nav { min-height: 68px; }
+      .breadcrumb { min-height: 38px; font-size: 0.78rem; }
+    }
+  
+    .text-gold { color: var(--dg-gold); }
+    .bg-white .text-gold, .bg-soft .text-gold { color: var(--dg-gold-dark); }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.001ms !important; }
+    }
+
+  
+  /* GPU layer hints para elementos animados */
+  .card, .solution-card, .app-card, .brand-card, .step-card, .faq-item,
+  .btn, .btn-primary, .btn-secondary, .btn-wa, .cta-btn, .service-card,
+  .feature-card, .audience-card, .offer-card { will-change: transform; }
+
+
+    .cookie-consent {
+      position: fixed;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      color: var(--dg-white);
+      background: rgba(11, 11, 13, 0.96);
+      border: 1px solid rgba(200, 162, 74, 0.35);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(14px);
+    }
+
+    .cookie-consent.is-visible { display: flex; }
+
+    .cookie-consent p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .cookie-consent strong {
+      display: block;
+      color: var(--dg-white);
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .cookie-consent a {
+      color: var(--dg-gold);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .cookie-button {
+      min-height: 40px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--dg-white);
+      cursor: pointer;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .cookie-button:hover {
+      transform: translateY(-1px);
+      border-color: var(--dg-gold);
+    }
+
+    .cookie-button.accept {
+      background: var(--dg-gold);
+      border-color: var(--dg-gold);
+      color: var(--dg-black);
+    }
+
+    .cookie-button.accept:hover {
+      background: var(--dg-gold-dark);
+      border-color: var(--dg-gold-dark);
+      color: var(--dg-white);
+    }
+
+    .footer-cookie-button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: rgba(255,255,255,0.74);
+      font: inherit;
+      font-size: 0.94rem;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .footer-cookie-button:hover { color: var(--dg-gold); }
+
+    @media (max-width: 760px) {
+      .cookie-consent {
+        left: 12px;
+        right: 12px;
+        bottom: calc(12px + env(safe-area-inset-bottom));
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cookie-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+  </style>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N65F3T7P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="cookie-consent" id="cookieConsentBanner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+    <div>
+      <strong>Privacidad y medición</strong>
+      <p>Usamos cookies y tecnologías de medición para mejorar el sitio, analizar visitas y optimizar campañas. Puedes aceptar o rechazar el uso de analítica y publicidad. Consulta nuestro <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>.</p>
+    </div>
+    <div class="cookie-actions" aria-label="Acciones de consentimiento">
+      <button class="cookie-button reject" type="button" id="rejectCookies">Rechazar</button>
+      <button class="cookie-button accept" type="button" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="logo" aria-label="DG Audiosound inicio">
+        <span class="logo-mark">DG</span>
+        <span class="logo-text">AUDIOSOUND</span>
+      </a>
+
+      <nav class="menu" id="mainMenu" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/soluciones/eventos-creadores-y-produccion/">Solución</a>
+        <a href="/aplicaciones/">Aplicaciones</a>
+        <a href="/blog/">Blog</a>
+        <a href="/marcas/">Marcas</a>
+        <a href="/tienda/" data-page-section="header" data-cta-intent="visit_store" data-conversion-type="navigation">Tienda</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20para%20Eventos%2C%20Creadores%20y%20Producci%C3%B3n." target="_blank" rel="noopener" data-page-section="header" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">Cotizar por WhatsApp</a>
+      <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Abrir menú" aria-controls="mainMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="breadcrumb-wrap" aria-label="Ruta de navegación">
+    <div class="container breadcrumb">
+      <a href="/">Inicio</a>
+      <span>›</span>
+      <a href="/soluciones/">Soluciones</a>
+      <span>›</span>
+      <span>Eventos, Creadores y Producción</span>
+    </div>
+  </div>
+
+  <main id="contenido-principal">
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <img loading="lazy" src="/assets/soluciones/eventos-creadores-produccion-hero.webp" srcset="/assets/soluciones/eventos-creadores-produccion-hero.webp 1920w, /assets/soluciones/eventos-creadores-produccion-hero-tablet.webp 1200w, /assets/soluciones/eventos-creadores-produccion-hero-mobile.webp 768w" sizes="100vw" alt="Eventos Creadores Produccion Hero | DG Audiosound" width="1920" height="1080" fetchpriority="high" decoding="async" />
+      </div>
+      <div class="container">
+        <div class="eyebrow">Solución: Eventos, creadores y producción</div>
+        <h1>Soluciones de audio y video para eventos, <span class="text-gold">creadores y producción</span></h1>
+        <p class="lead">Diseñamos soluciones profesionales para proyectos donde el sonido, la imagen, la microfonía, la grabación, la mezcla, la transmisión y la experiencia audiovisual son parte esencial del resultado.</p>
+        <p class="lead" style="margin-top:16px;">Desde un podcast bien producido hasta un sistema para DJ, un centro de culto, una sala de cine independiente o un montaje para músicos y vocalistas, en DG Audiosound te ayudamos a elegir, integrar y operar la tecnología adecuada.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20para%20Eventos%2C%20Creadores%20y%20Producci%C3%B3n." target="_blank" rel="noopener" data-page-section="hero" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">Cotizar mi proyecto</a>
+          <a class="btn btn-secondary" href="#soluciones">Ver soluciones</a>
+        </div>
+        <div class="microcopy">
+          <span class="pill">Audio profesional</span>
+          <span class="pill">Video y proyección</span>
+          <span class="pill">Microfonía</span>
+          <span class="pill">Streaming y grabación</span>
+          <span class="pill">Soluciones listas para operar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container two-col">
+        <div>
+          <div class="eyebrow">Producción con intención profesional</div>
+          <h2>Cuando el audio y el video fallan, la experiencia <span class="text-gold">completa pierde impacto</span></h2>
+          <p>En eventos, contenido digital, presentaciones en vivo y espacios de producción, la tecnología no debe improvisarse. Un micrófono incorrecto, una bocina mal seleccionada, una mezcla poco clara o una imagen deficiente pueden afectar la atención del público, la calidad del contenido y la percepción profesional del proyecto.</p>
+          <p style="margin-top:16px;">Nuestra labor es ayudarte a convertir una idea en una solución funcional: seleccionamos equipos adecuados, cuidamos la integración entre audio y video, consideramos la operación diaria y buscamos que cada componente trabaje con claridad, potencia, estabilidad y facilidad de uso.</p>
+        </div>
+        <figure class="image-card">
+          <img src="/assets/soluciones/eventos-creadores-produccion-contexto.webp" srcset="/assets/soluciones/eventos-creadores-produccion-contexto.webp 900w, /assets/soluciones/eventos-creadores-produccion-contexto-mobile.webp 640w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 100vw, 900px" alt="Integración profesional de audio, video y producción para proyectos audiovisuales" width="900" height="620" loading="lazy" fetchpriority="low" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">01</div><h3>Claridad sonora</h3><p>Seleccionamos sistemas que ayuden a que voces, música y contenido se escuchen con presencia y definición.</p></div>
+        <div class="mini-card"><div class="icon">02</div><h3>Imagen profesional</h3><p>Integramos pantallas, proyectores y video para presentaciones, contenido, transmisión o visualización en vivo.</p></div>
+        <div class="mini-card"><div class="icon">03</div><h3>Operación sencilla</h3><p>Buscamos configuraciones prácticas para que el equipo pueda usarse con seguridad, orden y continuidad.</p></div>
+        <div class="mini-card"><div class="icon">04</div><h3>Escalabilidad</h3><p>Diseñamos soluciones que puedan crecer según el proyecto, el espacio, la audiencia y el nivel de producción.</p></div>
+      </div>
+    </section>
+
+    <section class="section bg-soft">
+      <div class="container two-col">
+        <div class="highlight-card warning-card">
+          <div class="eyebrow">Problemas que resolvemos</div>
+          <h2>Evita comprar equipo que no se conecta, no rinde o no cumple <span class="text-gold">con tu objetivo</span></h2>
+          <p>Muchos proyectos inician comprando productos por separado: un micrófono, una bocina, una mezcladora, una cámara o un proyector. El problema aparece cuando esos equipos no son compatibles, no tienen la potencia necesaria, no entregan la calidad esperada o se vuelven complicados de operar.</p>
+          <p style="margin-top:16px;">En DG Audiosound revisamos el proyecto completo antes de recomendar tecnología. Así evitamos soluciones sobredimensionadas, equipos insuficientes, gastos innecesarios y configuraciones que terminan generando más problemas que resultados.</p>
+        </div>
+        <div class="icon-row" style="grid-template-columns: repeat(2, 1fr); margin-top:0;">
+          <div class="mini-card"><div class="icon">A</div><h3>Audio poco claro</h3><p>Voces sin presencia, música sin impacto, saturación, ruido, eco o mala cobertura del espacio.</p></div>
+          <div class="mini-card"><div class="icon">B</div><h3>Video limitado</h3><p>Imagen pequeña, poca luminosidad, mala conexión, proyección inadecuada o pantallas mal seleccionadas.</p></div>
+          <div class="mini-card"><div class="icon">C</div><h3>Equipo difícil de usar</h3><p>Configuraciones confusas, exceso de cables, operación inestable o dependencia total de terceros.</p></div>
+          <div class="mini-card"><div class="icon">D</div><h3>Compras sin estrategia</h3><p>Productos aislados que no forman un sistema confiable para crear, transmitir, presentar o producir.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="soluciones">
+      <div class="container centered">
+        <div class="eyebrow">Qué soluciones ofrecemos</div>
+        <h2>Audio, video, microfonía, mezcla, grabación y producción en <span class="text-gold">una sola visión</span></h2>
+        <p class="lead">Esta solución pilar agrupa los sistemas que ayudan a creadores, productores, músicos, DJs, centros de culto y espacios audiovisuales a lograr una experiencia más profesional, estable y clara para su audiencia.</p>
+      </div>
+
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">01</div><h3>Audio profesional</h3><p>Bocinas, subwoofers, sistemas PA, amplificación, procesamiento y distribución sonora para diferentes niveles de audiencia.</p></div>
+        <div class="mini-card"><div class="icon">02</div><h3>Microfonía</h3><p>Micrófonos alámbricos e inalámbricos para voz, instrumentos, podcast, streaming, presentaciones y uso en vivo.</p></div>
+        <div class="mini-card"><div class="icon">03</div><h3>Mezcla y control</h3><p>Consolas, mezcladoras, interfaces, control de audio y soluciones para administrar múltiples fuentes con orden.</p></div>
+        <div class="mini-card"><div class="icon">04</div><h3>Video y visualización</h3><p>Pantallas, proyectores, matrices, conectividad y soluciones para contenido visual, presentaciones y experiencias inmersivas.</p></div>
+      </div>
+    </section>
+
+    <section class="section bg-soft" id="que-incluye">
+      <div class="container centered">
+        <div class="eyebrow">Qué incluye la solución</div>
+        <h2>Una solución audiovisual completa para crear, producir, transmitir o presentar con mayor calidad.</h2>
+        <p class="lead">El alcance puede adaptarse a cada proyecto, pero siempre buscamos que el sistema tenga lógica completa: captura, mezcla, monitoreo, reproducción, video, conectividad, instalación y operación.</p>
+      </div>
+      <div class="container include-grid">
+        <article class="include-card"><h3>Diagnóstico del proyecto</h3><p>Revisión de objetivo, espacio, audiencia, fuentes, nivel de uso, presupuesto y necesidades reales.</p></article>
+        <article class="include-card"><h3>Selección de equipo</h3><p>Recomendación de micrófonos, bocinas, consolas, interfaces, cámaras, proyectores o pantallas según el caso.</p></article>
+        <article class="include-card"><h3>Integración de audio</h3><p>Configuración de señal, mezcla, monitoreo, refuerzo sonoro, conexiones y niveles básicos de operación.</p></article>
+        <article class="include-card"><h3>Integración de video</h3><p>Visualización, proyección, pantallas, captura o distribución de imagen para contenido, eventos o transmisión.</p></article>
+        <article class="include-card"><h3>Cableado y conectividad</h3><p>Propuesta de conexiones limpias y compatibles para reducir fallas, desorden y confusión operativa.</p></article>
+        <article class="include-card"><h3>Instalación según alcance</h3><p>Montaje, conexión, pruebas y puesta en marcha cuando el proyecto requiere entrega lista para operar.</p></article>
+        <article class="include-card"><h3>Capacitación básica</h3><p>Explicación de uso para que el equipo pueda operar el sistema con mayor seguridad y claridad.</p></article>
+        <article class="include-card"><h3>Acompañamiento comercial</h3><p>Propuesta formal, equipos originales y asesoría para crecer el sistema por etapas si el proyecto lo requiere.</p></article>
+      </div>
+      <div class="container">
+        <p class="local-note">Atendemos proyectos de eventos, creadores y producción en CDMX, Estado de México y otras ciudades de México según alcance, logística e instalación requerida.</p>
+      </div>
+    </section>
+
+    <section class="section bg-soft">
+      <div class="container centered">
+        <div class="eyebrow">Familias de solución</div>
+        <h2>Sistemas pensados para producir, presentar, transmitir y conectar <span class="text-gold">con tu audiencia</span></h2>
+        <p class="lead">Cada proyecto necesita una combinación diferente de equipos. Por eso organizamos la solución en familias que permiten armar un sistema completo, desde la captura del sonido hasta la reproducción final, la grabación o la transmisión.</p>
+      </div>
+
+      <div class="container cards-grid">
+        <article class="solution-card"><div class="card-img"><img src="/assets/soluciones/eventos-creadores-produccion-audio-profesional.webp" srcset="/assets/soluciones/eventos-creadores-produccion-audio-profesional.webp 700w, /assets/soluciones/eventos-creadores-produccion-audio-profesional-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Audio profesional para eventos, sonidos, DJs y presentaciones en vivo" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div><div class="card-body"><h3>Audio para eventos y presentaciones</h3><p>Sistemas de sonido para voz, música, reproducción, eventos, presentaciones y experiencias donde se requiere potencia, cobertura y claridad.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/soluciones/eventos-creadores-produccion-microfonia.webp" srcset="/assets/soluciones/eventos-creadores-produccion-microfonia.webp 700w, /assets/soluciones/eventos-creadores-produccion-microfonia-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Microfonía profesional alámbrica e inalámbrica para voz, instrumentos y contenido" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div><div class="card-body"><h3>Micrófonos y sistemas inalámbricos</h3><p>Soluciones de microfonía para locución, voz principal, instrumentos, entrevistas, predicación, streaming, música y grabación.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/soluciones/eventos-creadores-produccion-consolas-mezcladoras.webp" srcset="/assets/soluciones/eventos-creadores-produccion-consolas-mezcladoras.webp 700w, /assets/soluciones/eventos-creadores-produccion-consolas-mezcladoras-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Consolas mezcladoras e interfaces de audio para producción y eventos" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div><div class="card-body"><h3>Consolas, mezcladoras e interfaces</h3><p>Control de audio para administrar micrófonos, instrumentos, pistas, llamadas, computadoras, cámaras y salidas de monitoreo.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/soluciones/eventos-creadores-produccion-streaming-grabacion.webp" srcset="/assets/soluciones/eventos-creadores-produccion-streaming-grabacion.webp 700w, /assets/soluciones/eventos-creadores-produccion-streaming-grabacion-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Soluciones de streaming y grabación para creadores de contenido" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div><div class="card-body"><h3>Grabación, podcast y streaming</h3><p>Equipamiento para crear contenido con mejor sonido, captura limpia, monitoreo confiable y flujo preparado para producción digital.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/soluciones/eventos-creadores-produccion-video-proyeccion.webp" srcset="/assets/soluciones/eventos-creadores-produccion-video-proyeccion.webp 700w, /assets/soluciones/eventos-creadores-produccion-video-proyeccion-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Video, pantallas y proyectores para eventos, cine independiente y producción" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div><div class="card-body"><h3>Video, pantallas y proyección</h3><p>Soluciones visuales para presentaciones, cine independiente, transmisiones, contenido en vivo y espacios de exhibición audiovisual.</p></div></article>
+        <article class="solution-card"><div class="card-img"><img src="/assets/soluciones/eventos-creadores-produccion-iluminacion.webp" srcset="/assets/soluciones/eventos-creadores-produccion-iluminacion.webp 700w, /assets/soluciones/eventos-creadores-produccion-iluminacion-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Iluminación complementaria para eventos, escenarios y producción audiovisual" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /></div><div class="card-body"><h3>Iluminación complementaria</h3><p>Apoyo visual para escenarios, producción, grabación o ambientación cuando el proyecto requiere una presencia más cuidada.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section bg-dark">
+      <div class="container centered">
+        <div class="eyebrow">Beneficios de trabajar con DG Audiosound</div>
+        <h2>Una solución pensada para funcionar, no solo para verse bien <span class="text-gold">en una cotización</span></h2>
+        <p class="lead">Nuestro enfoque combina asesoría comercial, visión técnica y criterio de integración para que cada proyecto tenga una recomendación coherente con su uso real.</p>
+      </div>
+
+      <div class="container icon-row">
+        <div class="mini-card"><div class="icon">01</div><h3>Menos improvisación</h3><p>Partimos del objetivo del proyecto para proponer tecnología que realmente cumpla con el uso esperado.</p></div>
+        <div class="mini-card"><div class="icon">02</div><h3>Mejor inversión</h3><p>Te ayudamos a evitar compras duplicadas, incompatibles o sobredimensionadas que no aportan valor real.</p></div>
+        <div class="mini-card"><div class="icon">03</div><h3>Mayor impacto</h3><p>Un sistema bien seleccionado mejora la experiencia del público, la calidad del contenido y la percepción profesional.</p></div>
+        <div class="mini-card"><div class="icon">04</div><h3>Acompañamiento</h3><p>Podemos apoyar desde la elección de equipo hasta la integración, pruebas y capacitación básica de uso.</p></div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="aplicaciones">
+      <div class="container centered">
+        <div class="eyebrow">Aplicaciones relacionadas</div>
+        <h2>Explora las aplicaciones de <span class="text-gold">esta solución pilar</span></h2>
+        <p class="lead">Esta página funciona como punto de partida para proyectos de producción, contenido, sonido en vivo y experiencias audiovisuales. Cada aplicación tiene necesidades específicas, por eso conectamos esta solución con landings dedicadas a cada tipo de proyecto.</p>
+      </div>
+
+      <div class="container applications-grid">
+        <article class="application-card"><img src="/assets/soluciones/eventos-creadores-produccion-podcast.webp" srcset="/assets/soluciones/eventos-creadores-produccion-podcast.webp 700w, /assets/soluciones/eventos-creadores-produccion-podcast-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Soluciones de audio y video para podcast profesional" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /><div class="application-card-content"><h3>Podcast</h3><p>Micrófonos, interfaces, mezcladoras, monitoreo, grabación y video para producir contenido con sonido claro y presencia profesional.</p><a class="application-cta" href="/aplicaciones/audio-y-video-para-podcast/" data-page-section="aplicaciones" data-cta-intent="view_application" data-conversion-type="engagement" data-project-type="podcast" data-solution-slug="podcast">Ver solución</a></div></article>
+        <article class="application-card"><img src="/assets/soluciones/eventos-creadores-produccion-streaming.webp" srcset="/assets/soluciones/eventos-creadores-produccion-streaming.webp 700w, /assets/soluciones/eventos-creadores-produccion-streaming-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Soluciones de audio, video e iluminación para streamers y creadores" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /><div class="application-card-content"><h3>Streamers</h3><p>Audio, cámaras, iluminación básica, captura, monitoreo y control para transmisiones más limpias, estables y profesionales.</p><a class="application-cta" href="/aplicaciones/audio-y-video-para-streamers/" data-page-section="aplicaciones" data-cta-intent="view_application" data-conversion-type="engagement" data-project-type="streamers" data-solution-slug="streamers">Conocer aplicación</a></div></article>
+        <article class="application-card"><img src="/assets/soluciones/eventos-creadores-produccion-sonidos-dj.webp" srcset="/assets/soluciones/eventos-creadores-produccion-sonidos-dj.webp 700w, /assets/soluciones/eventos-creadores-produccion-sonidos-dj-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Audio profesional para sonidos y DJ con bocinas, subwoofers y consolas" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /><div class="application-card-content"><h3>Sonidos y DJ</h3><p>Sistemas PA, subwoofers, mezcladoras, control, microfonía y accesorios para presentaciones con potencia y claridad.</p><a class="application-cta" href="/aplicaciones/audio-para-sonidos-y-dj/" data-page-section="aplicaciones" data-cta-intent="view_application" data-conversion-type="engagement" data-project-type="sonidos_y_dj" data-solution-slug="sonidos-y-dj">Cotizar proyecto</a></div></article>
+        <article class="application-card"><img src="/assets/soluciones/eventos-creadores-produccion-centros-culto.webp" srcset="/assets/soluciones/eventos-creadores-produccion-centros-culto.webp 700w, /assets/soluciones/eventos-creadores-produccion-centros-culto-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Audio, video y microfonía para centros de culto" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /><div class="application-card-content"><h3>Centros de Culto</h3><p>Microfonía, sonido, monitoreo, video y operación audiovisual para lograr mensajes claros y experiencias más ordenadas.</p><a class="application-cta" href="/aplicaciones/audio-y-video-para-centros-de-culto/" data-page-section="aplicaciones" data-cta-intent="view_application" data-conversion-type="engagement" data-project-type="centros_de_culto" data-solution-slug="centros-de-culto">Ver solución</a></div></article>
+        <article class="application-card"><img src="/assets/soluciones/eventos-creadores-produccion-cine-independiente.webp" srcset="/assets/soluciones/eventos-creadores-produccion-cine-independiente.webp 700w, /assets/soluciones/eventos-creadores-produccion-cine-independiente-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Proyección, pantallas y sonido para cine independiente" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /><div class="application-card-content"><h3>Cine independiente</h3><p>Proyección, pantallas, sonido, conectividad y soporte audiovisual para exhibiciones, conciertos grabados y contenido especial.</p><a class="application-cta" href="/aplicaciones/audio-y-video-para-cine-independiente/" data-page-section="aplicaciones" data-cta-intent="view_application" data-conversion-type="engagement" data-project-type="cine_independiente" data-solution-slug="cine-independiente">Conocer aplicación</a></div></article>
+        <article class="application-card"><img src="/assets/soluciones/eventos-creadores-produccion-musicos-vocalistas.webp" srcset="/assets/soluciones/eventos-creadores-produccion-musicos-vocalistas.webp 700w, /assets/soluciones/eventos-creadores-produccion-musicos-vocalistas-mobile.webp 520w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 380px" alt="Microfonía, monitoreo y grabación para músicos y vocalistas" width="700" height="420" loading="lazy" fetchpriority="low" decoding="async" /><div class="application-card-content"><h3>Músicos y vocalistas</h3><p>Micrófonos, interfaces, monitoreo, mezcla y grabación para mejorar ensayos, presentaciones, contenido y producción musical.</p><a class="application-cta" href="/aplicaciones/audio-para-musicos-y-vocalistas/" data-page-section="aplicaciones" data-cta-intent="view_application" data-conversion-type="engagement" data-project-type="musicos_y_vocalistas" data-solution-slug="musicos-y-vocalistas">Cotizar proyecto</a></div></article>
+      </div>
+    </section>
+
+    <section class="section-sm bg-soft">
+      <div class="container event-banner">
+        <div class="event-img"><img src="/assets/soluciones/eventos-creadores-produccion-solucion-integral.webp" srcset="/assets/soluciones/eventos-creadores-produccion-solucion-integral.webp 980w, /assets/soluciones/eventos-creadores-produccion-solucion-integral-mobile.webp 640w" sizes="(max-width: 640px) 100vw, (max-width: 980px) 100vw, 980px" alt="Solución integral lista para operar en eventos, creación de contenido y producción audiovisual" width="980" height="620" loading="lazy" fetchpriority="low" decoding="async" /></div>
+        <div class="event-content">
+          <div class="eyebrow">Solución destacada</div>
+          <h2>De la idea al sistema completo: audio, video <span class="text-gold">y operación conectados</span></h2>
+          <p>No se trata únicamente de vender bocinas, micrófonos o pantallas. Una solución profesional debe considerar cómo se captura el sonido, cómo se mezcla, cómo se monitorea, cómo se reproduce, cómo se graba y cómo se presenta ante el público.</p>
+          <div class="btn-group"><a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20asesor%C3%ADa%20para%20una%20soluci%C3%B3n%20integral%20de%20audio%20y%20video%20para%20eventos%2C%20creadores%20o%20producci%C3%B3n." target="_blank" rel="noopener" data-page-section="solucion-destacada" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">Solicitar asesoría</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="proceso">
+      <div class="container centered"><div class="eyebrow">Proceso de trabajo</div><h2>Un proceso claro para <span class="text-gold">una solución profesional</span></h2><p class="lead">Te guiamos paso a paso para entender el proyecto, definir el alcance, seleccionar la tecnología adecuada y preparar una propuesta que pueda operar de forma realista.</p></div>
+      <div class="container process">
+        <div class="process-step"><div class="step-number">1</div><h3>Contacto inicial</h3><p>Nos compartes la idea, el tipo de proyecto y el objetivo principal.</p></div>
+        <div class="process-step"><div class="step-number">2</div><h3>Diagnóstico</h3><p>Revisamos uso, espacio, audiencia, fuentes, operación y necesidades técnicas.</p></div>
+        <div class="process-step"><div class="step-number">3</div><h3>Recomendación</h3><p>Definimos equipos, familias de producto y configuración sugerida.</p></div>
+        <div class="process-step"><div class="step-number">4</div><h3>Propuesta clara</h3><p>Te entregamos alcance, equipos, tiempos e inversión estimada.</p></div>
+        <div class="process-step"><div class="step-number">5</div><h3>Integración</h3><p>Apoyamos con suministro, instalación, conexión, pruebas y puesta en marcha.</p></div>
+        <div class="process-step"><div class="step-number">6</div><h3>Capacitación</h3><p>Explicamos el uso básico para que el sistema pueda operarse con confianza.</p></div>
+      </div>
+    </section>
+
+    <section class="section bg-soft">
+      <div class="container split-dark">
+        <div class="dark-panel">
+          <div class="eyebrow">Diferenciador DG Audiosound</div>
+          <h2>Integramos tecnología con criterio comercial, <span class="text-gold">técnico y operativo</span></h2>
+          <p>Sabemos que cada proyecto tiene una meta distinta: sonar mejor, transmitir con mayor calidad, proyectar una imagen más profesional, simplificar la operación o preparar un espacio para crecer. Por eso no recomendamos equipos aislados sin entender primero el resultado que buscas.</p>
+          <p style="margin-top:16px;">Nuestro valor está en ayudarte a tomar mejores decisiones: qué comprar, qué evitar, qué priorizar y cómo conectar los componentes para que la solución tenga sentido desde el primer día.</p>
+        </div>
+        <div class="gold-panel">
+          <div class="eyebrow" style="color:#fff;">Confianza</div>
+          <h2>Una decisión profesional <span class="text-gold">para tu proyecto</span></h2>
+          <ul class="check-list">
+            <li>Asesoría personalizada</li>
+            <li>Propuesta formal</li>
+            <li>Equipos originales</li>
+            <li>Marcas profesionales</li>
+            <li>Instalación e integración según alcance</li>
+            <li>Pruebas y puesta en marcha</li>
+            <li>Capacitación básica de uso</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container centered">
+        <div class="eyebrow">Marcas y tecnología</div>
+        <h2>Trabajamos con marcas profesionales para audio, <span class="text-gold">video y producción</span></h2>
+        <p class="lead">La selección de marca depende del tipo de proyecto, nivel de exigencia, presupuesto, operación y crecimiento esperado. Para esta categoría consideramos tecnología orientada a microfonía, mezcla, refuerzo sonoro, video, proyección, integración y producción.</p>
+      </div>
+      <div class="container brands-grid" aria-label="Marcas recomendadas para eventos, creadores y producción">
+        <div class="brand-box">Shure</div><div class="brand-box">Allen & Heath</div><div class="brand-box">QSC</div><div class="brand-box">NEXO</div><div class="brand-box">dBTechnologies</div>
+        <div class="brand-box">Zoom</div><div class="brand-box">Biamp</div><div class="brand-box">Kramer</div><div class="brand-box">Optoma</div><div class="brand-box">Sharp/NEC</div>
+      </div>
+    </section>
+
+    <section class="section bg-soft" id="faq">
+      <div class="container centered"><div class="eyebrow">Preguntas frecuentes</div><h2>Resolvemos tus dudas <span class="text-gold">antes de cotizar</span></h2></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1"><span>¿Qué tipo de soluciones ofrece DG Audiosound para eventos, creadores y producción?</span><span aria-hidden="true">+</span></button><div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1"><p>Ofrecemos soluciones profesionales de audio, video, microfonía, consolas, mezcladoras, bocinas, subwoofers, monitoreo, interfaces, grabación, streaming, proyección, pantallas e iluminación complementaria para proyectos audiovisuales.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2"><span>¿Pueden ayudarme a elegir el equipo correcto para mi proyecto?</span><span aria-hidden="true">+</span></button><div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2"><p>Sí. Analizamos el tipo de proyecto, espacio, uso, audiencia, operación, presupuesto y objetivos para recomendar una solución adecuada, escalable y fácil de operar.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3"><span>¿Trabajan con soluciones para podcast y streamers?</span><span aria-hidden="true">+</span></button><div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3"><p>Sí. Podemos integrar micrófonos, interfaces, mezcladoras, monitoreo, cámaras, iluminación básica, captura de video y flujo de audio para podcast, streaming y creación de contenido profesional.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4"><span>¿También atienden proyectos para sonidos, DJs y eventos en vivo?</span><span aria-hidden="true">+</span></button><div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4"><p>Sí. Desarrollamos soluciones con sistemas PA, subwoofers, consolas, microfonía, monitoreo, cableado y accesorios para sonidos, DJs, presentaciones y eventos donde se requiere potencia, claridad y confiabilidad.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-5" aria-expanded="false" aria-controls="faq-answer-5"><span>¿La solución puede incluir instalación y capacitación?</span><span aria-hidden="true">+</span></button><div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5"><p>Sí. Según el alcance del proyecto, podemos apoyar con instalación, conexión, configuración, pruebas, puesta en marcha y capacitación básica para que el equipo pueda operarse correctamente.</p></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-6" aria-expanded="false" aria-controls="faq-answer-6"><span>¿Cómo puedo solicitar una cotización?</span><span aria-hidden="true">+</span></button><div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6"><p>Puedes solicitar una cotización por WhatsApp al 55 3727 0177 o llenar el formulario de contacto de esta página. Te pediremos datos básicos del proyecto para preparar una recomendación adecuada.</p></div></div>
+      </div>
+    </section>
+    <section class="section bg-soft" id="cta-final">
+      <div class="container cta-final">
+        <div class="cta-content">
+          <div class="eyebrow">Siguiente paso</div>
+          <h2>Convierte tu proyecto audiovisual en una solución clara, ordenada y lista para crecer.</h2>
+          <p>Ya sea que estés preparando un podcast, un sistema para DJ, una producción musical, un centro de culto, cine independiente o un espacio para transmitir contenido, podemos ayudarte a definir qué equipo necesitas, qué evitar y cómo integrarlo correctamente.</p>
+          <div class="btn-group">
+            <a class="btn btn-primary" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20recibir%20asesor%C3%ADa%20para%20un%20proyecto%20de%20eventos%2C%20creadores%20o%20producci%C3%B3n.%20Necesito%20definir%20audio%2C%20video%2C%20microfon%C3%ADa%2C%20streaming%20o%20integraci%C3%B3n." target="_blank" rel="noopener" data-page-section="cta-final" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">Solicitar asesoría por WhatsApp</a>
+            <a class="btn btn-secondary" href="#contacto" data-page-section="cta-final" data-cta-intent="open_contact_form" data-conversion-type="engagement" data-project-type="eventos_creadores_produccion">Completar formulario</a>
+          </div>
+        </div>
+        <figure class="cta-media" aria-label="Solución integral de audio y video para eventos, creadores y producción">
+          <img src="/assets/soluciones/eventos-creadores-produccion-solucion-integral.webp" srcset="/assets/soluciones/eventos-creadores-produccion-solucion-integral.webp 980w, /assets/soluciones/eventos-creadores-produccion-solucion-integral-mobile.webp 640w" sizes="(max-width: 980px) 100vw, 480px" alt="Solución integral de audio, video, microfonía y producción lista para operar DG Audiosound" width="980" height="620" loading="lazy" fetchpriority="low" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-wrap">
+        <div class="contact-info">
+          <div class="eyebrow">Contacto</div>
+          <h2>Diseñemos una solución de audio y video para <span class="text-gold">Eventos, creadores y producción</span></h2>
+          <p>Comparte el tipo de proyecto, espacio, audiencia y necesidades principales. Con esa información podemos orientarte mejor y preparar una recomendación profesional.</p>
+          <div class="contact-details">
+            <div class="contact-detail"><strong>WhatsApp</strong><a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20para%20Eventos%2C%20Creadores%20y%20Producci%C3%B3n." target="_blank" rel="noopener" data-page-section="contacto" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">55 3727 0177</a></div>
+            <div class="contact-detail"><strong>Correo</strong><a href="mailto:contacto@dgaudiosound.com" data-page-section="contacto" data-cta-intent="contact" data-contact-method="email" data-conversion-type="contact_intent">contacto@dgaudiosound.com</a></div>
+            <div class="contact-detail"><strong>Atención</strong><span>Ciudad de México, Estado de México y proyectos en México</span></div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>Cuéntanos qué quieres producir, transmitir o sonorizar</h3>
+          <p>Completa estos datos y se abrirá WhatsApp con tu solicitud lista para enviarse.</p>
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">Nombre / Empresa *</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre o empresa" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Correo *</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="correo@empresa.com" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="phone">Teléfono / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="55 0000 0000" autocomplete="tel" />
+              </div>
+              <div class="form-field">
+                <label for="projectType">Tipo de proyecto</label>
+                <select id="projectType" name="projectType" autocomplete="off">
+                <option value="Podcast o grabación">Podcast o grabación</option>
+                <option value="Streaming o creación de contenido">Streaming o creación de contenido</option>
+                <option value="Sonidos y DJ">Sonidos y DJ</option>
+                <option value="Centro de culto">Centro de culto</option>
+                <option value="Cine independiente">Cine independiente</option>
+                <option value="Músicos o vocalistas">Músicos o vocalistas</option>
+                <option value="Otro proyecto de producción">Otro proyecto de producción</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="details">Detalles del proyecto</label>
+                <textarea id="details" name="details" placeholder="Cuéntanos medidas, zonas, uso principal, presupuesto aproximado o cualquier dato importante." autocomplete="off"></textarea>
+              </div>
+            </div>
+            <button class="form-submit" type="submit">Enviar solicitud por WhatsApp</button>
+            <p class="form-note">Tus datos se usarán únicamente para dar seguimiento a tu cotización. Consulta nuestro <a class="privacy-link" href="/aviso-de-privacidad/" data-page-section="contacto" data-cta-intent="privacy" data-conversion-type="navigation">aviso de privacidad</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="/" class="logo" style="color:#fff; margin-bottom:14px; display:inline-flex;"><span class="logo-mark">DG</span><span class="logo-text">AUDIOSOUND</span></a>
+        <p>Soluciones de audio y video para el éxito de tu proyecto.</p>
+      </div>
+      <div>
+        <h3>Soluciones</h3>
+        <div class="footer-links">
+          <a href="/soluciones/residencial-premium/">Residencial Premium</a>
+          <a href="/soluciones/negocios-y-experiencias-comerciales/">Negocios</a>
+          <a href="/soluciones/corporativo-e-institucional/">Corporativo</a>
+          <a href="/soluciones/eventos-creadores-y-produccion/">Eventos y Creadores</a>
+        </div>
+      </div>
+      <div>
+        <h3>Aplicaciones de producción</h3>
+        <div class="footer-links">
+          <a href="/aplicaciones/audio-y-video-para-podcast/" data-page-section="footer" data-cta-intent="view_application" data-conversion-type="navigation" data-solution-slug="podcast">Podcast</a>
+          <a href="/aplicaciones/audio-y-video-para-streamers/" data-page-section="footer" data-cta-intent="view_application" data-conversion-type="navigation" data-solution-slug="streamers">Streamers</a>
+          <a href="/aplicaciones/audio-para-sonidos-y-dj/" data-page-section="footer" data-cta-intent="view_application" data-conversion-type="navigation" data-solution-slug="sonidos-y-dj">Sonidos y DJ</a>
+          <a href="/aplicaciones/audio-y-video-para-centros-de-culto/" data-page-section="footer" data-cta-intent="view_application" data-conversion-type="navigation" data-solution-slug="centros-de-culto">Centros de Culto</a>
+          <a href="/aplicaciones/audio-y-video-para-cine-independiente/" data-page-section="footer" data-cta-intent="view_application" data-conversion-type="navigation" data-solution-slug="cine-independiente">Cine independiente</a>
+          <a href="/aplicaciones/audio-para-musicos-y-vocalistas/" data-page-section="footer" data-cta-intent="view_application" data-conversion-type="navigation" data-solution-slug="musicos-y-vocalistas">Músicos y vocalistas</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <div class="footer-links">
+          <a href="https://wa.me/525537270177" target="_blank" rel="noopener" data-page-section="footer" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">WhatsApp: 55 3727 0177</a>
+          <a href="https://www.instagram.com/dgaudiosound/" target="_blank" rel="noopener" data-page-section="footer" data-cta-intent="social" data-conversion-type="engagement" data-social-network="instagram">Instagram: @dgaudiosound</a>
+          <a href="https://www.facebook.com/61572482057227/" target="_blank" rel="noopener" data-page-section="footer" data-cta-intent="social" data-conversion-type="engagement" data-social-network="facebook">Facebook DG Audiosound</a>
+          <button class="footer-cookie-button" type="button" id="openCookiePreferences">Preferencias de cookies</button>
+          <a href="mailto:contacto@dgaudiosound.com" data-page-section="footer" data-cta-intent="contact" data-contact-method="email" data-conversion-type="contact_intent">contacto@dgaudiosound.com</a>
+        </div>
+      </div>
+      <div>
+        <h3>Legal y confianza</h3>
+        <div class="footer-links">
+          <a href="/aviso-de-privacidad/" data-page-section="footer" data-cta-intent="privacy" data-conversion-type="navigation">Aviso de privacidad</a>
+          <a href="/terminos-y-condiciones/" data-page-section="footer" data-cta-intent="terms" data-conversion-type="navigation">Términos y condiciones</a>
+          <a href="/garantias-y-devoluciones/" data-page-section="footer" data-cta-intent="warranty" data-conversion-type="navigation">Garantías y devoluciones</a>
+          <a href="/tienda/" data-page-section="footer" data-cta-intent="visit_store" data-conversion-type="navigation">Tienda</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 DG Audiosound. Todos los derechos reservados.</div>
+  </footer>
+
+  <a class="mobile-sticky-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20para%20Eventos%2C%20Creadores%20y%20Producci%C3%B3n." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp con DG Audiosound" data-page-section="mobile-sticky" data-cta-intent="quote" data-contact-method="whatsapp" data-conversion-type="contact_intent" data-project-type="eventos_creadores_produccion" data-quote-cta="true">
+    Cotizar por WhatsApp
+  </a>
+
+
+  <script>
+    (function () {
+      const cookieBanner = document.getElementById('cookieConsentBanner');
+      const acceptCookiesButton = document.getElementById('acceptCookies');
+      const rejectCookiesButton = document.getElementById('rejectCookies');
+      const openCookiePreferences = document.getElementById('openCookiePreferences');
+
+      function getStoredCookieConsent() {
+        try {
+          return window.localStorage.getItem('dg_cookie_consent');
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function setStoredCookieConsent(value) {
+        try {
+          window.localStorage.setItem('dg_cookie_consent', value);
+        } catch (error) {
+          // Si localStorage no está disponible, solo actualizamos el consentimiento en la sesión actual.
+        }
+      }
+
+      function updateDGConsent(consentValue, source) {
+        const accepted = consentValue === 'accepted';
+        if (typeof window.dgConsentCommand === 'function' && typeof window.dgBuildConsentState === 'function') {
+          window.dgConsentCommand(
+            'consent',
+            'update',
+            window.dgBuildConsentState(accepted ? 'granted' : 'denied')
+          );
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: accepted ? 'cookie_consent_accepted' : 'cookie_consent_rejected',
+          consent_status: consentValue,
+          consent_source: source || 'cookie_banner'
+        });
+      }
+
+      function showCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.hidden = false;
+        cookieBanner.classList.add('is-visible');
+      }
+
+      function hideCookieBanner() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.remove('is-visible');
+        cookieBanner.hidden = true;
+      }
+
+      function handleCookieChoice(choice) {
+        setStoredCookieConsent(choice);
+        updateDGConsent(choice, 'cookie_banner');
+        hideCookieBanner();
+      }
+
+      const storedCookieConsent = getStoredCookieConsent();
+      if (!storedCookieConsent) showCookieBanner();
+
+      if (acceptCookiesButton) {
+        acceptCookiesButton.addEventListener('click', () => handleCookieChoice('accepted'));
+      }
+
+      if (rejectCookiesButton) {
+        rejectCookiesButton.addEventListener('click', () => handleCookieChoice('rejected'));
+      }
+
+      if (openCookiePreferences) {
+        openCookiePreferences.addEventListener('click', () => {
+          showCookieBanner();
+          if (acceptCookiesButton) acceptCookiesButton.focus();
+        });
+      }
+    })();
+  </script>
+
+  <script>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+
+      const PAGE_CONTEXT = {
+        page_type: 'solution_landing',
+        page_category: 'eventos_creadores_produccion',
+        solution_slug: 'eventos-creadores-y-produccion',
+        lead_source: 'landing_eventos_creadores_produccion'
+      };
+
+      function cleanText(value) {
+        return (value || '').replace(/\s+/g, ' ').trim().slice(0, 120);
+      }
+
+      function toSlug(value) {
+        return cleanText(value)
+          .toLowerCase()
+          .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_|_$/g, '') || 'no_especificado';
+      }
+
+      function createEventId(eventName) {
+        let randomPart = Math.random().toString(36).slice(2, 10);
+        if (window.crypto && window.crypto.getRandomValues) {
+          const array = new Uint32Array(1);
+          window.crypto.getRandomValues(array);
+          randomPart = array[0].toString(36);
+        }
+        return 'dg_ecp_' + eventName + '_' + Date.now() + '_' + randomPart;
+      }
+
+      function getPageSection(element) {
+        if (element.dataset.pageSection) return element.dataset.pageSection;
+        const section = element.closest('section[id]');
+        if (section) return section.id;
+        if (element.closest('header')) return 'header';
+        if (element.closest('footer')) return 'footer';
+        return 'unknown';
+      }
+
+      function trackDGEvent(eventName, params) {
+        const eventId = createEventId(eventName);
+        const payload = Object.assign({}, PAGE_CONTEXT, params || {}, {
+          event: eventName,
+          event_id: eventId,
+          page_path: window.location.pathname
+        });
+
+        // Importante: no enviar nombre, correo, teléfono, empresa, ciudad ni mensaje al dataLayer.
+        delete payload.name;
+        delete payload.email;
+        delete payload.phone;
+        delete payload.telefono;
+        delete payload.message;
+        delete payload.details;
+        delete payload.empresa;
+        delete payload.correo;
+        delete payload.city;
+        delete payload.ciudad;
+
+        window.dataLayer.push(payload);
+        return eventId;
+      }
+
+      window.dgTrackEvent = trackDGEvent;
+
+      const mobileToggle = document.getElementById('mobileToggle');
+      const mainMenu = document.getElementById('mainMenu');
+      if (mobileToggle && mainMenu) {
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = mainMenu.classList.toggle('is-open');
+          mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          mobileToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        });
+
+        mainMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            mainMenu.classList.remove('is-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', 'Abrir menú');
+          });
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && mainMenu.classList.contains('is-open')) {
+            mainMenu.classList.remove('is-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.setAttribute('aria-label', 'Abrir menú');
+            mobileToggle.focus();
+          }
+        });
+      }
+
+      document.querySelectorAll('.faq-question').forEach((button) => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          const expanded = item.classList.toggle('active');
+          button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+          const icon = button.querySelector('span[aria-hidden="true"]');
+          if (icon) icon.textContent = expanded ? '−' : '+';
+
+          if (expanded) {
+            trackDGEvent('open_faq', {
+              page_section: 'faq',
+              faq_question: cleanText(button.innerText),
+              conversion_type: 'engagement'
+            });
+          }
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        const element = event.target.closest('a, button');
+        if (!element) return;
+
+        const href = element.getAttribute('href') || '';
+        const pageSection = getPageSection(element);
+        const linkText = cleanText(element.dataset.linkText || element.innerText || element.getAttribute('aria-label'));
+        const ctaIntent = element.dataset.ctaIntent || 'navigation';
+        const conversionType = element.dataset.conversionType || 'engagement';
+        const projectType = element.dataset.projectType || 'eventos_creadores_produccion';
+
+        const baseParams = {
+          page_section: pageSection,
+          link_text: linkText,
+          cta_intent: ctaIntent,
+          conversion_type: conversionType,
+          project_type: projectType
+        };
+
+        if (element.dataset.quoteCta === 'true') {
+          trackDGEvent('click_quote_cta', Object.assign({}, baseParams, {
+            contact_method: element.dataset.contactMethod || 'whatsapp',
+            destination_type: 'quote_cta'
+          }));
+        }
+
+        if (href.includes('wa.me/525537270177')) {
+          trackDGEvent('click_whatsapp', Object.assign({}, baseParams, {
+            contact_method: 'whatsapp',
+            destination_type: 'whatsapp'
+          }));
+        }
+
+        if (href.startsWith('mailto:')) {
+          trackDGEvent('click_email', Object.assign({}, baseParams, {
+            contact_method: 'email',
+            destination_type: 'email'
+          }));
+        }
+
+        if (href.startsWith('tel:')) {
+          trackDGEvent('click_phone', Object.assign({}, baseParams, {
+            contact_method: 'phone',
+            destination_type: 'phone'
+          }));
+        }
+
+        if (href.includes('instagram.com') || href.includes('facebook.com')) {
+          trackDGEvent('click_social', Object.assign({}, baseParams, {
+            destination_type: 'social',
+            social_network: element.dataset.socialNetwork || (href.includes('instagram.com') ? 'instagram' : 'facebook')
+          }));
+        }
+
+        if (href === '/tienda/' || href.startsWith('/tienda/')) {
+          trackDGEvent('click_store', Object.assign({}, baseParams, {
+            destination_type: 'store'
+          }));
+        }
+
+        if (element.dataset.solutionSlug) {
+          trackDGEvent('select_solution', Object.assign({}, baseParams, {
+            solution_slug: element.dataset.solutionSlug,
+            destination_type: 'internal_solution'
+          }));
+        }
+      });
+
+      const quoteForm = document.getElementById('quoteForm');
+      let formStarted = false;
+
+      if (quoteForm) {
+        quoteForm.addEventListener('focusin', () => {
+          if (formStarted) return;
+          formStarted = true;
+          const projectType = document.getElementById('projectType')?.value || 'Eventos, creadores y producción';
+          trackDGEvent('form_start', {
+            page_section: 'contacto',
+            form_id: 'quoteForm',
+            conversion_type: 'lead_form',
+            contact_method: 'whatsapp',
+            project_type: toSlug(projectType)
+          });
+        });
+
+        quoteForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const projectType = document.getElementById('projectType').value;
+          const details = document.getElementById('details').value.trim();
+
+          if (!quoteForm.checkValidity()) {
+            quoteForm.reportValidity();
+            return;
+          }
+
+          // Solo se envían parámetros no personales al dataLayer.
+          trackDGEvent('generate_lead', {
+            page_section: 'contacto',
+            form_id: 'quoteForm',
+            conversion_type: 'lead',
+            contact_method: 'whatsapp',
+            project_type: toSlug(projectType),
+            cta_intent: 'submit_quote_form'
+          });
+
+          trackDGEvent('click_whatsapp', {
+            page_section: 'contacto',
+            link_text: 'Enviar solicitud por WhatsApp',
+            cta_intent: 'submit_quote_form',
+            conversion_type: 'lead',
+            contact_method: 'whatsapp',
+            destination_type: 'whatsapp',
+            project_type: toSlug(projectType)
+          });
+
+          const message =
+            'Hola DG Audiosound, quiero solicitar una cotización para Eventos, Creadores y Producción.%0A%0A' +
+            'Nombre / Empresa: ' + encodeURIComponent(name) + '%0A' +
+            'Correo: ' + encodeURIComponent(email) + '%0A' +
+            'Teléfono / WhatsApp: ' + encodeURIComponent(phone || 'No especificado') + '%0A' +
+            'Tipo de proyecto: ' + encodeURIComponent(projectType) + '%0A' +
+            'Detalles: ' + encodeURIComponent(details || 'No especificado');
+
+          window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
