@@ -176,14 +176,26 @@ document.addEventListener('DOMContentLoaded', () => {
        7. HERO SLIDER LOGIC
        ======================================== */
     const slides = document.querySelectorAll('.slide');
+    const heroKicker = document.querySelector('.hero-kicker');
     let currentSlide = 0;
     const slideInterval = 5000; // 5 segundos
+
+    const kickerTexts = [
+        "Residencial Premium",
+        "Negocios y Experiencias Comerciales",
+        "Corporativo e Institucional",
+        "Eventos y Producción"
+    ];
 
     if (slides.length > 0) {
         setInterval(() => {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
+            
+            if (heroKicker && kickerTexts[currentSlide]) {
+                heroKicker.textContent = kickerTexts[currentSlide];
+            }
         }, slideInterval);
     }
 
