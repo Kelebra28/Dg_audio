@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio y Video para Auditorios Corporativos | DG Audiosound</title>
+    <meta name="description" content="Diseño, instalación e integración profesional de sistemas de audio, video, proyección, microfonía e iluminación para auditorios corporativos en México.">
+    <meta name="keywords" content="auditorios corporativos, sistemas audiovisuales, sonido profesional, microfonía ponentes, proyección gran formato, integración AV, DG Audiosound">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos principales del proyecto -->
+    <link rel="stylesheet" href="../../style.css">
+
+    <!-- Estilos específicos y adaptaciones premium locales -->
+    <style>
+        /* Override local para Hero Corporativo con Slider */
+        .corp-hero-v2 {
+            position: relative;
+            padding: 180px 0 120px;
+            background: #050505;
+            color: var(--color-text-white);
+            text-align: center;
+            overflow: hidden;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.8s ease-in-out;
+            filter: brightness(0.24);
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .corp-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.85) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .corp-hero-v2 .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .corp-hero-v2 .hero-kicker {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 164, 55, 0.2);
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(212, 164, 55, 0.2);
+        }
+
+        .corp-hero-v2 h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--color-text-white);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        .corp-hero-v2 .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            max-width: 820px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .corp-hero-v2 .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 4.5rem 0 0;
+            flex-wrap: wrap;
+        }
+
+        .corp-hero-v2 .hero-badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.25rem 1.75rem;
+            border-radius: var(--radius-md);
+            min-width: 160px;
+            transition: var(--transition-base);
+            color: var(--color-text-light);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .corp-hero-v2 .hero-badge-item i {
+            font-size: 1.6rem;
+            color: var(--color-primary);
+        }
+
+        .corp-hero-v2 .hero-badge-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            border-color: var(--color-primary);
+            background: rgba(212, 164, 55, 0.12);
+            box-shadow: 0 10px 25px rgba(212, 164, 55, 0.2);
+        }
+
+        /* Asignación de retardos para flotamiento */
+        .corp-hero-v2 .hero-badge-item:nth-child(1) { animation-delay: 0s; }
+        .corp-hero-v2 .hero-badge-item:nth-child(2) { animation-delay: 0.4s; }
+        .corp-hero-v2 .hero-badge-item:nth-child(3) { animation-delay: 0.8s; }
+        .corp-hero-v2 .hero-badge-item:nth-child(4) { animation-delay: 1.2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Efecto Shimmer Dorado para Textos */
+        .text-accent {
+            background: linear-gradient(90deg, #d4a437, #fef08a, #d4a437);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShimmer 3.5s linear infinite;
+            display: inline-block;
+            text-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
+        }
+
+        @keyframes goldShimmer {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+
+        /* Botón Primario Pulse Glow */
+        .btn-primary {
+            animation: pulseGlow 3s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: var(--shadow-sm); }
+            50% { box-shadow: 0 0 25px rgba(212, 164, 55, 0.55); }
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb-wrap {
+            background: var(--color-bg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            min-height: 48px;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .breadcrumb a {
+            color: var(--color-text-dark);
+            font-weight: 700;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Rejillas y Columnas Responsivas */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .benefits-corp-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .include-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .process-corp-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        /* Diseño de Tarjetas de Vidrio (Glassmorphic) y Efectos Hover */
+        .benefit-v2-card, .include-card, .brand-box, .process-v2-item {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: var(--radius-md);
+            padding: 2.5rem 1.75rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .benefit-v2-card {
+            text-align: center;
+        }
+
+        .benefit-v2-card i, .benefit-v2-card .icon {
+            width: 54px;
+            height: 54px;
+            display: inline-grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(212, 164, 55, 0.1);
+            color: var(--color-primary-hover);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition-base);
+        }
+
+        .benefit-v2-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .benefit-v2-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Hover glows y lifts */
+        .benefit-v2-card:hover, .include-card:hover, .brand-box:hover, .process-v2-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-primary);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.15), var(--shadow-glow);
+        }
+
+        .benefit-v2-card:hover i, .benefit-v2-card:hover .icon {
+            background-color: var(--color-primary);
+            color: var(--color-black);
+        }
+
+        /* Problema y Advertencias */
+        .highlight-card {
+            background: var(--color-bg);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+        }
+
+        .warning-card {
+            border-left: 5px solid #ef4444;
+        }
+
+        .warning-card:hover {
+            border-left-color: var(--color-primary);
+        }
+
+        /* Qué Incluye */
+        .include-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .include-card p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Espacios que Adaptamos */
+        .area-card {
+            min-height: 200px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            color: var(--color-text-white);
+            font-weight: 700;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+        }
+
+        .area-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .area-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.85) 100%);
+            z-index: 1;
+        }
+
+        .area-card span {
+            position: absolute;
+            left: 1.5rem;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            z-index: 2;
+            font-size: 1.15rem;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .area-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .area-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Banner de Modernización */
+        .event-banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(212, 164, 55, 0.2);
+            box-shadow: var(--shadow-md);
+            background: var(--color-bg);
+            margin-top: 4rem;
+            transition: var(--transition-base);
+        }
+
+        .event-banner:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-lg), 0 0 20px rgba(212, 164, 55, 0.1);
+        }
+
+        .event-img {
+            min-height: 350px;
+        }
+
+        .event-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-content p {
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Paneles de Diferenciación */
+        .split-dark {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .dark-panel {
+            background: var(--color-bg-dark);
+            color: var(--color-text-white);
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .dark-panel p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .dark-panel h2 {
+            color: var(--color-text-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .dark-panel:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.1), 0 0 20px rgba(212, 164, 55, 0.15);
+        }
+
+        .gold-panel {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+            color: var(--color-black);
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gold-panel h2 {
+            color: var(--color-black);
+            margin-bottom: 1.5rem;
+        }
+
+        .gold-panel .eyebrow {
+            color: var(--color-black);
+            opacity: 0.8;
+        }
+
+        .gold-panel:hover {
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.25), 0 0 25px rgba(212, 164, 55, 0.3);
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--color-primary-hover);
+            font-weight: 900;
+            font-size: 1.15rem;
+        }
+
+        .gold-panel .check-list li::before {
+            color: var(--color-black);
+        }
+
+        /* Marcas */
+        .brand-box {
+            min-height: 80px;
+            display: grid;
+            place-items: center;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            color: var(--color-text-dark);
+        }
+
+        /* Proceso */
+        .process-v2-item {
+            position: relative;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .process-v2-item span {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            width: 32px;
+            height: 32px;
+            background: var(--color-primary);
+            color: var(--color-black);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        .process-v2-icon {
+            font-size: 2.3rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            transition: var(--transition-base);
+        }
+
+        .process-v2-item h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-v2-item p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* FAQs Corporativo */
+        .faq-list {
+            max-width: 900px;
+            margin: 3.5rem auto 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: var(--radius-md);
+            background: var(--color-bg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+        }
+
+        .faq-question {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            cursor: pointer;
+            color: var(--color-text-dark);
+            transition: var(--transition-fast);
+        }
+
+        .faq-question span:last-child {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-answer p {
+            padding: 0 2rem 1.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.active {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-md), 0 0 15px rgba(212, 164, 55, 0.1);
+        }
+
+        .faq-item.active .faq-question span:last-child {
+            transform: rotate(45deg); /* Efecto rotativo premium de X en lugar de - */
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 350px;
+        }
+
+        /* Contacto y Formularios */
+        .contact-section {
+            background: var(--color-bg);
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 3rem;
+            align-items: stretch;
+            margin-top: 3.5rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #1c1f26, #0d0d0f);
+            color: var(--color-text-white);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            right: -80px;
+            top: -80px;
+            border-radius: 50%;
+            background: rgba(212, 164, 55, 0.15);
+            z-index: 0;
+        }
+
+        .contact-info > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-detail {
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-detail a, .contact-detail span {
+            color: rgba(255,255,255,0.92);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .contact-form-card {
+            background: var(--color-bg-dark-alt);
+            color: var(--color-text-white);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(212, 164, 55, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: var(--transition-base);
+        }
+
+        .contact-form-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.15), 0 0 25px rgba(212, 164, 55, 0.15);
+        }
+
+        .contact-form-card h3 {
+            color: var(--color-text-white);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-card p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-field {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .form-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .form-field input, .form-field select, .form-field textarea {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: var(--color-bg-alt);
+            color: var(--color-text-dark);
+            border-radius: var(--radius-md);
+            padding: 0.85rem 1rem;
+            outline: none;
+            transition: var(--transition-fast);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+        }
+
+        .form-field textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(212, 164, 55, 0.25);
+        }
+
+        .form-note {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.55);
+            margin-top: 1rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 1.5rem;
+            border: 0;
+            min-height: 50px;
+            border-radius: var(--radius-md);
+            background: var(--color-primary);
+            color: var(--color-black);
+            font-weight: 700;
+            font-family: var(--font-body);
+            cursor: pointer;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-sm);
+            font-size: 1rem;
+        }
+
+        .form-submit:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .privacy-note a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+
+        /* Sistema de Grillas Altamente Adaptativo (Media Queries) */
+        @media (max-width: 1024px) {
+            .benefits-corp-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .include-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .area-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+            .process-corp-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .brands-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.25rem;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+            .two-col .section-title {
+                display: inline-block;
+            }
+            .two-col img, .two-col figure {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+            .event-banner {
+                grid-template-columns: 1fr;
+            }
+            .event-img {
+                min-height: 280px;
+            }
+            .split-dark {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .contact-wrap {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .benefits-corp-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .include-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .area-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .process-corp-steps {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .brands-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .corp-hero-v2 .hero-badges {
+                gap: 1rem;
+            }
+            .corp-hero-v2 .hero-badge-item {
+                min-width: 140px;
+                padding: 1rem;
+            }
+            .contact-info, .contact-form-card, .event-content {
+                padding: 3rem 1.5rem;
+            }
+            .event-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../assets/dg_logo.webp" alt="DG AUDIOSOUND Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../../index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="../../index.html#soluciones" class="nav-link">Soluciones</a></li>
+                    <li class="nav-item"><a href="../../index.html#aplicaciones" class="nav-link active">Aplicaciones</a></li>
+                    <li class="nav-item"><a href="../../index.html#marcas" class="nav-link">Marcas</a></li>
+                    <li class="nav-item"><a href="../../index.html#contacto" class="nav-link">Tienda</a></li>
+                    <li class="nav-item"><a href="../../index.html#contacto" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="../../index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20un%20auditorio%20corporativo." target="_blank" class="btn btn-primary nav-cta">
+                    <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </a>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumb-wrap" aria-label="Ruta de navegación">
+        <div class="container breadcrumb">
+            <a href="../../index.html">Inicio</a>
+            <span>›</span>
+            <a href="../aplicaciones.html">Aplicaciones</a>
+            <span>›</span>
+            <span>Audio y video para auditorios corporativos</span>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- HERO CORPORATIVO CON SLIDER DINÁMICO -->
+        <section class="corp-hero-v2" id="inicio">
+            <div class="hero-slider">
+                <div class="slide active" style="background-image: url('../../assets/Imagenes/aplicaciones/Auditorios corporativos/audio-video-auditorios-corporativos-hero-dg-audiosound.webp');"></div>
+                <div class="slide" style="background-image: url('../../assets/Imagenes/aplicaciones/Auditorios corporativos/auditorio-corporativo-audio-video-dg-audiosound.webp');"></div>
+                <div class="slide" style="background-image: url('../../assets/Imagenes/aplicaciones/Auditorios corporativos/modernizacion-auditorio-corporativo-dg-audiosound.webp');"></div>
+                <div class="slide" style="background-image: url('../../assets/Imagenes/aplicaciones/Auditorios corporativos/centro-capacitacion-corporativo-dg-audiosound.webp');"></div>
+            </div>
+            <div class="corp-hero-overlay"></div>
+            
+            <div class="container">
+                <div class="reveal active">
+                    <span class="hero-kicker">Corporativo e Institucional</span>
+                    <h1>Audio y video para <br><span class="text-accent">auditorios corporativos</span></h1>
+                    <p class="hero-subtitle">Diseñamos e instalamos auditorios corporativos con sonido claro, imagen de alto impacto, microfonía profesional, iluminación funcional y operación técnica confiable.</p>
+                    
+                    <a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20un%20auditorio%20corporativo." target="_blank" class="btn btn-primary btn-large">
+                        <i class="fa-brands fa-whatsapp"></i> Cotizar mi Proyecto
+                    </a>
+
+                    <div class="hero-badges">
+                        <div class="hero-badge-item">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <span>Refuerzo Sonoro</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <i class="fa-solid fa-video"></i>
+                            <span>Proyección e Imagen</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                            <span>Microfonía Ponentes</span>
+                        </div>
+                        <div class="hero-badge-item">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Iluminación Funcional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMUNICACIÓN CORPORATIVA (Sección 1) -->
+        <section class="section section-light">
+            <div class="container two-col">
+                <div class="reveal fade-right">
+                    <span class="eyebrow">Comunicación corporativa de alto impacto</span>
+                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Un <span class="text-accent">auditorio corporativo</span> debe elevar cada presentación</h2>
+                    <p style="margin-bottom: 1.5rem;">El auditorio es el espacio donde la empresa comunica sus ideas más importantes: capacitaciones, conferencias, juntas generales, presentaciones directivas, eventos internos y encuentros con clientes o aliados.</p>
+                    <p>Cuando el audio, el video y la iluminación trabajan como una sola solución, el mensaje se entiende mejor, la audiencia se mantiene atenta y la empresa proyecta una imagen más sólida, moderna y profesional.</p>
+                </div>
+                <div class="reveal fade-left">
+                    <figure class="image-card" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-top: 10px;">
+                        <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/auditorio-corporativo-audio-video-dg-audiosound.webp" alt="Auditorio corporativo con sistema de audio, video, proyección e iluminación profesional" style="width: 100%; object-fit: cover;">
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Fila de mini tarjetas de beneficios (Grilla de 4) -->
+            <div class="container benefits-corp-grid">
+                <div class="benefit-v2-card reveal fade-up">
+                    <div class="icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Presencia institucional</h3>
+                    <p>El espacio comunica orden, tecnología y nivel profesional ante colaboradores, directivos, clientes e invitados.</p>
+                </div>
+                <div class="benefit-v2-card reveal fade-up" style="transition-delay: 100ms;">
+                    <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Eventos más fluidos</h3>
+                    <p>Reducimos interrupciones por fallas de audio, video, conexión o manejo técnico durante presentaciones importantes.</p>
+                </div>
+                <div class="benefit-v2-card reveal fade-up" style="transition-delay: 200ms;">
+                    <div class="icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Mayor alcance del mensaje</h3>
+                    <p>Cada asistente puede escuchar, ver y comprender con mayor claridad, incluso en auditorios amplios o con mucha audiencia.</p>
+                </div>
+                <div class="benefit-v2-card reveal fade-up" style="transition-delay: 300ms;">
+                    <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h3>Operación confiable</h3>
+                    <p>Diseñamos la integración para que el sistema sea estable, ordenado y fácil de operar por el equipo responsable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EL PROBLEMA (Sección 2) -->
+        <section class="section section-light-alt">
+            <div class="container two-col">
+                <div class="reveal fade-right highlight-card warning-card">
+                    <span class="eyebrow" style="color: #ef4444;">El problema</span>
+                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Cuando el auditorio falla, el mensaje pierde autoridad</h2>
+                    <p style="margin-bottom: 1.5rem;">Un auditorio con voz poco clara, pantallas mal dimensionadas, proyección débil, cables visibles, mala iluminación o controles complicados puede afectar la atención de la audiencia y la percepción profesional del evento.</p>
+                    <p>El reto no es solamente comprar bocinas, micrófonos o proyectores. Un auditorio corporativo requiere diseño audiovisual: cobertura sonora, visibilidad, acústica, flujo de señal, control, estética, seguridad de instalación y facilidad de uso.</p>
+                </div>
+
+                <div class="benefits-corp-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 0;">
+                    <div class="benefit-v2-card reveal fade-up" style="padding: 1.5rem 1.25rem; text-align: left;">
+                        <div class="icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; margin-bottom: 1rem;"><i class="fa-solid fa-volume-xmark"></i></div>
+                        <h4 style="font-weight:700; font-size:1.05rem; margin-bottom:0.5rem;">Voz poco clara</h4>
+                        <p>La audiencia no entiende al ponente o el audio se percibe bajo, saturado, con eco o con zonas sin cobertura.</p>
+                    </div>
+                    <div class="benefit-v2-card reveal fade-up" style="padding: 1.5rem 1.25rem; text-align: left; transition-delay: 50ms;">
+                        <div class="icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; margin-bottom: 1rem;"><i class="fa-solid fa-display"></i></div>
+                        <h4 style="font-weight:700; font-size:1.05rem; margin-bottom:0.5rem;">Imagen sin impacto</h4>
+                        <p>El contenido no se ve bien por tamaño, brillo, distancia, ángulo de visión o selección incorrecta de pantalla o proyector.</p>
+                    </div>
+                    <div class="benefit-v2-card reveal fade-up" style="padding: 1.5rem 1.25rem; text-align: left; transition-delay: 100ms;">
+                        <div class="icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; margin-bottom: 1rem;"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h4 style="font-weight:700; font-size:1.05rem; margin-bottom:0.5rem;">Iluminación deficiente</h4>
+                        <p>La falta de iluminación funcional afecta la presencia del escenario, la lectura del ponente y la experiencia del público.</p>
+                    </div>
+                    <div class="benefit-v2-card reveal fade-up" style="padding: 1.5rem 1.25rem; text-align: left; transition-delay: 150ms;">
+                        <div class="icon" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; margin-bottom: 1rem;"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <h4 style="font-weight:700; font-size:1.05rem; margin-bottom:0.5rem;">Operación complicada</h4>
+                        <p>Cambiar fuentes, controlar audio, conectar equipos o preparar un evento se vuelve lento y dependiente de improvisaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUCIONES Y QUÉ HACEMOS (Sección 3) -->
+        <section class="section section-white">
+            <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
+                <span class="eyebrow reveal fade-up">Qué hacemos</span>
+                <h2 class="section-title reveal fade-up">Integramos auditorios corporativos listos para presentar, capacitar y comunicar</h2>
+                <p class="section-subtitle reveal fade-up">En DG Audiosound diseñamos sistemas audiovisuales para auditorios empresariales, salas magnas, centros de capacitación y espacios institucionales. Evaluamos el tamaño, uso, audiencia, acústica, visibilidad y operación para proponer una solución funcional y estética.</p>
+            </div>
+
+            <div class="container benefits-corp-grid">
+                <!-- Card 1 -->
+                <div class="benefit-v2-card reveal fade-up">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/refuerzo-sonoro-auditorio-corporativo-dg-audiosound.webp" alt="Audio profesional" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
+                    <h3>Audio profesional</h3>
+                    <p>Diseñamos refuerzo sonoro, bocinas, subwoofers, procesamiento, mezcla y cobertura para voz y contenido multimedia.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="benefit-v2-card reveal fade-up" style="transition-delay: 100ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/proyeccion-video-auditorio-corporativo-dg-audiosound.webp" alt="Video y proyección" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
+                    <h3>Video y proyección</h3>
+                    <p>Integramos proyectores, pantallas y displays de gran formato según distancia, iluminación y uso del auditorio.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="benefit-v2-card reveal fade-up" style="transition-delay: 200ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/iluminacion-auditorio-corporativo-dg-audiosound.webp" alt="Iluminación y escenario" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
+                    <h3>Iluminación y escenario</h3>
+                    <p>Proponemos iluminación funcional para ponentes, paneles, presentaciones y eventos con presencia sumamente profesional.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="benefit-v2-card reveal fade-up" style="transition-delay: 300ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/instalacion-auditorio-corporativo-dg-audiosound.webp" alt="Control e integración" style="width: 100%; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
+                    <h3>Control e integración</h3>
+                    <p>Organizamos cableado, fuentes, racks, conexiones y operación para que el sistema audiovisual sea sumamente confiable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUÉ INCLUYE LA SOLUCIÓN (Sección 4) -->
+        <section class="section section-light-alt" id="incluye">
+            <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
+                <span class="eyebrow reveal fade-up">Qué incluye la solución</span>
+                <h2 class="section-title reveal fade-up">Una integración audiovisual completa para tu espacio</h2>
+                <p class="section-subtitle reveal fade-up">Nuestra propuesta no se limita a vender equipos. Diseñamos el alcance técnico integral para que todo trabaje en perfecta armonía.</p>
+            </div>
+
+            <div class="container include-grid">
+                <div class="include-card reveal fade-up">
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-clipboard-list"></i> Diagnóstico</h3>
+                    <p>Revisión profunda de capacidad, acústica, visibilidad, iluminación, puntos de montaje, cabina técnica y operación actual.</p>
+                </div>
+                <div class="include-card reveal fade-up" style="transition-delay: 50ms;">
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-pen-ruler"></i> Diseño AV</h3>
+                    <p>Definición detallada de cobertura sonora, microfonía, visualización, iluminación funcional y esquemas de control.</p>
+                </div>
+                <div class="include-card reveal fade-up" style="transition-delay: 100ms;">
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-box-open"></i> Equipamiento</h3>
+                    <p>Suministro de marcas profesionales originales de audio, video, iluminación, racks, cableado estructurado y conectores premium.</p>
+                </div>
+                <div class="include-card reveal fade-up" style="transition-delay: 150ms;">
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-screwdriver-wrench"></i> Instalación</h3>
+                    <p>Montaje estructural seguro de pantallas, proyectores, iluminación, bocinas y cableado limpio a cabina técnica.</p>
+                </div>
+                <div class="include-card reveal fade-up" style="transition-delay: 200ms;">
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-sliders"></i> Configuración</h3>
+                    <p>Calibración acústica fina de voces y multimedia, ajuste de imagen en displays/proyección y puesta en marcha del sistema.</p>
+                </div>
+                <div class="include-card reveal fade-up" style="transition-delay: 250ms;">
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-chalkboard-user"></i> Capacitación</h3>
+                    <p>Explicación práctica al personal encargado de la operación diaria del sistema para garantizar el uso correcto y autónomo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPACIOS QUE ADAPTAMOS (Sección 5) -->
+        <section class="section section-white">
+            <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
+                <span class="eyebrow reveal fade-up">Espacios que adaptamos</span>
+                <h2 class="section-title reveal fade-up">Soluciones para auditorios y salones corporativos</h2>
+                <p class="section-subtitle reveal fade-up">Adaptamos la cobertura sonora, los micrófonos, la visibilidad de pantalla e iluminación según el tamaño y propósito de tu espacio.</p>
+            </div>
+
+            <div class="container area-grid">
+                <!-- Card 1 -->
+                <div class="area-card reveal fade-up">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/auditorio-empresarial-dg-audiosound.webp" alt="Auditorio empresarial">
+                    <span>Auditorios empresariales</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="area-card reveal fade-up" style="transition-delay: 50ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/sala-magna-corporativa-dg-audiosound.webp" alt="Salas magnas">
+                    <span>Salas magnas</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="area-card reveal fade-up" style="transition-delay: 100ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/centro-capacitacion-corporativo-dg-audiosound.webp" alt="Centros de capacitación">
+                    <span>Centros de capacitación</span>
+                </div>
+                <!-- Card 4 -->
+                <div class="area-card reveal fade-up" style="transition-delay: 150ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/auditorio-institucional-dg-audiosound.webp" alt="Auditorios institucionales">
+                    <span>Auditorios institucionales</span>
+                </div>
+                <!-- Card 5 -->
+                <div class="area-card reveal fade-up" style="transition-delay: 200ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/salon-conferencias-corporativo-dg-audiosound.webp" alt="Salones de conferencias">
+                    <span>Salones de conferencias</span>
+                </div>
+                <!-- Card 6 -->
+                <div class="area-card reveal fade-up" style="transition-delay: 250ms;">
+                    <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/espacio-multiproposito-corporativo-dg-audiosound.webp" alt="Espacios multipropósito">
+                    <span>Espacios multipropósito</span>
+                </div>
+            </div>
+
+            <!-- Modernización de auditorios existentes (BENTO / BANNER) -->
+            <div class="container">
+                <div class="event-banner reveal fade-up">
+                    <div class="event-img">
+                        <img src="../../assets/Imagenes/aplicaciones/Auditorios corporativos/modernizacion-auditorio-corporativo-dg-audiosound.webp" alt="Modernización de auditorio">
+                    </div>
+                    <div class="event-content">
+                        <span class="eyebrow" style="color: var(--color-primary-hover);">Modernización de auditorios existentes</span>
+                        <h2 style="font-size: 2rem; margin-bottom: 1.5rem; line-height: 1.2;">Actualiza tu auditorio sin perder lo que ya funciona</h2>
+                        <p>Si tu empresa ya cuenta con un auditorio, podemos evaluar audio, proyección, microfonía, iluminación, cableado y operación actual para identificar mejoras reales. La modernización correcta permite elevar el desempeño del espacio sin invertir en cambios innecesarios.</p>
+                        <a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20modernizar%20un%20auditorio%20corporativo%20existente." target="_blank" class="btn btn-primary btn-large">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar modernización por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESO DE TRABAJO (Sección 6) -->
+        <section class="section section-light-alt" id="proceso">
+            <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
+                <span class="eyebrow reveal fade-up">Proceso</span>
+                <h2 class="section-title reveal fade-up">Un proceso claro para una solución profesional</h2>
+                <p class="section-subtitle reveal fade-up">Nuestro proceso de trabajo busca evitar improvisaciones: primero entendemos el espacio y el uso real del auditorio, después definimos la solución audiovisual que mejor responde a tus objetivos.</p>
+            </div>
+
+            <div class="container process-corp-steps">
+                <div class="process-v2-item reveal fade-up">
+                    <span>1</span>
+                    <div class="process-v2-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h4>Nos contactas</h4>
+                    <p>Cuéntanos el tamaño del auditorio, el uso principal, número de asistentes y tipo de eventos que realizas.</p>
+                </div>
+                <div class="process-v2-item reveal fade-up" style="transition-delay: 100ms;">
+                    <span>2</span>
+                    <div class="process-v2-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4>Revisamos el espacio</h4>
+                    <p>Analizamos acústica, visibilidad, iluminación, puntos de instalación, cableado, cabina técnica y operación actual.</p>
+                </div>
+                <div class="process-v2-item reveal fade-up" style="transition-delay: 200ms;">
+                    <span>3</span>
+                    <div class="process-v2-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4>Diseñamos</h4>
+                    <p>Definimos audio, video, microfonía, iluminación, control, racks y equipos adecuados para tu operación.</p>
+                </div>
+                <div class="process-v2-item reveal fade-up" style="transition-delay: 300ms;">
+                    <span>4</span>
+                    <div class="process-v2-icon"><i class="fa-solid fa-file-contract"></i></div>
+                    <h4>Propuesta clara</h4>
+                    <p>Te entregamos el alcance del proyecto detallado, equipos especificados, tiempos e inversión requerida.</p>
+                </div>
+                <div class="process-v2-item reveal fade-up" style="transition-delay: 400ms;">
+                    <span>5</span>
+                    <div class="process-v2-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h4>Instalamos</h4>
+                    <p>Ejecutamos el montaje, conexión y cableado ordenado, pruebas de rendimiento y puesta en marcha completa.</p>
+                </div>
+                <div class="process-v2-item reveal fade-up" style="transition-delay: 500ms;">
+                    <span>6</span>
+                    <div class="process-v2-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <h4>Te capacitamos</h4>
+                    <p>Explicamos el uso básico a tu personal para lograr una operación sencilla, independiente y segura del equipo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIADOR Y MARCAS (Sección 7) -->
+        <section class="section section-white">
+            <div class="container split-dark">
+                <div class="dark-panel reveal fade-right">
+                    <span class="eyebrow" style="color: var(--color-primary);">Diferenciador</span>
+                    <h2>No vendemos equipos aislados: diseñamos auditorios que comunican mejor</h2>
+                    <p style="margin-bottom: 1.5rem;">Un auditorio corporativo profesional requiere pensar en todo el sistema: cómo se escucha la voz, cómo se ve el contenido, cómo se ilumina el escenario, cómo se controla el evento y cómo se mantiene una operación confiable.</p>
+                    <p>Nuestro enfoque es integrar audio, video e iluminación para que el auditorio funcione como una herramienta estratégica de comunicación empresarial, capacitación y presencia institucional.</p>
+                </div>
+
+                <div class="gold-panel reveal fade-left">
+                    <span class="eyebrow">Confianza</span>
+                    <h2>Una decisión profesional para tu negocio</h2>
+                    <ul class="check-list">
+                        <li>Asesoría personalizada y real</li>
+                        <li>Propuesta técnica formal y clara</li>
+                        <li>Equipos profesionales 100% originales</li>
+                        <li>Instalación estética y estructurada</li>
+                        <li>Integración armoniosa con el espacio</li>
+                        <li>Capacitación práctica de uso</li>
+                        <li>Acompañamiento técnico post-venta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rejilla de marcas recomendadas (5 columnas responsivas) -->
+            <div class="container" style="text-align: center; max-width: 800px; margin-top: 5rem; margin-bottom: 2rem;">
+                <span class="eyebrow reveal fade-up">Marcas y tecnología</span>
+                <h2>Tecnología profesional para auditorios corporativos</h2>
+                <p class="section-subtitle reveal fade-up">Seleccionamos marcas reconocidas en la industria por su alto desempeño, confiabilidad y durabilidad en proyectos de integración.</p>
+            </div>
+
+            <div class="container brands-grid">
+                <div class="brand-box reveal fade-up">Shure</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 50ms;">Allen & Heath</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 100ms;">QSC</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 150ms;">Biamp</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 200ms;">Kramer</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 250ms;">NEXO</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 300ms;">dB Technologies</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 350ms;">Barco</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 400ms;">Sharp / NEC</div>
+                <div class="brand-box reveal fade-up" style="transition-delay: 450ms;">Optoma</div>
+            </div>
+        </section>
+
+        <!-- PREGUNTAS FRECUENTES (Sección 8) -->
+        <section class="section section-light-alt" id="faq">
+            <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 2rem;">
+                <span class="eyebrow reveal fade-up">FAQ</span>
+                <h2>Preguntas frecuentes sobre auditorios</h2>
+                <p class="section-subtitle reveal fade-up">Resolvemos tus dudas principales para ayudarte a planear e invertir con total tranquilidad técnica.</p>
+            </div>
+
+            <div class="faq-list reveal fade-up">
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>¿Qué incluye una solución audiovisual para auditorio corporativo?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puede incluir sistemas de audio (altavoces distribuidos, subwoofers), amplificación, microfonía inalámbrica o de mesa, consolas de mezcla digitales, pantallas LED de gran formato o proyectores 4K de alta luminosidad, iluminación escénica funcional, racks, control inteligente centralizado, cableado estructurado profesional, configuración acústica técnica y capacitación.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>¿Pueden modernizar un auditorio que ya existe?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Llevamos a cabo un diagnóstico profundo del equipamiento y cableado actual. Identificamos qué componentes se encuentran en condiciones óptimas para ser reutilizados y cuáles requieren una renovación inmediata para maximizar la calidad de audio, video y facilidad operativa del espacio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>¿Conviene usar proyector, pantalla LED o display de gran formato?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Depende directamente de la capacidad y profundidad del auditorio, el nivel de iluminación natural que reciba el espacio, las distancias visuales óptimas y tu presupuesto. Te asesoramos para seleccionar la tecnología de visualización más equilibrada en cuanto a impacto estético, brillo y retorno de inversión.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>¿El auditorio puede usarse para conferencias, capacitaciones y eventos híbridos?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Totalmente. Estructuramos la señal del sistema de manera que sea versátil e integramos conectividad USB/HDMI y cámaras de seguimiento. Esto permite utilizar el auditorio para juntas presenciales tradicionales, ponencias formales, transmisiones en vivo vía streaming o sesiones interactivas con Zoom, Teams o Webex.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>¿Incluyen instalación, configuración y pruebas?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Nuestro servicio llave en mano abarca todo: montaje e instalación técnica de los componentes, calibración sonora para eliminar ecos o saturaciones, ecualización y pruebas de flujo de video. Entregamos el auditorio 100% operativo y listo para usarse.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>¿Pueden ayudar a definir el alcance antes de cotizar?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, por supuesto. Podemos agendar una llamada consultiva o realizar una visita técnica. Nos permite conocer a detalle los objetivos de la empresa, las dimensiones físicas del auditorio y tus expectativas de calidad técnica antes de formular una propuesta comercial estructurada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE COTIZACIÓN (Sección 9) -->
+        <section class="section contact-section" id="contacto">
+            <div class="container contact-wrap">
+                <div class="contact-info reveal fade-right">
+                    <span class="eyebrow" style="color: var(--color-primary);">Cotización corporativa</span>
+                    <h2>Diseñemos un auditorio corporativo que comunique con <span class="text-accent">claridad y presencia</span></h2>
+                    <p>Cuéntanos qué tipo de auditorio tienes, qué eventos realizas y qué necesitas mejorar. En DG Audiosound te ayudamos a crear una solución audiovisual profesional para presentar, capacitar y comunicar con mayor impacto.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <strong>WhatsApp directo</strong>
+                            <a href="https://wa.me/525537270177" target="_blank">55 3727 0177</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Correo de atención</strong>
+                            <a href="mailto:contacto@dgaudiosound.com">contacto@dgaudiosound.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Área de cobertura</strong>
+                            <span>Ciudad de México, Estado de México y proyectos comerciales en todo México</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card reveal fade-left">
+                    <h3>Solicita una cotización</h3>
+                    <p>Completa tus datos y un especialista en integración se pondrá en contacto contigo para ayudarte a definir la mejor tecnología para tu espacio.</p>
+                    
+                    <form id="quoteForm">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="name">Nombre / Empresa *</label>
+                                <input id="name" name="name" type="text" placeholder="Ej. Empresa o institución" autocomplete="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Correo Corporativo *</label>
+                                <input id="email" name="email" type="email" placeholder="correo@empresa.com" autocomplete="email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Teléfono / WhatsApp *</label>
+                                <input id="phone" name="phone" type="tel" placeholder="55 0000 0000" autocomplete="tel" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="projectType">Tipo de proyecto</label>
+                                <select id="projectType" name="projectType">
+                                    <option value="Auditorio nuevo">Auditorio nuevo</option>
+                                    <option value="Modernización de auditorio existente">Modernización de auditorio existente</option>
+                                    <option value="Audio y microfonía profesional">Audio y microfonía profesional</option>
+                                    <option value="Pantalla LED / Proyección gran formato">Pantalla LED / Proyección gran formato</option>
+                                    <option value="Solución integral (Audio, Video y Control)">Solución integral (Audio, Video y Control)</option>
+                                    <option value="Otro proyecto corporativo">Otro proyecto corporativo</option>
+                                </select>
+                            </div>
+                            <div class="form-field full">
+                                <label for="details">Detalles del proyecto (Opcional)</label>
+                                <textarea id="details" name="details" placeholder="Ej. Capacidad aproximada, tipo de eventos, dimensiones de la sala, si requiere microfonía inalámbrica, iluminación o streaming."></textarea>
+                            </div>
+                        </div>
+
+                        <button class="form-submit" type="submit">Solicitar Asesoría Técnica</button>
+                        <div class="form-note privacy-note">
+                            Al enviar, abriremos WhatsApp con la información estructurada de tu proyecto. Consulta nuestro <a href="#" target="_blank">Aviso de Privacidad</a>.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            
+            <div class="footer-col brand-col">
+                <a href="../../index.html" class="footer-logo">
+                    <img src="../../assets/DG.png" alt="DG AUDIOSOUND Logo" class="footer-logo-img">
+                </a>
+                <p class="footer-desc">Proveemos soluciones integrales de audio, video e iluminación premium para crear experiencias inolvidables en hogares y negocios.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/dgaudiosound" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/dgaudiosound/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html#inicio">Inicio</a></li>
+                    <li><a href="../../index.html#soluciones">Soluciones</a></li>
+                    <li><a href="../../index.html#marcas">Nuestras Marcas</a></li>
+                    <li><a href="../../index.html#contacto">Tienda</a></li>
+                    <li><a href="../../index.html#contacto">Blog DG</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Soluciones</h4>
+                <ul class="footer-links">
+                    <li><a href="../cine_en_casa.html">Cine en Casa</a></li>
+                    <li><a href="../../index.html#contacto">Audio Residencial</a></li>
+                    <li><a href="../../index.html#contacto">Audio para Negocios</a></li>
+                    <li><a href="../../index.html#contacto">Salas Corporativas</a></li>
+                    <li><a href="../../index.html#contacto">Instalación Comercial</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Contacto</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-phone"></i> +52 55 3727 0177</li>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@dgaudiosound.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Ciudad de México, México</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 DG Audiosound. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Aviso de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Floating WhatsApp -->
+    <a href="https://wa.me/525537270177" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts de comportamiento -->
+    <script src="../../script.js"></script>
+    <script>
+        (function() {
+            // Manejador del Accordion de FAQs con rotación de X
+            document.querySelectorAll('.faq-item').forEach(function(item) {
+                const button = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                if (!button || !answer) return;
+
+                button.addEventListener('click', function() {
+                    const isActive = item.classList.toggle('active');
+                });
+            });
+
+            // Manejador del Hero Slider (Slideshow Crossfade)
+            const slides = document.querySelectorAll('.corp-hero-v2 .slide');
+            let currentSlide = 0;
+            const slideInterval = 4000; // Rotación cada 4 segundos
+
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, slideInterval);
+            }
+
+            // Manejador del Formulario de Cotización para WhatsApp
+            const quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const projectType = document.getElementById('projectType').value;
+                    const details = document.getElementById('details').value.trim();
+
+                    const message = 
+                        'Hola DG Audiosound, quiero cotizar audio y video para un auditorio corporativo.%0A%0A' +
+                        '*Nombre / Empresa:* ' + encodeURIComponent(name) + '%0A' +
+                        '*Correo:* ' + encodeURIComponent(email) + '%0A' +
+                        '*Teléfono / WhatsApp:* ' + encodeURIComponent(phone) + '%0A' +
+                        '*Tipo de Proyecto:* ' + encodeURIComponent(projectType) + '%0A' +
+                        '*Detalles:* ' + encodeURIComponent(details || 'No especificados');
+
+                    window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
