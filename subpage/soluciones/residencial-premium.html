@@ -1460,6 +1460,101 @@
             .faq-lux-btn { padding: 20px; font-size: 1rem; }
             .faq-lux-answer p { padding: 0 20px 20px; }
         }
+
+        /* ========================================
+           💎 LOCAL ADAPTATIONS FOR BENTO PROCESS & TEXT TICKER
+           ======================================== */
+        .process-bento-item {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            border-radius: 32px !important;
+            padding: 3.5rem 2.5rem !important;
+            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .process-bento-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+            background-size: 250% 250%;
+            background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+            z-index: 3;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: inherit;
+        }
+
+        .process-bento-item:hover::before {
+            opacity: 1;
+        }
+
+        .process-bento-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.06) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: inherit;
+        }
+
+        .process-bento-item:hover::after {
+            opacity: 1;
+        }
+
+        .process-bento-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-lux-gold) !important;
+            box-shadow: 0 30px 60px rgba(212, 164, 55, 0.06) !important;
+            background: #ffffff !important;
+        }
+
+        .process-bento-item h3 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #121215 !important;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item p {
+            font-size: 0.95rem;
+            color: #555560 !important;
+            line-height: 1.6;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item .bento-num {
+            background: #050505 !important;
+            color: #ffffff !important;
+            font-size: 0.9rem !important;
+            font-weight: 800 !important;
+            padding: 0.4rem 0.8rem !important;
+            border-radius: 50px !important;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item .bento-header i {
+            font-size: 1.8rem;
+            color: var(--color-lux-gold);
+            z-index: 2;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -1715,44 +1810,69 @@
             </div>
         </section>
 
-        <!-- 6. PROCESO DE TRABAJO UNIFICADO (5 PASOS PREMIUM) -->
-        <section class="section-lux-gray" id="proceso">
+        <!-- 6. PROCESO DE TRABAJO UNIFICADO (5 PASOS BENTO PREMIUM) -->
+        <section class="section-lux-gray how-we-work" id="proceso">
             <div class="container-lux">
                 <div style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
                     <span class="lux-kicker">El Viaje</span>
                     <h2 class="lux-title">Un Proceso Claro para <strong>Diseñar, Cotizar e Instalar</strong></h2>
+                    <p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 1rem auto 0;">Un flujo artesanal y transparente para que cada detalle de tu sistema de audio y video sea perfecto.</p>
                 </div>
 
-                <div class="process-premium-grid">
-                    <div class="process-card reveal-lux">
-                        <div class="process-number">01</div>
-                        <i class="fa-solid fa-comments"></i>
-                        <h4>Contacto inicial</h4>
-                        <p style="font-size: 0.85rem; color: #555560; margin-top: 12px; line-height: 1.5; text-align: center;">Nos escribes por WhatsApp y nos cuentas qué espacio quieres mejorar o qué idea tienes en mente.</p>
+                <div class="process-bento-grid reveal-lux">
+                    <!-- Step 1 -->
+                    <div class="process-bento-item">
+                        <div class="bento-header">
+                            <span class="bento-num">01</span>
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3>Contacto inicial</h3>
+                        <p>Nos escribes por WhatsApp y nos cuentas qué espacio quieres mejorar o qué idea tienes en mente.</p>
                     </div>
-                    <div class="process-card reveal-lux" style="transition-delay: 100ms;">
-                        <div class="process-number">02</div>
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        <h4>Diagnóstico</h4>
-                        <p style="font-size: 0.85rem; color: #555560; margin-top: 12px; line-height: 1.5; text-align: center;">Evaluamos fotos, medidas, planos, hábitos de uso, presupuesto y equipamiento actual.</p>
+                    <!-- Step 2 -->
+                    <div class="process-bento-item">
+                        <div class="bento-header">
+                            <span class="bento-num">02</span>
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3>Diagnóstico</h3>
+                        <p>Evaluamos fotos, medidas, planos, hábitos de uso, presupuesto y equipamiento actual.</p>
                     </div>
-                    <div class="process-card reveal-lux" style="transition-delay: 200ms;">
-                        <div class="process-number">03</div>
-                        <i class="fa-solid fa-pen-ruler"></i>
-                        <h4>Diseño de solución</h4>
-                        <p style="font-size: 0.85rem; color: #555560; margin-top: 12px; line-height: 1.5; text-align: center;">Planificamos la acústica, cableado, compatibilidad de marcas y te entregamos la propuesta formal.</p>
+                    <!-- Step 3 -->
+                    <div class="process-bento-item">
+                        <div class="bento-header">
+                            <span class="bento-num">03</span>
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+                        <h3>Diseño de solución</h3>
+                        <p>Planificamos la acústica, cableado, compatibilidad de marcas y te entregamos la propuesta formal.</p>
                     </div>
-                    <div class="process-card reveal-lux" style="transition-delay: 300ms;">
-                        <div class="process-number">04</div>
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <h4>Instalación</h4>
-                        <p style="font-size: 0.85rem; color: #555560; margin-top: 12px; line-height: 1.5; text-align: center;">Procedemos con el montaje seguro, tendido de cableado invisible y calibración digital por software.</p>
+                    <!-- Step 4 -->
+                    <div class="process-bento-item">
+                        <div class="bento-header">
+                            <span class="bento-num">04</span>
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3>Instalación</h3>
+                        <p>Procedemos con el montaje seguro, tendido de cableado invisible y calibración digital por software.</p>
                     </div>
-                    <div class="process-card reveal-lux" style="transition-delay: 400ms;">
-                        <div class="process-number">05</div>
-                        <i class="fa-solid fa-user-check"></i>
-                        <h4>Capacitación</h4>
-                        <p style="font-size: 0.85rem; color: #555560; margin-top: 12px; line-height: 1.5; text-align: center;">Te explicamos de manera práctica cómo operar tu sistema fácilmente y resolver dudas cotidianas.</p>
+                    <!-- Step 5 -->
+                    <div class="process-bento-item">
+                        <div class="bento-header">
+                            <span class="bento-num">05</span>
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <h3>Capacitación</h3>
+                        <p>Te explicamos de manera práctica cómo operar tu sistema fácilmente y resolver dudas cotidianas.</p>
+                    </div>
+                </div>
+
+                <div class="process-footer-clean reveal-lux" style="text-align: center; margin-top: 5rem;">
+                    <p class="process-quote-simple">"Un buen proyecto de audio residencial empieza entendiendo tu estilo de vida y la armonía de tu hogar."</p>
+                    <div class="process-cta">
+                        <a href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20residencial." class="btn btn-whatsapp-large" target="_blank" style="background: #25D366; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(37,211,102,0.15); transition: all 0.3s ease;">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Iniciar mi proyecto por WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1832,38 +1952,48 @@
             </div>
         </section>
 
-        <!-- 8. BRANDS LUX STRIP (AUTO-SCROLL MARQUEE CONTINUO) -->
-        <section class="section-lux-gray" id="marcas" style="padding: 100px 0;">
+        <!-- 8. BRANDS LUX STRIP (Text elements ticker exact matching index) -->
+        <section class="section-lux-gray brands" id="marcas" style="padding: 100px 0;">
             <div class="container-lux">
                 <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
                     <span class="lux-kicker">La Tecnología</span>
-                    <h2 class="lux-title" style="font-size: 2rem;">Integración Exclusiva de <strong>Marcas Mundiales</strong></h2>
+                    <h2 class="lux-title" style="font-size: 2rem;">Marcas profesionales para soluciones de <strong>alto rendimiento</strong></h2>
+                    <p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 1rem auto 0;">Trabajamos con tecnología reconocida mundialmente para garantizar la máxima fidelidad y confiabilidad en tu hogar.</p>
                 </div>
                 
-                <div class="brands-marquee-container">
-                    <div class="brands-marquee-track">
-                        <!-- Bloque original -->
-                        <div class="brand-marquee-item">SONOS</div>
-                        <div class="brand-marquee-item">KEF</div>
-                        <div class="brand-marquee-item">NAD</div>
-                        <div class="brand-marquee-item">PRO-JECT</div>
-                        <div class="brand-marquee-item">RUARK AUDIO</div>
-                        <div class="brand-marquee-item">ONKYO</div>
-                        <div class="brand-marquee-item">SHURE</div>
-                        <div class="brand-marquee-item">KRAMER</div>
-                        <div class="brand-marquee-item">OPTOMA</div>
-                        <div class="brand-marquee-item">SHARP / NEC</div>
-                        <!-- Bloque duplicado para bucle infinito -->
-                        <div class="brand-marquee-item">SONOS</div>
-                        <div class="brand-marquee-item">KEF</div>
-                        <div class="brand-marquee-item">NAD</div>
-                        <div class="brand-marquee-item">PRO-JECT</div>
-                        <div class="brand-marquee-item">RUARK AUDIO</div>
-                        <div class="brand-marquee-item">ONKYO</div>
-                        <div class="brand-marquee-item">SHURE</div>
-                        <div class="brand-marquee-item">KRAMER</div>
-                        <div class="brand-marquee-item">OPTOMA</div>
-                        <div class="brand-marquee-item">SHARP / NEC</div>
+                <div class="brands-ticker-wrapper reveal-lux">
+                    <div class="brands-ticker">
+                        <div class="ticker-item">SONOS</div>
+                        <div class="ticker-item">KEF</div>
+                        <div class="ticker-item">NAD</div>
+                        <div class="ticker-item">RUARK</div>
+                        <div class="ticker-item">PRO-JECT</div>
+                        <div class="ticker-item">ONKYO</div>
+                        <div class="ticker-item">SHURE</div>
+                        <div class="ticker-item">NEXO</div>
+                        <div class="ticker-item">QSC</div>
+                        <div class="ticker-item">BARCO</div>
+                        <div class="ticker-item">KRAMER</div>
+                        <div class="ticker-item">BIAMP</div>
+                        <div class="ticker-item">ALLEN & HEATH</div>
+                        <div class="ticker-item">OPTOMA</div>
+                        <div class="ticker-item">SHARP</div>
+                        
+                        <div class="ticker-item">SONOS</div>
+                        <div class="ticker-item">KEF</div>
+                        <div class="ticker-item">NAD</div>
+                        <div class="ticker-item">RUARK</div>
+                        <div class="ticker-item">PRO-JECT</div>
+                        <div class="ticker-item">ONKYO</div>
+                        <div class="ticker-item">SHURE</div>
+                        <div class="ticker-item">NEXO</div>
+                        <div class="ticker-item">QSC</div>
+                        <div class="ticker-item">BARCO</div>
+                        <div class="ticker-item">KRAMER</div>
+                        <div class="ticker-item">BIAMP</div>
+                        <div class="ticker-item">ALLEN & HEATH</div>
+                        <div class="ticker-item">OPTOMA</div>
+                        <div class="ticker-item">SHARP</div>
                     </div>
                 </div>
             </div>
@@ -2352,7 +2482,7 @@
             });
 
             // --- 7. EFECTO INTERACTIVO DE INCLINACIÓN Y REFLEJO ESPEJO 3D ---
-            const cards3D = document.querySelectorAll('.card-lux, .process-card');
+            const cards3D = document.querySelectorAll('.card-lux, .process-bento-item');
             cards3D.forEach(card => {
                 card.addEventListener('mousemove', (e) => {
                     const rect = card.getBoundingClientRect();
