@@ -532,7 +532,8 @@ img {
     transform: translateY(-5px);
 }
 
-.trust-text h4 {
+.trust-text h4,
+.trust-text .trust-title {
     font-size: 1.1rem;
     font-weight: 800;
     margin-bottom: 0.25rem;
@@ -596,6 +597,32 @@ img {
     height: 40px;
     background-color: rgba(0,0,0,0.1);
     margin: 0 1.5rem;
+}
+
+/* ======================================
+   💎 11. RENDERING PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+.solutions,
+.applications,
+.how-we-work,
+.why-us,
+.faq,
+.brands,
+.contact-bubbles-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+/* ========================================
+   💎 12. HIGH CONTRAST ACCESSIBILITY OVERRIDES
+   ======================================== */
+.section-premium-white .text-gradient-gold,
+.section-light .text-gradient-gold,
+.section-light-alt .text-gradient-gold,
+.contact-bubbles-section .text-gradient-gold {
+    background: linear-gradient(to right, #8a6d20, #b8860b, #8a6d20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ========================================
@@ -766,7 +793,6 @@ img {
     transform: translateX(5px);
 }
 
-/* ========================================
 /* ========================================
    5. APLICACIONES POR INDUSTRIA (ESTRUCTURA RESTAURADA)
    ======================================== */
@@ -960,7 +986,7 @@ img {
     overflow: hidden;
     padding: 6rem 0;
     position: relative;
-    background: #fdfdfd;
+    background: #0d0d0f;
 }
 
 .brands-ticker-wrapper::before,
@@ -976,12 +1002,12 @@ img {
 
 .brands-ticker-wrapper::before {
     left: 0;
-    background: linear-gradient(to right, #fdfdfd, transparent);
+    background: linear-gradient(to right, #0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
 }
 
 .brands-ticker-wrapper::after {
     right: 0;
-    background: linear-gradient(to left, #fdfdfd, transparent);
+    background: linear-gradient(to left, #0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
 }
 
 .brands-ticker {
@@ -1545,7 +1571,7 @@ img {
 }
 
 .footer-desc {
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
     font-size: 0.95rem;
     margin-bottom: 2rem;
 }
@@ -1577,7 +1603,7 @@ img {
     margin-bottom: 0.8rem;
 }
 .footer-links a {
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
 }
 .footer-links a:hover {
     color: var(--color-primary);
@@ -1585,7 +1611,7 @@ img {
 }
 
 .footer-contact li {
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
     margin-bottom: 1rem;
     display: flex;
     gap: 1rem;
@@ -1600,7 +1626,7 @@ img {
     background: #000000;
     padding: 1.5rem 0;
     font-size: 0.85rem;
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
 }
 
 .footer-bottom .container {
@@ -1610,7 +1636,7 @@ img {
 }
 
 .footer-legal a {
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
     margin-left: 1.5rem;
 }
 .footer-legal a:hover {
@@ -4615,7 +4641,7 @@ img {
 
 .process-subtitle {
     font-size: 1.2rem;
-    color: #64748b;
+    color: #475569;
     line-height: 1.8;
 }
 
@@ -4725,7 +4751,7 @@ img {
     margin: 3.5rem auto 0;
     font-size: 1.05rem;
     line-height: 1.75;
-    color: #64748b;
+    color: #475569;
     font-style: italic;
 }
 

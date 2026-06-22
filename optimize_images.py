@@ -30,9 +30,9 @@ def optimize_image(src_path, dest_path, size=None, quality=80):
 def main():
     base_dir = "/Users/kelebra/Documents/Rpm_Code/Dg_audio"
     
-    # 1. Optimize logo (210x210 for retina display fallback of 105x105)
+    # 1. Optimize logo (105x105 exactly to avoid PageSpeed warnings)
     logo_path = os.path.join(base_dir, "assets/dg_logo.webp")
-    optimize_image(logo_path, logo_path, size=(210, 210), quality=85)
+    optimize_image(logo_path, logo_path, size=(105, 105), quality=85)
     
     # 2. Optimize Home solutions cards to 634x422 (displayed size in CSS)
     home_dir = os.path.join(base_dir, "assets/Home")

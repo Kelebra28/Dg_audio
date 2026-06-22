@@ -105,16 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Forzar activación de elementos visibles al cargar
-    setTimeout(() => {
-        revealElements.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                el.classList.add('active');
-            }
-        });
-    }, 100);
-
     /* ========================================
        5. ACORDEÓN (FAQ)
        ======================================== */
