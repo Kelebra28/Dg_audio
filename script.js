@@ -178,6 +178,17 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     if (slides.length > 0) {
+        // Lazy load background images for non-initial slides after 2.5 seconds
+        setTimeout(() => {
+            slides.forEach(slide => {
+                const bgClass = slide.getAttribute('data-bg-class');
+                if (bgClass) {
+                    slide.classList.add(bgClass);
+                    slide.removeAttribute('data-bg-class');
+                }
+            });
+        }, 2500);
+
         setInterval(() => {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
