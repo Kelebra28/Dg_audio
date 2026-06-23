@@ -78,6 +78,14 @@ def process_file(file_path):
             link['href'] = fa_path
             modified = True
 
+    # 9. Add defer to script.js to remove it from the critical path
+    for script in soup.find_all('script'):
+        src = script.get('src', '')
+        if 'script.js' in src:
+            if not script.has_attr('defer') and not script.has_attr('async'):
+                script['defer'] = ''
+                modified = True
+
     if modified:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(str(soup))
