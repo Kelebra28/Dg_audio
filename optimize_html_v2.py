@@ -54,6 +54,16 @@ def process_file(file_path):
             link['href'] = href.replace('style.css', 'style.min.css')
             modified = True
 
+    # 7. Add srcset to dg_logo.webp to support Retina screens and pass PageSpeed
+    for img in soup.find_all('img'):
+        src = img.get('src', '')
+        if 'dg_logo.webp' in src:
+            base = src.replace('dg_logo.webp', '')
+            new_srcset = f"{src} 1x, {base}dg_logo@2x.webp 2x"
+            if img.get('srcset') != new_srcset:
+                img['srcset'] = new_srcset
+                modified = True
+
     if modified:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(str(soup))
@@ -65,7 +75,8 @@ def main():
         base_dir,
         os.path.join(base_dir, "subpage"),
         os.path.join(base_dir, "subpage/soluciones"),
-        os.path.join(base_dir, "subpage/applications")
+        os.path.join(base_dir, "subpage/applications"),
+        os.path.join(base_dir, "subpage/blog")
     ]
     
     for directory in dirs_to_process:
