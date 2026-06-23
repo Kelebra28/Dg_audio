@@ -64,6 +64,20 @@ def process_file(file_path):
                 img['srcset'] = new_srcset
                 modified = True
 
+    # 8. Use local FontAwesome CSS with font-display: swap to solve FCP/LCP warning
+    base_dir = "/Users/kelebra/Documents/Rpm_Code/Dg_audio"
+    rel_depth = os.path.relpath(base_dir, os.path.dirname(file_path))
+    if rel_depth == '.':
+        fa_path = 'assets/font-awesome.min.css'
+    else:
+        fa_path = os.path.join(rel_depth, 'assets/font-awesome.min.css').replace('\\', '/')
+
+    for link in soup.find_all('link'):
+        href = link.get('href', '')
+        if 'cdnjs.cloudflare.com' in href and 'font-awesome' in href and 'all.min.css' in href:
+            link['href'] = fa_path
+            modified = True
+
     if modified:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(str(soup))
