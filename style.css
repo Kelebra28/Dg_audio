@@ -433,6 +433,35 @@ img {
     opacity: 1;
 }
 
+/* Slider Slide Background Images */
+.slide-1 {
+    background-image: url('./assets/Home/dg-audiosound-hero-residencial-premium.webp');
+}
+.slide-2 {
+    background-image: url('./assets/Home/dg-audiosound-hero-negocios-experiencias-comerciales.webp');
+}
+.slide-3 {
+    background-image: url('./assets/Home/dg-audiosound-hero-corporativo-institucional.webp');
+}
+.slide-4 {
+    background-image: url('./assets/Home/dg-audiosound-hero-eventos-creadores-produccion.webp');
+}
+
+@media (max-width: 768px) {
+    .slide-1 {
+        background-image: url('./assets/Home/mobile-dg-audiosound-hero-residencial-premium.webp');
+    }
+    .slide-2 {
+        background-image: url('./assets/Home/mobile-dg-audiosound-hero-negocios-experiencias-comerciales.webp');
+    }
+    .slide-3 {
+        background-image: url('./assets/Home/mobile-dg-audiosound-hero-corporativo-institucional.webp');
+    }
+    .slide-4 {
+        background-image: url('./assets/Home/mobile-dg-audiosound-hero-eventos-creadores-produccion.webp');
+    }
+}
+
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
