@@ -879,7 +879,7 @@
         </article>
 
         <article class="system-card">
-          <h3>Auditorios corporativos</h3>
+          <h3>auditorios-corporativos</h3>
           <p>Sistemas audiovisuales para conferencias, juntas ejecutivas, presentaciones, capacitaciones, lanzamientos y eventos internos.</p>
           <ul>
             <li>Audio profesional para voz</li>
@@ -1119,7 +1119,7 @@
                 <select id="projectType" name="projectType">
                 <option value="Oficinas corporativas">Oficinas corporativas</option>
                 <option value="Salas de juntas">Salas de juntas</option>
-                <option value="Auditorios corporativos">Auditorios corporativos</option>
+                <option value="auditorios-corporativos">auditorios-corporativos</option>
                 <option value="Educación">Educación</option>
                 <option value="Gobierno">Gobierno</option>
                 <option value="Hoteles">Hoteles</option>
@@ -1459,7 +1459,7 @@
         quoteForm.addEventListener('focusin', () => {
           if (formStarted) return;
           formStarted = true;
-          const projectType = document.getElementById('projectType')?.value || 'Corporativo e institucional';
+          const projectType = document.getElementById('projectType')?.value || 'corporativo-e-institucional';
           trackDGEvent('form_start', {
             page_section: 'contacto',
             form_id: 'quoteForm',
@@ -1515,5 +1515,9 @@
       }
     })();
   </script>
+<!-- Botón Floating WhatsApp -->
+<a aria-label="Contacto por WhatsApp" class="whatsapp-float" href="https://wa.me/525537270177" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 </body>
 </html>
