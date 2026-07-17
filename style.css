@@ -1787,7 +1787,7 @@ img {
     color: white;
     font-size: 32px;
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    z-index: 1000;
+    z-index: 9999;
     transition: all 0.3s ease;
     animation: pulse-whatsapp 2s infinite;
 }
