@@ -1,4 +1,18 @@
 # ==============================================================================
+# SEGURIDAD BÁSICA DEL SERVIDOR
+# ==============================================================================
+# 1. Bloquear exploración de carpetas
+Options -Indexes
+
+# 2. Ocultar la versión de Apache
+ServerSignature Off
+
+# 3. Proteger archivos ocultos (.htaccess, .env, .git)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# ==============================================================================
 # OPTIMIZACIÓN DE CACHÉ DE NAVEGADOR (CACHE LIFETIMES) - DG AUDIOSOUND
 # ==============================================================================
 
