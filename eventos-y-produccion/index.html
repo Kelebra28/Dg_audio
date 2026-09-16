@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soluciones para Eventos, Creadores y Producción | DG Audiosound</title>
+<meta content="Diseñamos soluciones profesionales de audio y video para podcast, streaming, DJ, centros de culto, música en vivo y cine independiente en México." name="description"/>
+<meta content="audio profesional para eventos, microfonía inalámbrica, consolas mezcladoras de audio, streaming de video, DJ PA, cine independiente, DG Audiosound" name="keywords"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Font Awesome -->
+<link as="style" href="/assets/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/assets/font-awesome.min.css" rel="stylesheet"/></noscript>
+<!-- Estilos principales del proyecto -->
+<link href="/style.min.css" rel="stylesheet"/>
+<!-- Micro-universo de estilos visuales de ultra-lujo (Estilo Apple / Bang & Olufsen) -->
+<style>
+        :root {
+            --color-lux-black: #08080a;
+            --color-lux-dark-gray: #111115;
+            --color-lux-card-bg: rgba(26, 26, 32, 0.82);
+            --color-lux-gold: #d4a437;
+            --color-lux-gold-bright: #fef08a;
+            --color-lux-gold-glow: rgba(212, 164, 55, 0.25);
+            --color-lux-text-white: #ffffff;
+            --color-lux-text-muted: #c1c1cf;
+            --color-lux-border: rgba(212, 164, 55, 0.26);
+            --font-lux-heading: 'Outfit', sans-serif;
+            --font-lux-body: 'Inter', sans-serif;
+            --transition-lux: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Reset local y alternancia de temas */
+        body {
+            background-color: #ffffff;
+            color: #121215;
+            font-family: var(--font-lux-body);
+            overflow-x: hidden;
+        }
+
+        .section-lux-dark {
+            background-color: var(--color-lux-black);
+            color: #ffffff !important;
+            padding: 140px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-lux-dark .lux-title {
+            color: #ffffff !important;
+        }
+        .section-lux-dark .lux-lead {
+            color: #c1c1cf !important;
+        }
+        .section-lux-dark p, .section-lux-dark span, .section-lux-dark li, .section-lux-dark h1, .section-lux-dark h2, .section-lux-dark h3, .section-lux-dark h4 {
+            color: #ffffff !important;
+        }
+
+        .section-lux-dark-alt {
+            background-color: var(--color-lux-dark-gray);
+            color: #ffffff !important;
+            padding: 140px 0;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .section-lux-dark-alt .lux-title {
+            color: #ffffff !important;
+        }
+        .section-lux-dark-alt .lux-lead {
+            color: #c1c1cf !important;
+        }
+        .section-lux-dark-alt p, .section-lux-dark-alt span, .section-lux-dark-alt li, .section-lux-dark-alt h1, .section-lux-dark-alt h2, .section-lux-dark-alt h3, .section-lux-dark-alt h4 {
+            color: #ffffff !important;
+        }
+
+        .section-lux-white {
+            background-color: #ffffff;
+            color: #121215 !important;
+            padding: 140px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-lux-white .lux-title {
+            color: #121215 !important;
+        }
+        .section-lux-white .lux-lead {
+            color: #555560 !important;
+        }
+        .section-lux-white p, .section-lux-white span, .section-lux-white li, .section-lux-white h1, .section-lux-white h2, .section-lux-white h3, .section-lux-white h4 {
+            color: #121215 !important;
+        }
+        .section-lux-white .card-lux, .section-lux-white .antithesis-problem-card {
+            background: rgba(245, 245, 247, 0.85) !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            color: #121215 !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+        }
+        .section-lux-white .card-lux:hover, .section-lux-white .antithesis-problem-card:hover {
+            background: #ffffff !important;
+            border-color: var(--color-lux-gold) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+        }
+        .section-lux-white .card-lux-title, .section-lux-white .antithesis-problem-card h3 {
+            color: #121215 !important;
+        }
+        .section-lux-white .card-lux-desc, .section-lux-white .antithesis-problem-card p {
+            color: #555560 !important;
+        }
+
+        .section-lux-gray {
+            background-color: #f5f5f7;
+            color: #121215 !important;
+            padding: 140px 0;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+        .section-lux-gray .lux-title {
+            color: #121215 !important;
+        }
+        .section-lux-gray .lux-lead {
+            color: #555560 !important;
+        }
+        .section-lux-gray p, .section-lux-gray span, .section-lux-gray li, .section-lux-gray h1, .section-lux-gray h2, .section-lux-gray h3, .section-lux-gray h4 {
+            color: #121215 !important;
+        }
+        .section-lux-gray .card-lux, .section-lux-gray .brand-lux-box, .section-lux-gray .process-lux-num {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            color: #121215 !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+        }
+        .section-lux-gray .card-lux:hover, .section-lux-gray .brand-lux-box:hover {
+            border-color: var(--color-lux-gold) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+        }
+        .section-lux-gray .card-lux-title {
+            color: #121215 !important;
+        }
+        .section-lux-gray .card-lux-desc {
+            color: #555560 !important;
+        }
+
+        .container-lux {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Títulos editoriales y kickers */
+        .lux-kicker {
+            display: inline-block;
+            font-family: var(--font-lux-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--color-lux-gold);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .lux-kicker::after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--color-lux-gold);
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+
+        .lux-title {
+            font-family: var(--font-lux-heading);
+            font-weight: 300;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .lux-title strong {
+            font-weight: 700;
+        }
+
+        .lux-accent {
+            background: linear-gradient(90deg, var(--color-lux-gold), var(--color-lux-gold-bright), var(--color-lux-gold));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer-gold 4s linear infinite;
+        }
+
+        @keyframes shimmer-gold {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+
+        .lux-lead {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--color-lux-text-muted);
+            max-width: 800px;
+            font-weight: 300;
+        }
+
+        /* Reveal animations de alto nivel */
+        .reveal-lux {
+            opacity: 0;
+            transform: translateY(50px) scale(0.98);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal-lux.revealed {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* 1. HERO SLIDESHOW CINEMATOGRÁFICO CON APERTURA LENTA */
+        .hero-lux {
+            position: relative;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .hero-lux-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-lux-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.1);
+            transition: opacity 2.5s ease-in-out, transform 8s ease-out;
+            filter: brightness(0.68) contrast(1.02);
+        }
+
+        .hero-lux-slide.active {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        .hero-lux-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(8,8,10,0.65) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-lux-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding-top: 100px;
+        }
+
+        .hero-lux-title, .hero-lux-title h1, .hero-lux-title span {
+            font-family: var(--font-lux-heading);
+            font-size: clamp(2.8rem, 7vw, 5.2rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+            color: #ffffff !important;
+        }
+
+        .hero-lux-title strong {
+            font-weight: 800;
+            color: #ffffff !important;
+        }
+
+        .hero-lux-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            line-height: 1.65;
+            color: #ffffff !important;
+            opacity: 0.95;
+            max-width: 850px;
+            margin-bottom: 3.5rem;
+            font-weight: 300;
+        }
+
+        .hero-lux-badges {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 3rem;
+        }
+
+        .hero-lux-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition-lux);
+        }
+
+        .hero-lux-badge i {
+            color: var(--color-lux-gold);
+            font-size: 1.05rem;
+        }
+
+        .hero-lux-badge:hover {
+            border-color: var(--color-lux-gold);
+            background: rgba(212, 164, 55, 0.08);
+            color: var(--color-lux-text-white);
+            box-shadow: 0 10px 25px rgba(212, 164, 55, 0.15);
+            transform: translateY(-5px);
+        }
+
+        /* 2. LA ANTÍTESIS: ESTÉTICA ARQUITECTÓNICA VS RUIDO VISUAL (Asymmetrical Editorial Grid) */
+        .antithesis-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .antithesis-visual-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .antithesis-main-img {
+            width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition-lux);
+        }
+
+        .antithesis-parallax-card {
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+            width: 280px;
+            background: rgba(18, 18, 24, 0.85);
+            border: 1px solid var(--color-lux-border);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 20px 45px rgba(212, 164, 55, 0.08);
+            transform: translateY(calc(var(--scroll-offset, 0) * 0.15px));
+            will-change: transform;
+            transition: transform 0.1s linear;
+        }
+
+        .antithesis-parallax-card h4 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-lux-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .antithesis-parallax-card p {
+            font-size: 0.85rem;
+            color: var(--color-lux-text-muted);
+            line-height: 1.5;
+        }
+
+        .antithesis-problems {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 3.5rem;
+        }
+
+        .antithesis-problem-card {
+            background: var(--color-lux-card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            padding: 30px;
+            transition: var(--transition-lux);
+        }
+
+        .antithesis-problem-card:hover {
+            border-color: var(--color-lux-gold) !important;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px var(--color-lux-gold-glow);
+        }
+
+        .antithesis-problem-card i {
+            font-size: 1.5rem;
+            color: var(--color-lux-gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .antithesis-problem-card h3 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .antithesis-problem-card p {
+            font-size: 0.88rem;
+            color: var(--color-lux-text-muted);
+            line-height: 1.6;
+        }
+
+        /* 3. COMPONENTE ESTRELLA: INTERACTIVE SYSTEMS PARALLAX 3D CAROUSEL (SHOWCASE) */
+        .showcase-lux {
+            padding: 0;
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-slider {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .showcase-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.15);
+            transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 2.2s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: brightness(0.46) contrast(1.02) blur(2px);
+        }
+
+        .showcase-slide.active {
+            opacity: 1;
+            transform: scale(1);
+            filter: brightness(0.46) contrast(1.02) blur(0px);
+        }
+
+        .showcase-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            align-items: center;
+            padding: 0 80px;
+        }
+
+        .showcase-info-panel {
+            padding: 40px;
+            background: rgba(5, 5, 7, 0.45);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-left: 2px solid var(--color-lux-gold);
+            border-radius: 0 12px 12px 0;
+            box-shadow: -20px 0 50px rgba(0,0,0,0.5);
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .showcase-slide.active ~ .showcase-container .showcase-info-panel,
+        .showcase-info-panel.active {
+            transform: none;
+            opacity: 1;
+        }
+
+        .showcase-slide-title {
+            font-family: var(--font-lux-heading);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: var(--color-lux-text-white);
+            line-height: 1.1;
+        }
+
+        .showcase-slide-title strong {
+            font-weight: 700;
+            color: var(--color-lux-gold);
+        }
+
+        .showcase-slide-desc {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-lux-text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .showcase-specs {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 3rem 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .showcase-specs li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .showcase-specs li i {
+            color: var(--color-lux-gold);
+            font-size: 0.85rem;
+        }
+
+        .showcase-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-end;
+            padding-right: 40px;
+        }
+
+        .showcase-nav-btn {
+            background: transparent;
+            border: none;
+            font-family: var(--font-lux-heading);
+            font-weight: 400;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            text-align: right;
+            transition: var(--transition-lux);
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .showcase-nav-btn::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-lux-gold);
+            transition: var(--transition-lux);
+        }
+
+        .showcase-nav-btn.active {
+            color: var(--color-lux-text-white);
+            font-weight: 700;
+            font-size: 1.6rem;
+            padding-right: 20px;
+        }
+
+        .showcase-nav-btn.active::after {
+            width: 40px;
+        }
+
+        /* 4. GALERÍA DE INGENIERÍA: BLUEPRINT INTERACTIVO DE DISEÑO ACÚSTICO */
+        .blueprint-section {
+            background-color: var(--color-lux-black);
+            padding: 140px 0;
+            position: relative;
+        }
+
+        .blueprint-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            margin-top: 4.5rem;
+            align-items: stretch;
+        }
+
+        .blueprint-viewer {
+            position: relative;
+            background: #09090c;
+            border: 1px solid var(--color-lux-border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+            min-height: 500px;
+        }
+
+        .blueprint-viewer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.42;
+            pointer-events: none;
+        }
+
+        /* SVG Blueprint Grid overlay */
+        .blueprint-svg-wrap {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blueprint-svg {
+            width: 85%;
+            height: 85%;
+            stroke: var(--color-lux-gold);
+            stroke-width: 0.8;
+            stroke-dasharray: 2, 4;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 5px rgba(212, 164, 55, 0.4));
+        }
+
+        .blueprint-hotspot {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: var(--color-lux-gold);
+            border-radius: 50%;
+            z-index: 2;
+            cursor: pointer;
+            box-shadow: 0 0 0 0 rgba(212, 164, 55, 0.8);
+            animation: pulse-gold-spot 2s infinite;
+            display: grid;
+            place-items: center;
+            transition: var(--transition-lux);
+        }
+
+        .blueprint-hotspot::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--color-lux-text-white);
+            border-radius: 50%;
+        }
+
+        .blueprint-hotspot:hover {
+            transform: scale(1.3);
+            background: var(--color-lux-text-white);
+            box-shadow: 0 0 25px var(--color-lux-gold);
+        }
+
+        .blueprint-hotspot:hover::after {
+            background: var(--color-lux-gold);
+        }
+
+        @keyframes pulse-gold-spot {
+            0% { box-shadow: 0 0 0 0 rgba(212, 164, 55, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 164, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 164, 55, 0); }
+        }
+
+        .blueprint-hotspot-label {
+            position: absolute;
+            bottom: 35px;
+            white-space: nowrap;
+            background: rgba(5, 5, 7, 0.9);
+            border: 1px solid var(--color-lux-gold);
+            color: var(--color-lux-text-white);
+            font-family: var(--font-lux-heading);
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: var(--transition-lux);
+        }
+
+        .blueprint-hotspot:hover .blueprint-hotspot-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Posicionamiento de hotspots */
+        .spot-cine { top: 35%; left: 30%; }
+        .spot-audio { top: 55%; left: 65%; }
+        .spot-jardin { top: 75%; left: 40%; }
+        .spot-hifi { top: 25%; left: 75%; }
+
+        .blueprint-panel {
+            background: var(--color-lux-card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blueprint-panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--color-lux-gold);
+        }
+
+        .blueprint-panel-header {
+            font-family: var(--font-lux-heading);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-lux-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .blueprint-panel-title {
+            font-family: var(--font-lux-heading);
+            font-size: 1.85rem;
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+        }
+
+        .blueprint-panel-title strong {
+            font-weight: 700;
+        }
+
+        .blueprint-panel-desc {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--color-lux-text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .blueprint-tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+        }
+
+        .blueprint-tech-item strong {
+            display: block;
+            font-family: var(--font-lux-heading);
+            font-size: 0.8rem;
+            color: var(--color-lux-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .blueprint-tech-item span {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* 5. BENEFICIOS Y ALCANCE (Glassmorphism de súper lujo) */
+        .cards-lux-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 4.5rem;
+        }
+
+        .card-lux, .process-card {
+            background: var(--color-lux-card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            border-radius: 12px;
+            padding: 40px 30px;
+            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        /* Destello / Reflejo Espejo Diagonal de Cristal */
+        .card-lux::before, .process-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+            background-size: 250% 250%;
+            background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+            z-index: 3;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: inherit;
+        }
+
+        .card-lux:hover::before, .process-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Brillo dorado de fondo que sigue al mouse */
+        .card-lux::after, .process-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.08) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: inherit;
+        }
+
+        .card-lux:hover::after, .process-card:hover::after {
+            opacity: 1;
+        }
+
+        .card-lux:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-lux-gold);
+            box-shadow: 0 20px 40px rgba(212, 164, 55, 0.06), 0 0 25px rgba(212, 164, 55, 0.03);
+        }
+
+        .card-lux-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(212, 164, 55, 0.06);
+            border: 1px solid rgba(212, 164, 55, 0.1);
+            color: var(--color-lux-gold);
+            display: grid;
+            place-items: center;
+            font-size: 1.25rem;
+            margin-bottom: 2.25rem;
+            transition: var(--transition-lux);
+        }
+
+        .card-lux:hover .card-lux-icon {
+            background-color: var(--color-lux-gold);
+            color: #000;
+            box-shadow: 0 0 15px var(--color-lux-gold);
+        }
+
+        .card-lux-title {
+            font-family: var(--font-lux-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .card-lux-desc {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--color-lux-text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* 6. PROCESO ARTESANAL EN 4 ETAPAS (Scroll Reactivo) */
+        .process-lux-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 5rem;
+            position: relative;
+        }
+
+        .process-lux-line {
+            position: absolute;
+            top: 25px;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 164, 55, 0.1) 20%, rgba(212, 164, 55, 0.1) 80%, transparent 100%);
+            z-index: 0;
+        }
+
+        .process-lux-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .process-lux-num {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #09090c;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.4);
+            font-family: var(--font-lux-heading);
+            font-weight: 800;
+            font-size: 1.05rem;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 2rem;
+            transition: var(--transition-lux);
+        }
+
+        .process-lux-item.active .process-lux-num {
+            background-color: var(--color-lux-gold);
+            color: #000;
+            border-color: var(--color-lux-gold);
+            box-shadow: 0 0 25px rgba(212, 164, 55, 0.4);
+        }
+
+        .process-lux-item h3 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-lux-item p {
+            font-size: 0.88rem;
+            color: var(--color-lux-text-muted);
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+
+        /* 7. PASARELA VISUAL DE APLICACIONES (GATEWAY DE LUJO) */
+        .gateway-lux-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 4.5rem;
+        }
+
+        .gateway-lux-card {
+            position: relative;
+            height: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transition: var(--transition-lux);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+        }
+
+        .gateway-lux-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: brightness(0.62) contrast(1.02);
+        }
+
+        .gateway-lux-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(8,8,10,0.65) 100%);
+            z-index: 1;
+            pointer-events: none;
+            transition: var(--transition-lux);
+        }
+
+        .gateway-lux-content {
+            position: relative;
+            z-index: 2;
+            transform: translateY(20px);
+            transition: var(--transition-lux);
+        }
+
+        .gateway-lux-card h3 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffffff !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+        }
+
+        .gateway-lux-card p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.95) !important;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+        }
+
+        .gateway-lux-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-lux-heading);
+            font-weight: 700;
+            font-size: 0.78rem;
+            color: var(--color-lux-gold) !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: var(--transition-lux);
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .gateway-lux-link i {
+            transition: transform 0.4s ease;
+        }
+
+        .gateway-lux-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-lux-gold);
+            box-shadow: 0 25px 50px rgba(212, 164, 55, 0.08);
+        }
+
+        .gateway-lux-card:hover .gateway-lux-img {
+            transform: scale(1.08);
+            filter: brightness(0.48) contrast(1.05);
+        }
+
+        .gateway-lux-card:hover .gateway-lux-content {
+            transform: translateY(0);
+        }
+
+        .gateway-lux-card:hover .gateway-lux-content p {
+            opacity: 1;
+        }
+
+        .gateway-lux-card:hover .gateway-lux-link {
+            color: var(--color-lux-text-white);
+        }
+
+        .gateway-lux-card:hover .gateway-lux-link i {
+            transform: translateX(5px);
+        }
+
+        /* 8. BRANDS LUX STRIP (AUTO-SCROLL MARQUEE CONTINUO) */
+        .brands-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 30px 0;
+            position: relative;
+        }
+
+        .brands-marquee-container::before, .brands-marquee-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .brands-marquee-container::before {
+            left: 0;
+            background: linear-gradient(90deg, #f5f5f7 0%, rgba(245,245,247,0) 100%);
+        }
+
+        .brands-marquee-container::after {
+            right: 0;
+            background: linear-gradient(270deg, #f5f5f7 0%, rgba(245,245,247,0) 100%);
+        }
+
+        .brands-marquee-track {
+            display: flex;
+            width: calc(250px * 20);
+            animation: marquee-scroll 25s linear infinite;
+            gap: 30px;
+        }
+
+        .brand-marquee-item {
+            width: 220px;
+            height: 90px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            font-family: var(--font-lux-heading);
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            color: #121215;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+            transition: var(--transition-lux);
+        }
+
+        .brand-marquee-item:hover {
+            border-color: var(--color-lux-gold) !important;
+            box-shadow: 0 15px 35px rgba(212,164,55,0.1) !important;
+            transform: translateY(-5px);
+        }
+
+        /* Ajuste premium para tarjetas de proceso sobre fondo gris claro */
+        .section-lux-gray .process-card {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.05) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+            color: #121215 !important;
+            padding: 45px 30px !important;
+            border-radius: 16px !important;
+            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+        }
+
+        .section-lux-gray .process-card:hover {
+            transform: translateY(-10px) !important;
+            border-color: var(--color-lux-gold) !important;
+            box-shadow: 0 25px 50px rgba(212, 164, 55, 0.08) !important;
+        }
+
+        .section-lux-gray .process-card h4 {
+            color: #121215 !important;
+            font-size: 1.15rem !important;
+            font-family: var(--font-lux-heading) !important;
+            font-weight: 700 !important;
+            z-index: 2;
+        }
+
+        .section-lux-gray .process-card p {
+            color: #555560 !important;
+            font-size: 0.88rem !important;
+            line-height: 1.6 !important;
+            z-index: 2;
+        }
+
+        .section-lux-gray .process-card i {
+            color: var(--color-lux-gold) !important;
+            font-size: 2.3rem !important;
+            margin-bottom: 1.5rem !important;
+            z-index: 2;
+        }
+
+        .section-lux-gray .process-card .process-number {
+            color: rgba(0, 0, 0, 0.02) !important;
+            font-size: 6rem !important;
+            font-weight: 800 !important;
+            position: absolute !important;
+            top: -10px !important;
+            right: -5px !important;
+            z-index: 1 !important;
+            transition: color 0.4s ease !important;
+        }
+
+        .section-lux-gray .process-card:hover .process-number {
+            color: rgba(212, 164, 55, 0.08) !important;
+        }
+
+        @keyframes marquee-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-2500px); }
+        }
+
+        /* 9. ACORDEÓN DE PREGUNTAS SUSPENDIDO MINIMALISTA EN TEMA CLARO */
+        .section-lux-white .faq-lux-wrap {
+            max-width: 900px;
+            margin: 4.5rem auto 0;
+            display: grid;
+            gap: 16px;
+        }
+
+        .section-lux-white .faq-lux-item {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition-lux);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+        }
+
+        .section-lux-white .faq-lux-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            cursor: pointer;
+            font-family: var(--font-lux-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #121215 !important;
+            transition: var(--transition-lux);
+        }
+
+        .section-lux-white .faq-lux-btn span:last-child {
+            font-size: 1.5rem;
+            color: var(--color-lux-gold);
+            transition: transform 0.4s ease;
+        }
+
+        .section-lux-white .faq-lux-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .section-lux-white .faq-lux-answer p {
+            padding: 0 32px 28px;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: #555560 !important;
+        }
+
+        .section-lux-white .faq-lux-item.active {
+            border-color: var(--color-lux-gold) !important;
+            background: #ffffff !important;
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08) !important;
+        }
+
+        .section-lux-white .faq-lux-item.active .faq-lux-btn {
+            color: #121215 !important;
+            font-weight: 700;
+        }
+
+        .section-lux-white .faq-lux-item.active .faq-lux-btn span:last-child {
+            transform: rotate(45deg);
+        }
+
+
+
+        /* 10. FORMULARIO DE CONSULTA DE PRESTIGIO */
+        .consult-wrapper {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 80px;
+            align-items: stretch;
+            margin-top: 5rem;
+        }
+
+        .consult-info-panel {
+            background: linear-gradient(135deg, #0b0b0e 0%, #050507 100%);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        .consult-info-panel::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,164,55,0.06) 0%, transparent 70%);
+        }
+
+        .consult-info-panel p {
+            color: var(--color-lux-text-muted);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .consult-details-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .consult-detail-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .consult-detail-card i {
+            font-size: 1.4rem;
+            color: var(--color-lux-gold);
+        }
+
+        .consult-detail-card div strong {
+            display: block;
+            font-family: var(--font-lux-heading);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-lux-gold);
+            margin-bottom: 4px;
+        }
+
+        .consult-detail-card div a, .consult-detail-card div span {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+        }
+
+        .consult-form-card {
+            background: var(--color-lux-card-bg);
+            border: 1px solid var(--color-lux-border);
+            border-radius: 12px;
+            padding: 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+            transition: var(--transition-lux);
+        }
+
+        .consult-form-card:hover {
+            border-color: var(--color-lux-gold);
+            box-shadow: 0 45px 90px rgba(212, 164, 55, 0.08);
+        }
+
+        .consult-form-card h3 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.85rem;
+            font-weight: 300;
+            margin-bottom: 0.75rem;
+        }
+
+        .consult-form-card h3 strong {
+            font-weight: 700;
+        }
+
+        .consult-form-card p {
+            color: var(--color-lux-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .lux-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .lux-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lux-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .lux-field label {
+            font-family: var(--font-lux-heading);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .lux-field input, .lux-field select, .lux-field textarea {
+            background: #09090c;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: var(--color-lux-text-white);
+            border-radius: 6px;
+            padding: 14px 18px;
+            outline: none;
+            transition: var(--transition-lux);
+            font-family: var(--font-lux-body);
+            font-size: 0.95rem;
+        }
+
+        .lux-field textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .lux-field input:focus, .lux-field select:focus, .lux-field textarea:focus {
+            border-color: var(--color-lux-gold);
+            box-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .lux-submit-btn {
+            width: 100%;
+            background: var(--color-lux-gold);
+            color: #000;
+            border: none;
+            padding: 18px 30px;
+            font-family: var(--font-lux-heading);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(212, 164, 55, 0.15);
+            transition: var(--transition-lux);
+            margin-top: 1.5rem;
+        }
+
+        .lux-submit-btn:hover {
+            background: var(--color-lux-gold-bright);
+            box-shadow: 0 15px 30px rgba(212, 164, 55, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Responsividad móvil avanzada y colapsos fluidos */
+        @media (max-width: 1200px) {
+            .container-lux { padding: 0 30px; }
+            .showcase-container { grid-template-columns: 1fr; padding: 0 40px; }
+            .showcase-nav { display: none; }
+            .blueprint-grid { grid-template-columns: 1fr; gap: 40px; }
+            .consult-wrapper { grid-template-columns: 1fr; gap: 50px; }
+        }
+
+        @media (max-width: 1024px) {
+            .antithesis-grid { grid-template-columns: 1fr; gap: 50px; }
+            .antithesis-visual-wrapper { margin-top: 40px; }
+            .cards-lux-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-lux-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .process-lux-line { display: none; }
+            .gateway-lux-grid { grid-template-columns: repeat(2, 1fr); }
+            .brands-lux-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-lux { min-height: 80vh; }
+            .hero-lux-title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+            .hero-lux-subtitle { font-size: 1rem; }
+            .lux-form-grid { grid-template-columns: 1fr; }
+            .cards-lux-grid { grid-template-columns: 1fr; }
+            .gateway-lux-grid { grid-template-columns: 1fr; }
+            .process-lux-grid { grid-template-columns: 1fr; }
+            .brands-lux-grid { grid-template-columns: repeat(2, 1fr); }
+            .consult-info-panel { padding: 40px 20px; }
+            .consult-form-card { padding: 40px 20px; }
+            .faq-lux-btn { padding: 20px; font-size: 1rem; }
+            .faq-lux-answer p { padding: 0 20px 20px; }
+        }
+
+        /* ========================================
+           💎 LOCAL ADAPTATIONS FOR BENTO PROCESS & TEXT TICKER
+           ======================================== */
+        .process-bento-item {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            border-radius: 32px !important;
+            padding: 3.5rem 2.5rem !important;
+            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .process-bento-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+            background-size: 250% 250%;
+            background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+            z-index: 3;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: inherit;
+        }
+
+        .process-bento-item:hover::before {
+            opacity: 1;
+        }
+
+        .process-bento-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.06) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: inherit;
+        }
+
+        .process-bento-item:hover::after {
+            opacity: 1;
+        }
+
+        .process-bento-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-lux-gold) !important;
+            box-shadow: 0 30px 60px rgba(212, 164, 55, 0.06) !important;
+            background: #ffffff !important;
+        }
+
+        .process-bento-item h3 {
+            font-family: var(--font-lux-heading);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #121215 !important;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item p {
+            font-size: 0.95rem;
+            color: #555560 !important;
+            line-height: 1.6;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item .bento-num {
+            background: #050505 !important;
+            color: #ffffff !important;
+            font-size: 0.9rem !important;
+            font-weight: 800 !important;
+            padding: 0.4rem 0.8rem !important;
+            border-radius: 50px !important;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item .bento-header i {
+            font-size: 1.8rem;
+            color: var(--color-lux-gold);
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+<link href="https://dgaudiosound.com/subpage/soluciones/eventos-y-produccion" rel="canonical"/><meta content="Eventos y Producción | Audio Profesional, Microfonía y Video | DG Audiosound" property="og:title"/><meta content="Diseño, ingeniería e integración de sistemas de audio profesional, microfonía, consolas de mezcla, grabación y streaming de video para creadores y producciones." property="og:description"/><meta content="https://dgaudiosound.com/subpage/soluciones/eventos-y-produccion.html" property="og:url"/><meta content="website" property="og:type"/><meta content="https://dgaudiosound.com/assets/Imagenes/dg-audiosound-og.jpg" property="og:image"/></head>
+<body>
+<!-- NAVBAR INMERSIVO -->
+<header class="navbar" id="navbar">
+<div class="container nav-container">
+<a class="logo" href="/index">
+<img alt="DG AUDIOSOUND Logo" class="logo-img" height="105" src="/assets/dg_logo.webp" srcset="../../assets/dg_logo.webp 1x, ../../assets/dg_logo@2x.webp 2x" width="105"/>
+</a>
+<nav class="nav-menu" id="nav-menu">
+<ul class="nav-list">
+<li class="nav-item"><a class="nav-link" href="/index#inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link active" href="/index#soluciones">Soluciones</a></li>
+<li class="nav-item"><a class="nav-link" href="/index#aplicaciones">Aplicaciones</a></li>
+<li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.dgaudiosound.com/tienda">Tienda</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.dgaudiosound.com/blog">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="/index#contacto">Contacto</a></li>
+</ul>
+<a class="btn btn-primary nav-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20de%20audio%20y%20video%20para%20eventos%20o%20producci%C3%B3n." style="animation: pulseGlow 3s infinite;" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </a>
+</nav>
+<div class="hamburger" id="hamburger">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</div>
+</div>
+</header>
+<!-- BREADCRUMBS MUTEADOS -->
+<main>
+<!-- 1. HERO DE APERTURA LENTA -->
+<section class="hero-lux" id="inicio">
+<div class="hero-lux-slider">
+<div class="hero-lux-slide active" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-hero..webp');"></div>
+</div>
+<div class="hero-lux-overlay"></div>
+<div class="container-lux hero-lux-content">
+<div class="reveal-lux active">
+<span class="lux-kicker">Ingeniería Audiovisual</span>
+<h1 class="hero-lux-title">Soluciones de audio y video para eventos, <span class="text-accent">creadores y producción</span>.</h1>
+<p class="hero-lux-subtitle">Diseñamos soluciones profesionales para proyectos donde el sonido, la imagen, la microfonía, la grabación, la mezcla, la transmisión y la experiencia audiovisual son parte esencial del resultado.</p>
+<a class="btn btn-primary btn-large" href="#contacto" style="padding: 18px 36px; font-family: var(--font-lux-heading); letter-spacing: 2px; text-transform: uppercase; animation: pulseGlow 3s infinite;">
+                        Iniciar Estudio de Diseño
+                    </a>
+<div class="hero-lux-badges"><div class="hero-lux-badge"><i class="fa-solid fa-microphone-lines"></i><span>Audio Profesional</span></div><div class="hero-lux-badge"><i class="fa-solid fa-microphone"></i><span>Microfonía</span></div><div class="hero-lux-badge"><i class="fa-solid fa-sliders"></i><span>Mezcla y Control</span></div><div class="hero-lux-badge"><i class="fa-solid fa-video"></i><span>Grabación y Streaming</span></div></div>
+</div>
+</div>
+</section>
+<!-- 2. LA ANTÍTESIS: ESTÉTICA ARQUITECTÓNICA VS RUIDO VISUAL -->
+<section class="section-lux-white" id="problema">
+<div class="container-lux">
+<div class="reveal-lux">
+<span class="lux-kicker">La Filosofía</span>
+<h2 class="lux-title">Cuando el audio y el video fallan, la experiencia <strong>completa pierde impacto</strong></h2>
+<p class="lux-lead" style="margin-bottom: 2rem;">En eventos, contenido digital, presentaciones en vivo y espacios de producción, la tecnología no debe improvisarse. Un micrófono incorrecto, una bocina mal seleccionada, una mezcla poco clara o una imagen deficiente pueden afectar la atención del público, la calidad del contenido y la percepción profesional del proyecto.</p>
+<p style="color: #555560; line-height: 1.7; margin-bottom: 2.5rem;">En DG Audiosound revisamos el proyecto completo antes de recomendar tecnología. Así evitamos soluciones sobredimensionadas, equipos suficientes, gastos innecesarios y configuraciones que terminan generando más problemas que resultados.</p>
+<div class="antithesis-problems">
+<div class="antithesis-problem-card" style="text-align: center;">
+<i class="fa-solid fa-volume-xmark" style="margin: 0 auto 1rem;"></i>
+<h3>Audio poco claro</h3>
+<p>Voces sin presencia, música sin impacto, saturación, ruido, eco o mala cobertura del espacio.</p>
+</div>
+<div class="antithesis-problem-card" style="text-align: center;">
+<i class="fa-solid fa-triangle-exclamation" style="margin: 0 auto 1rem;"></i>
+<h3>Video limitado</h3>
+<p>Imagen pequeña, poca luminosidad, mala conexión, proyección inadecuada o pantallas mal seleccionadas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. COMPONENTE ESTRELLA: INTERACTIVE SYSTEMS PARALLAX 3D CAROUSEL (SHOWCASE) -->
+<section class="showcase-lux" id="sistemas">
+<!-- Background Slides representativos -->
+<div class="showcase-slider">
+<div class="showcase-slide active" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-podcast.webp');"></div>
+<div class="showcase-slide" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-streaming.webp');"></div>
+<div class="showcase-slide" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-sonidos-dj.webp');"></div>
+<div class="showcase-slide" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-centros-culto.webp');"></div>
+<div class="showcase-slide" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-cine-independiente.webp');"></div>
+<div class="showcase-slide" style="background-image: url('../../assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-musicos-vocalistas.webp');"></div>
+</div>
+<div class="showcase-container">
+<div class="showcase-info-panel active">
+<span class="lux-kicker" style="margin-bottom: 1rem;">Especialidad</span>
+<h2 class="showcase-slide-title">Podcast <strong>Profesional</strong></h2>
+<p class="showcase-slide-desc">Micrófonos, interfaces, mezcladoras, monitoreo, grabación y video para producir contenido con sonido claro y presencia profesional.</p>
+<ul class="showcase-specs">
+<li><i class="fa-solid fa-circle-check"></i> Micrófonos profesionales e interfaces de audio</li>
+<li><i class="fa-solid fa-circle-check"></i> Tratamiento acústico básico y soportes</li>
+<li><i class="fa-solid fa-circle-check"></i> Solución lista para grabar y transmitir</li>
+</ul>
+<a class="gateway-lux-link" href="/eventos-y-produccion/podcast">Explorar Ingeniería <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+<div class="showcase-nav">
+<button class="showcase-nav-btn active" data-index="0">01. Podcast</button>
+<button class="showcase-nav-btn" data-index="1">02. Streamers</button>
+<button class="showcase-nav-btn" data-index="2">03. Sonidos y DJ</button>
+<button class="showcase-nav-btn" data-index="3">04. Centros de Culto</button>
+<button class="showcase-nav-btn" data-index="4">05. Cine Independiente</button>
+<button class="showcase-nav-btn" data-index="5">06. Músicos y Vocalistas</button>
+</div>
+</div>
+</section>
+<!-- 4. GALERÍA DE INGENIERÍA: BLUEPRINT INTERACTIVO DE DISEÑO ACÚSTICO -->
+<section class="section-lux-dark-alt" id="blueprint">
+<div class="container-lux">
+<div style="max-width: 800px;">
+<span class="lux-kicker">El Plano Técnico</span>
+<h2 class="lux-title">La Anatomía de un <strong>Ecosistema de Producción</strong></h2>
+<p class="lux-lead">Diseñar de forma profesional requiere estructurar planos detallados de ingeniería antes de colocar un solo cable. Conoce cómo estructuramos los sistemas para garantizar calidad.</p>
+</div>
+<div class="blueprint-grid">
+<div class="blueprint-viewer">
+<img alt="Esquema estructural de planos técnicos DG Audiosound" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-contexto.webp"/>
+<div class="blueprint-svg-wrap">
+<svg class="blueprint-svg" preserveaspectratio="none" viewbox="0 0 100 100">
+<rect fill="none" height="80" width="80" x="10" y="10"></rect>
+<line x1="50" x2="50" y1="10" y2="90"></line>
+<line x1="10" x2="90" y1="50" y2="50"></line>
+<circle cx="50" cy="50" fill="none" r="30"></circle>
+</svg>
+</div>
+<!-- Hotspots interactivos -->
+<div class="blueprint-hotspot spot-cine" data-target="cine">
+<span class="blueprint-hotspot-label">Audio y Captura</span>
+</div>
+<div class="blueprint-hotspot spot-audio" data-target="audio">
+<span class="blueprint-hotspot-label">Microfonía Inalámbrica</span>
+</div>
+<div class="blueprint-hotspot spot-jardin" data-target="jardin">
+<span class="blueprint-hotspot-label">Consolas y Control</span>
+</div>
+<div class="blueprint-hotspot spot-hifi" data-target="hifi">
+<span class="blueprint-hotspot-label">Proyección y Video</span>
+</div>
+</div>
+<div class="blueprint-panel" id="blueprint-details">
+<span class="blueprint-panel-header" id="bp-header">Audio y Captura</span>
+<h3 class="blueprint-panel-title" id="bp-title">Producción de <strong>Audio</strong></h3>
+<p class="blueprint-panel-desc" id="bp-desc">Calibramos y seleccionamos micrófonos de condensador y dinámicos junto con interfaces y consolas para capturar audio de alta definición sin saturación ni ruidos.</p>
+<div class="blueprint-tech-grid">
+<div class="blueprint-tech-item">
+<strong id="bp-tech1-title">Entradas</strong>
+<span id="bp-tech1-desc">Previos de micro de bajo ruido</span>
+</div>
+<div class="blueprint-tech-item">
+<strong id="bp-tech2-title">Operación</strong>
+<span id="bp-tech2-desc">Monitoreo en vivo con audífonos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. BENEFICIOS (Glassmorphism de alta gama) -->
+<section class="section-lux-white" id="beneficios">
+<div class="container-lux">
+<div style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
+<span class="lux-kicker">Los Beneficios</span>
+<h2 class="lux-title" style="margin-bottom: 1.5rem;">Por qué la <strong>Consultoría de Ingeniería</strong> es Indispensable</h2>
+<p style="color: #555560; font-size: 1.1rem; font-weight: 300;">Trabajar con profesionales asegura un retorno de inversión en disfrute, estética, compatibilidad de marcas y facilidad operativa.</p>
+</div>
+<div class="cards-lux-grid">
+<div class="card-lux reveal-lux">
+<div>
+<div class="card-lux-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+<h3 class="card-lux-title">Invisibilidad Estética</h3>
+<p class="card-lux-desc">Ocultamos cableados, canalizaciones y racks de control en armarios específicos para que no existan distractores en tu interiorismo.</p>
+</div>
+</div>
+<div class="card-lux reveal-lux" style="transition-delay: 100ms;">
+<div>
+<div class="card-lux-icon"><i class="fa-solid fa-sliders"></i></div>
+<h3 class="card-lux-title">Operación Simplificada</h3>
+<p class="card-lux-desc">Controla la iluminación, persianas, pantallas y audio desde un solo comando o smartphone de forma centralizada.</p>
+</div>
+</div>
+<div class="card-lux reveal-lux" style="transition-delay: 200ms;">
+<div>
+<div class="card-lux-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+<h3 class="card-lux-title">Ingeniería Acústica</h3>
+<p class="card-lux-desc">Tratamos físicamente los espacios con paneles absorbentes ocultos para asegurar voces nítidas y bajos perfectos sin eco.</p>
+</div>
+</div>
+<div class="card-lux reveal-lux" style="transition-delay: 300ms;">
+<div>
+<div class="card-lux-icon"><i class="fa-solid fa-shield-halved"></i></div>
+<h3 class="card-lux-title">Cero Obsolescencia</h3>
+<p class="card-lux-desc">Diseñamos la infraestructura con cableado de fibra y categoría preparados para las velocidades y resoluciones de los próximos 10 años.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. PROCESO DE TRABAJO UNIFICADO (5 PASOS BENTO PREMIUM) -->
+<section class="section-lux-gray how-we-work" id="proceso">
+<div class="container-lux">
+<div style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
+<span class="lux-kicker">El Viaje</span>
+<h2 class="lux-title">Un Proceso Claro para <strong>Equipar e Instalar</strong></h2>
+<p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 1rem auto 0;">Un proceso estructurado para garantizar resultados excepcionales en cada etapa de tu proyecto.</p>
+</div>
+<div class="process-bento-grid reveal-lux">
+<!-- Step 1 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">01</span>
+<i class="fa-solid fa-comments"></i>
+</div>
+<h3>Contacto inicial</h3>
+<p>Nos compartes la idea, el tipo de proyecto y el objetivo principal.</p>
+</div>
+<!-- Step 2 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">02</span>
+<i class="fa-solid fa-magnifying-glass-chart"></i>
+</div>
+<h3>Diagnóstico</h3>
+<p>Revisamos uso, espacio, audiencia, fuentes, operation y necesidades técnicas.</p>
+</div>
+<!-- Step 3 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">03</span>
+<i class="fa-solid fa-pen-ruler"></i>
+</div>
+<h3>Diseño de solución</h3>
+<p>Definimos equipos, familias de producto y configuración sugerida.</p>
+</div>
+<!-- Step 4 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">04</span>
+<i class="fa-solid fa-screwdriver-wrench"></i>
+</div>
+<h3>Instalación</h3>
+<p>Apoyamos con suministro, instalación, conexión, pruebas y puesta en marcha.</p>
+</div>
+<!-- Step 5 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">05</span>
+<i class="fa-solid fa-user-check"></i>
+</div>
+<h3>Capacitación</h3>
+<p>Explicamos el uso básico para que el sistema pueda operarse con confianza.</p>
+</div>
+</div>
+<div class="process-footer-clean reveal-lux" style="text-align: center; margin-top: 5rem;">
+<p class="process-quote-simple">"Un buen proyecto de producción empieza garantizando la claridad del sonido, la fidelidad de la captura y la confiabilidad del equipo."</p>
+<div class="process-cta">
+<a class="btn btn-whatsapp-large" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20eventos%20y%20produccion." style="background: #25D366; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(37,211,102,0.15); transition: all 0.3s ease;" target="_blank">
+<i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Iniciar mi proyecto por WhatsApp
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. PASARELA VISUAL DE APLICACIONES (GATEWAY DE LUJO) -->
+<section class="section-lux-white" id="aplicaciones">
+<div class="container-lux">
+<div style="max-width: 800px; margin-bottom: 5rem;">
+<span class="lux-kicker">Las Especialidades</span>
+<h2 class="lux-title">Explora las aplicaciones de esta solución pilar</h2>
+<p class="lux-lead">Cada tipo de producción exige una especificación técnica de sonido e imagen diferente. Selecciona la aplicación correspondiente para conocer su alcance y planos específicos.</p>
+</div>
+<div class="gateway-lux-grid">
+<!-- Cine -->
+<div class="gateway-lux-card reveal-lux">
+<img alt="DG Audiosound Podcast" class="gateway-lux-img" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-podcast.webp"/>
+<div class="gateway-lux-overlay"></div>
+<div class="gateway-lux-content">
+<h3>Podcast</h3>
+<p>Micrófonos, interfaces, mezcladoras, monitoreo, grabación y video para producir contenido.</p>
+<a class="gateway-lux-link" href="/eventos-y-produccion/podcast">Ver Solución <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<!-- Audio Distribuido -->
+<div class="gateway-lux-card reveal-lux" style="transition-delay: 100ms;">
+<img alt="DG Audiosound Streamers" class="gateway-lux-img" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-streaming.webp"/>
+<div class="gateway-lux-overlay"></div>
+<div class="gateway-lux-content">
+<h3>Streamers</h3>
+<p>Audio, cámaras, iluminación básica, captura y control para transmisiones profesionales.</p>
+<a class="gateway-lux-link" href="/eventos-y-produccion/streamers">Ver Solución <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<!-- Jardin -->
+<div class="gateway-lux-card reveal-lux" style="transition-delay: 200ms;">
+<img alt="DG Audiosound Sonidos y DJ" class="gateway-lux-img" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-sonidos-dj.webp"/>
+<div class="gateway-lux-overlay"></div>
+<div class="gateway-lux-content">
+<h3>Sonidos y DJ</h3>
+<p>PA, subwoofers, mezcladoras, control, microfonía y accesorios para potencia y claridad.</p>
+<a class="gateway-lux-link" href="/eventos-y-produccion/sonidos-dj">Ver Solución <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<!-- Home Office -->
+<div class="gateway-lux-card reveal-lux">
+<img alt="DG Audiosound Centros de Culto" class="gateway-lux-img" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-centros-culto.webp"/>
+<div class="gateway-lux-overlay"></div>
+<div class="gateway-lux-content">
+<h3>Centros de Culto</h3>
+<p>Microfonía, sonido, monitoreo, video y transmisión para ceremonias ordenadas.</p>
+<a class="gateway-lux-link" href="/eventos-y-produccion/centros-de-culto">Ver Solución <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<!-- Hi-Fi -->
+<div class="gateway-lux-card reveal-lux" style="transition-delay: 100ms;">
+<img alt="DG Audiosound Cine Independiente" class="gateway-lux-img" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-cine-independiente.webp"/>
+<div class="gateway-lux-overlay"></div>
+<div class="gateway-lux-content">
+<h3>Cine Independiente</h3>
+<p>Proyección, pantallas, sonido, conectividad y soporte técnico para exhibiciones.</p>
+<a class="gateway-lux-link" href="/eventos-y-produccion/cine-independiente">Ver Solución <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<!-- Family Room -->
+<div class="gateway-lux-card reveal-lux" style="transition-delay: 200ms;">
+<img alt="DG Audiosound Músicos y vocalistas" class="gateway-lux-img" src="/assets/Imagenes/soluciones/eventos-creadores-y-produccion/eventos-creadores-produccion-musicos-vocalistas.webp"/>
+<div class="gateway-lux-overlay"></div>
+<div class="gateway-lux-content">
+<h3>Músicos y vocalistas</h3>
+<p>Micrófonos, interfaces, monitoreo, mezcla y grabación para ensayos y producción.</p>
+<a class="gateway-lux-link" href="/eventos-y-produccion/musicos-vocalistas">Ver Solución <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BRANDS LUX STRIP (Text elements ticker exact matching index) -->
+<section class="section-lux-gray brands" id="marcas" style="padding: 100px 0;">
+<div class="container-lux">
+<div style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+<span class="lux-kicker">La Tecnología</span>
+<h2 class="lux-title" style="font-size: 2rem;">Marcas profesionales para soluciones de <strong>alto rendimiento</strong></h2>
+<p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 1rem auto 0;">Trabajamos con tecnología reconocida mundialmente para garantizar la máxima fidelidad y confiabilidad en tu proyecto.</p>
+</div>
+<div class="brands-ticker-wrapper reveal-lux">
+<div class="brands-ticker"><div class="ticker-item">SHURE</div><div class="ticker-item">ALLEN &amp; HEATH</div><div class="ticker-item">QSC</div><div class="ticker-item">NEXO</div><div class="ticker-item">ZOOM</div><div class="ticker-item">BIAMP</div><div class="ticker-item">KRAMER</div><div class="ticker-item">OPTOMA</div><div class="ticker-item">SHARP</div><div class="ticker-item">DBTECHNOLOGIES</div><div class="ticker-item">SHURE</div><div class="ticker-item">ALLEN &amp; HEATH</div><div class="ticker-item">QSC</div><div class="ticker-item">NEXO</div><div class="ticker-item">ZOOM</div><div class="ticker-item">BIAMP</div><div class="ticker-item">KRAMER</div><div class="ticker-item">OPTOMA</div><div class="ticker-item">SHARP</div><div class="ticker-item">DBTECHNOLOGIES</div><div class="ticker-item">SHURE</div><div class="ticker-item">ALLEN &amp; HEATH</div><div class="ticker-item">QSC</div><div class="ticker-item">NEXO</div><div class="ticker-item">ZOOM</div><div class="ticker-item">BIAMP</div><div class="ticker-item">KRAMER</div><div class="ticker-item">OPTOMA</div><div class="ticker-item">SHARP</div><div class="ticker-item">DBTECHNOLOGIES</div></div>
+</div>
+</div>
+</section>
+<!-- 9. PREGUNTAS FRECUENTES (FAQs) -->
+<section class="section-lux-white" id="faq">
+<div class="container-lux">
+<div style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
+<span class="lux-kicker">FAQ</span>
+<h2 class="lux-title">Resolvemos tus <strong>Dudas Frecuentes</strong></h2>
+</div>
+<div class="faq-lux-wrap reveal-lux">
+<div class="faq-lux-item">
+<button class="faq-lux-btn" type="button"><span>¿Qué tipo de soluciones ofrece DG Audiosound para eventos, creadores y producción?</span></button>
+<div class="faq-lux-answer">
+<p>Ofrecemos soluciones profesionales de audio, video, microfonía, consolas, mezcladoras, bocinas, subwoofers, monitoreo, interfaces, grabación, streaming, proyección, pantallas e iluminación complementaria.</p>
+</div>
+</div>
+<div class="faq-lux-item">
+<button class="faq-lux-btn" type="button"><span>¿Pueden ayudarme a elegir el equipo correcto para mi proyecto?</span></button>
+<div class="faq-lux-answer">
+<p>Sí. Analizamos el tipo de proyecto, espacio, uso, audiencia, operación, presupuesto y objetivos para recomendar una solución adecuada, de alta fidelidad, escalable y fácil de operar.</p>
+</div>
+</div>
+<div class="faq-lux-item">
+<button class="faq-lux-btn" type="button"><span>¿Trabajan con soluciones para podcast y streamers?</span></button>
+<div class="faq-lux-answer">
+<p>Sí. Podemos integrar micrófonos, interfaces, mezcladoras, monitoreo, cámaras, iluminación básica, captura de video y flujos de audio para podcast, streaming y creación de contenido.</p>
+</div>
+</div>
+<div class="faq-lux-item">
+<button class="faq-lux-btn" type="button"><span>¿También atienden proyectos para sonidos, DJs y eventos en vivo?</span></button>
+<div class="faq-lux-answer">
+<p>Sí. Desarrollamos soluciones con sistemas PA, subwoofers, consolas, microfonía, monitoreo, cableado y accesorios para sonidos, DJs, presentaciones y eventos que requieran potencia y claridad.</p>
+</div>
+</div>
+<div class="faq-lux-item">
+<button class="faq-lux-btn" type="button"><span>¿La solución puede incluir instalación y capacitación?</span></button>
+<div class="faq-lux-answer">
+<p>Sí. Según el alcance del proyecto, apoyamos con instalación, conexión, configuración, pruebas de operación, puesta en marcha y capacitación básica para que el equipo pueda operarse con total confianza.</p>
+</div>
+</div>
+<div class="faq-lux-item">
+<button class="faq-lux-btn" type="button"><span>¿Cómo puedo solicitar una cotización?</span></button>
+<div class="faq-lux-answer">
+<p>Puedes escribirnos por WhatsApp al 55 3727 0177 o llenar el formulario de contacto en esta página. Te pediremos detalles básicos de tu proyecto para preparar una recomendación adecuada.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. FORMULARIO DE CONTACTO BURBUJAS PREMIUM (DE index.html) -->
+<section class="contact-bubbles-section" id="contacto">
+<div class="container">
+<div class="section-header reveal-lux" style="margin-bottom:4rem; text-align: center;">
+<h2 class="section-title">Cuéntanos tu <span class="text-gradient-gold">proyecto</span></h2>
+<p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 0 auto;">Completa el formulario y te contactamos por WhatsApp con la orientación adecuada para tu espacio o proyecto de producción.</p>
+</div>
+<div class="contact-bubbles-wrapper reveal-lux">
+<!-- Bubble 1: Info -->
+<div class="contact-bubble contact-bubble-dark" style="background: #050505;">
+<span class="cb-badge">Contacto</span>
+<h2>¿En qué podemos <br/><span class="text-gradient-gold">ayudarte?</span></h2>
+<p class="cb-desc" style="color: rgba(255,255,255,0.6);">Podemos orientarte sobre diseño de salas, ingeniería acústica, sonido invisible distribuido o integración audiovisual de alta fidelidad. Escríbenos.</p>
+<div class="cb-methods">
+<a class="cb-method" href="https://wa.me/525537270177" target="_blank">
+<div class="cb-method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">WhatsApp</strong>
+<span style="color: rgba(255,255,255,0.5);">+52 55 3727 0177 — respuesta rápida</span>
+</div>
+</a>
+<a class="cb-method" href="mailto:contacto@dgaudiosound.com">
+<div class="cb-method-icon"><i class="fa-solid fa-envelope"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">Correo</strong>
+<span style="color: rgba(255,255,255,0.5);">contacto@dgaudiosound.com</span>
+</div>
+</a>
+<div class="cb-method">
+<div class="cb-method-icon"><i class="fa-solid fa-location-dot"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">Ciudad de México</strong>
+<span style="color: rgba(255,255,255,0.5);">Cobertura nacional e instalaciones</span>
+</div>
+</div>
+<div class="cb-method">
+<div class="cb-method-icon"><i class="fa-solid fa-share-nodes"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">Redes Sociales</strong>
+<span style="color: rgba(255,255,255,0.5);">Instagram · Facebook</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bubble 2: WhatsApp Form -->
+<div class="contact-bubble contact-bubble-light" style="background: #ffffff; box-shadow: 0 20px 60px rgba(0,0,0,0.08);">
+<h3 style="color: #050505;">Solicita asesoría para tu proyecto</h3>
+<p class="cb-form-desc" style="color: #64748b;">Completa el formulario y se abrirá WhatsApp con la información capturada. Te recomendamos incluir el tipo de espacio y tus objetivos acústicos o estéticos.</p>
+<form class="cb-form" id="bubblesWhatsappForm">
+<div class="cb-form-row">
+<div class="cb-field">
+<label for="cb-name" style="color: #374151;">Nombre</label>
+<input id="cb-name" placeholder="Tu nombre" required="" type="text"/>
+</div>
+<div class="cb-field">
+<label for="cb-company" style="color: #374151;">Empresa (Opcional)</label>
+<input id="cb-company" placeholder="Nombre de la empresa" type="text"/>
+</div>
+</div>
+<div class="cb-form-row">
+<div class="cb-field">
+<label for="cb-phone" style="color: #374151;">WhatsApp / Teléfono</label>
+<input id="cb-phone" placeholder="55 0000 0000" required="" type="tel"/>
+</div>
+<div class="cb-field">
+<label for="cb-city" style="color: #374151;">Ciudad</label>
+<input id="cb-city" placeholder="Ciudad de México" required="" type="text"/>
+</div>
+</div>
+<div class="cb-field">
+<label for="cb-project" style="color: #374151;">Tipo de proyecto</label>
+<select id="cb-project" required=""><option value="Podcast o grabación">Podcast o grabación</option><option value="Streaming o creación de contenido">Streaming o creación de contenido</option><option value="Sonidos y DJ">Sonidos y DJ</option><option value="Centro de culto">Centro de culto</option><option value="Cine independiente">Cine independiente</option><option value="Músicos o vocalistas">Músicos o vocalistas</option><option value="Otro proyecto de producción">Otro proyecto de producción</option></select>
+</div>
+<div class="cb-field full">
+<label for="cb-message" style="color: #374151;">Detalles del proyecto</label>
+<textarea id="cb-message" placeholder="Cuéntanos qué necesitas: tipo de espacio, si está en obra negra o terminada, medidas aproximadas, etc." required="" rows="4"></textarea>
+</div>
+<button class="cb-submit" style="background: #25D366; color: white;" type="submit">
+<i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+                            </button>
+<p class="cb-privacy-note" style="color: #94a3b8;">
+                                Tus datos se enviarán dentro del mensaje de WhatsApp. Al enviar aceptas nuestro <a href="#" style="color:var(--color-primary)">Aviso de Privacidad</a>.
+                            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER INMERSIVO -->
+<footer class="footer">
+<div class="container footer-container">
+<div class="footer-col brand-col">
+<a class="footer-logo" href="/index">
+<img alt="DG AUDIOSOUND Logo" class="footer-logo-img" height="60" src="/assets/DG.png" width="112"/>
+</a>
+<p class="footer-desc">Proveemos soluciones integrales de audio, video e iluminación premium para crear experiencias inolvidables en hogares y negocios.</p>
+<div class="social-links">
+<a aria-label="Facebook" href="https://www.facebook.com/dgaudiosound" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/dgaudiosound/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+<div class="footer-col">
+<h4 class="footer-title">Navegación</h4>
+<ul class="footer-links">
+<li><a href="/index#inicio">Inicio</a></li>
+<li><a href="/soluciones">Soluciones</a></li>
+<li><a href="#marcas">Nuestras Marcas</a></li>
+<li><a href="https://www.dgaudiosound.com/tienda">Tienda</a></li>
+<li><a href="https://www.dgaudiosound.com/blog">Blog DG</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="footer-title">Soluciones</h4>
+<ul class="footer-links">
+<li><a href="/residencial-premium">Audio Residencial</a></li>
+<li><a href="/negocios-y-experiencias">Audio para Negocios</a></li>
+<li><a href="/corporativo-e-institucional">Salas Corporativas</a></li>
+<li><a href="/eventos-y-produccion">Estudios y Creadores</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="footer-title">Contacto</h4>
+<ul class="footer-contact">
+<li><i class="fa-solid fa-phone"></i> +52 55 3727 0177</li>
+<li><i class="fa-solid fa-envelope"></i> contacto@dgaudiosound.com</li>
+<li><i class="fa-solid fa-location-dot"></i> Ciudad de México, México</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<p>© 2026 DG Audiosound. Todos los derechos reservados.</p>
+<div class="footer-legal">
+<a href="#">Aviso de Privacidad</a>
+<a href="#">Términos y Condiciones</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- MOTOR DE ANIMACIONES DE SCROLL, PARALLAX Y BLUEPRINT INTERACTIVO (JS NATIVO OPTIMIZADO) -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. HERO SLIDESHOW CROSSFADE LENTO ---
+            const heroSlides = document.querySelectorAll('.hero-lux-slide');
+            let currentHeroIndex = 0;
+
+            setInterval(() => {
+                heroSlides[currentHeroIndex].classList.remove('active');
+                currentHeroIndex = (currentHeroIndex + 1) % heroSlides.length;
+                heroSlides[currentHeroIndex].classList.add('active');
+            }, 5500);
+
+            // --- 2. MOTOR REVEAL CON INTERSECTION OBSERVER DE ALTO RENDIMIENTO ---
+            const revealElements = document.querySelectorAll('.reveal-lux');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // --- 3. SCROLL-DRIVEN PARALLAX ASIMÉTRICO (CPU OPTIMIZADO) ---
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                // Evitar cálculos innecesarios si no hay scroll real
+                if (scrollTop === lastScrollTop) return;
+                lastScrollTop = scrollTop;
+
+                // Asignar offset para transformaciones CSS
+                document.documentElement.style.setProperty('--scroll-offset', scrollTop);
+
+                // Proceso Artesanal: Activar etapas según scroll
+                const processSection = document.getElementById('proceso');
+                if (processSection) {
+                    const rect = processSection.getBoundingClientRect();
+                    const processItems = document.querySelectorAll('.process-lux-item');
+                    
+                    if (rect.top < window.innerHeight * 0.6) {
+                        const progress = Math.min(Math.max((window.innerHeight * 0.6 - rect.top) / rect.height, 0), 1);
+                        const step = Math.floor(progress * 4);
+                        processItems.forEach((item, index) => {
+                            if (index <= step) {
+                                item.classList.add('active');
+                            } else {
+                                item.classList.remove('active');
+                            }
+                        });
+                    }
+                }
+            }, { passive: true });
+
+            // --- 3.5. ADAPTIVE FLOATING NAVBAR COLOR (100% PRECIRO E INSTANTÁNEO) ---
+            const navbarEl = document.getElementById('navbar');
+            if (navbarEl) {
+                const checkNavbarColor = () => {
+                    const navbarRect = navbarEl.getBoundingClientRect();
+                    const navbarCenter = navbarRect.top + navbarRect.height / 2;
+                    
+                    // Encontrar qué sección está cruzando la mitad de la barra
+                    const sections = document.querySelectorAll('section, header');
+                    let currentSection = null;
+                    
+                    sections.forEach(sec => {
+                        if (sec.id === 'navbar') return;
+                        const rect = sec.getBoundingClientRect();
+                        if (rect.top <= navbarCenter && rect.bottom >= navbarCenter) {
+                            currentSection = sec;
+                        }
+                    });
+                    
+                    if (currentSection) {
+                        const isLight = currentSection.classList.contains('section-lux-white') || 
+                                        currentSection.classList.contains('section-lux-gray') || 
+                                        currentSection.classList.contains('contact-bubbles-section');
+                        if (isLight) {
+                            // Si el fondo de la sección es claro, la barra es negra
+                            navbarEl.classList.remove('nav-light');
+                        } else {
+                            // Si el fondo de la sección es oscuro/negro, la barra es blanca
+                            navbarEl.classList.add('nav-light');
+                        }
+                    }
+                };
+                
+                window.addEventListener('scroll', checkNavbarColor, { passive: true });
+                window.addEventListener('resize', checkNavbarColor, { passive: true });
+                
+                // Evento de scroll adicional para clase scrolled
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbarEl.classList.add('scrolled');
+                    } else {
+                        navbarEl.classList.remove('scrolled');
+                    }
+                }, { passive: true });
+                
+                // Ejecución inicial inmediata
+                checkNavbarColor();
+            }
+
+            // --- 4. COMPONENTE ESTRELLA: CAROUSEL PARALLAX 3D ---
+            const showcaseSlides = document.querySelectorAll('.showcase-slide');
+            const showcaseNavButtons = document.querySelectorAll('.showcase-nav-btn');
+            const infoPanel = document.querySelector('.showcase-info-panel');
+
+            // Copywriting e ingeniería específica para cada uno de los 6 sistemas principales
+            const systemsData = [
+                {
+                    title: "Podcast <strong>Profesional</strong>",
+                    desc: "Micrófonos, interfaces, mezcladoras, monitoreo, grabación y video para producir contenido con sonido claro y presencia profesional.",
+                    specs: [
+                        "Micrófonos profesionales e interfaces de audio",
+                        "Tratamiento acústico básico y soportes",
+                        "Solución lista para grabar y transmitir"
+                    ],
+                    link: "../applications/podcast.html"
+                },
+                {
+                    title: "Audio y Video para <strong>Streamers</strong>",
+                    desc: "Audio, cámaras, iluminación básica, captura, monitoreo y control para transmisiones más limpias, estables y profesionales.",
+                    specs: [
+                        "Audio optimizado y micrófonos dinámicos",
+                        "Cámaras y capturadoras de alta definición",
+                        "Iluminación básica de rostro y control"
+                    ],
+                    link: "../applications/streamers.html"
+                },
+                {
+                    title: "Sonidos y <strong>DJ</strong>",
+                    desc: "Sistemas PA, subwoofers, mezcladoras, control, microfonía y accesorios para presentaciones con potencia y claridad.",
+                    specs: [
+                        "Sistemas de sonido PA y subwoofers activos",
+                        "Mezcladoras de audio y consolas de mezcla",
+                        "Micrófonos inalámbricos y cableado robusto"
+                    ],
+                    link: "../applications/sonidos-dj.html"
+                },
+                {
+                    title: "Centros de <strong>Culto</strong>",
+                    desc: "Microfonía, sonido, monitoreo, video y operación audiovisual para lograr mensajes claros y experiencias más ordenadas.",
+                    specs: [
+                        "Microfonía para voz principal y predicación",
+                        "Sistemas de sonido y cobertura uniforme",
+                        "Solución de transmisión en vivo y video"
+                    ],
+                    link: "../applications/centros-de-culto.html"
+                },
+                {
+                    title: "Cine <strong>Independiente</strong>",
+                    desc: "Proyección, pantallas, sonido, conectividad y soporte audiovisual para exhibiciones, conciertos grabados y contenido especial.",
+                    specs: [
+                        "Proyección HD y pantallas de gran formato",
+                        "Sonido envolvente y cobertura de audio",
+                        "Conectividad y soporte técnico para salas"
+                    ],
+                    link: "../applications/cine-independiente.html"
+                },
+                {
+                    title: "Músicos y <strong>Vocalistas</strong>",
+                    desc: "Micrófonos, interfaces, monitoreo, mezcla y grabación para mejorar ensayos, presentaciones, contenido y producción musical.",
+                    specs: [
+                        "Micrófonos para voz e instrumentos",
+                        "Monitoreo personal y audífonos de estudio",
+                        "Interfaces y mezcladoras de grabación"
+                    ],
+                    link: "../applications/musicos-vocalistas.html"
+                }
+            ];
+
+            showcaseNavButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const index = parseInt(btn.getAttribute('data-index'));
+
+                    // Animación del panel de información (Fade out)
+                    infoPanel.classList.remove('active');
+
+                    setTimeout(() => {
+                        // Cambiar fondos y botones activos
+                        showcaseSlides.forEach(slide => slide.classList.remove('active'));
+                        showcaseNavButtons.forEach(navBtn => navBtn.classList.remove('active'));
+
+                        showcaseSlides[index].classList.add('active');
+                        btn.classList.add('active');
+
+                        // Actualizar datos de texto
+                        const data = systemsData[index];
+                        infoPanel.querySelector('.showcase-slide-title').innerHTML = data.title;
+                        infoPanel.querySelector('.showcase-slide-desc').textContent = data.desc;
+                        infoPanel.querySelector('.gateway-lux-link').setAttribute('href', data.link);
+
+                        // Actualizar especificaciones
+                        const specsList = infoPanel.querySelector('.showcase-specs');
+                        specsList.innerHTML = '';
+                        data.specs.forEach(spec => {
+                            const li = document.createElement('li');
+                            li.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${spec}`;
+                            specsList.appendChild(li);
+                        });
+
+                        // Animación del panel de información (Fade in)
+                        infoPanel.classList.add('active');
+                    }, 500); // Duración de transición de salida del panel
+                });
+            });
+
+            // --- 5. LÓGICA DEL BLUEPRINT INTERACTIVO ---
+            const hotspots = document.querySelectorAll('.blueprint-hotspot');
+            const bpPanel = document.getElementById('blueprint-details');
+
+            const blueprintData = {
+                cine: {
+                    header: "Audio y Captura",
+                    title: "Producción de <strong>Audio</strong>",
+                    desc: "Calibramos y seleccionamos micrófonos de condensador y dinámicos junto con interfaces y consolas para capturar audio de alta definición sin saturación ni ruidos.",
+                    tech1Title: "Entradas",
+                    tech1Desc: "Previos de micro de bajo ruido",
+                    tech2Title: "Operación",
+                    tech2Desc: "Monitoreo en vivo con audífonos"
+                },
+                audio: {
+                    header: "Sistemas de Microfonía",
+                    title: "Microfonía <strong>Inalámbrica Profesional</strong>",
+                    desc: "Diseño y asignación de frecuencias para evitar interferencias en escenarios, templos o eventos en vivo. Máxima claridad de voz.",
+                    tech1Title: "Estabilidad",
+                    tech1Desc: "Análisis de espectro de radiofrecuencia",
+                    tech2Title: "Sistemas",
+                    tech2Desc: "Micrófonos de diadema, solapa y mano"
+                },
+                jardin: {
+                    header: "Refuerzo Sonoro",
+                    title: "Sonido PA <strong>para Eventos y DJ</strong>",
+                    desc: "Configuración de sistemas PA y subwoofers para cobertura acústica impecable, con graves con pegada e inteligibilidad del habla para toda tu audiencia.",
+                    tech1Title: "Potencia",
+                    tech1Desc: "Bocinas amplificadas y subwoofers",
+                    tech2Title: "Protección",
+                    tech2Desc: "Procesamiento DSP y limitadores"
+                },
+                hifi: {
+                    header: "Producción de Video",
+                    title: "Proyección y <strong>Streaming Digital</strong>",
+                    desc: "Integración de video multicanal, mezcladoras de video y capturadoras para transmisiones y proyecciones nítidas con sincronización de audio.",
+                    tech1Title: "Video",
+                    tech1Desc: "Captura 1080p / 4K Ultra HD",
+                    tech2Title: "Flujo",
+                    tech2Desc: "Mezcladores de video por hardware"
+                }
+            };
+
+            hotspots.forEach(spot => {
+                spot.addEventListener('click', (e) => {
+                    const targetKey = e.currentTarget.getAttribute('data-target');
+                    const data = blueprintData[targetKey];
+
+                    // Transición sutil del panel lateral
+                    bpPanel.style.opacity = '0';
+                    bpPanel.style.transform = 'translateY(20px)';
+
+                    setTimeout(() => {
+                        document.getElementById('bp-header').textContent = data.header;
+                        document.getElementById('bp-title').innerHTML = data.title;
+                        document.getElementById('bp-desc').textContent = data.desc;
+                        document.getElementById('bp-tech1-title').textContent = data.tech1Title;
+                        document.getElementById('bp-tech1-desc').textContent = data.tech1Desc;
+                        document.getElementById('bp-tech2-title').textContent = data.tech2Title;
+                        document.getElementById('bp-tech2-desc').textContent = data.tech2Desc;
+
+                        bpPanel.style.opacity = '1';
+                        bpPanel.style.transform = 'none';
+                    }, 350);
+                });
+            });
+
+            // --- 6. ACORDEÓN DE PREGUNTAS (FAQ) CON ROTACIÓN ---
+            const faqItems = document.querySelectorAll('.faq-lux-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-lux-btn');
+                const answer = item.querySelector('.faq-lux-answer');
+
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Cerrar todos los demás acordeones
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-lux-answer').style.maxHeight = '0px';
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // --- 7. EFECTO INTERACTIVO DE INCLINACIÓN Y REFLEJO ESPEJO 3D ---
+            const cards3D = document.querySelectorAll('.card-lux, .process-bento-item');
+            cards3D.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const percentX = (x / rect.width) * 100;
+                    const percentY = (y / rect.height) * 100;
+                    
+                    // Cálculo de inclinación física en perspectiva
+                    const rotateX = ((rect.height / 2 - y) / (rect.height / 2)) * 10;
+                    const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+                    card.style.setProperty('--mouse-x', `${percentX}%`);
+                    card.style.setProperty('--mouse-y', `${percentY}%`);
+                    
+                    // Ajustar variables de reflejo diagonal espejo
+                    card.style.setProperty('--glow-x', `${(percentX - 50) * 2}%`);
+                    card.style.setProperty('--glow-y', `${(percentY - 50) * 2}%`);
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    card.style.setProperty('--mouse-x', '50%');
+                    card.style.setProperty('--mouse-y', '50%');
+                    card.style.setProperty('--glow-x', '0%');
+                    card.style.setProperty('--glow-y', '0%');
+                });
+            });
+
+            // --- 8. CAPTURA Y FORMULACIÓN DEL WHATSAPP LEAD FORM BURBUJAS ---
+            const bubblesForm = document.getElementById('bubblesWhatsappForm');
+            if (bubblesForm) {
+                bubblesForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('cb-name').value;
+                    const company = document.getElementById('cb-company').value || 'No especificada';
+                    const phone = document.getElementById('cb-phone').value;
+                    const city = document.getElementById('cb-city').value;
+                    const project = document.getElementById('cb-project').value;
+                    const message = document.getElementById('cb-message').value;
+                    const tel = '525537270177';
+
+                    // Estructurar el mensaje de ultra-lujo para WhatsApp
+                    const msg = `🏛️ *DG AUDIOSOUND - SOLICITUD DE ASESORÍA PRODUCCIÓN* 🏛️\n\n` +
+                                `• *Cliente:* ${name}\n` +
+                                `• *Empresa:* ${company}\n` +
+                                `• *Teléfono:* ${phone}\n` +
+                                `• *Ciudad:* ${city}\n` +
+                                `• *Tipo de Proyecto:* ${project}\n\n` +
+                                `📝 *Detalles del Espacio / Proyecto:*\n${message}\n\n` +
+                                `_Deseo coordinar una asesoría personalizada para mi espacio premium._`;
+
+                    const urlEncodedMsg = encodeURIComponent(msg);
+                    const waUrl = `https://wa.me/${tel}?text=${urlEncodedMsg}`;
+
+                    window.open(waUrl, '_blank');
+                });
+            }
+        });
+    </script>
+<!-- Botón Floating WhatsApp -->
+<a aria-label="Contacto por WhatsApp" class="whatsapp-float" href="https://wa.me/525537270177" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+    <script defer src="/script.js"></script>
+</body>
+</html>

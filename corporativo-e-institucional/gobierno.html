@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Audio y Video para Gobierno en México | Salas, Auditorios y Videoconferencia | DG Audiosound</title>
+<meta content="Audio y video para gobierno en CDMX y México: pantallas profesionales Sharp/NEC, microfonía, videoconferencia, auditorios, salas institucionales e..." name="description"/>
+<meta content="gobierno, salas de cabildo, salas institucionales, salas de prensa, atención ciudadana, videoconferencia gobierno, DG Audiosound" name="keywords"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- Font Awesome -->
+<link as="style" href="/assets/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/assets/font-awesome.min.css" rel="stylesheet"/></noscript>
+<!-- Estilos principales del proyecto -->
+<link href="/style.min.css" rel="stylesheet"/>
+<!-- Estilos específicos y adaptaciones premium locales -->
+<style>
+        /* ========================================
+           💎 1. HERO CORPORATIVO CON SLIDER Y ALTO CONTRASTE
+           ======================================== */
+        .corp-hero-v2 {
+            position: relative;
+            padding: 180px 0 120px;
+            background: #050505;
+            color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.8s ease-in-out;
+            filter: brightness(0.65) blur(1.5px); /* Blur de 2px para nitidez de alta gama */
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .corp-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.65) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .corp-hero-v2 .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .corp-hero-v2 .hero-kicker {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(212, 164, 55, 0.15);
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
+        }
+
+        .corp-hero-v2 h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: #ffffff !important;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.85);
+        }
+
+        .corp-hero-v2 .hero-subtitle {
+            font-size: 1.25rem;
+            color: #f5f5f7 !important;
+            max-width: 820px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+
+        .corp-hero-v2 .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 4.5rem 0 0;
+            flex-wrap: wrap;
+        }
+
+        .corp-hero-v2 .hero-badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.25rem 1.5rem;
+            border-radius: var(--radius-md);
+            min-width: 160px;
+            transition: var(--transition-base);
+            color: #f5f5f7;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .corp-hero-v2 .hero-badge-item i {
+            font-size: 1.6rem;
+            color: var(--color-primary);
+        }
+
+        .corp-hero-v2 .hero-badge-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            border-color: var(--color-primary);
+            background: rgba(212, 164, 55, 0.12);
+            box-shadow: 0 10px 25px rgba(212, 164, 55, 0.2);
+            color: #ffffff;
+        }
+
+        .corp-hero-v2 .hero-badge-item:nth-child(1) { animation-delay: 0s; }
+        .corp-hero-v2 .hero-badge-item:nth-child(2) { animation-delay: 0.4s; }
+        .corp-hero-v2 .hero-badge-item:nth-child(3) { animation-delay: 0.8s; }
+        .corp-hero-v2 .hero-badge-item:nth-child(4) { animation-delay: 1.2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Efecto Shimmer Dorado para Textos */
+        .text-accent {
+            background: linear-gradient(90deg, #d4a437, #fef08a, #d4a437);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShimmer 3.5s linear infinite;
+            display: inline-block;
+            text-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
+        }
+
+        @keyframes goldShimmer {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+
+        .btn-primary {
+            animation: pulseGlow 3s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: var(--shadow-sm); }
+            50% { box-shadow: 0 0 25px rgba(212, 164, 55, 0.55); }
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb-wrap {
+            background: var(--color-bg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            min-height: 48px;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .breadcrumb a {
+            color: var(--color-text-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--color-primary);
+        }
+
+        /* ========================================
+           💎 2. DISPOSICIÓN EDITORIAL Y SECCIONES
+           ======================================== */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .benefits-corp-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .include-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+
+        /* ========================================
+           💎 3. TARJETAS 3D INTERACTIVAS Y CRISTALINAS
+           ======================================== */
+        .benefit-v2-card, .include-card, .brand-box, .process-bento-item, .antithesis-problem-card {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 1.75rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        /* Reflejo Espejo Diagonal */
+        .benefit-v2-card::before, .include-card::before, .process-bento-item::before, .antithesis-problem-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+            background-size: 250% 250%;
+            background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+            z-index: 3;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: inherit;
+        }
+
+        .benefit-v2-card:hover::before, .include-card:hover::before, .process-bento-item:hover::before, .antithesis-problem-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Resplandor del Cursor */
+        .benefit-v2-card::after, .include-card::after, .process-bento-item::after, .antithesis-problem-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.06) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: inherit;
+        }
+
+        .benefit-v2-card:hover::after, .include-card:hover::after, .process-bento-item:hover::after, .antithesis-problem-card:hover::after {
+            opacity: 1;
+        }
+
+        .benefit-v2-card {
+            text-align: center;
+        }
+
+        .benefit-v2-card .icon, .benefit-v2-card i {
+            width: 54px;
+            height: 54px;
+            display: inline-grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(212, 164, 55, 0.08);
+            color: var(--color-primary-hover);
+            font-size: 1.4rem;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition-base);
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-v2-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            position: relative;
+            color: var(--color-text-dark);
+            z-index: 2;
+        }
+
+        .benefit-v2-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-v2-card:hover, .include-card:hover, .process-bento-item:hover, .antithesis-problem-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-primary) !important;
+            box-shadow: 0 20px 40px rgba(212, 164, 55, 0.06), 0 0 25px rgba(212, 164, 55, 0.03) !important;
+            background: #ffffff !important;
+        }
+
+        .benefit-v2-card:hover .icon, .benefit-v2-card:hover i {
+            background-color: var(--color-primary);
+            color: var(--color-black);
+        }
+
+        /* Qué Incluye */
+        .include-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .include-card p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* ========================================
+           💎 4. LA ANTÍTESIS: ASYMMETRICAL EDITORIAL GRID
+           ======================================== */
+        .antithesis-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .antithesis-visual-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .antithesis-main-img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .antithesis-main-img:hover {
+            transform: scale(1.02);
+        }
+
+        .antithesis-problems {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .antithesis-problem-card {
+            padding: 2rem 1.5rem;
+            text-align: left;
+        }
+
+        .antithesis-problem-card i {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            background: rgba(212, 164, 55, 0.08);
+            width: 48px;
+            height: 48px;
+            display: inline-grid;
+            place-items: center;
+            border-radius: 50%;
+            transition: var(--transition-base);
+            z-index: 2;
+        }
+
+        .antithesis-problem-card:hover i {
+            background-color: var(--color-primary);
+            color: var(--color-black);
+        }
+
+        .antithesis-problem-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+            z-index: 2;
+        }
+
+        .antithesis-problem-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            z-index: 2;
+        }
+
+        /* ========================================
+           💎 5. ESPACIOS QUE ADAPTAMOS Y BENTO
+           ======================================== */
+        .area-card {
+            min-height: 220px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-base);
+        }
+
+        .area-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 220px;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .area-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+
+        .area-card span {
+            position: absolute;
+            left: 1.5rem;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            z-index: 2;
+            font-size: 1.1rem;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .area-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .area-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Banner de Modernización */
+        .event-banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(212, 164, 55, 0.15);
+            box-shadow: var(--shadow-md);
+            background: #ffffff;
+            margin-top: 4rem;
+            transition: var(--transition-base);
+        }
+
+        .event-banner:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-lg), 0 0 20px rgba(212, 164, 55, 0.05);
+        }
+
+        .event-img {
+            min-height: 380px;
+        }
+
+        .event-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .event-content p {
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-text-muted);
+        }
+
+        /* ========================================
+           💎 6. DIFERENCIADOR Y SECCIÓN SPLIT
+           ======================================== */
+        .split-dark {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+
+        .dark-panel {
+            background: #050505;
+            color: #ffffff;
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .dark-panel p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .dark-panel h2 {
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .dark-panel:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08);
+        }
+
+        .gold-panel {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+            color: var(--color-black);
+            padding: 3.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .gold-panel h2 {
+            color: var(--color-black);
+            margin-bottom: 1.5rem;
+        }
+
+        .gold-panel .eyebrow {
+            color: var(--color-black);
+            opacity: 0.8;
+        }
+
+        .gold-panel:hover {
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.25);
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--color-primary-hover);
+            font-weight: 900;
+            font-size: 1.15rem;
+        }
+
+        .gold-panel .check-list li::before {
+            color: var(--color-black);
+        }
+
+        /* ========================================
+           💎 7. PROCESO DE TRABAJO (BENTO PROCESS)
+           ======================================== */
+        .process-bento-item {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            border-radius: 32px !important;
+            padding: 3.5rem 2.5rem !important;
+            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .process-bento-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--color-text-dark) !important;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item p {
+            font-size: 0.95rem;
+            color: var(--color-text-muted) !important;
+            line-height: 1.6;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item .bento-num {
+            background: #050505 !important;
+            color: #ffffff !important;
+            font-size: 0.9rem !important;
+            font-weight: 800 !important;
+            padding: 0.4rem 0.8rem !important;
+            border-radius: 50px !important;
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-bento-item .bento-header i {
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            z-index: 2;
+            position: relative;
+        }
+
+        /* ========================================
+           💎 9. ACORDEÓN DE PREGUNTAS (FAQs)
+           ======================================== */
+        .faq-lux-wrap {
+            max-width: 900px;
+            margin: 4.5rem auto 0;
+            display: grid;
+            gap: 16px;
+        }
+
+        .faq-lux-item {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+        }
+
+        .faq-lux-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-text-dark) !important;
+            transition: all 0.4s ease;
+        }
+
+        .faq-lux-btn span:last-child {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform 0.4s ease;
+        }
+
+        .faq-lux-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .faq-lux-answer p {
+            padding: 0 32px 28px;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--color-text-muted) !important;
+        }
+
+        .faq-lux-item.active {
+            border-color: var(--color-primary) !important;
+            background: #ffffff !important;
+            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08) !important;
+        }
+
+        .faq-lux-item.active .faq-lux-btn {
+            color: var(--color-text-dark) !important;
+        }
+
+        .faq-lux-item.active .faq-lux-btn span:last-child {
+            transform: rotate(45deg);
+        }
+
+        /* ========================================
+           💎 10. MEDIA QUERIES RESPONSIVAS
+           ======================================== */
+        @media (max-width: 1024px) {
+            .benefits-corp-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .include-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .area-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+            .antithesis-grid {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+                text-align: center;
+            }
+            .antithesis-problems {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .two-col .section-title {
+                display: inline-block;
+            }
+            .two-col img, .two-col figure, .antithesis-visual-wrapper img {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+            .event-banner {
+                grid-template-columns: 1fr;
+            }
+            .event-img {
+                min-height: 280px;
+            }
+            .split-dark {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .benefits-corp-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .include-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .area-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .antithesis-problems {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .corp-hero-v2 .hero-badges {
+                gap: 1rem;
+            }
+            .corp-hero-v2 .hero-badge-item {
+                min-width: 140px;
+                padding: 1rem;
+            }
+            .event-content {
+                padding: 3rem 1.5rem;
+                text-align: center;
+            }
+        }
+    
+        /* ========================================
+           💎 LUX GRID STYLE (Injected)
+           ======================================== */
+        .lux-dark-section {
+            background-color: #050505 !important;
+            color: #ffffff;
+            padding: 6rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .lux-dark-section h2 {
+            color: #ffffff !important;
+        }
+        .lux-dark-section p {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        .lux-dark-section .eyebrow {
+            color: var(--color-primary) !important;
+        }
+        .antithesis-problems.lux-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 4rem;
+        }
+        .antithesis-problem-card.lux-card {
+            background: #09090c !important;
+            border: 1px solid rgba(255, 255, 255, 0.03) !important;
+            border-radius: 12px !important;
+            padding: 40px !important;
+            transition: all 0.4s ease !important;
+            text-align: left !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+        }
+        .antithesis-problem-card.lux-card:hover {
+            border-color: var(--color-primary) !important;
+            transform: translateY(-8px) !important;
+            box-shadow: 0 15px 30px rgba(212, 164, 55, 0.15) !important;
+        }
+        .antithesis-problem-card.lux-card i {
+            font-size: 1.8rem !important;
+            color: var(--color-primary) !important;
+            background-color: transparent !important;
+            width: auto !important;
+            height: auto !important;
+            display: inline-block !important;
+            margin: 0 0 1.25rem 0 !important;
+        }
+        .antithesis-problem-card.lux-card:hover i {
+            background-color: transparent !important;
+            color: var(--color-primary) !important;
+            transform: scale(1.1);
+        }
+        .antithesis-problem-card.lux-card h3 {
+            color: #ffffff !important;
+            font-size: 1.25rem !important;
+            margin-bottom: 1rem !important;
+        }
+        .antithesis-problem-card.lux-card p {
+            color: rgba(255, 255, 255, 0.6) !important;
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+        }
+        
+        .value-prop-lux {
+            background: linear-gradient(135deg, #0b0b0e 0%, #050507 100%) !important;
+            border: 1px solid rgba(212, 164, 55, 0.25) !important;
+            border-radius: 20px !important;
+            padding: 5rem 4rem !important;
+            text-align: center !important;
+            max-width: 900px !important;
+            margin: 0 auto 5rem !important;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .value-prop-lux::before {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212,164,55,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .value-prop-lux h2 {
+            color: #ffffff !important;
+            position: relative;
+            z-index: 2;
+        }
+        .value-prop-lux p {
+            color: rgba(255, 255, 255, 0.8) !important;
+            position: relative;
+            z-index: 2;
+        }
+        .value-prop-lux .eyebrow {
+            color: var(--color-primary) !important;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @media (max-width: 768px) {
+            .antithesis-problems.lux-grid {
+                grid-template-columns: 1fr;
+            }
+            .value-prop-lux {
+                padding: 3rem 2rem !important;
+            }
+        }
+</style>
+<link href="https://dgaudiosound.com/subpage/applications/gobierno" rel="canonical"/><meta content="Audio y Video para Gobierno en México | Salas, Auditorios y Videoconferencia | DG Audiosound" property="og:title"/><meta content="Audio y video para gobierno en CDMX y México: pantallas profesionales Sharp/NEC, microfonía, videoconferencia, auditorios, salas institucionales e..." property="og:description"/><meta content="https://dgaudiosound.com/subpage/applications/gobierno.html" property="og:url"/><meta content="website" property="og:type"/><meta content="https://dgaudiosound.com/assets/Imagenes/dg-audiosound-og.jpg" property="og:image"/></head>
+<body>
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+<div class="container nav-container">
+<a class="logo" href="/index">
+<img alt="DG AUDIOSOUND Logo" class="logo-img" height="105" src="/assets/dg_logo.webp" srcset="../../assets/dg_logo.webp 1x, ../../assets/dg_logo@2x.webp 2x" width="105"/>
+</a>
+<nav class="nav-menu" id="nav-menu">
+<ul class="nav-list">
+<li class="nav-item"><a class="nav-link" href="/index#inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="/index#soluciones">Soluciones</a></li>
+<li class="nav-item"><a class="nav-link active" href="/index#aplicaciones">Aplicaciones</a></li>
+<li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.dgaudiosound.com/tienda">Tienda</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.dgaudiosound.com/blog">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="/index#contacto">Contacto</a></li>
+</ul>
+<a class="btn btn-primary nav-cta" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20audiovisual%20para%20sala%20institucional%20o%20cabildo." target="_blank">
+<i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </a>
+</nav>
+<div class="hamburger" id="hamburger">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</div>
+</div>
+</header>
+<!-- BREADCRUMBS -->
+<main>
+<!-- HERO CORPORATIVO CON SLIDER DINÁMICO -->
+<section class="corp-hero-v2" id="inicio">
+<div class="hero-slider">
+<div class="slide active" style="background-image: url('../../assets/Imagenes/soluciones/corporativo-e-institucional/audio-video-gobierno-hero-dg-audiosound.webp');"></div>
+<div class="slide" style="background-image: url('../../assets/Imagenes/soluciones/corporativo-e-institucional/corporativo-institucional-dg-audiosound-hero.webp');"></div>
+<div class="slide" style="background-image: url('../../assets/Imagenes/soluciones/corporativo-e-institucional/problema-audio-video-corporativo-institucional-dg-audiosound.webp');"></div>
+</div>
+<div class="slide" style="background-image: url('../../assets/Imagenes/aplicaciones/gobierno/audio-video-gobierno-hero-dg-audiosound.webp');"></div>
+<div class="slide" style="background-image: url('../../assets/Imagenes/aplicaciones/gobierno/cabildos-sesiones-publicas-audio-video-dg-audiosound.webp');"></div>
+<div class="slide" style="background-image: url('../../assets/Imagenes/aplicaciones/gobierno/sala-institucional-videoconferencia-gobierno-dg-audiosound.webp');"></div>
+<div class="corp-hero-overlay"></div>
+<div class="container">
+<div class="reveal active">
+<span class="hero-kicker">Corporativo e Institucional</span>
+<h1>Audio y video para <span class="text-accent">gobierno</span></h1>
+<p class="hero-subtitle">Diseñamos e instalamos soluciones audiovisuales para instituciones públicas que necesitan comunicar, capacitar, presentar y atender con claridad, orden y presencia profesional.<br/><br/>Integramos audio, microfonía, pantallas profesionales Sharp/NEC, proyectores, videoconferencia, cableado, soportes y control para salas institucionales, auditorios, capacitación, juntas y atención ciudadana.</p>
+<a class="btn btn-primary btn-large" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20audiovisual%20para%20sala%20institucional%20o%20cabildo." target="_blank">
+<i class="fa-brands fa-whatsapp"></i> Cotizar mi Proyecto
+                    </a>
+<div class="hero-badges">
+<div class="hero-badge-item">
+<i class="fa-solid fa-volume-high"></i>
+<span>Audio claro para comunicación pública</span>
+</div>
+<div class="hero-badge-item">
+<i class="fa-solid fa-video"></i>
+<span>Pantallas profesionales Sharp/NEC</span>
+</div>
+<div class="hero-badge-item">
+<i class="fa-solid fa-video"></i>
+<span>Videoconferencia institucional</span>
+</div>
+<div class="hero-badge-item">
+<i class="fa-solid fa-volume-high"></i>
+<span>Auditorios y capacitación</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMUNICACIÓN CORPORATIVA (Sección 1) -->
+<section class="section section-light">
+<div class="container two-col">
+<div class="reveal fade-right">
+<span class="eyebrow">Comunicación institucional</span>
+<h2>Los espacios de gobierno necesitan tecnología que funcione conclaridad y confianza</h2>
+<p style="margin-bottom: 1.5rem;">En una institución pública, cada reunión, presentación, capacitación o atención ciudadana debe escucharse y verse con claridad. El audio y el video no solo apoyan la operación diaria: también proyectan orden, seriedad y profesionalismo.</p>
+<p style="margin-bottom: 1.5rem;">En DG Audiosound desarrollamos soluciones audiovisuales para gobierno con enfoque práctico: sistemas estables, fáciles de operar y adecuados para salas institucionales, auditorios, áreas de capacitación, atención al público y reuniones híbridas.</p>
+<p>Con una integración adecuada, la tecnología institucional deja de ser un problema operativo y se convierte en una herramienta para comunicar mejor, atender con mayor orden y proyectar una imagen pública más profesional.</p>
+</div>
+<div class="reveal fade-left">
+<figure class="image-card" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-top: 10px;">
+<img alt="Comunicación institucional" src="/assets/Imagenes/soluciones/corporativo-e-institucional/aplicacion-gobierno-audio-video-dg-audiosound.webp" style="width: 100%; object-fit: cover;"/>
+</figure>
+</div>
+</div>
+<!-- Fila de mini tarjetas de beneficios (Grilla de 4) -->
+<div class="container benefits-corp-grid">
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+<h3>Claridad en el mensaje</h3>
+<p>La voz, las presentaciones y los contenidos visuales llegan mejor a funcionarios, invitados, ciudadanos y equipos de trabajo.</p>
+</div>
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-clock"></i></div>
+<h3>Operación eficiente</h3>
+<p>Los sistemas se diseñan para iniciar reuniones, capacitaciones o sesiones de trabajo con menor fricción operativa.</p>
+</div>
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-award"></i></div>
+<h3>Imagen institucional</h3>
+<p>Cada sala, auditorio o punto de atención proyecta una presencia más ordenada, moderna y profesional.</p>
+</div>
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-sliders"></i></div>
+<h3>Integración segura</h3>
+<p>Cuidamos instalación, cableado, soportes y configuración para entregar soluciones limpias, funcionales y durables.</p>
+</div>
+</div>
+</section>
+<!-- EL PROBLEMA (Sección 2) -->
+<section class="lux-dark-section" id="problema">
+<div class="container">
+<div class="reveal fade-right" style="max-width: 800px; margin: 0 auto; text-align: center;">
+<span class="eyebrow">La Filosofía</span>
+<h2 class="section-title" style="margin-bottom: 1.5rem;">Cuando la tecnología falla, la comunicación institucional pierde fuerza</h2>
+<p style="margin-bottom: 1.5rem;">En salas de gobierno, auditorios públicos o espacios de capacitación, los problemas de audio, imagen o conexión pueden afectar reuniones importantes, eventos oficiales, sesiones de trabajo, cursos internos y atención al ciudadano.</p>
+<p style="margin-bottom: 1.5rem;">La solución no está en comprar equipos por separado. Un proyecto audiovisual institucional debe considerar aforo, acústica, visibilidad, iluminación, operación, conectividad, cableado, facilidad de uso y crecimiento futuro.</p>
+<div class="antithesis-problems lux-grid">
+<div class="antithesis-problem-card lux-card">
+<i class="fa-solid fa-volume-xmark"></i>
+<h3>Audio poco claro</h3>
+<p>La voz de ponentes, funcionarios, instructores o participantes no se entiende con la calidad necesaria.</p>
+</div>
+<div class="antithesis-problem-card lux-card">
+<i class="fa-solid fa-display"></i>
+<h3>Imagen insuficiente</h3>
+<p>Las presentaciones, datos, comunicados o transmisiones no se visualizan con el impacto y tamaño adecuados.</p>
+</div>
+<div class="antithesis-problem-card lux-card">
+<i class="fa-solid fa-lightbulb"></i>
+<h3>Operación compleja</h3>
+<p>Cuando el sistema requiere demasiados pasos, el personal pierde tiempo y aumenta el riesgo de errores durante una sesión.</p>
+</div>
+<div class="antithesis-problem-card lux-card">
+<i class="fa-solid fa-triangle-exclamation"></i>
+<h3>Instalaciones improvisadas</h3>
+<p>Cables expuestos, equipos mal ubicados o soluciones temporales reducen seguridad, estética y confiabilidad.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOLUCIONES Y QUÉ HACEMOS (Sección 3) -->
+<section class="section section-white">
+<div class="container value-prop-lux">
+<span class="eyebrow reveal fade-up">Qué hacemos</span>
+<h2 class="section-title reveal fade-up">Integramos sistemas audiovisuales para espacios públicos, administrativos e institucionales</h2>
+<p class="section-subtitle reveal fade-up">Diseñamos soluciones de audio y video para dependencias, municipios, oficinas de gobierno, salas de juntas, auditorios, centros de capacitación, salas de prensa y espacios de atención ciudadana. Evaluamos el uso real del espacio para recomendar pantallas, proyectores, micrófonos, bocinas, cámaras, control y cableado adecuados.</p>
+</div>
+<div class="container benefits-corp-grid">
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+<h3>Audio institucional</h3>
+<p>Sistemas de sonido, bocinas, amplificación, procesamiento y microfonía para discursos, juntas, sesiones, capacitación y eventos públicos.</p>
+</div>
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-clock"></i></div>
+<h3>Video y visualización</h3>
+<p>Pantallas profesionales Sharp/NEC, displays, proyectores o visualización de gran formato según tamaño, iluminación y uso del espacio.</p>
+</div>
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-award"></i></div>
+<h3>Videoconferencia</h3>
+<p>Soluciones para reuniones híbridas, sesiones remotas, coordinación entre sedes y comunicación institucional con participantes externos.</p>
+</div>
+<div class="benefit-v2-card reveal fade-up">
+<div class="icon"><i class="fa-solid fa-sliders"></i></div>
+<h3>Instalación y control</h3>
+<p>Cableado, soportes, conexión, configuración, pruebas y operación sencilla para que el sistema funcione de forma ordenada.</p>
+</div>
+</div>
+</section>
+<!-- QUÉ INCLUYE LA SOLUCIÓN (Sección 4) -->
+<section class="section section-light-alt" id="incluye">
+<div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
+<span class="eyebrow reveal fade-up">Qué incluye la solución</span>
+<h2 class="section-title reveal fade-up">Soluciones audiovisuales para gobierno e instituciones públicas</h2>
+<p class="section-subtitle reveal fade-up">Cada dependencia tiene espacios con necesidades distintas: salas de juntas, auditorios, cabildos, capacitación, salas de prensa, módulos de atención y áreas administrativas. Por eso diseñamos soluciones por uso, aforo y nivel de operación, no paquetes genéricos.</p>
+</div>
+<div class="container include-grid">
+<div class="include-card reveal fade-up">
+<h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-clipboard-list"></i> Audio para comunicación institucional</h3>
+<p>Bocinas, amplificación, procesamiento y distribución de audio para mejorar la claridad de voz en salas, auditorios, juntas, sesiones públicas y espacios de capacitación.</p>
+</div>
+<div class="include-card reveal fade-up">
+<h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-microphone-lines"></i> Microfonía para salas y sesiones</h3>
+<p>Micrófonos de mesa, podium, mano, solapa, cuello de ganso o sistemas inalámbricos para reuniones, discursos, paneles, conferencias y sesiones institucionales.</p>
+</div>
+<div class="include-card reveal fade-up">
+<h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-display"></i> Pantallas profesionales Sharp/NEC</h3>
+<p>Displays profesionales para salas de juntas, atención ciudadana, capacitación, recepción, comunicación interna y visualización de información institucional.</p>
+</div>
+<div class="include-card reveal fade-up">
+<h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-video"></i> Videoconferencia institucional</h3>
+<p>Cámaras, audio, pantallas y conectividad para reuniones híbridas, coordinación entre sedes, capacitación remota y sesiones con participantes externos.</p>
+</div>
+<div class="include-card reveal fade-up">
+<h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-graduation-cap"></i> Auditorios y capacitación</h3>
+<p>Refuerzo sonoro, microfonía, proyección, pantallas y control para auditorios, cursos, informes, conferencias, presentaciones y eventos institucionales.</p>
+</div>
+<div class="include-card reveal fade-up">
+<h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-screwdriver-wrench"></i> Control, cableado e instalación</h3>
+<p>Integramos soportes, cableado, conexiones, configuración y puesta en marcha para que la solución sea limpia, segura y fácil de operar por el personal responsable.</p>
+</div>
+</div>
+</section>
+<!-- ESPACIOS QUE ADAPTAMOS (Sección 5) -->
+<section class="section section-white">
+<div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
+<span class="eyebrow reveal fade-up">Espacios que adaptamos</span>
+<h2 class="section-title reveal fade-up">Áreas de gobierno donde aplicamos audio y video profesional</h2>
+<p class="section-subtitle reveal fade-up">Las soluciones audiovisuales para gobierno pueden aplicarse en espacios administrativos, públicos, de capacitación y comunicación institucional. El objetivo es que cada área tenga tecnología acorde a su función, aforo, nivel de uso y formalidad.</p>
+</div>
+<div class="container area-grid">
+<!-- Card 1 -->
+<div class="area-card reveal fade-up">
+<img alt="Sala de juntas de gobierno con pantalla, audio y videoconferencia" src="/assets/Imagenes/aplicaciones/gobierno/salas-juntas-gobierno-dg-audiosound.webp"/>
+<span>Salas de juntas institucionales</span>
+</div>
+<!-- Card 2 -->
+<div class="area-card reveal fade-up" style="transition-delay: 50ms;">
+<img alt="Auditorio público de gobierno con audio y video profesional" src="/assets/Imagenes/aplicaciones/gobierno/auditorios-publicos-gobierno-dg-audiosound.webp"/>
+<span>Auditorios públicos</span>
+</div>
+<!-- Card 3 -->
+<div class="area-card reveal fade-up" style="transition-delay: 100ms;">
+<img alt="Sala de capacitación de gobierno con audio y pantallas profesionales" src="/assets/Imagenes/aplicaciones/gobierno/salas-capacitacion-gobierno-dg-audiosound.webp"/>
+<span>Salas de capacitación</span>
+</div>
+<!-- Card 4 -->
+<div class="area-card reveal fade-up" style="transition-delay: 150ms;">
+<img alt="Sala de prensa institucional con audio, video y microfonía" src="/assets/Imagenes/aplicaciones/gobierno/salas-prensa-gobierno-audio-video-dg-audiosound.webp"/>
+<span>Salas de prensa</span>
+</div>
+<!-- Card 5 -->
+<div class="area-card reveal fade-up" style="transition-delay: 200ms;">
+<img alt="Área de atención ciudadana con pantallas y audio institucional" src="/assets/Imagenes/aplicaciones/gobierno/atencion-ciudadana-audio-video-gobierno-dg-audiosound.webp"/>
+<span>Atención ciudadana</span>
+</div>
+<!-- Card 6 -->
+<div class="area-card reveal fade-up" style="transition-delay: 250ms;">
+<img alt="Sala de cabildo o sesiones públicas con microfonía y video" src="/assets/Imagenes/aplicaciones/gobierno/cabildos-sesiones-publicas-audio-video-dg-audiosound.webp"/>
+<span>Cabildos y sesiones públicas</span>
+</div>
+</div>
+<!-- Modernización de auditorios existentes (BENTO / BANNER) -->
+<div class="container">
+<div class="event-banner reveal fade-up">
+<div class="event-img">
+<img alt="Sala institucional de gobierno con videoconferencia, audio y pantalla profesional" src="/assets/Imagenes/aplicaciones/gobierno/sala-institucional-videoconferencia-gobierno-dg-audiosound.webp"/>
+</div>
+<div class="event-content">
+<span class="eyebrow" style="color: var(--color-primary-hover);">Salas institucionales listas para operar</span>
+<h2 style="font-size: 2rem; margin-bottom: 1.5rem; line-height: 1.2;">Reuniones, sesiones y capacitaciones con mejor audio, imagen y control</h2>
+<p>Una sala institucional debe permitir que el personal se reúna, presente, capacite y se conecte con otras sedes sin complicaciones técnicas. En DG Audiosound integramos audio, video, pantallas profesionales, microfonía y videoconferencia para que el espacio se vea formal y funcione con confianza.</p>
+<a class="btn btn-primary btn-large" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20audiovisual%20para%20sala%20institucional%20o%20atenci%C3%B3n%20ciudadana." target="_blank"><i class="fa-brands fa-whatsapp"></i> Cotizar sala institucional por WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PROCESO DE TRABAJO (Sección 6) -->
+<section class="section section-light-alt how-we-work" id="proceso">
+<div class="container">
+<div class="section-header reveal fade-up" style="text-align: center; max-width: 800px; margin: 0 auto 5rem;">
+<span class="eyebrow">Proceso</span>
+<h2 class="section-title">Cómo trabajamos tu proyecto de <span class="text-gradient-gold">audio y video</span></h2>
+<p class="section-subtitle">Un proceso estructurado para garantizar resultados excepcionales en cada etapa de tu proyecto.</p>
+</div>
+<div class="process-bento-grid reveal fade-up">
+<!-- Step 1 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">01</span>
+<i class="fa-solid fa-headset"></i>
+</div>
+<h3>Nos contactas</h3>
+<p>Cuéntanos si necesitas equipar una sala, auditorio, área de capacitación, atención ciudadana o espacio institucional.</p>
+</div>
+<!-- Step 2 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">02</span>
+<i class="fa-solid fa-magnifying-glass-chart"></i>
+</div>
+<h3>Revisamos necesidades</h3>
+<p>Analizamos aforo, uso, acústica, iluminación, conectividad, operación, imagen institucional y presupuesto disponible.</p>
+</div>
+<!-- Step 3 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">03</span>
+<i class="fa-solid fa-pen-ruler"></i>
+</div>
+<h3>Diseñamos la solución</h3>
+<p>Definimos audio, microfonía, pantallas, proyección, videoconferencia, cableado, control e instalación.</p>
+</div>
+<!-- Step 4 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">04</span>
+<i class="fa-solid fa-file-contract"></i>
+</div>
+<h3>Propuesta clara</h3>
+<p>Te entregamos alcance, equipos, tiempos e inversión.</p>
+</div>
+<!-- Step 5 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">05</span>
+<i class="fa-solid fa-screwdriver-wrench"></i>
+</div>
+<h3>Instalamos</h3>
+<p>Montaje, conexión, pruebas, ajustes y puesta en marcha.</p>
+</div>
+<!-- Step 6 -->
+<div class="process-bento-item">
+<div class="bento-header">
+<span class="bento-num">06</span>
+<i class="fa-solid fa-user-check"></i>
+</div>
+<h3>Te capacitamos</h3>
+<p>Explicamos el uso básico para una operación sencilla.</p>
+</div>
+</div>
+<div class="process-footer-clean reveal fade-up" style="text-align: center; margin-top: 5rem;">
+<p class="process-quote-simple">"Un buen proyecto audiovisual empieza entendiendo el espacio, el uso y la experiencia que quieres lograr."</p>
+<div class="process-cta">
+<a class="btn btn-whatsapp-large" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20audiovisual%20para%20sala%20institucional%20o%20cabildo." style="background: #25D366; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(37,211,102,0.15); transition: all 0.3s ease;" target="_blank">
+<i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Iniciar mi proyecto por WhatsApp
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- DIFERENCIADOR Y MARCAS (Sección 7) -->
+<section class="section section-white">
+<div class="container split-dark">
+<div class="dark-panel reveal fade-right">
+<span class="eyebrow" style="color: var(--color-primary);">Diferenciador</span>
+<h2>No vendemos equipos sueltos: integramos soluciones audiovisuales para operación institucional</h2>
+<p style="margin-bottom: 1.5rem;">En gobierno, una mala decisión tecnológica puede provocar sistemas difíciles de usar, equipos subutilizados o instalaciones que no responden al nivel de formalidad del espacio. Por eso partimos del uso real y del tipo de comunicación que debe soportar cada área.</p>
+<p>Nuestro enfoque combina asesoría, selección de equipo, integración estética, instalación profesional y capacitación básica para que cada sala, auditorio o espacio de atención funcione con mayor claridad y confianza.</p>
+</div>
+<div class="gold-panel reveal fade-left">
+<span class="eyebrow">Confianza</span>
+<h2>Una decisión profesional para tu institución</h2>
+<ul class="check-list"><li>Asesoría personalizada</li><li>Propuesta formal</li><li>Equipos originales</li><li>Instalación profesional</li><li>Integración formal y ordenada</li><li>Capacitación básica de uso</li><li>Acompañamiento técnico</li></ul>
+</div>
+</div>
+<!-- Marquesina de marcas recomendadas (Text elements ticker exact matching index) -->
+<div id="marcas" class="container" style="text-align: center; max-width: 800px; margin-top: 5rem; margin-bottom: 2rem;">
+<span class="eyebrow reveal fade-up">Marcas y tecnología</span>
+<h2>Marcas profesionales para soluciones de <span class="text-gradient-gold">alto rendimiento</span></h2>
+<p class="section-subtitle reveal fade-up">Trabajamos con tecnología reconocida mundialmente para garantizar la máxima fidelidad y confiabilidad en cada proyecto.</p>
+</div>
+<div class="brands-ticker-wrapper reveal fade-up">
+<div class="brands-ticker">
+<div class="ticker-item">SONOS</div>
+<div class="ticker-item">KEF</div>
+<div class="ticker-item">NAD</div>
+<div class="ticker-item">RUARK</div>
+<div class="ticker-item">PRO-JECT</div>
+<div class="ticker-item">ONKYO</div>
+<div class="ticker-item">SHURE</div>
+<div class="ticker-item">NEXO</div>
+<div class="ticker-item">QSC</div>
+<div class="ticker-item">BARCO</div>
+<div class="ticker-item">KRAMER</div>
+<div class="ticker-item">BIAMP</div>
+<div class="ticker-item">ALLEN &amp; HEATH</div>
+<div class="ticker-item">OPTOMA</div>
+<div class="ticker-item">SHARP</div>
+<div class="ticker-item">SONOS</div>
+<div class="ticker-item">KEF</div>
+<div class="ticker-item">NAD</div>
+<div class="ticker-item">RUARK</div>
+<div class="ticker-item">PRO-JECT</div>
+<div class="ticker-item">ONKYO</div>
+<div class="ticker-item">SHURE</div>
+<div class="ticker-item">NEXO</div>
+<div class="ticker-item">QSC</div>
+<div class="ticker-item">BARCO</div>
+<div class="ticker-item">KRAMER</div>
+<div class="ticker-item">BIAMP</div>
+<div class="ticker-item">ALLEN &amp; HEATH</div>
+<div class="ticker-item">OPTOMA</div>
+<div class="ticker-item">SHARP</div>
+</div>
+</div>
+</section>
+<!-- PREGUNTAS FRECUENTES (Sección 8) -->
+<section class="section section-light" id="faq">
+<div class="container" style="text-align: center; max-width: 800px; margin-bottom: 2rem;">
+<span class="eyebrow reveal fade-up">FAQ</span>
+<h2>Preguntas frecuentes sobre audio y video para gobierno</h2>
+<p class="section-subtitle reveal fade-up">Resolvemos tus dudas principales para ayudarte a planear e invertir con total tranquilidad y claridad técnica.</p>
+</div>
+<div class="faq-lux-wrap reveal fade-up"><div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Qué incluye una solución audiovisual para gobierno?</span><span>+</span></button><div class="faq-lux-answer"><p>Puede incluir audio, bocinas, microfonía, pantallas profesionales Sharp/NEC, proyectores, videoconferencia, cámaras, cableado, soportes, configuración, instalación y capacitación básica de uso.</p></div></div><div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Pueden equipar salas institucionales o salas de juntas de gobierno?</span><span>+</span></button><div class="faq-lux-answer"><p>Sí. Podemos diseñar e instalar soluciones para salas de juntas, salas de consejo, salas de capacitación, cabildos, auditorios, atención ciudadana y espacios administrativos.</p></div></div><div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Qué conviene más: pantalla profesional o proyector?</span><span>+</span></button><div class="faq-lux-answer"><p>Depende del tamaño del espacio, iluminación, distancia de visualización, tipo de contenido, uso diario y presupuesto. Te ayudamos a elegir la solución más funcional para cada sala o auditorio.</p></div></div><div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿También pueden integrar videoconferencia institucional?</span><span>+</span></button><div class="faq-lux-answer"><p>Sí. Integramos cámaras, micrófonos, bocinas, pantallas y conectividad para reuniones híbridas, capacitación remota, coordinación entre sedes y sesiones con participantes externos.</p></div></div><div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿La instalación puede quedar limpia y formal?</span><span>+</span></button><div class="faq-lux-answer"><p>Sí. Cuidamos cableado, soportes, ubicación de equipos, estética, configuración y pruebas para que la solución sea ordenada, segura y acorde con un espacio institucional.</p></div></div><div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Pueden apoyar desde la definición del alcance?</span><span>+</span></button><div class="faq-lux-answer"><p>Sí. Podemos ayudarte a revisar necesidades, definir alcances, recomendar equipos y preparar una propuesta clara para que la institución tome una decisión mejor informada.</p></div></div></div>
+</section>
+<!-- FORMULARIO DE CONTACTO BURBUJAS PREMIUM (DOBLE BURBUJA) -->
+<section class="contact-bubbles-section" id="contacto">
+<div class="container">
+<div class="section-header reveal fade-up" style="margin-bottom:4rem; text-align: center;">
+<h2 class="section-title">Moderniza tus espacios de gobierno conaudio y video profesional</h2>
+<p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 0 auto;">Cuéntanos qué espacio necesitas mejorar: sala de juntas, auditorio, capacitación, atención ciudadana o sala institucional. En DG Audiosound te ayudamos a diseñar una solución audiovisual clara, formal y preparada para operar con confianza.</p>
+</div>
+<div class="contact-bubbles-wrapper reveal fade-up">
+<!-- Bubble 1: Info -->
+<div class="contact-bubble contact-bubble-dark" style="background: #050505;">
+<span class="cb-badge">Contacto</span>
+<h2>Moderniza tus espacios de gobierno conaudio y video profesional</h2>
+<p class="cb-desc" style="color: rgba(255,255,255,0.6);">Cuéntanos qué espacio necesitas mejorar: sala de juntas, auditorio, capacitación, atención ciudadana o sala institucional. En DG Audiosound te ayudamos a diseñar una solución audiovisual clara, formal y preparada para operar con confianza.</p>
+<div class="cb-methods">
+<a class="cb-method" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20audiovisual%20para%20sala%20institucional%20o%20cabildo." target="_blank">
+<div class="cb-method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">WhatsApp Corporativo</strong>
+<span style="color: rgba(255,255,255,0.5);">+52 55 3727 0177 — respuesta rápida</span>
+</div>
+</a>
+<a class="cb-method" href="mailto:contacto@dgaudiosound.com">
+<div class="cb-method-icon"><i class="fa-solid fa-envelope"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">Correo de Atención</strong>
+<span style="color: rgba(255,255,255,0.5);">contacto@dgaudiosound.com</span>
+</div>
+</a>
+<div class="cb-method">
+<div class="cb-method-icon"><i class="fa-solid fa-location-dot"></i></div>
+<div class="cb-method-info">
+<strong style="color: #ffffff;">Área de Cobertura</strong>
+<span style="color: rgba(255,255,255,0.5);">Ciudad de México, Estado de México y proyectos comerciales en todo México</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bubble 2: WhatsApp Form -->
+<div class="contact-bubble contact-bubble-light" style="background: #ffffff; box-shadow: 0 20px 60px rgba(0,0,0,0.08);">
+<h3 style="color: #050505;">Solicita una cotización</h3>
+<p class="cb-form-desc" style="color: #64748b;">Completa los datos básicos y abriremos WhatsApp con la información lista para enviarla a DG Audiosound.</p>
+<form class="cb-form" id="bubblesWhatsappForm">
+<div class="cb-form-row">
+<div class="cb-field">
+<label for="cb-name" style="color: #374151;">Nombre / Contacto *</label>
+<input id="cb-name" placeholder="Tu nombre" required="" type="text"/>
+</div>
+<div class="cb-field">
+<label for="cb-company" style="color: #374151;">Empresa / Institución *</label>
+<input id="cb-company" placeholder="Nombre de la empresa" required="" type="text"/>
+</div>
+</div>
+<div class="cb-form-row">
+<div class="cb-field">
+<label for="cb-phone" style="color: #374151;">WhatsApp / Teléfono *</label>
+<input id="cb-phone" placeholder="55 0000 0000" required="" type="tel"/>
+</div>
+<div class="cb-field">
+<label for="cb-city" style="color: #374151;">Ciudad *</label>
+<input id="cb-city" placeholder="Ej. Ciudad de México" required="" type="text"/>
+</div>
+</div>
+<div class="cb-field">
+<label for="cb-project" style="color: #374151;">Tipo de proyecto</label>
+<select id="cb-project" required=""><option value="Sala institucional">Sala institucional</option><option value="Auditorio público">Auditorio público</option><option value="Sala de capacitación">Sala de capacitación</option><option value="Videoconferencia institucional">Videoconferencia institucional</option><option value="Atención ciudadana">Atención ciudadana</option><option value="Otro proyecto">Otro proyecto</option></select>
+</div>
+<div class="cb-field full">
+<label for="cb-message" style="color: #374151;">Detalles del proyecto</label>
+<textarea id="cb-message" placeholder="Indícanos tipo de institución, sala, auditorio, cabildo, capacitación, atención ciudadana, pantallas profesionales Sharp/NEC, audio, videoconferencia, alcance y presupuesto aproximado." required="" rows="4"></textarea>
+</div>
+<button class="cb-submit" style="background: #25D366; color: white;" type="submit">
+<i class="fa-brands fa-whatsapp"></i> Solicitar Asesoría Técnica
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-container">
+<div class="footer-col brand-col">
+<a class="footer-logo" href="/index">
+<img alt="DG AUDIOSOUND Logo" class="footer-logo-img" height="60" src="/assets/DG.png" width="112"/>
+</a>
+<p class="footer-desc">Proveemos soluciones integrales de audio, video e iluminación premium para crear experiencias inolvidables en hogares y negocios.</p>
+<div class="social-links">
+<a aria-label="Facebook" href="https://www.facebook.com/dgaudiosound" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/dgaudiosound/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+<div class="footer-col">
+<h4 class="footer-title">Navegación</h4>
+<ul class="footer-links">
+<li><a href="/index#inicio">Inicio</a></li>
+<li><a href="/soluciones">Soluciones</a></li>
+<li><a href="#marcas">Nuestras Marcas</a></li>
+<li><a href="https://www.dgaudiosound.com/tienda">Tienda</a></li>
+<li><a href="https://www.dgaudiosound.com/blog">Blog DG</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="footer-title">Soluciones</h4>
+<ul class="footer-links">
+<li><a href="/residencial-premium/cine-en-casa">Cine en Casa</a></li>
+<li><a href="/residencial-premium">Audio Residencial</a></li>
+<li><a href="/negocios-y-experiencias">Audio para Negocios</a></li>
+<li><a href="/corporativo-e-institucional">Salas Corporativas</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 class="footer-title">Contacto</h4>
+<ul class="footer-contact">
+<li><i class="fa-solid fa-phone"></i> +52 55 3727 0177</li>
+<li><i class="fa-solid fa-envelope"></i> contacto@dgaudiosound.com</li>
+<li><i class="fa-solid fa-location-dot"></i> Ciudad de México, México</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<p>© 2026 DG Audiosound. Todos los derechos reservados.</p>
+<div class="footer-legal">
+<a href="#">Aviso de Privacidad</a>
+<a href="#">Términos y Condiciones</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Botón Floating WhatsApp -->
+<a aria-label="Contacto por WhatsApp" class="whatsapp-float" href="https://wa.me/525537270177" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<!-- Scripts de comportamiento -->
+<script>
+        (function() {
+            // --- 1. ADAPTIVE FLOATING NAVBAR COLOR (100% PRECIRO E INSTANTÁNEO) ---
+            const navbarEl = document.getElementById('navbar');
+            if (navbarEl) {
+                const checkNavbarColor = () => {
+                    const navbarRect = navbarEl.getBoundingClientRect();
+                    const navbarCenter = navbarRect.top + navbarRect.height / 2;
+                    
+                    // Encontrar qué sección está cruzando la mitad de la barra
+                    const sections = document.querySelectorAll('section, header');
+                    let currentSection = null;
+                    
+                    sections.forEach(sec => {
+                        if (sec.id === 'navbar') return;
+                        const rect = sec.getBoundingClientRect();
+                        if (rect.top <= navbarCenter && rect.bottom >= navbarCenter) {
+                            currentSection = sec;
+                        }
+                    });
+                    
+                    if (currentSection) {
+                        const isLight = currentSection.classList.contains('section-light') || 
+                                        currentSection.classList.contains('section-light-alt') || 
+                                        currentSection.classList.contains('section-white') || 
+                                        currentSection.classList.contains('contact-bubbles-section') ||
+                                        currentSection.classList.contains('breadcrumb-wrap');
+                        if (isLight) {
+                            // Si el fondo de la sección es claro, la barra es negra
+                            navbarEl.classList.remove('nav-light');
+                        } else {
+                            // Si el fondo de la sección es oscuro/negro, la barra es blanca
+                            navbarEl.classList.add('nav-light');
+                        }
+                    }
+                };
+                
+                window.addEventListener('scroll', checkNavbarColor, { passive: true });
+                window.addEventListener('resize', checkNavbarColor, { passive: true });
+                
+                // Evento de scroll adicional para clase scrolled
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbarEl.classList.add('scrolled');
+                    } else {
+                        navbarEl.classList.remove('scrolled');
+                    }
+                }, { passive: true });
+                
+                // Ejecución inicial inmediata
+                checkNavbarColor();
+            }
+
+            // --- 2. EFECTO INTERACTIVO DE INCLINACIÓN Y REFLEJO ESPEJO 3D ---
+            const cards3D = document.querySelectorAll('.benefit-v2-card, .process-bento-item, .include-card, .brand-marquee-item, .antithesis-problem-card');
+            cards3D.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const percentX = (x / rect.width) * 100;
+                    const percentY = (y / rect.height) * 100;
+                    
+                    // Cálculo de inclinación física en perspectiva
+                    const rotateX = ((rect.height / 2 - y) / (rect.height / 2)) * 10;
+                    const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+                    card.style.setProperty('--mouse-x', `${percentX}%`);
+                    card.style.setProperty('--mouse-y', `${percentY}%`);
+                    
+                    // Ajustar variables de reflejo diagonal espejo
+                    card.style.setProperty('--glow-x', `${(percentX - 50) * 2}%`);
+                    card.style.setProperty('--glow-y', `${(percentY - 50) * 2}%`);
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    card.style.setProperty('--mouse-x', '50%');
+                    card.style.setProperty('--mouse-y', '50%');
+                    card.style.setProperty('--glow-x', '0%');
+                    card.style.setProperty('--glow-y', '0%');
+                });
+            });
+
+            // --- 3. ACORDEÓN DE PREGUNTAS (FAQ) CON ROTACIÓN ---
+            const faqItems = document.querySelectorAll('.faq-lux-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-lux-btn');
+                const answer = item.querySelector('.faq-lux-answer');
+                if (!btn || !answer) return;
+
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Cerrar todos los demás
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-lux-answer').style.maxHeight = '0px';
+                    });
+                    
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // --- 4. MANEJADOR DEL HERO SLIDER (SLIDESHOW CROSSFADE) ---
+            const slides = document.querySelectorAll('.corp-hero-v2 .slide');
+            let currentSlide = 0;
+            const slideInterval = 4000; // Rotación cada 4 segundos
+
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, slideInterval);
+            }
+
+            // --- 5. MANEJADOR DEL FORMULARIO DE COTIZACIÓN DE DOBLE BURBUJA ---
+            const bubblesForm = document.getElementById('bubblesWhatsappForm');
+            if (bubblesForm) {
+                bubblesForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('cb-name').value.trim();
+                    const company = document.getElementById('cb-company').value.trim();
+                    const phone = document.getElementById('cb-phone').value.trim();
+                    const city = document.getElementById('cb-city').value.trim();
+                    const projectType = document.getElementById('cb-project').value;
+                    const details = document.getElementById('cb-message').value.trim();
+
+                    const message = 
+                        'Hola DG Audiosound, quiero cotizar un proyecto de Gobierno.%0A%0A' +
+                        '*Nombre / Contacto:* ' + encodeURIComponent(name) + '%0A' +
+                        '*Empresa / Institución:* ' + encodeURIComponent(company) + '%0A' +
+                        '*WhatsApp / Teléfono:* ' + encodeURIComponent(phone) + '%0A' +
+                        '*Ciudad:* ' + encodeURIComponent(city) + '%0A' +
+                        '*Tipo de Proyecto:* ' + encodeURIComponent(projectType) + '%0A' +
+                        '*Detalles:* ' + encodeURIComponent(details);
+
+                    window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
+                });
+            }
+        })();
+    </script>
+    <script defer src="/script.js"></script>
+</body>
+</html>

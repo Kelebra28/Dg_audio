@@ -81,3 +81,63 @@
     BrowserMatch ^Mozilla/4\.0[678] no-gzip
     BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
+
+# ==============================================================================
+# URL REWRITING - OCULTAR EXTENSIÓN .HTML
+# ==============================================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Redirigir externamente la URL con .html a la URL sin .html (SEO)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP [NC]
+    RewriteRule ^(.*)\.html$ https://www.dgaudiosound.com/$1 [R=301,L]
+
+    # 2. Reescritura interna: si la solicitud sin .html corresponde a un archivo .html existente, sírvelo
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+
+    # ==============================================================================
+    # 3. REDIRECCIONES 301 DE LA ESTRUCTURA ANTIGUA (/subpage/) A LA NUEVA
+    # ==============================================================================
+    # Residencial Premium
+    RewriteRule ^subpage/soluciones/residencial-premium/?$ https://www.dgaudiosound.com/residencial-premium [R=301,L]
+    RewriteRule ^subpage/cine_en_casa/?$ https://www.dgaudiosound.com/residencial-premium/cine-en-casa [R=301,L]
+    RewriteRule ^subpage/applications/audio-distribuido/?$ https://www.dgaudiosound.com/residencial-premium/audio-distribuido [R=301,L]
+    RewriteRule ^subpage/applications/audio-hi-fi/?$ https://www.dgaudiosound.com/residencial-premium/audio-hi-fi [R=301,L]
+    RewriteRule ^subpage/applications/terrazas-y-jardin/?$ https://www.dgaudiosound.com/residencial-premium/terrazas-y-jardin [R=301,L]
+    RewriteRule ^subpage/applications/family-room/?$ https://www.dgaudiosound.com/residencial-premium/family-room [R=301,L]
+    RewriteRule ^subpage/applications/home-office/?$ https://www.dgaudiosound.com/residencial-premium/home-office [R=301,L]
+
+    # Negocios y Experiencias
+    RewriteRule ^subpage/soluciones/negocios-y-experiencias/?$ https://www.dgaudiosound.com/negocios-y-experiencias [R=301,L]
+    RewriteRule ^subpage/applications/restaurantes/?$ https://www.dgaudiosound.com/negocios-y-experiencias/restaurantes [R=301,L]
+    RewriteRule ^subpage/applications/bares-antros/?$ https://www.dgaudiosound.com/negocios-y-experiencias/bares-antros [R=301,L]
+    RewriteRule ^subpage/applications/gimnasios/?$ https://www.dgaudiosound.com/negocios-y-experiencias/gimnasios [R=301,L]
+    RewriteRule ^subpage/applications/cafeterias/?$ https://www.dgaudiosound.com/negocios-y-experiencias/cafeterias [R=301,L]
+    RewriteRule ^subpage/applications/retail/?$ https://www.dgaudiosound.com/negocios-y-experiencias/retail [R=301,L]
+    RewriteRule ^subpage/applications/barberias/?$ https://www.dgaudiosound.com/negocios-y-experiencias/barberias [R=301,L]
+
+    # Corporativo e Institucional
+    RewriteRule ^subpage/soluciones/corporativo-e-institucional/?$ https://www.dgaudiosound.com/corporativo-e-institucional [R=301,L]
+    RewriteRule ^subpage/applications/salas-de-juntas/?$ https://www.dgaudiosound.com/corporativo-e-institucional/salas-de-juntas [R=301,L]
+    RewriteRule ^subpage/applications/auditorios-corporativos/?$ https://www.dgaudiosound.com/corporativo-e-institucional/auditorios-corporativos [R=301,L]
+    RewriteRule ^subpage/applications/educacion/?$ https://www.dgaudiosound.com/corporativo-e-institucional/educacion [R=301,L]
+    RewriteRule ^subpage/applications/hoteles/?$ https://www.dgaudiosound.com/corporativo-e-institucional/hoteles [R=301,L]
+    RewriteRule ^subpage/applications/oficinas-corporativas/?$ https://www.dgaudiosound.com/corporativo-e-institucional/oficinas-corporativas [R=301,L]
+    RewriteRule ^subpage/applications/gobierno/?$ https://www.dgaudiosound.com/corporativo-e-institucional/gobierno [R=301,L]
+
+    # Eventos y Producción
+    RewriteRule ^subpage/soluciones/eventos-y-produccion/?$ https://www.dgaudiosound.com/eventos-y-produccion [R=301,L]
+    RewriteRule ^subpage/applications/podcast/?$ https://www.dgaudiosound.com/eventos-y-produccion/podcast [R=301,L]
+    RewriteRule ^subpage/applications/streamers/?$ https://www.dgaudiosound.com/eventos-y-produccion/streamers [R=301,L]
+    RewriteRule ^subpage/applications/centros-de-culto/?$ https://www.dgaudiosound.com/eventos-y-produccion/centros-de-culto [R=301,L]
+    RewriteRule ^subpage/applications/musicos-vocalistas/?$ https://www.dgaudiosound.com/eventos-y-produccion/musicos-vocalistas [R=301,L]
+    RewriteRule ^subpage/applications/sonidos-dj/?$ https://www.dgaudiosound.com/eventos-y-produccion/sonidos-dj [R=301,L]
+    RewriteRule ^subpage/applications/cine-independiente/?$ https://www.dgaudiosound.com/eventos-y-produccion/cine-independiente [R=301,L]
+
+    # Páginas principales restantes
+    RewriteRule ^subpage/soluciones/?$ https://www.dgaudiosound.com/soluciones [R=301,L]
+    RewriteRule ^subpage/aplicaciones/?$ https://www.dgaudiosound.com/aplicaciones [R=301,L]
+    RewriteRule ^subpage/?$ https://www.dgaudiosound.com/ [R=301,L]
+</IfModule>
