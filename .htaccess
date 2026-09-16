@@ -88,17 +88,18 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    # 0. Romper el bucle infinito de redirecciones entre Vercel y Apache para carpetas
+    DirectorySlash Off
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteRule ^(.*)$ $1/index.html [L]
+
     # 1. Redirigir externamente la URL con .html a la URL sin .html (SEO)
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP [NC]
     RewriteRule ^(.*)\.html$ https://www.dgaudiosound.com/$1 [R=301,L]
 
-    # 2. Reescritura interna: si la solicitud sin .html corresponde a un archivo .html existente, sírvelo
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.html -f
-    RewriteRule ^(.*)$ $1.html [L]
-
     # ==============================================================================
-    # 3. REDIRECCIONES 301 DE LA ESTRUCTURA ANTIGUA (/subpage/) A LA NUEVA
+    # 2. REDIRECCIONES 301 DE LA ESTRUCTURA ANTIGUA (/subpage/) A LA NUEVA
     # ==============================================================================
     # Residencial Premium
     RewriteRule ^subpage/soluciones/residencial-premium/?$ https://www.dgaudiosound.com/residencial-premium [R=301,L]
@@ -140,4 +141,9 @@
     RewriteRule ^subpage/soluciones/?$ https://www.dgaudiosound.com/soluciones [R=301,L]
     RewriteRule ^subpage/aplicaciones/?$ https://www.dgaudiosound.com/aplicaciones [R=301,L]
     RewriteRule ^subpage/?$ https://www.dgaudiosound.com/ [R=301,L]
+
+    # 3. Reescritura interna: si la solicitud sin .html corresponde a un archivo .html existente, sírvelo
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
