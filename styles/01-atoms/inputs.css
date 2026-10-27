@@ -1,0 +1,168 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ÁTOMOS: CAMPOS DE FORMULARIO, INPUTS Y SELECTS
+   ========================================================================== */
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-white);
+    opacity: 0.9;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #ffffff;
+    color: #050505;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition-base);
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(212, 164, 55, 0.2);
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Campos de Formulario Bubble (Contacto) */
+.cb-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.cb-field.full { 
+    grid-column: 1 / -1; 
+}
+
+.cb-field label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #374151;
+    text-transform: uppercase;
+}
+
+.cb-field input,
+.cb-field select,
+.cb-field textarea {
+    padding: 0.85rem 1.1rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #050505;
+    background: #f9fafb;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+    width: 100%;
+}
+
+.cb-field input:focus,
+.cb-field select:focus,
+.cb-field textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(212,164,55,0.12);
+    background: white;
+}
+
+.cb-field textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Premium Custom Select */
+.premium-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.premium-select-custom {
+    padding: 1.1rem 1.25rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    background: #f8fafc;
+    color: #050505;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+}
+
+.premium-select-custom i {
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.premium-select-wrapper.active .premium-select-custom {
+    border-color: var(--color-primary);
+    background: white;
+    box-shadow: 0 0 0 5px rgba(212, 164, 55, 0.12);
+}
+
+.premium-select-wrapper.active .premium-select-custom i {
+    transform: rotate(180deg);
+}
+
+.premium-options-list {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid rgba(212, 164, 55, 0.2);
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.premium-select-wrapper.active .premium-options-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.premium-option-item {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.premium-option-item:last-child {
+    border-bottom: none;
+}
+
+.premium-option-item:hover {
+    background: rgba(212, 164, 55, 0.08);
+    padding-left: 1.75rem;
+    color: var(--color-black);
+}
+
+.premium-option-item.selected {
+    background: rgba(212, 164, 55, 0.15);
+    font-weight: 700;
+    color: var(--color-black);
+}

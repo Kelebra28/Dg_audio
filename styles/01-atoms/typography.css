@@ -1,0 +1,81 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ÁTOMOS: TIPOGRAFÍA Y ENCABEZADOS
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-dark);
+}
+
+.text-white { 
+    color: var(--color-text-white); 
+}
+
+.text-light-gray { 
+    color: var(--color-text-light); 
+}
+
+.text-accent { 
+    color: var(--color-accent); 
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #d4a437 0%, #f3e5ab 50%, #d4a437 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Encabezados Globales dentro de Secciones */
+.section-dark .section-title,
+.section-black .section-title {
+    color: var(--color-text-white);
+}
+
+.section-dark .section-subtitle,
+.section-black .section-subtitle {
+    color: var(--color-text-light);
+    opacity: 0.8;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header.align-left {
+    text-align: left;
+    margin-left: 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    position: relative;
+    display: inline-block;
+    color: inherit;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: inherit;
+    opacity: 0.9;
+}
+
+.section-closing-text {
+    text-align: center;
+    max-width: 820px;
+    margin: 3.5rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #475569;
+    font-style: italic;
+}
+
+.section-closing-text.on-dark {
+    color: rgba(255, 255, 255, 0.55);
+}

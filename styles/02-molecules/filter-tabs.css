@@ -1,0 +1,30 @@
+/* ==========================================================================
+   DG AUDIOSOUND — MOLÉCULAS: PESTAÑAS DE FILTRADO INTERACTIVO
+   ========================================================================== */
+
+.store-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--color-bg-dark);
+    background: var(--color-bg-alt);
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: var(--transition-base);
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    background: var(--color-bg-dark);
+    color: white;
+    border-color: var(--color-bg-dark);
+}

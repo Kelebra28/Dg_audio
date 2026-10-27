@@ -1,0 +1,38 @@
+# ==============================================================================
+# DG AUDIOSOUND — GITIGNORE
+# ==============================================================================
+
+# 1. Carpetas de respaldo y versiones anteriores
+_legacy/
+example/
+
+# 2. Scripts y hojas de estilo monolíticas antiguas de la raíz
+script.js
+style.css
+style.min.css
+
+# 3. Control de rastreadores y bots
+robots.txt
+
+# 4. Sistema Operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 5. Entorno y Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 6. Archivos temporales y respaldos
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+scratch/

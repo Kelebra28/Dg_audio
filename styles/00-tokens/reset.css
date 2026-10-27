@@ -1,0 +1,75 @@
+/* ==========================================================================
+   DG AUDIOSOUND — TOKENS: RESETS Y ESTILOS BASE
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-base);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: var(--space-xxl) 0;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.bg-light {
+    background-color: var(--color-bg-alt);
+}
+
+.section-light {
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+}
+
+.section-light-alt {
+    background-color: var(--color-bg-alt);
+    color: var(--color-text-dark);
+}
+
+.section-dark {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+
+.section-black {
+    background-color: var(--color-black);
+    color: var(--color-text-light);
+}

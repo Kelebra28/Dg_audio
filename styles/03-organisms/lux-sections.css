@@ -1,0 +1,1047 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: SECCIONES Y COMPONENTES ULTRA-LUJO
+   Estilo editorial de alta gama (Apple / Bang & Olufsen) para subpáginas
+   ========================================================================== */
+
+/* 1. SECCIONES BASE Y ALTERNANCIA DE TEMAS */
+.section-lux-dark {
+    background-color: var(--color-lux-black);
+    color: #ffffff !important;
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-lux-dark .lux-title,
+.section-lux-dark p,
+.section-lux-dark span,
+.section-lux-dark li,
+.section-lux-dark h1,
+.section-lux-dark h2,
+.section-lux-dark h3,
+.section-lux-dark h4 {
+    color: #ffffff !important;
+}
+
+.section-lux-dark .lux-lead {
+    color: #c1c1cf !important;
+}
+
+.section-lux-dark-alt {
+    background-color: var(--color-lux-dark-gray);
+    color: #ffffff !important;
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.section-lux-dark-alt .lux-title,
+.section-lux-dark-alt p,
+.section-lux-dark-alt span,
+.section-lux-dark-alt li,
+.section-lux-dark-alt h1,
+.section-lux-dark-alt h2,
+.section-lux-dark-alt h3,
+.section-lux-dark-alt h4 {
+    color: #ffffff !important;
+}
+
+.section-lux-dark-alt .lux-lead {
+    color: #c1c1cf !important;
+}
+
+.section-lux-white {
+    background-color: #ffffff;
+    color: #121215 !important;
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-lux-white .lux-title,
+.section-lux-white p,
+.section-lux-white span,
+.section-lux-white li,
+.section-lux-white h1,
+.section-lux-white h2,
+.section-lux-white h3,
+.section-lux-white h4 {
+    color: #121215 !important;
+}
+
+.section-lux-white .lux-lead {
+    color: #555560 !important;
+}
+
+.section-lux-white .card-lux,
+.section-lux-white .antithesis-problem-card {
+    background: rgba(245, 245, 247, 0.85) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    color: #121215 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.section-lux-white .card-lux:hover,
+.section-lux-white .antithesis-problem-card:hover {
+    background: #ffffff !important;
+    border-color: var(--color-lux-gold) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.section-lux-white .card-lux-title,
+.section-lux-white .antithesis-problem-card h3 {
+    color: #121215 !important;
+}
+
+.section-lux-white .card-lux-desc,
+.section-lux-white .antithesis-problem-card p {
+    color: #555560 !important;
+}
+
+.section-lux-gray {
+    background-color: #f5f5f7;
+    color: #121215 !important;
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.section-lux-gray .lux-title,
+.section-lux-gray p,
+.section-lux-gray span,
+.section-lux-gray li,
+.section-lux-gray h1,
+.section-lux-gray h2,
+.section-lux-gray h3,
+.section-lux-gray h4 {
+    color: #121215 !important;
+}
+
+.section-lux-gray .lux-lead {
+    color: #555560 !important;
+}
+
+.section-lux-gray .card-lux,
+.section-lux-gray .brand-lux-box,
+.section-lux-gray .process-lux-num {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    color: #121215 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.section-lux-gray .card-lux:hover,
+.section-lux-gray .brand-lux-box:hover {
+    border-color: var(--color-lux-gold) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.section-lux-gray .card-lux-title {
+    color: #121215 !important;
+}
+
+.section-lux-gray .card-lux-desc {
+    color: #555560 !important;
+}
+
+.container-lux {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 2. TIPOGRAFÍA EDITORIAL Y KICKERS */
+.lux-kicker {
+    display: inline-block;
+    font-family: var(--font-lux-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-lux-gold);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.lux-kicker::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: var(--color-lux-gold);
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.lux-title {
+    font-family: var(--font-lux-heading);
+    font-weight: 300;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.lux-title strong {
+    font-weight: 700;
+}
+
+.lux-accent {
+    background: linear-gradient(90deg, var(--color-lux-gold), var(--color-lux-gold-bright), var(--color-lux-gold));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer-gold 4s linear infinite;
+}
+
+@keyframes shimmer-gold {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+.lux-lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--color-lux-text-muted);
+    max-width: 800px;
+    font-weight: 300;
+}
+
+/* 3. REVEAL ANIMATIONS Y FALLBACK DE VISIBILIDAD */
+.reveal-lux {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-lux.revealed,
+.reveal-lux.active {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* 4. HERO LUX SLIDESHOW CINEMATOGRÁFICO */
+.hero-lux {
+    position: relative;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-lux-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-lux-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 2.5s ease-in-out, transform 8s ease-out;
+    filter: brightness(0.68) contrast(1.02);
+}
+
+.hero-lux-slide.active {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.hero-lux-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(8, 8, 10, 0.65) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-lux-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-top: 100px;
+}
+
+/* Garantizar visibilidad inmediata del texto del hero */
+.hero-lux-content .reveal-lux {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.hero-lux-title,
+.hero-lux-title h1,
+.hero-lux-title span {
+    font-family: var(--font-lux-heading);
+    font-size: clamp(2.8rem, 7vw, 5.2rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    color: #ffffff !important;
+}
+
+.hero-lux-title strong {
+    font-weight: 800;
+    color: #ffffff !important;
+}
+
+.hero-lux-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.65;
+    color: #ffffff !important;
+    opacity: 0.95;
+    max-width: 850px;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+}
+
+.hero-lux-badges {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 3rem;
+}
+
+.hero-lux-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition-lux);
+}
+
+.hero-lux-badge i {
+    color: var(--color-lux-gold);
+    font-size: 1.05rem;
+}
+
+.hero-lux-badge:hover {
+    border-color: var(--color-lux-gold);
+    background: rgba(212, 164, 55, 0.08);
+    color: var(--color-lux-text-white);
+    box-shadow: 0 10px 25px rgba(212, 164, 55, 0.15);
+    transform: translateY(-5px);
+}
+
+/* 5. ANTÍTESIS: MALLA ASIMÉTRICA */
+.antithesis-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.antithesis-visual-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.antithesis-main-img {
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-lux);
+}
+
+.antithesis-parallax-card {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    width: 280px;
+    background: rgba(18, 18, 24, 0.85);
+    border: 1px solid var(--color-lux-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(212, 164, 55, 0.08);
+    transform: translateY(calc(var(--scroll-offset, 0) * 0.15px));
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+.antithesis-parallax-card h4 {
+    font-family: var(--font-lux-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-lux-gold);
+    margin-bottom: 0.5rem;
+}
+
+.antithesis-parallax-card p {
+    font-size: 0.85rem;
+    color: var(--color-lux-text-muted);
+    line-height: 1.5;
+}
+
+.antithesis-problems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 3.5rem;
+}
+
+.antithesis-problem-card {
+    background: var(--color-lux-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 30px;
+    transition: var(--transition-lux);
+}
+
+.antithesis-problem-card:hover {
+    border-color: var(--color-lux-gold) !important;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px var(--color-lux-gold-glow);
+}
+
+.antithesis-problem-card i {
+    font-size: 1.5rem;
+    color: var(--color-lux-gold);
+    margin-bottom: 1.25rem;
+}
+
+.antithesis-problem-card h3 {
+    font-family: var(--font-lux-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.antithesis-problem-card p {
+    font-size: 0.88rem;
+    color: var(--color-lux-text-muted);
+    line-height: 1.6;
+}
+
+/* 6. TARJETAS DE BENEFICIOS (GLASSMORPHISM LUX) */
+.cards-lux-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 4.5rem;
+}
+
+.card-lux,
+.process-card {
+    background: var(--color-lux-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px;
+    padding: 40px 30px;
+    transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.card-lux::before,
+.process-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+    background-size: 250% 250%;
+    background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+}
+
+.card-lux:hover::before,
+.process-card:hover::before {
+    opacity: 1;
+}
+
+.card-lux::after,
+.process-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.08) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.card-lux:hover::after,
+.process-card:hover::after {
+    opacity: 1;
+}
+
+.card-lux:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-lux-gold);
+    box-shadow: 0 20px 40px rgba(212, 164, 55, 0.06), 0 0 25px rgba(212, 164, 55, 0.03);
+}
+
+.card-lux-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(212, 164, 55, 0.06);
+    border: 1px solid rgba(212, 164, 55, 0.1);
+    color: var(--color-lux-gold);
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 2.25rem;
+    transition: var(--transition-lux);
+}
+
+.card-lux:hover .card-lux-icon {
+    background-color: var(--color-lux-gold);
+    color: #000;
+    box-shadow: 0 0 15px var(--color-lux-gold);
+}
+
+.card-lux-title {
+    font-family: var(--font-lux-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card-lux-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--color-lux-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* 7. PASARELA VISUAL DE APLICACIONES (GATEWAY DE LUJO) */
+.gateway-lux-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 4.5rem;
+}
+
+.gateway-lux-card {
+    position: relative;
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-lux);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+}
+
+.gateway-lux-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(0.62) contrast(1.02);
+}
+
+.gateway-lux-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 40%, rgba(8, 8, 10, 0.65) 100%);
+    z-index: 1;
+    pointer-events: none;
+    transition: var(--transition-lux);
+}
+
+.gateway-lux-content {
+    position: relative;
+    z-index: 2;
+    transform: translateY(20px);
+    transition: var(--transition-lux);
+}
+
+.gateway-lux-card h3 {
+    font-family: var(--font-lux-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+}
+
+.gateway-lux-card p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.95) !important;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+.gateway-lux-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-lux-heading);
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--color-lux-gold) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: var(--transition-lux);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gateway-lux-link i {
+    transition: transform 0.4s ease;
+}
+
+.gateway-lux-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-lux-gold);
+    box-shadow: 0 25px 50px rgba(212, 164, 55, 0.08);
+}
+
+.gateway-lux-card:hover .gateway-lux-img {
+    transform: scale(1.08);
+    filter: brightness(0.48) contrast(1.05);
+}
+
+.gateway-lux-card:hover .gateway-lux-content {
+    transform: translateY(0);
+}
+
+.gateway-lux-card:hover .gateway-lux-content p {
+    opacity: 1;
+}
+
+.gateway-lux-card:hover .gateway-lux-link {
+    color: var(--color-lux-text-white);
+}
+
+.gateway-lux-card:hover .gateway-lux-link i {
+    transform: translateX(5px);
+}
+
+/* 8. BRANDS MARQUEE TRACK */
+.brands-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+    position: relative;
+}
+
+.brands-marquee-container::before,
+.brands-marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.brands-marquee-container::before {
+    left: 0;
+    background: linear-gradient(90deg, #f5f5f7 0%, rgba(245, 245, 247, 0) 100%);
+}
+
+.brands-marquee-container::after {
+    right: 0;
+    background: linear-gradient(270deg, #f5f5f7 0%, rgba(245, 245, 247, 0) 100%);
+}
+
+.brands-marquee-track {
+    display: flex;
+    width: calc(250px * 20);
+    animation: marquee-scroll 25s linear infinite;
+    gap: 30px;
+}
+
+.brand-marquee-item {
+    width: 220px;
+    height: 90px;
+    flex-shrink: 0;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-lux-heading);
+    font-weight: 500;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    color: #121215;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    transition: var(--transition-lux);
+}
+
+.brand-marquee-item:hover {
+    border-color: var(--color-lux-gold) !important;
+    box-shadow: 0 15px 35px rgba(212, 164, 55, 0.1) !important;
+    transform: translateY(-5px);
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2500px); }
+}
+
+/* 9. ACORDEÓN DE PREGUNTAS EN TEMA CLARO */
+.section-lux-white .faq-lux-wrap {
+    max-width: 900px;
+    margin: 4.5rem auto 0;
+    display: grid;
+    gap: 16px;
+}
+
+.section-lux-white .faq-lux-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition-lux);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.section-lux-white .faq-lux-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-lux-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #121215 !important;
+    transition: var(--transition-lux);
+}
+
+.section-lux-white .faq-lux-btn span:last-child {
+    font-size: 1.5rem;
+    color: var(--color-lux-gold);
+    transition: transform 0.4s ease;
+}
+
+.section-lux-white .faq-lux-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-lux-white .faq-lux-answer p {
+    padding: 0 32px 28px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #555560 !important;
+}
+
+.section-lux-white .faq-lux-item.active {
+    border-color: var(--color-lux-gold) !important;
+    background: #ffffff !important;
+    box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08) !important;
+}
+
+.section-lux-white .faq-lux-item.active .faq-lux-btn {
+    color: #121215 !important;
+    font-weight: 700;
+}
+
+.section-lux-white .faq-lux-item.active .faq-lux-btn span:last-child {
+    transform: rotate(45deg);
+}
+
+/* 10. FORMULARIO DE CONSULTA DE PRESTIGIO */
+.consult-wrapper {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: stretch;
+    margin-top: 5rem;
+}
+
+.consult-info-panel {
+    background: linear-gradient(135deg, #0b0b0e 0%, #050507 100%);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.consult-info-panel::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: -150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 164, 55, 0.06) 0%, transparent 70%);
+}
+
+.consult-info-panel p {
+    color: var(--color-lux-text-muted);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.consult-details-list {
+    display: grid;
+    gap: 25px;
+}
+
+.consult-detail-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.consult-detail-card i {
+    font-size: 1.4rem;
+    color: var(--color-lux-gold);
+}
+
+.consult-detail-card div strong {
+    display: block;
+    font-family: var(--font-lux-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-lux-gold);
+    margin-bottom: 4px;
+}
+
+.consult-detail-card div a,
+.consult-detail-card div span {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+
+.consult-form-card {
+    background: var(--color-lux-card-bg);
+    border: 1px solid var(--color-lux-border);
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-lux);
+}
+
+.consult-form-card:hover {
+    border-color: var(--color-lux-gold);
+    box-shadow: 0 45px 90px rgba(212, 164, 55, 0.08);
+}
+
+.consult-form-card h3 {
+    font-family: var(--font-lux-heading);
+    font-size: 1.85rem;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+}
+
+.consult-form-card h3 strong {
+    font-weight: 700;
+}
+
+.consult-form-card p {
+    color: var(--color-lux-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.lux-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.lux-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lux-field.full {
+    grid-column: 1 / -1;
+}
+
+.lux-field label {
+    font-family: var(--font-lux-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.lux-field input,
+.lux-field select,
+.lux-field textarea {
+    background: #09090c;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--color-lux-text-white);
+    border-radius: 6px;
+    padding: 14px 18px;
+    outline: none;
+    transition: var(--transition-lux);
+    font-family: var(--font-lux-body);
+    font-size: 0.95rem;
+}
+
+.lux-field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.lux-field input:focus,
+.lux-field select:focus,
+.lux-field textarea:focus {
+    border-color: var(--color-lux-gold);
+    box-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.lux-submit-btn {
+    width: 100%;
+    background: var(--color-lux-gold);
+    color: #000;
+    border: none;
+    padding: 18px 30px;
+    font-family: var(--font-lux-heading);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(212, 164, 55, 0.15);
+    transition: var(--transition-lux);
+    margin-top: 1.5rem;
+}
+
+.lux-submit-btn:hover {
+    background: var(--color-lux-gold-bright);
+    box-shadow: 0 15px 30px rgba(212, 164, 55, 0.4);
+    transform: translateY(-3px);
+}
+
+/* 11. RESPONSIVIDAD Y COLAPSOS FLUIDOS */
+@media (max-width: 1200px) {
+    .container-lux {
+        padding: 0 30px;
+    }
+
+    .consult-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .antithesis-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .antithesis-visual-wrapper {
+        margin-top: 40px;
+    }
+
+    .cards-lux-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gateway-lux-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-lux {
+        min-height: 80vh;
+    }
+
+    .hero-lux-title {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
+
+    .hero-lux-subtitle {
+        font-size: 1rem;
+    }
+
+    .lux-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-lux-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gateway-lux-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .consult-info-panel,
+    .consult-form-card {
+        padding: 40px 20px;
+    }
+
+    .faq-lux-btn {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .faq-lux-answer p {
+        padding: 0 20px 20px;
+    }
+}

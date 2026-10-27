@@ -1,0 +1,146 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: SECCIÓN DE PREGUNTAS FRECUENTES (FAQ ACCORDION)
+   ========================================================================== */
+
+.faq {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--color-bg-dark);
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid rgba(212, 164, 55, 0.1);
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-text-white);
+    transition: var(--transition-base);
+}
+
+.accordion-header:hover {
+    color: var(--color-primary);
+}
+
+.accordion-header .icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+    color: var(--color-primary);
+}
+
+.accordion-header.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-content p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   LUXURY ACCORDION / FAQ LUX (SUBPÁGINAS Y RESIDENCIAL)
+   ========================================================================== */
+.faq-lux-wrap {
+    max-width: 900px;
+    margin: 4.5rem auto 0;
+    display: grid;
+    gap: 16px;
+}
+
+.faq-lux-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.faq-lux-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-dark) !important;
+    transition: all 0.4s ease;
+}
+
+.faq-lux-btn span:last-child {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    transition: transform 0.4s ease;
+    line-height: 1;
+}
+
+.faq-lux-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-lux-answer p {
+    padding: 0 32px 28px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--color-text-muted) !important;
+    margin: 0;
+}
+
+.faq-lux-item.active {
+    border-color: var(--color-primary) !important;
+    background: #ffffff !important;
+    box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08) !important;
+}
+
+.faq-lux-item.active .faq-lux-btn {
+    color: var(--color-text-dark) !important;
+}
+
+.faq-lux-item.active .faq-lux-btn span:last-child {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 640px) {
+    .faq-lux-btn {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .faq-lux-answer p {
+        padding: 0 20px 20px;
+    }
+}

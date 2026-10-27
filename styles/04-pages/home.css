@@ -1,0 +1,63 @@
+/* ==========================================================================
+   DG AUDIOSOUND — PÁGINAS: ESTILOS Y ANIMACIONES ESPECÍFICAS DE HOME
+   ========================================================================== */
+
+/* Optimizaciones de Renderizado de Secciones */
+.solutions,
+.applications,
+.how-we-work,
+.why-us,
+.faq,
+.brands,
+.contact-bubbles-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+/* Accesibilidad y alto contraste sobre fondos claros */
+.section-premium-white .text-gradient-gold,
+.section-light .text-gradient-gold,
+.section-light-alt .text-gradient-gold,
+.contact-bubbles-section .text-gradient-gold {
+    background: linear-gradient(to right, #8a6d20, #b8860b, #8a6d20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero y contenido Above-the-fold siempre visible de inmediato (evita FOUC y bloqueos JS) */
+.hero-content,
+.hero-content.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Animaciones globales de revelado por scroll */
+.reveal {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fade-up {
+    transform: translateY(40px);
+}
+
+.fade-left {
+    transform: translateX(40px);
+}
+
+.fade-right {
+    transform: translateX(-40px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

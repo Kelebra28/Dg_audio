@@ -1,0 +1,470 @@
+/* ==========================================================================
+   DG AUDIOSOUND — PÁGINAS: RESIDENCIAL PREMIUM
+   Estilos específicos de la landing residencial-premium/index.html
+   ========================================================================== */
+
+/* 1. COMPONENTE ESTRELLA: INTERACTIVE SYSTEMS PARALLAX 3D CAROUSEL (SHOWCASE) */
+.showcase-lux {
+    padding: 0;
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.showcase-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.15);
+    transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 2.2s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(0.46) contrast(1.02) blur(2px);
+}
+
+.showcase-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(0.46) contrast(1.02) blur(0px);
+}
+
+.showcase-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.showcase-info-panel {
+    padding: 40px;
+    background: rgba(5, 5, 7, 0.45);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 2px solid var(--color-lux-gold);
+    border-radius: 0 12px 12px 0;
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.5);
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-slide.active ~ .showcase-container .showcase-info-panel,
+.showcase-info-panel.active {
+    transform: none;
+    opacity: 1;
+}
+
+.showcase-slide-title {
+    font-family: var(--font-lux-heading);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--color-lux-text-white);
+    line-height: 1.1;
+}
+
+.showcase-slide-title strong {
+    font-weight: 700;
+    color: var(--color-lux-gold);
+}
+
+.showcase-slide-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-lux-text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.showcase-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+    display: grid;
+    gap: 12px;
+}
+
+.showcase-specs li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.showcase-specs li i {
+    color: var(--color-lux-gold);
+    font-size: 0.85rem;
+}
+
+.showcase-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 40px;
+}
+
+.showcase-nav-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--font-lux-heading);
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    text-align: right;
+    transition: var(--transition-lux);
+    padding: 10px 0;
+    position: relative;
+}
+
+.showcase-nav-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-lux-gold);
+    transition: var(--transition-lux);
+}
+
+.showcase-nav-btn.active {
+    color: var(--color-lux-text-white);
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding-right: 20px;
+}
+
+.showcase-nav-btn.active::after {
+    width: 40px;
+}
+
+/* 2. GALERÍA DE INGENIERÍA: BLUEPRINT INTERACTIVO */
+.blueprint-section {
+    background-color: var(--color-lux-black);
+    padding: 140px 0;
+    position: relative;
+}
+
+.blueprint-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    margin-top: 4.5rem;
+    align-items: stretch;
+}
+
+.blueprint-viewer {
+    position: relative;
+    background: #09090c;
+    border: 1px solid var(--color-lux-border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    min-height: 500px;
+}
+
+.blueprint-viewer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.42;
+    pointer-events: none;
+}
+
+.blueprint-svg-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blueprint-svg {
+    width: 85%;
+    height: 85%;
+    stroke: var(--color-lux-gold);
+    stroke-width: 0.8;
+    stroke-dasharray: 2, 4;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(212, 164, 55, 0.4));
+}
+
+.blueprint-hotspot {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: var(--color-lux-gold);
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(212, 164, 55, 0.8);
+    animation: pulse-gold-spot 2s infinite;
+    display: grid;
+    place-items: center;
+    transition: var(--transition-lux);
+}
+
+.blueprint-hotspot::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--color-lux-text-white);
+    border-radius: 50%;
+}
+
+.blueprint-hotspot:hover {
+    transform: scale(1.3);
+    background: var(--color-lux-text-white);
+    box-shadow: 0 0 25px var(--color-lux-gold);
+}
+
+.blueprint-hotspot:hover::after {
+    background: var(--color-lux-gold);
+}
+
+@keyframes pulse-gold-spot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 164, 55, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(212, 164, 55, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 164, 55, 0);
+    }
+}
+
+.blueprint-hotspot-label {
+    position: absolute;
+    bottom: 35px;
+    white-space: nowrap;
+    background: rgba(5, 5, 7, 0.9);
+    border: 1px solid var(--color-lux-gold);
+    color: var(--color-lux-text-white);
+    font-family: var(--font-lux-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: var(--transition-lux);
+}
+
+.blueprint-hotspot:hover .blueprint-hotspot-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spot-cine { top: 35%; left: 30%; }
+.spot-audio { top: 55%; left: 65%; }
+.spot-jardin { top: 75%; left: 40%; }
+.spot-hifi { top: 25%; left: 75%; }
+
+.blueprint-panel {
+    background: var(--color-lux-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.blueprint-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-lux-gold);
+}
+
+.blueprint-panel-header {
+    font-family: var(--font-lux-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-lux-gold);
+    margin-bottom: 1.5rem;
+}
+
+.blueprint-panel-title {
+    font-family: var(--font-lux-heading);
+    font-size: 1.85rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.blueprint-panel-title strong {
+    font-weight: 700;
+}
+
+.blueprint-panel-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-lux-text-muted);
+    margin-bottom: 2rem;
+}
+
+.blueprint-tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+}
+
+.blueprint-tech-item strong {
+    display: block;
+    font-family: var(--font-lux-heading);
+    font-size: 0.8rem;
+    color: var(--color-lux-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.blueprint-tech-item span {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* 3. ADAPTACIONES PARA EL PROCESO BENTO */
+.process-bento-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 32px !important;
+    padding: 3.5rem 2.5rem !important;
+    transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.process-bento-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+    background-size: 250% 250%;
+    background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+}
+
+.process-bento-item:hover::before {
+    opacity: 1;
+}
+
+.process-bento-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.process-bento-item:hover::after {
+    opacity: 1;
+}
+
+.process-bento-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-lux-gold) !important;
+    box-shadow: 0 30px 60px rgba(212, 164, 55, 0.06) !important;
+    background: #ffffff !important;
+}
+
+.process-bento-item h3 {
+    font-family: var(--font-lux-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #121215 !important;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    z-index: 2;
+    position: relative;
+}
+
+.process-bento-item p {
+    font-size: 0.95rem;
+    color: #555560 !important;
+    line-height: 1.6;
+    z-index: 2;
+    position: relative;
+}
+
+.process-bento-item .bento-num {
+    background: #050505 !important;
+    color: #ffffff !important;
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 50px !important;
+    z-index: 2;
+    position: relative;
+}
+
+.process-bento-item .bento-header i {
+    font-size: 1.8rem;
+    color: var(--color-lux-gold);
+    z-index: 2;
+    position: relative;
+}
+
+/* 4. RESPONSIVIDAD ESPECÍFICA */
+@media (max-width: 1200px) {
+    .showcase-container {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+
+    .showcase-nav {
+        display: none;
+    }
+
+    .blueprint-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

@@ -1,0 +1,115 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: HEADER / NAVBAR FLOTANTE ADAPTATIVO
+   ========================================================================== */
+
+.navbar {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    height: 70px;
+    border-radius: 999px;
+    background: rgba(5, 5, 5, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, top 0.3s ease, height 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Modo claro — cuando el navbar flota sobre secciones blancas o claras */
+.navbar.nav-light {
+    background: rgba(255, 255, 255, 0.82);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+
+.navbar.scrolled {
+    top: 10px;
+    height: 62px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: var(--transition-base);
+}
+
+.navbar.scrolled .logo-img {
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+    .hamburger { 
+        display: flex; 
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 90px);
+        background: #0d0d0f;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.4s ease;
+    }
+
+    .nav-menu.active { 
+        left: 0; 
+    }
+
+    .nav-list { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 2.5rem;
+    }
+
+    .nav-list .nav-link {
+        color: var(--color-text-white);
+        font-size: 1.25rem;
+    }
+}

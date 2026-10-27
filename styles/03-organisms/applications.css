@@ -1,0 +1,149 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: SECCIÓN DE APLICACIONES POR INDUSTRIA
+   ========================================================================== */
+
+.applications {
+    padding: 8rem 0;
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+.app-bg-shape {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.shape-1 {
+    top: 5%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+}
+
+.shape-2 {
+    bottom: 5%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+}
+
+.applications .container {
+    position: relative;
+    z-index: 1;
+}
+
+.applications .section-header {
+    margin-bottom: 5rem;
+}
+
+.app-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.app-category-block {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 164, 55, 0.1);
+    border-radius: 32px;
+    padding: 3rem;
+    transition: all 0.4s ease;
+}
+
+.app-category-block:hover {
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.category-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.category-name i {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+
+.category-intro {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.app-sub-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.apps-footer {
+    text-align: center;
+    margin-top: 6rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.apps-footer-text {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 1200px) {
+    .app-sub-items { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 1024px) {
+    .app-categories-grid { 
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .applications { 
+        padding: 6rem 1.5rem; 
+    }
+    .app-categories-grid { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    .app-category-block { 
+        padding: 1.5rem; 
+    }
+    .app-sub-items { 
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
+    }
+    .category-name { 
+        font-size: 1.8rem; 
+        flex-wrap: wrap; 
+    }
+    .sub-item { 
+        height: 180px; 
+        padding: 2rem; 
+    }
+    .sub-item i { 
+        font-size: 2.2rem; 
+    }
+    .sub-item h4 { 
+        font-size: 1.1rem; 
+    }
+}

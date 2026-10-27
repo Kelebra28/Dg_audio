@@ -1,0 +1,48 @@
+/* ==========================================================================
+   DG AUDIOSOUND — MOLÉCULAS: ELEMENTOS Y ENLACES DE NAVEGACIÓN
+   ========================================================================== */
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: relative;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Modo claro: texto oscuro */
+.navbar.nav-light .nav-link {
+    color: #050505;
+}
+
+.navbar.nav-light .nav-link:hover,
+.navbar.nav-light .nav-link.active {
+    color: var(--color-primary);
+}
+
+.navbar.nav-light .nav-cta {
+    background-color: var(--color-primary);
+    color: #050505;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: var(--transition-base);
+}
+
+.nav-link:hover::after, 
+.nav-link.active::after {
+    width: 100%;
+}

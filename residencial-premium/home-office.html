@@ -23,1013 +23,18 @@
             rel="stylesheet" />
     </noscript>
     <!-- Font Awesome -->
-    <link as="style" href="/assets/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'"
+    <link as="style" href="../assets/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'"
         rel="preload" /><noscript>
-        <link href="/assets/font-awesome.min.css" rel="stylesheet" />
+        <link href="../assets/font-awesome.min.css" rel="stylesheet" />
     </noscript>
-    <!-- Estilos principales del proyecto -->
-    <link href="/style.min.css" rel="stylesheet" />
-    <!-- Estilos específicos y adaptaciones premium locales -->
-    <style>
-        /* ========================================
-           💎 1. HERO CORPORATIVO CON SLIDER Y ALTO CONTRASTE
-           ======================================== */
-        .corp-hero-v2 {
-            position: relative;
-            padding: 180px 0 120px;
-            background: #050505;
-            color: #ffffff;
-            text-align: center;
-            overflow: hidden;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.8s ease-in-out;
-            filter: brightness(0.65) blur(1.5px);
-            /* Blur de 2px para nitidez de alta gama */
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .corp-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(5, 5, 5, 0.2) 0%, rgba(5, 5, 5, 0.65) 100%);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .corp-hero-v2 .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .corp-hero-v2 .hero-kicker {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            background: rgba(212, 164, 55, 0.15);
-            border: 1px solid var(--color-primary);
-            color: var(--color-primary);
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            box-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
-        }
-
-        .corp-hero-v2 h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            color: #ffffff !important;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
-        }
-
-        .corp-hero-v2 .hero-subtitle {
-            font-size: 1.25rem;
-            color: #f5f5f7 !important;
-            max-width: 820px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.95;
-            line-height: 1.6;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-        }
-
-        .corp-hero-v2 .hero-badges {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 4.5rem 0 0;
-            flex-wrap: wrap;
-        }
-
-        .corp-hero-v2 .hero-badge-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.85rem;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 1.25rem 1.5rem;
-            border-radius: var(--radius-md);
-            min-width: 160px;
-            transition: var(--transition-base);
-            color: #f5f5f7;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .corp-hero-v2 .hero-badge-item i {
-            font-size: 1.6rem;
-            color: var(--color-primary);
-        }
-
-        .corp-hero-v2 .hero-badge-item:hover {
-            transform: translateY(-8px) scale(1.03);
-            border-color: var(--color-primary);
-            background: rgba(212, 164, 55, 0.12);
-            box-shadow: 0 10px 25px rgba(212, 164, 55, 0.2);
-            color: #ffffff;
-        }
-
-        .corp-hero-v2 .hero-badge-item:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .corp-hero-v2 .hero-badge-item:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .corp-hero-v2 .hero-badge-item:nth-child(3) {
-            animation-delay: 0.8s;
-        }
-
-        .corp-hero-v2 .hero-badge-item:nth-child(4) {
-            animation-delay: 1.2s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        /* Efecto Shimmer Dorado para Textos */
-        .text-accent {
-            background: linear-gradient(90deg, #d4a437, #fef08a, #d4a437);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: goldShimmer 3.5s linear infinite;
-            display: inline-block;
-            text-shadow: 0 0 15px rgba(212, 164, 55, 0.15);
-        }
-
-        @keyframes goldShimmer {
-            0% {
-                background-position: 0% center;
-            }
-
-            50% {
-                background-position: 100% center;
-            }
-
-            100% {
-                background-position: 0% center;
-            }
-        }
-
-        .btn-primary {
-            animation: pulseGlow 3s infinite;
-        }
-
-        @keyframes pulseGlow {
-
-            0%,
-            100% {
-                box-shadow: var(--shadow-sm);
-            }
-
-            50% {
-                box-shadow: 0 0 25px rgba(212, 164, 55, 0.55);
-            }
-        }
-
-        /* Breadcrumbs */
-        .breadcrumb-wrap {
-            background: var(--color-bg);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .breadcrumb {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            min-height: 48px;
-            font-size: 0.85rem;
-            color: var(--color-text-muted);
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-
-        .breadcrumb a {
-            color: var(--color-text-dark);
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            color: var(--color-primary);
-        }
-
-        /* ========================================
-           💎 2. DISPOSICIÓN EDITORIAL Y SECCIONES
-           ======================================== */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .benefits-corp-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-top: 3.5rem;
-        }
-
-        .include-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3.5rem;
-        }
-
-        .area-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 3.5rem;
-        }
-
-        /* ========================================
-           💎 3. TARJETAS 3D INTERACTIVAS Y CRISTALINAS
-           ======================================== */
-        .benefit-v2-card,
-        .include-card,
-        .brand-box,
-        .process-bento-item,
-        .antithesis-problem-card {
-            background: #ffffff !important;
-            border: 1px solid rgba(0, 0, 0, 0.06) !important;
-            border-radius: var(--radius-lg);
-            padding: 2.5rem 1.75rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
-            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transform-style: preserve-3d;
-            will-change: transform;
-        }
-
-        /* Reflejo Espejo Diagonal */
-        .benefit-v2-card::before,
-        .include-card::before,
-        .process-bento-item::before,
-        .antithesis-problem-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
-            background-size: 250% 250%;
-            background-position: var(--glow-x, 0%) var(--glow-y, 0%);
-            z-index: 3;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            border-radius: inherit;
-        }
-
-        .benefit-v2-card:hover::before,
-        .include-card:hover::before,
-        .process-bento-item:hover::before,
-        .antithesis-problem-card:hover::before {
-            opacity: 1;
-        }
-
-        /* Resplandor del Cursor */
-        .benefit-v2-card::after,
-        .include-card::after,
-        .process-bento-item::after,
-        .antithesis-problem-card::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.06) 0%, transparent 60%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            pointer-events: none;
-            z-index: 1;
-            border-radius: inherit;
-        }
-
-        .benefit-v2-card:hover::after,
-        .include-card:hover::after,
-        .process-bento-item:hover::after,
-        .antithesis-problem-card:hover::after {
-            opacity: 1;
-        }
-
-        .benefit-v2-card {
-            text-align: center;
-        }
-
-        .benefit-v2-card .icon,
-        .benefit-v2-card i {
-            width: 54px;
-            height: 54px;
-            display: inline-grid;
-            place-items: center;
-            border-radius: 50%;
-            background: rgba(212, 164, 55, 0.08);
-            color: var(--color-primary-hover);
-            font-size: 1.4rem;
-            margin: 0 auto 1.5rem;
-            transition: var(--transition-base);
-            position: relative;
-            z-index: 2;
-        }
-
-        .benefit-v2-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.75rem;
-            font-family: var(--font-heading);
-            font-weight: 700;
-            position: relative;
-            color: var(--color-text-dark);
-            z-index: 2;
-        }
-
-        .benefit-v2-card p {
-            font-size: 0.85rem;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-            position: relative;
-            z-index: 2;
-        }
-
-        .benefit-v2-card:hover,
-        .include-card:hover,
-        .process-bento-item:hover,
-        .antithesis-problem-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--color-primary) !important;
-            box-shadow: 0 20px 40px rgba(212, 164, 55, 0.06), 0 0 25px rgba(212, 164, 55, 0.03) !important;
-            background: #ffffff !important;
-        }
-
-        .benefit-v2-card:hover .icon,
-        .benefit-v2-card:hover i {
-            background-color: var(--color-primary);
-            color: var(--color-black);
-        }
-
-        /* Qué Incluye */
-        .include-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-            color: var(--color-text-dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 2;
-            position: relative;
-        }
-
-        .include-card p {
-            color: var(--color-text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            z-index: 2;
-            position: relative;
-        }
-
-        /* ========================================
-           💎 4. LA ANTÍTESIS: ASYMMETRICAL EDITORIAL GRID
-           ======================================== */
-        .antithesis-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .antithesis-visual-wrapper {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .antithesis-main-img {
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .antithesis-main-img:hover {
-            transform: scale(1.02);
-        }
-
-        .antithesis-problems {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .antithesis-problem-card {
-            padding: 2rem 1.5rem;
-            text-align: left;
-        }
-
-        .antithesis-problem-card i {
-            font-size: 1.5rem;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-            background: rgba(212, 164, 55, 0.08);
-            width: 48px;
-            height: 48px;
-            display: inline-grid;
-            place-items: center;
-            border-radius: 50%;
-            transition: var(--transition-base);
-            z-index: 2;
-        }
-
-        .antithesis-problem-card:hover i {
-            background-color: var(--color-primary);
-            color: var(--color-black);
-        }
-
-        .antithesis-problem-card h3 {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--color-text-dark);
-            z-index: 2;
-        }
-
-        .antithesis-problem-card p {
-            font-size: 0.85rem;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-            z-index: 2;
-        }
-
-        /* ========================================
-           💎 5. ESPACIOS QUE ADAPTAMOS Y BENTO
-           ======================================== */
-        .area-card {
-            min-height: 220px;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            position: relative;
-            color: #ffffff;
-            font-weight: 700;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-base);
-        }
-
-        .area-card img {
-            width: 100%;
-            height: 100%;
-            min-height: 220px;
-            object-fit: cover;
-            transition: transform 1s ease;
-        }
-
-        .area-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 40%, rgba(0, 0, 0, 0.8) 100%);
-            z-index: 1;
-        }
-
-        .area-card span {
-            position: absolute;
-            left: 1.5rem;
-            right: 1.5rem;
-            bottom: 1.5rem;
-            z-index: 2;
-            font-size: 1.1rem;
-            font-family: var(--font-heading);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-        }
-
-        .area-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .area-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-        }
-
-        /* Banner de Modernización */
-        .event-banner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            overflow: hidden;
-            border-radius: var(--radius-lg);
-            border: 1px solid rgba(212, 164, 55, 0.15);
-            box-shadow: var(--shadow-md);
-            background: #ffffff;
-            margin-top: 4rem;
-            transition: var(--transition-base);
-        }
-
-        .event-banner:hover {
-            border-color: var(--color-primary);
-            box-shadow: var(--shadow-lg), 0 0 20px rgba(212, 164, 55, 0.05);
-        }
-
-        .event-img {
-            min-height: 380px;
-        }
-
-        .event-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .event-content {
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .event-content p {
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--color-text-muted);
-        }
-
-        /* ========================================
-           💎 6. DIFERENCIADOR Y SECCIÓN SPLIT
-           ======================================== */
-        .split-dark {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            margin-top: 3.5rem;
-        }
-
-        .dark-panel {
-            background: #050505;
-            color: #ffffff;
-            padding: 3.5rem;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .dark-panel p {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.7;
-        }
-
-        .dark-panel h2 {
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-        }
-
-        .dark-panel:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08);
-        }
-
-        .gold-panel {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
-            color: var(--color-black);
-            padding: 3.5rem;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-            transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .gold-panel h2 {
-            color: var(--color-black);
-            margin-bottom: 1.5rem;
-        }
-
-        .gold-panel .eyebrow {
-            color: var(--color-black);
-            opacity: 0.8;
-        }
-
-        .gold-panel:hover {
-            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.25);
-        }
-
-        .check-list {
-            list-style: none;
-            display: grid;
-            gap: 0.8rem;
-        }
-
-        .check-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-
-        .check-list li::before {
-            content: "✓";
-            color: var(--color-primary-hover);
-            font-weight: 900;
-            font-size: 1.15rem;
-        }
-
-        .gold-panel .check-list li::before {
-            color: var(--color-black);
-        }
-
-        /* ========================================
-           💎 7. PROCESO DE TRABAJO (BENTO PROCESS)
-           ======================================== */
-        .process-bento-item {
-            background: #ffffff !important;
-            border: 1px solid rgba(0, 0, 0, 0.06) !important;
-            border-radius: 32px !important;
-            padding: 3.5rem 2.5rem !important;
-            transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease !important;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transform-style: preserve-3d;
-            will-change: transform;
-        }
-
-        .process-bento-item h3 {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--color-text-dark) !important;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            z-index: 2;
-            position: relative;
-        }
-
-        .process-bento-item p {
-            font-size: 0.95rem;
-            color: var(--color-text-muted) !important;
-            line-height: 1.6;
-            z-index: 2;
-            position: relative;
-        }
-
-        .process-bento-item .bento-num {
-            background: #050505 !important;
-            color: #ffffff !important;
-            font-size: 0.9rem !important;
-            font-weight: 800 !important;
-            padding: 0.4rem 0.8rem !important;
-            border-radius: 50px !important;
-            z-index: 2;
-            position: relative;
-        }
-
-        .process-bento-item .bento-header i {
-            font-size: 1.8rem;
-            color: var(--color-primary);
-            z-index: 2;
-            position: relative;
-        }
-
-        /* ========================================
-           💎 9. ACORDEÓN DE PREGUNTAS (FAQs)
-           ======================================== */
-        .faq-lux-wrap {
-            max-width: 900px;
-            margin: 4.5rem auto 0;
-            display: grid;
-            gap: 16px;
-        }
-
-        .faq-lux-item {
-            background: #ffffff !important;
-            border: 1px solid rgba(0, 0, 0, 0.06) !important;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
-        }
-
-        .faq-lux-btn {
-            width: 100%;
-            background: transparent;
-            border: none;
-            padding: 24px 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: left;
-            cursor: pointer;
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--color-text-dark) !important;
-            transition: all 0.4s ease;
-        }
-
-        .faq-lux-btn span:last-child {
-            font-size: 1.5rem;
-            color: var(--color-primary);
-            transition: transform 0.4s ease;
-        }
-
-        .faq-lux-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .faq-lux-answer p {
-            padding: 0 32px 28px;
-            font-size: 0.92rem;
-            line-height: 1.65;
-            color: var(--color-text-muted) !important;
-        }
-
-        .faq-lux-item.active {
-            border-color: var(--color-primary) !important;
-            background: #ffffff !important;
-            box-shadow: 0 15px 35px rgba(212, 164, 55, 0.08) !important;
-        }
-
-        .faq-lux-item.active .faq-lux-btn {
-            color: var(--color-text-dark) !important;
-        }
-
-        .faq-lux-item.active .faq-lux-btn span:last-child {
-            transform: rotate(45deg);
-        }
-
-        /* ========================================
-           💎 10. MEDIA QUERIES RESPONSIVAS
-           ======================================== */
-        @media (max-width: 1024px) {
-            .benefits-corp-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .include-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-
-            .area-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.25rem;
-            }
-
-            .two-col {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-                text-align: center;
-            }
-
-            .antithesis-grid {
-                grid-template-columns: 1fr;
-                gap: 3.5rem;
-                text-align: center;
-            }
-
-            .antithesis-problems {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .two-col .section-title {
-                display: inline-block;
-            }
-
-            .two-col img,
-            .two-col figure,
-            .antithesis-visual-wrapper img {
-                max-width: 650px;
-                margin: 0 auto;
-            }
-
-            .event-banner {
-                grid-template-columns: 1fr;
-            }
-
-            .event-img {
-                min-height: 280px;
-            }
-
-            .split-dark {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .benefits-corp-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .include-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .area-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .antithesis-problems {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .corp-hero-v2 .hero-badges {
-                gap: 1rem;
-            }
-
-            .corp-hero-v2 .hero-badge-item {
-                min-width: 140px;
-                padding: 1rem;
-            }
-
-            .event-content {
-                padding: 3rem 1.5rem;
-                text-align: center;
-            }
-        }
-
-        /* ========================================
-           💎 LUX GRID STYLE (Injected)
-           ======================================== */
-        .lux-dark-section {
-            background-color: #050505 !important;
-            color: #ffffff;
-            padding: 6rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .lux-dark-section h2 {
-            color: #ffffff !important;
-        }
-
-        .lux-dark-section p {
-            color: rgba(255, 255, 255, 0.7) !important;
-        }
-
-        .lux-dark-section .eyebrow {
-            color: var(--color-primary) !important;
-        }
-
-        .antithesis-problems.lux-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 4rem;
-        }
-
-        .antithesis-problem-card.lux-card {
-            background: #09090c !important;
-            border: 1px solid rgba(255, 255, 255, 0.03) !important;
-            border-radius: 12px !important;
-            padding: 40px !important;
-            transition: all 0.4s ease !important;
-            text-align: left !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-        }
-
-        .antithesis-problem-card.lux-card:hover {
-            border-color: var(--color-primary) !important;
-            transform: translateY(-8px) !important;
-            box-shadow: 0 15px 30px rgba(212, 164, 55, 0.15) !important;
-        }
-
-        .antithesis-problem-card.lux-card i {
-            font-size: 1.8rem !important;
-            color: var(--color-primary) !important;
-            background-color: transparent !important;
-            width: auto !important;
-            height: auto !important;
-            display: inline-block !important;
-            margin: 0 0 1.25rem 0 !important;
-        }
-
-        .antithesis-problem-card.lux-card:hover i {
-            background-color: transparent !important;
-            color: var(--color-primary) !important;
-            transform: scale(1.1);
-        }
-
-        .antithesis-problem-card.lux-card h3 {
-            color: #ffffff !important;
-            font-size: 1.25rem !important;
-            margin-bottom: 1rem !important;
-        }
-
-        .antithesis-problem-card.lux-card p {
-            color: rgba(255, 255, 255, 0.6) !important;
-            font-size: 0.95rem !important;
-            line-height: 1.6 !important;
-        }
-
-        .value-prop-lux {
-            background: linear-gradient(135deg, #0b0b0e 0%, #050507 100%) !important;
-            border: 1px solid rgba(212, 164, 55, 0.25) !important;
-            border-radius: 20px !important;
-            padding: 5rem 4rem !important;
-            text-align: center !important;
-            max-width: 900px !important;
-            margin: 0 auto 5rem !important;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6) !important;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .value-prop-lux::before {
-            content: "";
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            top: -200px;
-            right: -200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(212, 164, 55, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .value-prop-lux h2 {
-            color: #ffffff !important;
-            position: relative;
-            z-index: 2;
-        }
-
-        .value-prop-lux p {
-            color: rgba(255, 255, 255, 0.8) !important;
-            position: relative;
-            z-index: 2;
-        }
-
-        .value-prop-lux .eyebrow {
-            color: var(--color-primary) !important;
-            position: relative;
-            z-index: 2;
-        }
-
-        @media (max-width: 768px) {
-            .antithesis-problems.lux-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .value-prop-lux {
-                padding: 3rem 2rem !important;
-            }
-        }
-    </style>
+    <!-- Estilos principales del proyecto (Atomic Design) -->
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="icon" type="image/png" href="../assets/DG.png" />
+    <noscript>
+        <style>
+            .reveal, .reveal-lux { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
     <link href="https://www.dgaudiosound.com/residencial-premium/home-office" rel="canonical" />
     <meta content="Home Office Premium en CDMX | Audio y Video | DG Audiosound" property="og:title" />
     <meta
@@ -1039,14 +44,14 @@
     <meta content="website" property="og:type" />
     <meta content="es_MX" property="og:locale" />
     <meta content="DG Audiosound" property="og:site_name" />
-    <meta content="https://dgaudiosound.com/assets/Imagenes/dg-audiosound-og.jpg" property="og:image" />
+    <meta content="https://www.dgaudiosound.com/assets/Imagenes/aplicaciones/home-office/home-office-premium-dg-audiosound-og.webp" property="og:image" />
     <meta content="Home office premium con audio y video profesional | DG Audiosound" property="og:image:alt" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="Home Office Premium en CDMX | Audio y Video | DG Audiosound" name="twitter:title" />
     <meta
         content="Diseñamos e instalamos home office premium en CDMX y Estado de México con audio, video, cámaras, micrófonos, iluminación, pantallas y conectividad."
         name="twitter:description" />
-    <meta content="https://dgaudiosound.com/assets/Imagenes/dg-audiosound-og.jpg" name="twitter:image" />
+    <meta content="https://www.dgaudiosound.com/assets/Imagenes/aplicaciones/home-office/home-office-premium-dg-audiosound-og.webp" name="twitter:image" />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1200,7 +205,6 @@
   ]
 }
 </script>
-    <link rel="icon" type="image/png" href="/assets/DG.png" />
 </head>
 
 <body>
@@ -1208,18 +212,18 @@
     <header class="navbar" id="navbar">
         <div class="container nav-container">
             <a class="logo" href="/index">
-                <img alt="DG AUDIOSOUND Logo" class="logo-img" height="105" src="/assets/dg_logo.webp"
-                    srcset="../../assets/dg_logo.webp 1x, ../../assets/dg_logo@2x.webp 2x" width="105" />
+                <img alt="DG AUDIOSOUND Logo" class="logo-img" height="105" src="../assets/dg_logo.webp"
+                    srcset="../assets/dg_logo.webp 1x, ../assets/dg_logo@2x.webp 2x" width="105" />
             </a>
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="/index#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="/index#soluciones">Soluciones</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/index#aplicaciones">Aplicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/residencial-premium">Residencial</a></li>
                     <li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.dgaudiosound.com/tienda">Tienda</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.dgaudiosound.com/blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
                 <a class="btn btn-primary nav-cta"
                     href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20mi%20Home%20Office."
@@ -1234,22 +238,22 @@
             </div>
         </div>
     </header>
-    <!-- BREADCRUMBS -->
+
     <main>
         <!-- HERO CORPORATIVO CON SLIDER DINÁMICO -->
         <section class="corp-hero-v2" id="inicio">
             <div class="hero-slider">
                 <div class="slide active"
-                    style="background-image: url('/assets/Imagenes/aplicaciones/home-office/sala-juntas-residencial-dg-audiosound.webp');">
+                    style="background-image: url('../assets/Imagenes/aplicaciones/home-office/sala-juntas-residencial-dg-audiosound.webp');">
                 </div>
                 <div class="slide"
-                    style="background-image: url('/assets/Imagenes/aplicaciones/home-office/home-office-premium-dg-audiosound-hero.webp');">
+                    style="background-image: url('../assets/Imagenes/aplicaciones/home-office/home-office-premium-dg-audiosound-hero.webp');">
                 </div>
                 <div class="slide"
-                    style="background-image: url('/assets/Imagenes/aplicaciones/home-office/oficina-privada-casa-dg-audiosound.webp');">
+                    style="background-image: url('../assets/Imagenes/aplicaciones/home-office/oficina-privada-casa-dg-audiosound.webp');">
                 </div>
                 <div class="slide"
-                    style="background-image: url('/assets/Imagenes/aplicaciones/home-office/estudio-home-office-dg-audiosound.webp');">
+                    style="background-image: url('../assets/Imagenes/aplicaciones/home-office/estudio-home-office-dg-audiosound.webp');">
                 </div>
             </div>
             <div class="corp-hero-overlay"></div>
@@ -1275,21 +279,22 @@
                             <span>Audio para videoconferencias</span>
                         </div>
                         <div class="hero-badge-item">
-                            <i class="fa-solid fa-volume-high"></i>
+                            <i class="fa-solid fa-camera"></i>
                             <span>Cámara e iluminación</span>
                         </div>
                         <div class="hero-badge-item">
-                            <i class="fa-solid fa-volume-high"></i>
+                            <i class="fa-solid fa-microphone"></i>
                             <span>Micrófonos y audio claro</span>
                         </div>
                         <div class="hero-badge-item">
-                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid fa-desktop"></i>
                             <span>Pantallas y conectividad</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- COMUNICACIÓN CORPORATIVA (Sección 1) -->
         <section class="section section-light">
             <div class="container two-col">
@@ -1307,7 +312,7 @@
                     <figure class="image-card"
                         style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); margin-top: 10px;">
                         <img alt="Home office premium con cámara, micrófono, iluminación y pantalla integrado por DG Audiosound"
-                            src="/assets/Imagenes/aplicaciones/home-office/oficina-privada-casa-dg-audiosound.webp" />
+                            src="../assets/Imagenes/aplicaciones/home-office/oficina-privada-casa-dg-audiosound.webp" />
                     </figure>
                 </div>
             </div>
@@ -1319,7 +324,7 @@
                     <p>Audio, encuadre e iluminación pensados para reuniones, presentaciones y llamadas.</p>
                 </div>
                 <div class="benefit-v2-card reveal fade-up">
-                    <div class="icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="icon"><i class="fa-solid fa-clock"></i></div>
                     <h3>Menos fricción</h3>
                     <p>Conexiones y cableado definidos para reducir adaptadores, desconexiones y ajustes repetitivos.
                     </p>
@@ -1330,148 +335,126 @@
                     <p>Pantalla, cámara y posición de trabajo organizadas para sesiones largas y uso cotidiano.</p>
                 </div>
                 <div class="benefit-v2-card reveal fade-up">
-                    <div class="icon"><i class="fa-solid fa-clock"></i></div>
-                    <h3>Operación sencilla</h3>
-                    <p>Configuración práctica para entrar a una llamada, compartir contenido y ajustar audio o video.
-                    </p>
+                    <div class="icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>Integración estética</h3>
+                    <p>Cables ordenados, soportes adecuados y un espacio visualmente profesional.</p>
                 </div>
             </div>
         </section>
+
         <!-- EL PROBLEMA (Sección 2) -->
         <section class="lux-dark-section" id="problema">
             <div class="container">
                 <div class="reveal fade-right" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <span class="eyebrow">Problemas frecuentes</span>
-                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Los problemas de un home office suelen
-                        aparecer en audio, imagen, iluminación y conexión.</h2>
-                    <p style="margin-bottom: 1.5rem;">La cámara integrada de una laptop, un micrófono demasiado lejos,
-                        una ventana detrás del usuario o una conexión basada en varios adaptadores pueden funcionar para
-                        una llamada ocasional, pero no siempre ofrecen resultados consistentes para trabajo diario.</p>
-                    <p style="margin-bottom: 1.5rem;">Antes de recomendar equipo revisamos qué está causando el
-                        problema: distancia y patrón del micrófono, ruido o reverberación, contraluz, encuadre,
-                        resolución, conectividad, posición de pantallas y compatibilidad con la computadora y las
-                        plataformas utilizadas.</p>
+                    <span class="eyebrow">La Filosofía</span>
+                    <h2 class="section-title" style="margin-bottom: 1.5rem;">La mayoría de los problemas en reuniones
+                        virtuales no son de conexión, sino de diseño del espacio.</h2>
+                    <p style="margin-bottom: 1.5rem;">Cámaras mal ubicadas, mala iluminación, audio con eco, cables
+                        sueltos y adaptadores improvisados distraen, cansan y afectan la imagen profesional. Trabajar
+                        todos los días así genera fatiga y fricción.</p>
+                    <p style="margin-bottom: 1.5rem;">En un home office premium, cada elemento se piensa para que la
+                        comunicación fluya con naturalidad. La meta es resolver audio, video, iluminación y
+                        conectividad como un sistema integral.</p>
                     <div class="antithesis-problems lux-grid">
                         <div class="antithesis-problem-card lux-card">
                             <i class="fa-solid fa-volume-xmark"></i>
-                            <h3>Audio poco claro</h3>
-                            <p>Distancia, reverberación, ruido de fondo o una selección incorrecta de micrófono reducen
-                                inteligibilidad.</p>
+                            <h3>Voz lejana o con eco</h3>
+                            <p>El micrófono de la computadora capta ruido de fondo, eco de la habitación y suena distante.</p>
                         </div>
                         <div class="antithesis-problem-card lux-card">
                             <i class="fa-solid fa-display"></i>
-                            <h3>Imagen débil</h3>
-                            <p>Resolución, encuadre, altura de cámara y enfoque deben corresponder a la distancia real
-                                de trabajo.</p>
+                            <h3>Mala iluminación</h3>
+                            <p>Sombras, contraluz de ventanas o iluminación cenital que fatiga la vista y desmejora el video.</p>
                         </div>
                         <div class="antithesis-problem-card lux-card">
                             <i class="fa-solid fa-lightbulb"></i>
-                            <h3>Iluminación deficiente</h3>
-                            <p>Contraluz, sombras o temperaturas de color mezcladas pueden producir una imagen
-                                inconsistente.</p>
+                            <h3>Encuadre incómodo</h3>
+                            <p>La cámara de la laptop apunta desde abajo, creando un ángulo poco natural en llamadas.</p>
                         </div>
                         <div class="antithesis-problem-card lux-card">
                             <i class="fa-solid fa-triangle-exclamation"></i>
-                            <h3>Cables y conexión</h3>
-                            <p>Adaptadores, puertos, alimentación y rutas de cable deben resolverse para que el sistema
-                                sea repetible.</p>
+                            <h3>Desorden de cables</h3>
+                            <p>Múltiples cables, cargadores y hubs sobre el escritorio reducen el enfoque y la estética.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- SOLUCIONES Y QUÉ HACEMOS (Sección 3) -->
         <section class="section section-white">
             <div class="container value-prop-lux">
                 <span class="eyebrow reveal fade-up">Qué hacemos</span>
-                <h2 class="section-title reveal fade-up">Integramos audio, video, iluminación y conectividad según tu
-                    espacio y forma de trabajar.</h2>
-                <p class="section-subtitle reveal fade-up">Revisamos medidas, computadora, plataformas, pantallas,
-                    iluminación, ruido, tipo de reuniones y equipo existente antes de definir cámara, microfonía,
-                    monitoreo, conexiones y control.</p>
+                <h2 class="section-title reveal fade-up">Diseñamos tu oficina en casa como un entorno profesional de alta
+                    comunicación.</h2>
+                <p class="section-subtitle reveal fade-up">Evaluamos tu posición de trabajo, iluminación, acústica del
+                    cuarto y plataformas para seleccionar cámara, micrófono, monitores, audio y conectividad ideales.</p>
             </div>
             <div class="container benefits-corp-grid">
                 <div class="benefit-v2-card reveal fade-up">
-                    <div class="icon"><i class="fa-solid fa-award"></i></div>
-                    <h3>Audio y microfonía</h3>
-                    <p>Seleccionamos micrófono, monitoreo y conexiones según distancia, ruido, reverberación y dinámica
-                        de las reuniones.</p>
+                    <div class="icon"><i class="fa-solid fa-microphone"></i></div>
+                    <h3>Audio profesional</h3>
+                    <p>Micrófonos dedicados y monitoreo para que tu voz se escuche clara, cálida y sin eco.</p>
                 </div>
                 <div class="benefit-v2-card reveal fade-up">
-                    <div class="icon"><i class="fa-solid fa-award"></i></div>
-                    <h3>Cámara y pantalla</h3>
-                    <p>Definimos cámara, monitor o pantalla, soporte, altura y encuadre según la posición real de
-                        trabajo.</p>
+                    <div class="icon"><i class="fa-solid fa-camera"></i></div>
+                    <h3>Cámaras y óptica</h3>
+                    <p>Cámaras 4K o PTZ con enfoque preciso y ángulo a la altura de los ojos.</p>
                 </div>
                 <div class="benefit-v2-card reveal fade-up">
-                    <div class="icon"><i class="fa-solid fa-award"></i></div>
-                    <h3>Iluminación</h3>
-                    <p>Planeamos luz frontal, lateral o ambiental considerando ventanas, reflejos, rostro y uso del
-                        espacio.</p>
+                    <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Iluminación difusa</h3>
+                    <p>Luces de temperatura regulable orientadas para eliminar sombras y cuidar tu vista.</p>
                 </div>
                 <div class="benefit-v2-card reveal fade-up">
-                    <div class="icon"><i class="fa-solid fa-clock"></i></div>
-                    <h3>Acústica del espacio</h3>
-                    <p>Evaluamos eco, reverberación y ruido para recomendar ajustes que favorezcan la inteligibilidad.
-                    </p>
+                    <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h3>Conectividad limpia</h3>
+                    <p>Un solo cable a tu laptop con docks de alto rendimiento y gestión oculta de cableado.</p>
                 </div>
             </div>
         </section>
+
         <!-- QUÉ INCLUYE LA SOLUCIÓN (Sección 4) -->
         <section class="section section-light-alt" id="incluye">
             <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
                 <span class="eyebrow reveal fade-up">Qué incluye la solución</span>
-                <h2 class="section-title reveal fade-up">Una solución integrada para videoconferencias, trabajo remoto y
-                    reuniones desde casa.</h2>
-                <p class="section-subtitle reveal fade-up">El alcance se define según el tamaño del cuarto, posición del
-                    escritorio, frecuencia de uso, plataformas de videoconferencia, equipo actual, nivel de privacidad,
-                    estética y presupuesto.</p>
+                <h2 class="section-title reveal fade-up">Una oficina en casa lista para conectarte y rendir al máximo.</h2>
+                <p class="section-subtitle reveal fade-up">Equipamiento calibrado, estética sobria y operación inmediata
+                    para reuniones ejecutivas, consultorías o trabajo directivo.</p>
             </div>
             <div class="container include-grid">
                 <div class="include-card reveal fade-up">
-                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-clipboard-list"></i>
-                        Videoconferencia profesional</h3>
-                    <p>Integración de cámara, micrófono, monitoreo, pantalla y conexiones para un flujo de reunión
-                        sencillo y repetible.</p>
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-video"></i> Cámara y encuadre</h3>
+                    <p>Selección y montaje de cámara con encuadre natural y balance de color para videoconferencias.</p>
                 </div>
                 <div class="include-card reveal fade-up">
-                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-microphone-lines"></i>
-                        Micrófonos y audio claro</h3>
-                    <p>Selección y ubicación de micrófono para obtener voz clara considerando distancia, ruido y
-                        características del cuarto.</p>
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-microphone-lines"></i> Micrófono y captura</h3>
+                    <p>Microfonía direccional que aísla el teclado y ruidos del hogar para transmitir solo tu voz.</p>
                 </div>
                 <div class="include-card reveal fade-up">
-                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-display"></i> Cámara e
-                        iluminación</h3>
-                    <p>Encuadre e iluminación definidos según la posición del usuario, las ventanas y las condiciones de
-                        luz del espacio.</p>
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-sun"></i> Iluminación de estudio</h3>
+                    <p>Luminarias LED difusas regulables en tono e intensidad para proyectar una imagen profesional.</p>
                 </div>
                 <div class="include-card reveal fade-up">
-                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-video"></i> Pantallas y
-                        monitores</h3>
-                    <p>Pantallas, monitores y soportes según distancia de visualización, ergonomía y necesidad de
-                        compartir contenido.</p>
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-desktop"></i> Pantallas y monitores</h3>
+                    <p>Soportes ergonómicos de monitores para postura correcta y máxima productividad visual.</p>
                 </div>
                 <div class="include-card reveal fade-up">
-                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-couch"></i> Acústica del
-                        espacio</h3>
-                    <p>Evaluación de eco, reverberación y ruido para recomendar ajustes que ayuden a mejorar la
-                        inteligibilidad en llamadas.</p>
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-network-wired"></i> Conectividad y docks</h3>
+                    <p>Puertos organizados y conexión de red estable para cero interrupciones en videollamadas.</p>
                 </div>
                 <div class="include-card reveal fade-up">
-                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-screwdriver-wrench"></i>
-                        Conectividad y cableado</h3>
-                    <p>Planeamos rutas, soportes, alimentación y conexiones para mantener una instalación ordenada y
-                        fácil de operar.</p>
+                    <h3 style="color: var(--color-primary-hover);"><i class="fa-solid fa-wrench"></i> Instalación y calibración</h3>
+                    <p>Montaje seguro, ocultamiento de cables y pruebas con tus aplicaciones de cabecera.</p>
                 </div>
             </div>
         </section>
+
         <!-- ESPACIOS QUE ADAPTAMOS (Sección 5) -->
         <section class="section section-white">
             <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 3.5rem;">
                 <span class="eyebrow reveal fade-up">Espacios que adaptamos</span>
-                <h2 class="section-title reveal fade-up">Home office para oficinas privadas, estudios y espacios
-                    ejecutivos en casa.</h2>
+                <h2 class="section-title reveal fade-up">Soluciones que se integran con elegancia en cualquier rincón del hogar.</h2>
                 <p class="section-subtitle reveal fade-up">La integración puede adaptarse a una oficina dedicada,
                     estudio, recámara convertida, biblioteca, consultorio remoto, sala ejecutiva o espacio para creación
                     de contenido.</p>
@@ -1480,46 +463,46 @@
                 <!-- Card 1 -->
                 <div class="area-card reveal fade-up">
                     <img alt="Oficina privada en casa con audio y video profesional DG Audiosound"
-                        src="/assets/Imagenes/aplicaciones/home-office/oficina-privada-casa-dg-audiosound.webp" />
+                        src="../assets/Imagenes/aplicaciones/home-office/oficina-privada-casa-dg-audiosound.webp" />
                     <span>Oficina privada</span>
                 </div>
                 <!-- Card 2 -->
                 <div class="area-card reveal fade-up" style="transition-delay: 50ms;">
                     <img alt="Estudio de home office con cámara micrófono e iluminación DG Audiosound"
-                        src="/assets/Imagenes/aplicaciones/home-office/estudio-home-office-dg-audiosound.webp" />
+                        src="../assets/Imagenes/aplicaciones/home-office/estudio-home-office-dg-audiosound.webp" />
                     <span>Estudio en casa</span>
                 </div>
                 <!-- Card 3 -->
                 <div class="area-card reveal fade-up" style="transition-delay: 100ms;">
                     <img alt="Sala de juntas residencial con videoconferencia premium DG Audiosound"
-                        src="/assets/Imagenes/aplicaciones/home-office/sala-juntas-residencial-dg-audiosound.webp" />
+                        src="../assets/Imagenes/aplicaciones/home-office/sala-juntas-residencial-dg-audiosound.webp" />
                     <span>Sala de juntas residencial</span>
                 </div>
                 <!-- Card 4 -->
                 <div class="area-card reveal fade-up" style="transition-delay: 150ms;">
                     <img alt="Consultorio online desde casa con audio y video profesional DG Audiosound"
-                        src="/assets/Imagenes/aplicaciones/home-office/consultorio-online-home-office-dg-audiosound.webp" />
+                        src="../assets/Imagenes/aplicaciones/home-office/consultorio-online-home-office-dg-audiosound.webp" />
                     <span>Consultorio online</span>
                 </div>
                 <!-- Card 5 -->
                 <div class="area-card reveal fade-up" style="transition-delay: 200ms;">
                     <img alt="Home office para creadores podcast y contenido profesional DG Audiosound"
-                        src="/assets/Imagenes/aplicaciones/home-office/home-office-creadores-podcast-dg-audiosound.webp" />
+                        src="../assets/Imagenes/aplicaciones/home-office/home-office-creadores-podcast-dg-audiosound.webp" />
                     <span>Creadores y podcast</span>
                 </div>
                 <!-- Card 6 -->
                 <div class="area-card reveal fade-up" style="transition-delay: 250ms;">
                     <img alt="Espacio ejecutivo de home office premium con audio video e iluminación DG Audiosound"
-                        src="/assets/Imagenes/aplicaciones/home-office/espacio-ejecutivo-home-office-dg-audiosound.webp" />
+                        src="../assets/Imagenes/aplicaciones/home-office/espacio-ejecutivo-home-office-dg-audiosound.webp" />
                     <span>Espacio ejecutivo</span>
                 </div>
             </div>
-            <!-- Modernización de auditorios existentes (BENTO / BANNER) -->
+            <!-- Especial videoconferencias (BENTO / BANNER) -->
             <div class="container">
                 <div class="event-banner reveal fade-up">
                     <div class="event-img">
                         <img alt="Videollamadas profesionales desde home office con cámara micrófono iluminación y pantalla DG Audiosound"
-                            src="/assets/Imagenes/aplicaciones/home-office/home-office-videollamadas-profesionales-dg-audiosound.webp" />
+                            src="../assets/Imagenes/aplicaciones/home-office/home-office-videollamadas-profesionales-dg-audiosound.webp" />
                     </div>
                     <div class="event-content">
                         <span class="eyebrow" style="color: var(--color-primary-hover);">Especial
@@ -1536,6 +519,7 @@
                 </div>
             </div>
         </section>
+
         <!-- PROCESO DE TRABAJO (Sección 6) -->
         <section class="section section-light-alt how-we-work" id="proceso">
             <div class="container">
@@ -1544,8 +528,8 @@
                     <span class="eyebrow">Proceso</span>
                     <h2 class="section-title">Cómo trabajamos tu proyecto de <span class="text-gradient-gold">audio y
                             video</span></h2>
-                    <p class="section-subtitle">Partimos del espacio, el equipo existente y tu forma de trabajar antes
-                        de seleccionar tecnología.</p>
+                    <p class="section-subtitle">Un proceso claro para pasar de las necesidades del espacio a una
+                        solución dimensionada, instalada y configurada.</p>
                 </div>
                 <div class="process-bento-grid reveal fade-up">
                     <!-- Step 1 -->
@@ -1555,7 +539,7 @@
                             <i class="fa-solid fa-headset"></i>
                         </div>
                         <h3>Nos contactas</h3>
-                        <p>Nos escribes por WhatsApp y nos compartes qué necesitas mejorar.</p>
+                        <p>Nos escribes por WhatsApp y nos cuentas qué espacio quieres equipar y tus dinámicas de trabajo.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="process-bento-item">
@@ -1563,9 +547,8 @@
                             <span class="bento-num">02</span>
                             <i class="fa-solid fa-magnifying-glass-chart"></i>
                         </div>
-                        <h3>Revisamos tu espacio</h3>
-                        <p>Analizamos fotos, medidas, posición del escritorio, iluminación, ruido, equipo actual y tipo
-                            de reuniones.</p>
+                        <h3>Revisamos el área</h3>
+                        <p>Analizamos posición de escritorio, iluminación natural, ruido de fondo y equipo existente.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="process-bento-item">
@@ -1574,8 +557,7 @@
                             <i class="fa-solid fa-pen-ruler"></i>
                         </div>
                         <h3>Definimos solución</h3>
-                        <p>Definimos cámara, microfonía, pantalla, iluminación, conexiones y ajustes acústicos del
-                            espacio.</p>
+                        <p>Diseñamos el paquete ideal de cámara, micrófono, luces, audio y gestión de cables.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="process-bento-item">
@@ -1584,7 +566,7 @@
                             <i class="fa-solid fa-file-contract"></i>
                         </div>
                         <h3>Propuesta clara</h3>
-                        <p>Te entregamos alcance, equipos, tiempos e inversión.</p>
+                        <p>Te entregamos el desglose de equipos, compatibilidad, tiempos de entrega e inversión.</p>
                     </div>
                     <!-- Step 5 -->
                     <div class="process-bento-item">
@@ -1593,7 +575,7 @@
                             <i class="fa-solid fa-screwdriver-wrench"></i>
                         </div>
                         <h3>Instalamos</h3>
-                        <p>Montaje, conexión, pruebas, ajustes y puesta en marcha.</p>
+                        <p>Montamos soportes, organizamos cableado y calibramos audio y cámara en tu computadora.</p>
                     </div>
                     <!-- Step 6 -->
                     <div class="process-bento-item">
@@ -1601,13 +583,12 @@
                             <span class="bento-num">06</span>
                             <i class="fa-solid fa-user-check"></i>
                         </div>
-                        <h3>Te capacitamos</h3>
-                        <p>Explicamos el uso básico para una operación sencilla.</p>
+                        <h3>Prueba guiada</h3>
+                        <p>Hacemos una llamada de prueba juntos para verificar que todo opere con máxima claridad.</p>
                     </div>
                 </div>
                 <div class="process-footer-clean reveal fade-up" style="text-align: center; margin-top: 5rem;">
-                    <p class="process-quote-simple">"Un buen proyecto audiovisual empieza entendiendo el espacio, el uso
-                        y la experiencia que quieres lograr."</p>
+                    <p class="process-quote-simple">"Una oficina en casa profesional debe operar sin complicaciones: sentarte, conectarte y hablar."</p>
                     <div class="process-cta">
                         <a class="btn btn-whatsapp-large"
                             href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20mi%20Home%20Office."
@@ -1620,17 +601,19 @@
                 </div>
             </div>
         </section>
+
         <!-- DIFERENCIADOR Y MARCAS (Sección 7) -->
         <section class="section section-white">
             <div class="container split-dark">
                 <div class="dark-panel reveal fade-right">
                     <span class="eyebrow" style="color: var(--color-primary);">Diferenciador</span>
-                    <h2>No empezamos por una lista de gadgets: diseñamos el sistema alrededor de tu trabajo.</h2>
-                    <p style="margin-bottom: 1.5rem;">Cámara, micrófono, iluminación, pantalla, computadora,
-                        conectividad y condiciones acústicas deben funcionar como un conjunto. Una mejora aislada no
-                        siempre resuelve el problema principal.</p>
-                    <p>En DG Audiosound revisamos compatibilidad, ubicación, conexiones y operación antes de recomendar
-                        equipos, buscando una solución limpia, funcional y preparada para el uso cotidiano.</p>
+                    <h2>Tecnología seleccionada para el trabajo real: sin trucos, sin fallas.</h2>
+                    <p style="margin-bottom: 1.5rem;">Un buen home office no necesita cámaras complicadas de cine ni
+                        micrófonos que estorben en tu escritorio. Lo que requiere es compatibilidad 100% nativa con tu
+                        computadora y plataformas (Teams, Zoom, Meet), niveles de ganancia bien calibrados y una luz que
+                        no canse tus ojos tras horas de llamadas.</p>
+                    <p>En DG Audiosound integramos componentes profesionales seleccionados específicamente para funcionar
+                        de manera estable día tras día, manteniendo una estética limpia y ordenada en tu hogar.</p>
                 </div>
                 <div class="gold-panel reveal fade-left">
                     <span class="eyebrow">Confianza</span>
@@ -1641,62 +624,59 @@
                         <li>Equipos originales</li>
                         <li>Instalación profesional</li>
                         <li>Integración estética</li>
-                        <li>Capacitación básica de uso</li>
+                        <li>Calibración de audio y luz</li>
                         <li>Acompañamiento técnico</li>
                     </ul>
                 </div>
             </div>
-            <!-- Marquesina de marcas recomendadas (Text elements ticker exact matching index) -->
+            <!-- Marquesina de marcas recomendadas -->
             <div id="marcas" class="container"
                 style="text-align: center; max-width: 800px; margin-top: 5rem; margin-bottom: 2rem;">
                 <span class="eyebrow reveal fade-up">Marcas y tecnología</span>
                 <h2>Marcas profesionales para soluciones de <span class="text-gradient-gold">alto rendimiento</span>
                 </h2>
-                <p class="section-subtitle reveal fade-up">Seleccionamos tecnología profesional según compatibilidad,
-                    función, disponibilidad y requerimientos reales de cada proyecto.</p>
+                <p class="section-subtitle reveal fade-up">Seleccionamos marcas líderes en captura de voz, óptica,
+                    procesamiento acústico y monitoreo profesional.</p>
             </div>
             <div class="brands-ticker-wrapper reveal fade-up">
                 <div class="brands-ticker">
+                    <div class="ticker-item">SHURE</div>
                     <div class="ticker-item">SONOS</div>
                     <div class="ticker-item">KEF</div>
                     <div class="ticker-item">NAD</div>
-                    <div class="ticker-item">RUARK</div>
-                    <div class="ticker-item">PRO-JECT</div>
-                    <div class="ticker-item">ONKYO</div>
-                    <div class="ticker-item">SHURE</div>
-                    <div class="ticker-item">NEXO</div>
-                    <div class="ticker-item">QSC</div>
-                    <div class="ticker-item">BARCO</div>
                     <div class="ticker-item">KRAMER</div>
                     <div class="ticker-item">BIAMP</div>
                     <div class="ticker-item">ALLEN &amp; HEATH</div>
                     <div class="ticker-item">OPTOMA</div>
                     <div class="ticker-item">SHARP</div>
+                    <div class="ticker-item">BARCO</div>
+                    <div class="ticker-item">QSC</div>
+                    <div class="ticker-item">RUARK</div>
+                    <div class="ticker-item">PRO-JECT</div>
+                    <div class="ticker-item">SHURE</div>
                     <div class="ticker-item">SONOS</div>
                     <div class="ticker-item">KEF</div>
                     <div class="ticker-item">NAD</div>
-                    <div class="ticker-item">RUARK</div>
-                    <div class="ticker-item">PRO-JECT</div>
-                    <div class="ticker-item">ONKYO</div>
-                    <div class="ticker-item">SHURE</div>
-                    <div class="ticker-item">NEXO</div>
-                    <div class="ticker-item">QSC</div>
-                    <div class="ticker-item">BARCO</div>
                     <div class="ticker-item">KRAMER</div>
                     <div class="ticker-item">BIAMP</div>
                     <div class="ticker-item">ALLEN &amp; HEATH</div>
                     <div class="ticker-item">OPTOMA</div>
                     <div class="ticker-item">SHARP</div>
+                    <div class="ticker-item">BARCO</div>
+                    <div class="ticker-item">QSC</div>
+                    <div class="ticker-item">RUARK</div>
+                    <div class="ticker-item">PRO-JECT</div>
                 </div>
             </div>
         </section>
+
         <!-- PREGUNTAS FRECUENTES (Sección 8) -->
         <section class="section section-light" id="faq">
             <div class="container" style="text-align: center; max-width: 800px; margin-bottom: 2rem;">
                 <span class="eyebrow reveal fade-up">FAQ</span>
                 <h2>Preguntas frecuentes sobre home office premium</h2>
-                <p class="section-subtitle reveal fade-up">Respuestas directas sobre audio, cámara, iluminación,
-                    plataformas, acústica del espacio y datos necesarios para diseñar una oficina en casa.</p>
+                <p class="section-subtitle reveal fade-up">Respuestas directas sobre audio, cámaras, iluminación y
+                    configuración para videoconferencias.</p>
             </div>
             <div class="faq-lux-wrap reveal fade-up">
                 <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Qué incluye
@@ -1707,29 +687,28 @@
                             del espacio, la computadora, las plataformas utilizadas y el tipo de reuniones.</p>
                     </div>
                 </div>
-                <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Cómo mejorar
-                            el audio de una videoconferencia desde casa?</span><span>+</span></button>
+                <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Cómo mejorar el
+                            audio de una videoconferencia desde casa?</span><span>+</span></button>
                     <div class="faq-lux-answer">
                         <p>Conviene revisar el micrófono, su distancia y orientación, el nivel de ruido del cuarto y la
                             reverberación. Un micrófono apropiado y una correcta configuración ayudan a que la voz se
                             escuche cercana, clara y consistente.</p>
                     </div>
                 </div>
-                <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Cómo mejorar
-                            la imagen en reuniones virtuales?</span><span>+</span></button>
+                <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Cómo mejorar la
+                            imagen en reuniones virtuales?</span><span>+</span></button>
                     <div class="faq-lux-answer">
                         <p>La imagen mejora al combinar una cámara adecuada con un encuadre correcto, altura apropiada,
                             iluminación frontal o lateral y un fondo ordenado. La solución debe adaptarse a la posición
                             de trabajo y a las condiciones reales de luz del espacio.</p>
                     </div>
                 </div>
-                <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Pueden ayudar
-                            a reducir eco o reverberación en mi home office?</span><span>+</span></button>
+                <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿Pueden ayudar a
+                            reducir eco o reverberación en mi home office?</span><span>+</span></button>
                     <div class="faq-lux-answer">
                         <p>Sí. Podemos evaluar las condiciones del cuarto y recomendar ajustes de ubicación, mobiliario
                             y elementos de absorción que ayuden a mejorar la inteligibilidad. Si el espacio requiere un
-                            tratamiento acústico especializado, el alcance se define según las necesidades del proyecto.
-                        </p>
+                            tratamiento acústico especializado, el alcance se define según las necesidades del proyecto.</p>
                     </div>
                 </div>
                 <div class="faq-lux-item reveal fade-up"><button class="faq-lux-btn" type="button"><span>¿El sistema
@@ -1744,29 +723,28 @@
                             información necesitan para cotizar un home office?</span><span>+</span></button>
                     <div class="faq-lux-answer">
                         <p>Ayudan las medidas y fotos del espacio, posición del escritorio, computadora y pantallas
-                            actuales, plataformas de videoconferencia, tipo y frecuencia de reuniones, problemas de
-                            audio o imagen, requerimientos de privacidad y presupuesto aproximado.</p>
+                            actuales, plataformas de videoconferencia, tipo y frecuencia de reuniones, problemas de audio
+                            o imagen, requerimientos de privacidad y presupuesto aproximado.</p>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- FORMULARIO DE CONTACTO BURBUJAS PREMIUM (DOBLE BURBUJA) -->
         <section class="contact-bubbles-section" id="contacto">
             <div class="container">
                 <div class="section-header reveal fade-up" style="margin-bottom:4rem; text-align: center;">
-                    <h2 class="section-title">Mejora tu home office con audio, video y conectividad profesional</h2>
-                    <p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 0 auto;">Comparte
-                        fotos, medidas, equipo actual, plataformas de videoconferencia y los problemas que quieres
-                        resolver para preparar una recomendación técnica.</p>
+                    <h2 class="section-title">Diseñemos el home office ideal para tus reuniones</h2>
+                    <p class="section-subtitle" style="color: #555560; max-width: 700px; margin: 0 auto;">Comparte fotos
+                        o planos, medidas, equipo actual y dinámicas de trabajo para preparar una recomendación técnica inicial.</p>
                 </div>
                 <div class="contact-bubbles-wrapper reveal fade-up">
                     <!-- Bubble 1: Info -->
                     <div class="contact-bubble contact-bubble-dark" style="background: #050505;">
                         <span class="cb-badge">Contacto</span>
-                        <h2>Mejora tu home office con audio, video y conectividad profesional</h2>
-                        <p class="cb-desc" style="color: rgba(255,255,255,0.6);">Comparte fotos, medidas, equipo actual,
-                            plataformas de videoconferencia y los problemas que quieres resolver para preparar una
-                            recomendación técnica.</p>
+                        <h2>Home office profesional adaptado a tu estilo de trabajo</h2>
+                        <p class="cb-desc" style="color: rgba(255,255,255,0.6);">Cuéntanos qué necesitas resolver: audio,
+                            iluminación, cámara, orden de cableado o acondicionamiento acústico. Diseñamos la solución exacta para tu día a día.</p>
                         <div class="cb-methods">
                             <a class="cb-method"
                                 href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20mi%20Home%20Office."
@@ -1774,8 +752,7 @@
                                 <div class="cb-method-icon"><i class="fa-brands fa-whatsapp"></i></div>
                                 <div class="cb-method-info">
                                     <strong style="color: #ffffff;">WhatsApp Residencial</strong>
-                                    <span style="color: rgba(255,255,255,0.5);">+52 55 3727 0177 — respuesta
-                                        rápida</span>
+                                    <span style="color: rgba(255,255,255,0.5);">+52 55 3727 0177 — respuesta rápida</span>
                                 </div>
                             </a>
                             <a class="cb-method" href="mailto:contacto@dgaudiosound.com">
@@ -1789,8 +766,7 @@
                                 <div class="cb-method-icon"><i class="fa-solid fa-location-dot"></i></div>
                                 <div class="cb-method-info">
                                     <strong style="color: #ffffff;">Área de Cobertura</strong>
-                                    <span style="color: rgba(255,255,255,0.5);">Ciudad de México, Estado de México y
-                                        proyectos residenciales en otras ciudades de México</span>
+                                    <span style="color: rgba(255,255,255,0.5);">Ciudad de México, Estado de México y proyectos en otras ciudades del país</span>
                                 </div>
                             </div>
                         </div>
@@ -1799,8 +775,8 @@
                     <div class="contact-bubble contact-bubble-light"
                         style="background: #ffffff; box-shadow: 0 20px 60px rgba(0,0,0,0.08);">
                         <h3 style="color: #050505;">Solicita una cotización</h3>
-                        <p class="cb-form-desc" style="color: #64748b;">Cuéntanos qué necesitas mejorar: audio, cámara,
-                            iluminación, pantalla, conectividad, cableado o videoconferencia.</p>
+                        <p class="cb-form-desc" style="color: #64748b;">Indica tus requerimientos principales para preparar
+                            una propuesta a tu medida.</p>
                         <form class="cb-form" id="bubblesWhatsappForm">
                             <div class="cb-form-row">
                                 <div class="cb-field">
@@ -1808,9 +784,8 @@
                                     <input id="cb-name" placeholder="Tu nombre" required="" type="text" />
                                 </div>
                                 <div class="cb-field">
-                                    <label for="cb-company" style="color: #374151;">Nombre del proyecto *</label>
-                                    <input id="cb-company" placeholder="Ej. Home office Bosques" required=""
-                                        type="text" />
+                                    <label for="cb-company" style="color: #374151;">Empresa / Proyecto (opcional)</label>
+                                    <input id="cb-company" placeholder="Ej. Oficina Polanco" type="text" />
                                 </div>
                             </div>
                             <div class="cb-form-row">
@@ -1826,22 +801,19 @@
                             <div class="cb-field">
                                 <label for="cb-project" style="color: #374151;">Tipo de proyecto</label>
                                 <select id="cb-project" required="">
-                                    <option value="Home office completo">Home office completo</option>
-                                    <option value="Videoconferencia profesional">Videoconferencia profesional</option>
+                                    <option value="Home office integral">Home office integral</option>
+                                    <option value="Mejora de audio y micrófono">Mejora de audio y micrófono</option>
                                     <option value="Cámara e iluminación">Cámara e iluminación</option>
-                                    <option value="Micrófono y audio claro">Micrófono y audio claro</option>
-                                    <option value="Pantalla / monitor">Pantalla / monitor</option>
-                                    <option value="Acústica del espacio">Acústica del espacio</option>
-                                    <option value="Cableado y conectividad">Cableado y conectividad</option>
-                                    <option value="Mejora de setup actual">Mejora de setup actual</option>
-                                    <option value="Oficina ejecutiva en casa">Oficina ejecutiva en casa</option>
+                                    <option value="Monitores y conectividad">Monitores y conectividad</option>
+                                    <option value="Acondicionamiento acústico">Acondicionamiento acústico</option>
+                                    <option value="Estudio para podcast o creadores">Estudio para podcast o creadores</option>
                                     <option value="Otro proyecto">Otro proyecto</option>
                                 </select>
                             </div>
                             <div class="cb-field full">
                                 <label for="cb-message" style="color: #374151;">Detalles del proyecto</label>
                                 <textarea id="cb-message"
-                                    placeholder="Cuéntanos medidas del cuarto, posición del escritorio, computadora y pantallas actuales, plataformas que usas, tipo de reuniones y problemas de audio, imagen, iluminación o conexión."
+                                    placeholder="Comparte medidas aproximadas, tipo de computadora, plataformas de videollamada frecuentes y qué te gustaría mejorar prioritariamente."
                                     required="" rows="4"></textarea>
                             </div>
                             <button class="cb-submit" style="background: #25D366; color: white;" type="submit">
@@ -1853,12 +825,13 @@
             </div>
         </section>
     </main>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col brand-col">
                 <a class="footer-logo" href="/index">
-                    <img alt="DG AUDIOSOUND Logo" class="footer-logo-img" height="60" src="/assets/DG.png"
+                    <img alt="DG AUDIOSOUND Logo" class="footer-logo-img" height="60" src="../assets/DG.png"
                         width="112" />
                 </a>
                 <p class="footer-desc">Proveemos soluciones integrales de audio, video e iluminación premium para crear
@@ -1877,7 +850,7 @@
                     <li><a href="/#soluciones">Soluciones</a></li>
                     <li><a href="#marcas">Nuestras Marcas</a></li>
                     <li><a href="https://www.dgaudiosound.com/tienda">Tienda</a></li>
-                    <li><a href="https://www.dgaudiosound.com/blog">Blog DG</a></li>
+                    <li><a href="https://www.dgaudiosound.com/blog">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1887,6 +860,7 @@
                     <li><a href="/residencial-premium/audio-distribuido">Audio Distribuido</a></li>
                     <li><a href="/residencial-premium/audio-hi-fi">Audio Hi-Fi</a></li>
                     <li><a href="/residencial-premium/family-room">Family Room</a></li>
+                    <li><a href="/residencial-premium">Residencial Premium</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1899,7 +873,7 @@
             </div>
         </div>
 
-<div class="footer-bottom">
+        <div class="footer-bottom">
             <div class="container">
                 <p>© 2026 DG Audiosound. Todos los derechos reservados.</p>
                 <div class="footer-legal">
@@ -1909,191 +883,15 @@
             </div>
         </div>
     </footer>
+
     <!-- Botón Floating WhatsApp -->
-    <a aria-label="Contacto por WhatsApp" class="whatsapp-float" href="https://wa.me/525537270177" target="_blank">
+    <a aria-label="Contacto por WhatsApp" class="whatsapp-float" href="https://wa.me/525537270177?text=Hola%20DG%20Audiosound%2C%20quiero%20cotizar%20audio%20y%20video%20para%20mi%20Home%20Office." target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <!-- Scripts de comportamiento -->
-    <script>
-        (function () {
-            // --- 1. ADAPTIVE FLOATING NAVBAR COLOR (100% PRECIRO E INSTANTÁNEO) ---
-            const navbarEl = document.getElementById('navbar');
-            if (navbarEl) {
-                const checkNavbarColor = () => {
-                    const navbarRect = navbarEl.getBoundingClientRect();
-                    const navbarCenter = navbarRect.top + navbarRect.height / 2;
 
-                    // Encontrar qué sección está cruzando la mitad de la barra
-                    const sections = document.querySelectorAll('section, header');
-                    let currentSection = null;
-
-                    sections.forEach(sec => {
-                        if (sec.id === 'navbar') return;
-                        const rect = sec.getBoundingClientRect();
-                        if (rect.top <= navbarCenter && rect.bottom >= navbarCenter) {
-                            currentSection = sec;
-                        }
-                    });
-
-                    if (currentSection) {
-                        const isLight = currentSection.classList.contains('section-light') ||
-                            currentSection.classList.contains('section-light-alt') ||
-                            currentSection.classList.contains('section-white') ||
-                            currentSection.classList.contains('contact-bubbles-section') ||
-                            currentSection.classList.contains('breadcrumb-wrap');
-                        if (isLight) {
-                            // Si el fondo de la sección es claro, la barra es negra
-                            navbarEl.classList.remove('nav-light');
-                        } else {
-                            // Si el fondo de la sección es oscuro/negro, la barra es blanca
-                            navbarEl.classList.add('nav-light');
-                        }
-                    }
-                };
-
-                window.addEventListener('scroll', checkNavbarColor, { passive: true });
-                window.addEventListener('resize', checkNavbarColor, { passive: true });
-
-                // Evento de scroll adicional para clase scrolled
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbarEl.classList.add('scrolled');
-                    } else {
-                        navbarEl.classList.remove('scrolled');
-                    }
-                }, { passive: true });
-
-                // Ejecución inicial inmediata
-                checkNavbarColor();
-            }
-
-            // --- 2. EFECTO INTERACTIVO DE INCLINACIÓN Y REFLEJO ESPEJO 3D ---
-            const cards3D = document.querySelectorAll('.benefit-v2-card, .process-bento-item, .include-card, .brand-marquee-item, .antithesis-problem-card');
-            cards3D.forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-
-                    const percentX = (x / rect.width) * 100;
-                    const percentY = (y / rect.height) * 100;
-
-                    // Cálculo de inclinación física en perspectiva
-                    const rotateX = ((rect.height / 2 - y) / (rect.height / 2)) * 10;
-                    const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 10;
-
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
-                    card.style.setProperty('--mouse-x', `${percentX}%`);
-                    card.style.setProperty('--mouse-y', `${percentY}%`);
-
-                    // Ajustar variables de reflejo diagonal espejo
-                    card.style.setProperty('--glow-x', `${(percentX - 50) * 2}%`);
-                    card.style.setProperty('--glow-y', `${(percentY - 50) * 2}%`);
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-                    card.style.setProperty('--mouse-x', '50%');
-                    card.style.setProperty('--mouse-y', '50%');
-                    card.style.setProperty('--glow-x', '0%');
-                    card.style.setProperty('--glow-y', '0%');
-                });
-            });
-
-            // --- 3. ACORDEÓN DE PREGUNTAS (FAQ) CON ROTACIÓN ---
-            const faqItems = document.querySelectorAll('.faq-lux-item');
-            faqItems.forEach(item => {
-                const btn = item.querySelector('.faq-lux-btn');
-                const answer = item.querySelector('.faq-lux-answer');
-                if (!btn || !answer) return;
-
-                btn.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-
-                    // Cerrar todos los demás
-                    faqItems.forEach(i => {
-                        i.classList.remove('active');
-                        i.querySelector('.faq-lux-answer').style.maxHeight = '0px';
-                    });
-
-                    if (!isActive) {
-                        item.classList.add('active');
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
-                    }
-                });
-            });
-
-            // --- 4. MANEJADOR DEL HERO SLIDER (SLIDESHOW CROSSFADE) ---
-            const slides = document.querySelectorAll('.corp-hero-v2 .slide');
-            let currentSlide = 0;
-            const slideInterval = 4000; // Rotación cada 4 segundos
-
-            if (slides.length > 0) {
-                setInterval(() => {
-                    slides[currentSlide].classList.remove('active');
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    slides[currentSlide].classList.add('active');
-                }, slideInterval);
-            }
-
-            // --- 5. MANEJADOR DEL FORMULARIO DE COTIZACIÓN DE DOBLE BURBUJA ---
-            const bubblesForm = document.getElementById('bubblesWhatsappForm');
-            if (bubblesForm) {
-                bubblesForm.addEventListener('submit', function (event) {
-                    event.preventDefault();
-
-                    const name = document.getElementById('cb-name').value.trim();
-                    const company = document.getElementById('cb-company').value.trim();
-                    const phone = document.getElementById('cb-phone').value.trim();
-                    const city = document.getElementById('cb-city').value.trim();
-                    const projectType = document.getElementById('cb-project').value;
-                    const details = document.getElementById('cb-message').value.trim();
-
-                    const message =
-                        'Hola DG Audiosound, quiero cotizar un proyecto de Home Office.%0A%0A' +
-                        '*Nombre / Contacto:* ' + encodeURIComponent(name) + '%0A' +
-                        '*Nombre del proyecto:* ' + encodeURIComponent(company) + '%0A' +
-                        '*WhatsApp / Teléfono:* ' + encodeURIComponent(phone) + '%0A' +
-                        '*Ciudad:* ' + encodeURIComponent(city) + '%0A' +
-                        '*Tipo de Proyecto:* ' + encodeURIComponent(projectType) + '%0A' +
-                        '*Detalles:* ' + encodeURIComponent(details);
-
-                    window.open('https://wa.me/525537270177?text=' + message, '_blank', 'noopener');
-                });
-            }
-        })();
-    </script>
-    <script>
-        (function () {
-            const expectedHeroKicker = 'Residencial Premium';
-            const protectHeroKicker = () => {
-                const heroKicker = document.querySelector('.corp-hero-v2 .hero-kicker');
-                if (!heroKicker) return;
-
-                const restore = () => {
-                    if (heroKicker.textContent.trim() !== expectedHeroKicker) {
-                        heroKicker.textContent = expectedHeroKicker;
-                    }
-                };
-
-                restore();
-
-                const observer = new MutationObserver(restore);
-                observer.observe(heroKicker, {
-                    childList: true,
-                    characterData: true,
-                    subtree: true
-                });
-            };
-
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', protectHeroKicker, { once: true });
-            } else {
-                protectHeroKicker();
-            }
-        })();
-    </script>
-    <script defer src="/script.js"></script>
+    <!-- Scripts: Arquitectura dual para soporte universal (Modular + Vanilla diferido) -->
+    <script defer src="../script.js"></script>
+    <script type="module" src="../scripts/modules/subpage.js"></script>
 </body>
 
 </html>

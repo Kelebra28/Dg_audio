@@ -1,0 +1,137 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: CÓMO TRABAJAMOS (BENTO PROCESS)
+   ========================================================================== */
+
+.how-we-work {
+    padding: 8rem 0;
+    background: #fdfdfd;
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+.process-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 6rem 0;
+}
+
+.process-bento-item {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    padding: 3.5rem 2.5rem;
+    border-radius: 32px;
+    transition: transform 0.12s ease-out, box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.process-bento-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+    background-size: 250% 250%;
+    background-position: var(--glow-x, 0%) var(--glow-y, 0%);
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+}
+
+.process-bento-item:hover::before {
+    opacity: 1;
+}
+
+.process-bento-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(212, 164, 55, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.process-bento-item:hover::after {
+    opacity: 1;
+}
+
+.process-bento-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+}
+
+.bento-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.bento-num {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    background: #000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+}
+
+.bento-header i {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+.process-bento-item h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.process-bento-item p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.process-footer-clean {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.process-quote-simple {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #475569;
+    font-style: italic;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+    .process-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .process-bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-bento-item {
+        padding: 2.5rem 2rem;
+    }
+}

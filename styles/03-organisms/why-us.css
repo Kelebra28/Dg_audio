@@ -1,0 +1,58 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: SECCIÓN POR QUÉ ELEGIRNOS (WHY US)
+   ========================================================================== */
+
+.why-us {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.why-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    transition: var(--transition-base);
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.why-icon {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.why-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.why-card p {
+    color: var(--color-text-light);
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .why-us-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .why-us-grid { 
+        grid-template-columns: 1fr; 
+    }
+}

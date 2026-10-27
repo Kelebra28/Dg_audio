@@ -1,0 +1,89 @@
+/* ==========================================================================
+   DG AUDIOSOUND — ORGANISMOS: SECCIÓN DE MARCAS ALIADAS (TICKER INFINITO)
+   ========================================================================== */
+
+.brands {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+}
+
+.brands-ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 6rem 0;
+    position: relative;
+    background: #0d0d0f;
+}
+
+.brands-ticker-wrapper::before,
+.brands-ticker-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.brands-ticker-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
+}
+
+.brands-ticker-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0d0d0f 0%, rgba(13, 13, 15, 0) 100%);
+}
+
+.brands-ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: brands-scroll 60s linear infinite;
+    width: fit-content;
+}
+
+.ticker-item {
+    font-size: 2.4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #d4a437 0%, #f3d078 50%, #d4a437 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 5rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: default;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-family: var(--font-heading);
+    opacity: 0.5;
+}
+
+.ticker-item:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(212, 164, 55, 0.3));
+}
+
+.brands-ticker-wrapper:hover .brands-ticker {
+    animation-play-state: paused;
+}
+
+@keyframes brands-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .ticker-item {
+        font-size: 1.5rem;
+        margin: 0 2.5rem;
+        letter-spacing: 2px;
+    }
+    .brands-ticker-wrapper {
+        padding: 4rem 0;
+    }
+    .brands-ticker-wrapper::before,
+    .brands-ticker-wrapper::after {
+        width: 100px;
+    }
+}
