@@ -1,0 +1,10 @@
+{
+  "name": "dg-audiosound-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web oficial de DG Audiosound con arquitectura Atomic Design y empaquetador de producción sin dependencias externas.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-bundle.mjs"
+  }
+}

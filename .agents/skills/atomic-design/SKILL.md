@@ -174,3 +174,7 @@ Cuando se refactorice una página o componente en este repositorio, el agente de
    * Levantar servidor local (`python3 -m http.server 8000`).
    * Navegar y comprobar visualmente con la herramienta de navegador.
    * Revisar consola: Cero errores 404 y cero advertencias de JavaScript.
+5. **Empaquetado de Producción (`npm run build`)**:
+   * Los archivos de desarrollo siguen siendo 100% modulares (`styles/main.css` con `@import` y `scripts/main.js` con `import`).
+   * Para evitar que el CDN de Hostinger (`hcdn`) bloquee con `HTTP 429 Too Many Requests` tras 20 peticiones concurrentes, las páginas HTML enlazan los bundles compilados `styles/bundle.min.css?v=3` y `scripts/bundle.min.js?v=3`.
+   * Siempre que modifiques cualquier archivo atómico en `styles/` o `scripts/`, ejecuta `npm run build` (`node scripts/build-bundle.mjs`) para regenerar automáticamente `styles/bundle.min.css` y `scripts/bundle.min.js`.
