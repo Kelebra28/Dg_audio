@@ -30,12 +30,14 @@ export function initSubpage(options = {}) {
                 const isLight = currentSection.classList.contains('section-light') ||
                     currentSection.classList.contains('section-light-alt') ||
                     currentSection.classList.contains('section-white') ||
+                    currentSection.classList.contains('section-lux-white') ||
+                    currentSection.classList.contains('section-lux-gray') ||
                     currentSection.classList.contains('contact-bubbles-section') ||
                     currentSection.classList.contains('breadcrumb-wrap');
                 if (isLight) {
-                    navbarEl.classList.remove('nav-light');
-                } else {
                     navbarEl.classList.add('nav-light');
+                } else {
+                    navbarEl.classList.remove('nav-light');
                 }
             }
         };
@@ -52,6 +54,47 @@ export function initSubpage(options = {}) {
         }, { passive: true });
 
         checkNavbarColor();
+    }
+
+    // --- 1.5. MENÚ MÓVIL (HAMBURGUESA) Y REVEAL DE SECCIONES ---
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    }
+
+    const revealElements = document.querySelectorAll('.reveal, .reveal-lux');
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active', 'revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+        revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                el.classList.add('active', 'revealed');
+            }
+            revealObserver.observe(el);
+        });
     }
 
     // --- 2. EFECTO INTERACTIVO DE INCLINACIÓN Y REFLEJO ESPEJO 3D ---

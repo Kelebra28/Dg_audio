@@ -17,11 +17,11 @@ export function initNegociosExperienciasPage() {
     }
 
     // 2. MOTOR REVEAL CON INTERSECTION OBSERVER DE ALTO RENDIMIENTO
-    const revealElements = document.querySelectorAll('.reveal-lux');
+    const revealElements = document.querySelectorAll('.reveal-lux, .reveal');
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
+                entry.target.classList.add('revealed', 'active');
                 observer.unobserve(entry.target);
             }
         });
@@ -33,7 +33,7 @@ export function initNegociosExperienciasPage() {
     revealElements.forEach(el => {
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-            el.classList.add('revealed');
+            el.classList.add('revealed', 'active');
         }
         revealObserver.observe(el);
     });
@@ -88,11 +88,13 @@ export function initNegociosExperienciasPage() {
             if (currentSection) {
                 const isLight = currentSection.classList.contains('section-lux-white') ||
                     currentSection.classList.contains('section-lux-gray') ||
+                    currentSection.classList.contains('section-light') ||
+                    currentSection.classList.contains('section-white') ||
                     currentSection.classList.contains('contact-bubbles-section');
                 if (isLight) {
-                    navbarEl.classList.remove('nav-light');
-                } else {
                     navbarEl.classList.add('nav-light');
+                } else {
+                    navbarEl.classList.remove('nav-light');
                 }
             }
         };
@@ -109,6 +111,22 @@ export function initNegociosExperienciasPage() {
         }, { passive: true });
 
         checkNavbarColor();
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
     }
 
     // 5. COMPONENTE ESTRELLA: CAROUSEL PARALLAX 3D (COMERCIAL)

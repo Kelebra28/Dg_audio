@@ -81,6 +81,10 @@
     transition: var(--transition-fast);
 }
 
+.navbar.nav-light .hamburger .bar {
+    background-color: #050505;
+}
+
 @media (max-width: 768px) {
     .hamburger { 
         display: flex; 

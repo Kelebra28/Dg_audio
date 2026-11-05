@@ -3,42 +3,42 @@
    ========================================================================== */
 
 /* 1. Tokens & Base */
-@import './00-tokens/variables.css';
-@import './00-tokens/lux-tokens.css';
-@import './00-tokens/reset.css';
+@import './00-tokens/variables.css?v=2';
+@import './00-tokens/lux-tokens.css?v=2';
+@import './00-tokens/reset.css?v=2';
 
 /* 2. Atoms */
-@import './01-atoms/typography.css';
-@import './01-atoms/buttons.css';
-@import './01-atoms/badges.css';
-@import './01-atoms/inputs.css';
-@import './01-atoms/floating-whatsapp.css';
+@import './01-atoms/typography.css?v=2';
+@import './01-atoms/buttons.css?v=2';
+@import './01-atoms/badges.css?v=2';
+@import './01-atoms/inputs.css?v=2';
+@import './01-atoms/floating-whatsapp.css?v=2';
 
 /* 3. Molecules */
-@import './02-molecules/nav-items.css';
-@import './02-molecules/service-card.css';
-@import './02-molecules/product-card.css';
-@import './02-molecules/filter-tabs.css';
-@import './02-molecules/trust-bar.css';
-@import './02-molecules/cookie-banner.css';
+@import './02-molecules/nav-items.css?v=2';
+@import './02-molecules/service-card.css?v=2';
+@import './02-molecules/product-card.css?v=2';
+@import './02-molecules/filter-tabs.css?v=2';
+@import './02-molecules/trust-bar.css?v=2';
+@import './02-molecules/cookie-banner.css?v=2';
 
 /* 4. Organisms */
-@import './03-organisms/navbar.css';
-@import './03-organisms/hero.css';
-@import './03-organisms/dark-premium.css';
-@import './03-organisms/premium-white.css';
-@import './03-organisms/solutions.css';
-@import './03-organisms/applications.css';
-@import './03-organisms/how-we-work.css';
-@import './03-organisms/why-us.css';
-@import './03-organisms/brands.css';
-@import './03-organisms/faq.css';
-@import './03-organisms/contact.css';
-@import './03-organisms/footer.css';
-@import './03-organisms/lux-sections.css';
-@import './03-organisms/lux-subpages.css';
+@import './03-organisms/navbar.css?v=2';
+@import './03-organisms/hero.css?v=2';
+@import './03-organisms/dark-premium.css?v=2';
+@import './03-organisms/premium-white.css?v=2';
+@import './03-organisms/solutions.css?v=2';
+@import './03-organisms/applications.css?v=2';
+@import './03-organisms/how-we-work.css?v=2';
+@import './03-organisms/why-us.css?v=2';
+@import './03-organisms/brands.css?v=2';
+@import './03-organisms/faq.css?v=2';
+@import './03-organisms/contact.css?v=2';
+@import './03-organisms/footer.css?v=2';
+@import './03-organisms/lux-sections.css?v=2';
+@import './03-organisms/lux-subpages.css?v=2';
 
 /* 5. Pages */
-@import './04-pages/home.css';
-@import './04-pages/residencial-premium.css';
-@import './04-pages/legal.css';
+@import './04-pages/home.css?v=2';
+@import './04-pages/residencial-premium.css?v=2';
+@import './04-pages/legal.css?v=2';
