@@ -1,3 +1,4 @@
+
 /**
  * DG AUDIOSOUND — MOLÉCULA: BANNER DE CONSENTIMIENTO Y COOKIES
  * Gestiona el almacenamiento del consentimiento, actualización del Consent Mode (GTM / GA4 / Pixel)

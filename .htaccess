@@ -29,10 +29,10 @@ ServerSignature Off
     ExpiresByType application/xml "access plus 0 seconds"
     ExpiresByType text/xml "access plus 0 seconds"
 
-    # Hojas de estilo y JavaScript: 1 año (ya que usamos nombres minificados/versionados)
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType text/javascript "access plus 1 year"
+    # Hojas de estilo y JavaScript: Validación inmediata para reflejar cambios en producción sin bloqueos de CDN
+    ExpiresByType text/css "access plus 0 seconds"
+    ExpiresByType application/javascript "access plus 0 seconds"
+    ExpiresByType text/javascript "access plus 0 seconds"
 
     # Imágenes y recursos multimedia: 1 año
     ExpiresByType image/jpeg "access plus 1 year"
@@ -56,13 +56,13 @@ ServerSignature Off
 
 # 2. Configurar cabeceras Cache-Control explícitas (mod_headers) como respaldo
 <IfModule mod_headers.c>
-    # Recursos estáticos de larga duración (1 año)
-    <FilesMatch "\.(css|js|webp|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|otf|mp4|webm)$">
+    # Recursos multimedia y fuentes de larga duración (1 año)
+    <FilesMatch "\.(webp|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|otf|mp4|webm)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
     
-    # Recursos dinámicos (sin caché)
-    <FilesMatch "\.(html|htm|xml|txt|json)$">
+    # HTML, CSS, JS y recursos dinámicos (revalidación inmediata en CDN y navegador)
+    <FilesMatch "\.(html|htm|css|js|xml|txt|json)$">
         Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
         Header set Pragma "no-cache"
         Header set Expires "0"
