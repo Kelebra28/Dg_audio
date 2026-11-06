@@ -4,9 +4,13 @@
  * (Residencial, Negocios, Corporativo, Eventos)
  */
 
+import { initImageGuard } from '../01-atoms/image-guard.js';
+
 export function initSubpage(options = {}) {
     if (window.__DG_SUBPAGE_INITIALIZED__) return;
     window.__DG_SUBPAGE_INITIALIZED__ = true;
+
+    initImageGuard();
 
     // --- 1. ADAPTIVE FLOATING NAVBAR COLOR ---
     const navbarEl = document.getElementById('navbar');

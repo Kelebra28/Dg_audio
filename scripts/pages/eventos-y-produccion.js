@@ -4,7 +4,10 @@
  * acordeón FAQ, tilt 3D y formulario de WhatsApp.
  */
 
+import { initImageGuard } from '../01-atoms/image-guard.js';
+
 export function initEventosProduccionPage() {
+    initImageGuard();
     // 1. HERO SLIDESHOW CROSSFADE LENTO
     const heroSlides = document.querySelectorAll('.hero-lux-slide');
     if (heroSlides.length > 1) {

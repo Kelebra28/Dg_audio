@@ -5,6 +5,7 @@
  * actualizar `scripts/bundle.min.js` (usado en producción para evitar HTTP 429).
  */
 
+import { initImageGuard } from './01-atoms/image-guard.js';
 import { initNavbar } from './organisms/navbar.js';
 import { initHeroSlider } from './organisms/hero-slider.js';
 import { initScrollReveal } from './organisms/scroll-reveal.js';
@@ -18,6 +19,7 @@ function startApp() {
     if (window.__DG_APP_INITIALIZED__) return;
     window.__DG_APP_INITIALIZED__ = true;
 
+    initImageGuard();
     initNavbar();
     initHeroSlider();
     initScrollReveal();
